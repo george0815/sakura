@@ -281,46 +281,106 @@ void CPU_6502::ORA(uint16_t addr) {
 
 // Push A, stores the value of the accumulator to the current stack position
 // then decrements the stack pointer
-void CPU_6502::PHA(uint16_t addr) {}
+void CPU_6502::PHA(uint16_t addr) { push(A); }
 
 // Push processor status, pushes a byte representing the status register to the
 // stack, then decrements the stack pointer the B flag and the extra bit are
 // both pushed as one
-void CPU_6502::PHP(uint16_t addr) {}
+void CPU_6502::PHP(uint16_t addr) { push(STATUS_REGISTER | B_FLAG | UNUSED); }
 
 // Pull A, increments the stack pointer then loads that value at that stack
 // position into A
-void CPU_6502::PLA(uint16_t addr) {}
+void CPU_6502::PLA(uint16_t addr) {
+  A = pull();
+  SET_FLAG(ZERO, A == 0);
+  SET_FLAG(NEGATIVE, A & 0x80);
+}
 
 // Pull processor status, increments the stack pointer then loads that byte into
 // the 6 flags
-void CPU_6502::PLP(uint16_t addr) {}
+void CPU_6502::PLP(uint16_t addr) {
+  STATUS_REGISTER = pull();
+  SET_FLAG(UNUSED, true);
+}
 
 // Rotate left, shifts a memory value or the accumulator to the left
 // the carry flag is treated as though it is both above bit 7 and below bit 0
 // so bit 7 is shifted to carry, and carry is shifted to bit 0
-void CPU_6502::ROL(uint16_t addr) {}
+void CPU_6502::ROL(uint16_t addr) {
+  uint8_t carry = GET_FLAG(CARRY) ? 1 : 0;
+  if (LOOKUP[read(PC - 1)].addr_mode == &CPU_6502::ACCUMULATOR) {
+    uint8_t prev = A;
+    A = (A << 1) | carry;
+    SET_FLAG(CARRY, prev & 0x80);
+    SET_FLAG(ZERO, A == 0);
+    SET_FLAG(NEGATIVE, A & 0x80);
+  } else {
+    uint8_t data = read(addr);
+    uint8_t prev = data;
+    data = (data << 1) | carry;
+    write(addr, data);
+    SET_FLAG(CARRY, prev & 0x80);
+    SET_FLAG(ZERO, data == 0);
+    SET_FLAG(NEGATIVE, data & 0x80);
+  }
+}
 
 // Rotate right, shifts a memory value or the accumulator to the right
 // the carry flag is treated as though it is both above bit 7 and below bit 0
 // so bit 7 is shifted to carry, and carry is shifted to bit 0
-void CPU_6502::ROR(uint16_t addr) {}
+void CPU_6502::ROR(uint16_t addr) {
+  uint8_t carry = GET_FLAG(CARRY) ? 0x80 : 0x00;
+  if (LOOKUP[read(PC - 1)].addr_mode == &CPU_6502::ACCUMULATOR) {
+    uint8_t prev = A;
+    A = (A >> 1) | carry;
+    SET_FLAG(CARRY, prev & 0x01);
+    SET_FLAG(ZERO, A == 0);
+    SET_FLAG(NEGATIVE, A & 0x80);
+  } else {
+    uint8_t data = read(addr);
+    uint8_t prev = data;
+    data = (data >> 1) | carry;
+    write(addr, data);
+    SET_FLAG(CARRY, prev & 0x01);
+    SET_FLAG(ZERO, data == 0);
+    SET_FLAG(NEGATIVE, data & 0x80);
+  }
+}
 
 // Return from interrupt, returns from an interrupt handler by pulling the
 // status flags from the stack, then pulling the new program counter similar to
 // PLP but changes to the interrupt disable flag apply immediately instead of
 // being delayed one instruction
-void CPU_6502::RTI(uint16_t addr) {}
+void CPU_6502::RTI(uint16_t addr) {
+  STATUS_REGISTER = pull();
+  SET_FLAG(UNUSED, true);
+  uint8_t lo = pull();
+  uint8_t hi = pull();
+  PC = (hi << 8) | lo;
+}
 
 // Return from subroutine, pulls an address from the stack into the program
 // counter, then increments the program counter
-void CPU_6502::RTS(uint16_t addr) {}
+void CPU_6502::RTS(uint16_t addr) {
+  uint8_t lo = pull();
+  uint8_t hi = pull();
+  PC = (hi << 8) | lo;
+  PC++;
+}
 
 // Subtract with carry, subtracts a memory value and the NOT of the carry flag
 // from the accumulator it does this by adding the bitwise NOT of the memory
 // value using ADC carry is cleared when it underflows and set otherwise
 // overflow works the same as ADC, except with an intverted memory value
-void CPU_6502::SBC(uint16_t addr) {}
+void CPU_6502::SBC(uint16_t addr) {
+  const uint16_t value = read(addr) ^ ZERO_PAGE_MASK;
+  uint16_t sum = A + value + (GET_FLAG(CARRY) ? 1 : 0);
+  SET_FLAG(CARRY, sum & PAGE_MASK);
+  SET_FLAG(ZERO, (sum & ZERO_PAGE_MASK) == 0);
+  SET_FLAG(OVERFLOW, (sum ^ A) & (sum & value) & 0x80);
+  SET_FLAG(NEGATIVE, sum & 0x80);
+  A = sum;
+}
 
 // Set carry, sets the carry flag
 void CPU_6502::SEC(uint16_t addr) { SET_FLAG(CARRY, true); }
