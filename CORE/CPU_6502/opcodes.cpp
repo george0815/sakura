@@ -127,59 +127,125 @@ void CPU_6502::CLV(uint16_t addr) { SET_FLAG(OVERFLOW, false); }
 // sets flags as appropriate but does not modify any of the registers
 // comparison is implemented as a subtraction, setting carry if there is no
 // borrow zero if the result is 0, negative if the result is negative
-void CPU_6502::CMP(uint16_t addr) {}
+void CPU_6502::CMP(uint16_t addr) {
+  const uint8_t data = read(addr);
+  uint16_t diff = A - data;
+  SET_FLAG(CARRY, A >= data);
+  SET_FLAG(ZERO, (diff & ZERO_PAGE_MASK) == 0);
+  SET_FLAG(NEGATIVE, diff & 0x80);
+}
 
-// Compare X, compares Y to a memory value
+// Compare X, compares X to a memory value
 // sets flags as appropriate but does not modify any of the registers
 // comparison is implemented as a subtraction, setting carry if there is no
 // borrow zero if the result is 0, negative if the result is negative
-void CPU_6502::CPX(uint16_t addr) {}
+void CPU_6502::CPX(uint16_t addr) {
+  const uint8_t data = read(addr);
+  uint16_t diff = X - data;
+  SET_FLAG(CARRY, X >= data);
+  SET_FLAG(ZERO, (diff & ZERO_PAGE_MASK) == 0);
+  SET_FLAG(NEGATIVE, diff & 0x80);
+}
 
 // Compare Y, compares Y to a memory value
 // sets flags as appropriate but does not modify any of the registers
 // comparison is implemented as a subtraction, setting carry if there is no
 // borrow zero if the result is 0, negative if the result is negative
-void CPU_6502::CPY(uint16_t addr) {}
+void CPU_6502::CPY(uint16_t addr) {
+  const uint8_t data = read(addr);
+  uint16_t diff = Y - data;
+  SET_FLAG(CARRY, Y >= data);
+  SET_FLAG(ZERO, (diff & ZERO_PAGE_MASK) == 0);
+  SET_FLAG(NEGATIVE, diff & 0x80);
+}
 
 // Decrement memory, subtracts 1 from a memory location
-void CPU_6502::DEC(uint16_t addr) {}
+void CPU_6502::DEC(uint16_t addr) {
+  uint8_t data = read(addr) - 1;
+  write(addr, data);
+  SET_FLAG(ZERO, data == 0);
+  SET_FLAG(NEGATIVE, data & 0x80);
+}
 
 // Decrement X, subtracts 1 from the X register
-void CPU_6502::DEX(uint16_t addr) {}
+void CPU_6502::DEX(uint16_t addr) {
+  X--;
+  SET_FLAG(ZERO, X == 0);
+  SET_FLAG(NEGATIVE, X & 0x80);
+}
 
 // Decrement Y, subtracts 1 from the Y register
-void CPU_6502::DEY(uint16_t addr) {}
+void CPU_6502::DEY(uint16_t addr) {
+  Y--;
+  SET_FLAG(ZERO, Y == 0);
+  SET_FLAG(NEGATIVE, Y & 0x80);
+}
 
 // Bitwise exclusive OR, XORs a memory value with the accumulator, bit by bit
-void CPU_6502::EOR(uint16_t addr) {}
+void CPU_6502::EOR(uint16_t addr) {
+  A ^= read(addr);
+  SET_FLAG(ZERO, A == 0);
+  SET_FLAG(NEGATIVE, A & 0x80);
+}
 
 // Increment memory, 1 is added to a memory value
-void CPU_6502::INC(uint16_t addr) {}
+void CPU_6502::INC(uint16_t addr) {
+  uint8_t data = read(addr) + 1;
+  write(addr, data);
+  SET_FLAG(ZERO, data == 0);
+  SET_FLAG(NEGATIVE, data & 0x80);
+}
 
 // Increment Y, 1 is added to the Y register
-void CPU_6502::INY(uint16_t addr) {}
+void CPU_6502::INY(uint16_t addr) {
+  Y++;
+  SET_FLAG(ZERO, X == 0);
+  SET_FLAG(NEGATIVE, X & 0x80);
+}
 
 // Increment X, 1 is added to the X register
-void CPU_6502::INX(uint16_t addr) {}
+void CPU_6502::INX(uint16_t addr) {
+  X++;
+  SET_FLAG(ZERO, X == 0);
+  SET_FLAG(NEGATIVE, X & 0x80);
+}
 
 // Jump, sets the PC to a new value, allowing code to execute from a new
 // location JMP BUG: if the new 2 byte PC crosses a page (ends in FF), then the
 // CPU fails to increment the page wheen reading the second byte
-void CPU_6502::JMP(uint16_t addr) {}
+void CPU_6502::JMP(uint16_t addr) { PC = addr; }
 
 // Pushes the current program counter to the stack, then sets the PC to a new
-// value then the code can call a function and return using RTS the return
-// address on the stack points 1 byte before the start of the next instruction
-void CPU_6502::JSR(uint16_t addr) {}
+// value then the code can call a function and return using RTS
+// the return address on the stack points 1 byte before the start of the next
+// instruction
+void CPU_6502::JSR(uint16_t addr) {
+  PC--;
+  push((PC >> 8));             // push PC hi
+  push((PC | ZERO_PAGE_MASK)); // push PC lo
+  PC = addr;
+}
 
 // Loads a memory value into the accumulator
-void CPU_6502::LDA(uint16_t addr) {}
+void CPU_6502::LDA(uint16_t addr) {
+  A = read(addr);
+  SET_FLAG(ZERO, A == 0);
+  SET_FLAG(NEGATIVE, A & 0x80);
+}
 
 // Loads a memory value into the X register
-void CPU_6502::LDX(uint16_t addr) {}
+void CPU_6502::LDX(uint16_t addr) {
+  X = read(addr);
+  SET_FLAG(ZERO, X == 0);
+  SET_FLAG(NEGATIVE, X & 0x80);
+}
 
 // Loads a memory value into the Y register
-void CPU_6502::LDY(uint16_t addr) {}
+void CPU_6502::LDY(uint16_t addr) {
+  Y = read(addr);
+  SET_FLAG(ZERO, Y == 0);
+  SET_FLAG(NEGATIVE, Y & 0x80);
+}
 
 // Logical shift right, shifts all bits of a memory value or the accumulator one
 // position to the right 0 is shifted into bit 7, and 0 is shifted to the carry
@@ -207,7 +273,11 @@ void CPU_6502::LSR(uint16_t addr) {
 void CPU_6502::NOP(uint16_t addr) {}
 
 // Bitwise OR, ORs a memory value and the accumulator, bit by bit
-void CPU_6502::ORA(uint16_t addr) {}
+void CPU_6502::ORA(uint16_t addr) {
+  A |= read(addr);
+  SET_FLAG(ZERO, A == 0);
+  SET_FLAG(NEGATIVE, A & 0x80);
+}
 
 // Push A, stores the value of the accumulator to the current stack position
 // then decrements the stack pointer
@@ -253,22 +323,22 @@ void CPU_6502::RTS(uint16_t addr) {}
 void CPU_6502::SBC(uint16_t addr) {}
 
 // Set carry, sets the carry flag
-void CPU_6502::SEC(uint16_t addr) {}
+void CPU_6502::SEC(uint16_t addr) { SET_FLAG(CARRY, true); }
 
 // Set decimal, sets the decimal flag
-void CPU_6502::SED(uint16_t addr) {}
+void CPU_6502::SED(uint16_t addr) { SET_FLAG(DECIMAL, true); }
 
 // Set interrupt disable, sets the interrupt disable flag
-void CPU_6502::SEI(uint16_t addr) {}
+void CPU_6502::SEI(uint16_t addr) { SET_FLAG(INTERRUPT_DISABLE, true); }
 
 // Store accumulator, stores the accumulator value into memory
-void CPU_6502::STA(uint16_t addr) {}
+void CPU_6502::STA(uint16_t addr) { write(addr, A); }
 
 // Store X, stores the X register value into memory
-void CPU_6502::STX(uint16_t addr) {}
+void CPU_6502::STX(uint16_t addr) { write(addr, X); }
 
 // Store Y, stores the Y register value into memory
-void CPU_6502::STY(uint16_t addr) {}
+void CPU_6502::STY(uint16_t addr) { write(addr, Y); }
 
 // Transfer A to X, copies the accumulator value to the X register
 void CPU_6502::TAX(uint16_t addr) {}
