@@ -341,23 +341,46 @@ void CPU_6502::STX(uint16_t addr) { write(addr, X); }
 void CPU_6502::STY(uint16_t addr) { write(addr, Y); }
 
 // Transfer A to X, copies the accumulator value to the X register
-void CPU_6502::TAX(uint16_t addr) {}
+void CPU_6502::TAX(uint16_t addr) {
+  X = A;
+  SET_FLAG(ZERO, X == 0);
+  SET_FLAG(NEGATIVE, X & 0x80);
+}
 
 // Transfer A to Y, copies the accumulator value to the Y register
-void CPU_6502::TAY(uint16_t addr) {}
+void CPU_6502::TAY(uint16_t addr) {
+
+  Y = A;
+  SET_FLAG(ZERO, Y == 0);
+  SET_FLAG(NEGATIVE, Y & 0x80);
+}
 
 // Transfer stack pointer to X, copies the stack pointer value to the X register
-void CPU_6502::TSX(uint16_t addr) {}
+void CPU_6502::TSX(uint16_t addr) {
+
+  X = SP;
+  SET_FLAG(ZERO, X == 0);
+  SET_FLAG(NEGATIVE, X & 0x80);
+}
 
 // Transfer X to the accumulator, copies the X register value to the accumulator
-void CPU_6502::TXA(uint16_t addr) {}
+void CPU_6502::TXA(uint16_t addr) {
+
+  A = X;
+  SET_FLAG(ZERO, A == 0);
+  SET_FLAG(NEGATIVE, A & 0x80);
+}
 
 // Transfer X to the stack pointer, copies the X register value to the stack
 // pointer
-void CPU_6502::TXS(uint16_t addr) {}
+void CPU_6502::TXS(uint16_t addr) { SP = X; }
 
 // Transfer Y to the accumulator, copies the Y register value to the accumulator
-void CPU_6502::TYA(uint16_t addr) {}
+void CPU_6502::TYA(uint16_t addr) {
+  A = Y;
+  SET_FLAG(ZERO, A == 0);
+  SET_FLAG(NEGATIVE, A & 0x80);
+}
 
 // UNIMPLEMENTED/INVALID
 
