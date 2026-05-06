@@ -46,37 +46,39 @@ void CPU_6502::ASL(uint16_t addr) {
 }
 
 // Branch if carry clear, if the carry is clear then branches by adding the
-// offset to the PC offset is signed and has a range of -128 -> 127
-void CPU_6502::BCC(uint16_t addr) {}
+// offset to the PC, offset is signed and has a range of -128 -> 127
+void CPU_6502::BCC(uint16_t addr) { BRANCH(addr, !GET_FLAG(CARRY)); }
 
 // Branch if carry set, if the carry is set then branches by adding the offset
-// to the PC offset is signed and has a range of -128 -> 127
-void CPU_6502::BCS(uint16_t addr) {}
+// to the PC, offset is signed and has a range of -128 -> 127
+void CPU_6502::BCS(uint16_t addr) { BRANCH(addr, GET_FLAG(CARRY)); }
 
 // Branch if equal, if the zero flag is set then branches by adding the offset
-// to the PC offset is signed and has a range of -128 -> 127
-void CPU_6502::BEQ(uint16_t addr) {}
+// to the PC, offset is signed and has a range of -128 -> 127
+void CPU_6502::BEQ(uint16_t addr) { BRANCH(addr, GET_FLAG(ZERO)); }
 
 // Branch if minus, if the negative flag is set then branches by adding the
-// offset to the PC offset is signed and has a range of -128 -> 127
-void CPU_6502::BMI(uint16_t addr) {}
+// offset to the PC, offset is signed and has a range of -128 -> 127
+void CPU_6502::BMI(uint16_t addr) { BRANCH(addr, GET_FLAG(NEGATIVE)); }
 
 // Branch if not equal, if the zero flag is clear then branches by adding the
-// relative offset to the PC offset is signed and has a range of -128 -> 127
-void CPU_6502::BNE(uint16_t addr) {}
+// relative offset to the PC, offset is signed and has a range of -128 -> 127
+void CPU_6502::BNE(uint16_t addr) { BRANCH(addr, !GET_FLAG(ZERO)); }
 
 // Branch if plus, if the negative flag is clear then branches by adding the
-// relative offset to the PC offset is signed and has a range of -128 -> 127
-void CPU_6502::BPL(uint16_t addr) {}
+// relative offset to the PC, offset is signed and has a range of -128 -> 127
+void CPU_6502::BPL(uint16_t addr) { BRANCH(addr, !GET_FLAG(NEGATIVE)); }
 
 // Branch if overflow clear, if the overflow flag is clear then branches by
-// adding the relative offset to the PC offset is signed and has a range of -128
+// adding the relative offset to the PC, offset is signed and has a range of
+// -128
 // -> 127
-void CPU_6502::BVC(uint16_t addr) {}
+void CPU_6502::BVC(uint16_t addr) { BRANCH(addr, !GET_FLAG(OVERFLOW)); }
 
 // Branch if overflow set, if the overflow flag is set then branches by adding
-// the relative offset to the PC offset is signed and has a range of -128 -> 127
-void CPU_6502::BVS(uint16_t addr) {}
+// the relative offset to the PC, offset is signed and has a range of -128 ->
+// 127
+void CPU_6502::BVS(uint16_t addr) { BRANCH(addr, GET_FLAG(OVERFLOW)); }
 
 // Bit test, modifies flags but does not change memory or registers.
 // the zero flag is set depending on the reselt of the accumulator AND memory
@@ -110,16 +112,16 @@ void CPU_6502::BRK(uint16_t addr) {
 }
 
 // Clear carry, clears the carry flag
-void CPU_6502::CLC(uint16_t addr) {}
+void CPU_6502::CLC(uint16_t addr) { SET_FLAG(CARRY, false); }
 
 // Clear carry, clears the decimal flag
-void CPU_6502::CLD(uint16_t addr) {}
+void CPU_6502::CLD(uint16_t addr) { SET_FLAG(DECIMAL, false); }
 
 // Clear carry, clears the interrupt disable flag
-void CPU_6502::CLI(uint16_t addr) {}
+void CPU_6502::CLI(uint16_t addr) { SET_FLAG(INTERRUPT_DISABLE, false); }
 
 // Clear carry, clears the overflow flag
-void CPU_6502::CLV(uint16_t addr) {}
+void CPU_6502::CLV(uint16_t addr) { SET_FLAG(OVERFLOW, false); }
 
 // Compare A, compares the accumulator to a memory value
 // sets flags as appropriate but does not modify any of the registers
