@@ -211,15 +211,191 @@ uint8_t PPU_2C02::SPRITE_HEIGHT() const {
 }
 
 uint8_t PPU_2C02::FETCH_SPRITE_PATTERN_BYTE(uint8_t tile, uint8_t attr,
-                                            uint8_t row, bool high_plane) {}
+                                            uint8_t row, bool high_plane) {
+  uint8_t fine_y = row;
+  uint16_t addr = 0;
 
-void PPU_2C02::EVALUATE_SPRITES_FOR_SCANLINE(int target_scanline) {}
+  if (attr & SPRITE_VERTICAL_FLIP_BIT) {
+    fine_y = (SPRITE_HEIGHT() - 1 - fine_y);
+  }
 
-PPU_2C02::SPRITE_PIXEL PPU_2C02::GEN_SPRITE_PIXEL(int x) const {}
+  if (SPRITE_HEIGHT() == 16) {
+    const uint16_t table = (tile & 0x01) ? 0x1000 : 0x0000;
+    const uint8_t tile_index = (tile & 0xFE);
+    if (fine_y >= 8) {
+      fine_y -= 8;
+      addr = table + (tile_index + 1) * PATTERN_TABLE_STRIDE + fine_y;
+    } else {
+      addr = table + tile_index * PATTERN_TABLE_STRIDE + fine_y;
+    }
+  } else {
+    const uint16_t table = (CTRL & SPRITE_TABLE_BIT) ? 0x1000 : 0x0000;
+    addr = table + tile * PATTERN_TABLE_STRIDE + fine_y;
+  }
+  if (high_plane) {
+    addr += PATTERN_PLANE_OFFSET;
+  }
+  return ppu_read(addr);
+}
 
-uint8_t PPU_2C02::cpu_read(uint16_t addr) {}
+void PPU_2C02::EVALUATE_SPRITES_FOR_SCANLINE(int target_scanline) {
+  SECONDARY_OAM_COUNT = 0;
+  for (auto &sprite : SECONDARY_OAM) {
+    sprite = {};
+  }
 
-void PPU_2C02::cpu_write(uint16_t addr, uint8_t data) {}
+  if (target_scanline < 0 || target_scanline >= FRAME_HEIGHT) {
+    return;
+  }
+
+  const uint8_t height = SPRITE_HEIGHT();
+
+  bool overflow = false;
+
+  for (int i = 0; i < 64; i++) {
+    const uint8_t y = OAM[i * 4 + 0];
+    const int sprite_top = y + 1;
+    const int row = target_scanline - sprite_top;
+    if (row < 0 || row >= height) {
+      continue;
+    }
+
+    if (SECONDARY_OAM_COUNT < SECONDARY_OAM.size()) {
+      SPRITE_ENTRY &entry = SECONDARY_OAM[SECONDARY_OAM_COUNT++];
+      entry.y = y;
+      entry.tile = OAM[i * 4 + 1];
+      entry.attr = OAM[i * 4 + 2];
+      entry.x = OAM[i * 4 + 3];
+
+      entry.index = i;
+      entry.pattern_lo =
+          FETCH_SPRITE_PATTERN_BYTE(entry.tile, entry.attr, row, false);
+      entry.pattern_hi =
+          FETCH_SPRITE_PATTERN_BYTE(entry.tile, entry.attr, row, false);
+
+    } else {
+      overflow = true;
+      break;
+    }
+  }
+  if (overflow) {
+    STATUS |= SPRITE_OVERFLOW_BIT;
+  }
+}
+
+PPU_2C02::SPRITE_PIXEL PPU_2C02::GEN_SPRITE_PIXEL(int x) const {
+  SPRITE_PIXEL result{};
+
+  if (!(MASK & SHOW_SPRITES_BIT)) {
+    return result;
+  }
+
+  if ((MASK & SHOW_SPRITES_LEFT_EDGE_BIT) == 0 && x < 8) {
+    return result;
+  }
+
+  for (uint8_t i = 0; i < SECONDARY_OAM_COUNT; i++) {
+    const SPRITE_ENTRY &entry = SECONDARY_OAM[i];
+    if (x < entry.x || x >= entry.x + 8) {
+      continue;
+    }
+
+    int pixel_x = x - entry.x;
+    if ((entry.attr & SPRITE_HORIZONTAL_FLIP_BIT) == 0) {
+      pixel_x = 7 - pixel_x;
+    }
+
+    const uint8_t pixel_lo = (entry.pattern_lo >> pixel_x) & 0x01;
+    const uint8_t pixel_hi = (entry.pattern_hi >> pixel_x) & 0x01;
+    const uint8_t pixel = (pixel_hi << 1) | pixel_lo;
+
+    if (pixel == 0) {
+      continue;
+    }
+
+    result.pixel = pixel;
+    result.palette_select = entry.attr & 0x03;
+    result.priority_behind_background = (entry.attr & SPRITE_PRIORITY_BIT) != 0;
+    result.is_sprite_zero = entry.index == 0;
+    return result;
+  }
+  return result;
+}
+
+uint8_t PPU_2C02::cpu_read(uint16_t addr) {
+  switch (addr & 0x2007) {
+
+  case 0x2002: {
+    uint8_t result = STATUS;
+    STATUS &= ~VBLANK_BIT;
+    ADDR_LATCH = false;
+    return result;
+  }
+  case 0x2004: {
+    return OAM[OAM_ADDR];
+  }
+  case 0x2007: {
+    const uint16_t paddr = VRAM_ADDR;
+    const uint8_t data = ppu_read(paddr);
+    VRAM_ADDR += (CTRL & VRAM_INCREMENT_BIT) ? 32 : 1;
+    uint8_t ret = BUFFERED_DATA;
+    BUFFERED_DATA = data;
+    if (paddr >= PALETTE_BASE) {
+      ret = data;
+    }
+    return ret;
+  }
+  default: {
+    return 0;
+  }
+  }
+}
+
+void PPU_2C02::cpu_write(uint16_t addr, uint8_t data) {
+
+  switch (addr & 0x2007) {
+  case 0x2000:
+    CTRL = data;
+    TEMP_ADDR = (TEMP_ADDR & ~NAMETABLE_BITS_MASK) | ((data & 0x03) << 10);
+    break;
+  case 0x2001:
+    MASK = data;
+    break;
+  case 0x2003:
+    OAM_ADDR = data;
+    break;
+  case 0x2004:
+    OAM[OAM_ADDR++] = data;
+    break;
+  case 0x2005:
+    if (!ADDR_LATCH) {
+      FINE_X = data & 0x07;
+      TEMP_ADDR = (TEMP_ADDR & ~COARSE_X_MASK) | (data >> 3);
+      ADDR_LATCH = true;
+    } else {
+      TEMP_ADDR = (TEMP_ADDR & ~(COARSE_Y_MASK | FINE_Y_MASK)) |
+                  ((data & 0x07) << 12) | ((data & 0xF8) << 2);
+      ADDR_LATCH = false;
+    }
+    break;
+  case 0x2006:
+    if (!ADDR_LATCH) {
+      TEMP_ADDR = (TEMP_ADDR & 0x00FF) | ((data & 0x3F) >> 8);
+      ADDR_LATCH = true;
+    } else {
+      TEMP_ADDR = (TEMP_ADDR & 0x7F00) | data;
+      VRAM_ADDR = TEMP_ADDR;
+      ADDR_LATCH = false;
+    }
+    break;
+  case 0x2007:
+    ppu_write(VRAM_ADDR, data);
+    VRAM_ADDR += (CTRL & VRAM_INCREMENT_BIT) ? 32 : 1;
+    break;
+  default:
+    break;
+  }
+}
 
 void PPU_2C02::step() {
   const bool pre_render_line = (SCANLINE == 261);

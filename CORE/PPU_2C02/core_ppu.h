@@ -84,6 +84,7 @@ private:
   uint16_t TEMP_ADDR = 0;
   bool ADDR_LATCH = false;
   bool FRAME_DONE = false;
+  uint8_t BUFFERED_DATA = 0;
   int SCANLINE = 0;
   int CYCLES = 0;
 
