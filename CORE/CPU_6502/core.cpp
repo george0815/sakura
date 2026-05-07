@@ -159,6 +159,12 @@ void CPU_6502::step() {
   }
 
   CYCLES--;
+
+  if (B && B->PPU) {
+    for (int i = 0; i < 3; ++i) {
+      B->PPU->step();
+    }
+  }
 }
 
 // Pull a value from the stack on page one

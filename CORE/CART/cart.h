@@ -38,7 +38,7 @@ struct CART {
   bool USES_BATTERY_BACKED_SRAM = false;
   uint32_t PRG_RAM_SIZE = 0;
   uint8_t MAPPER_ID = 0;
-  MIRRORING MIRRORING = MIRRORING::HORIZONTAL;
+  MIRRORING MIRROR_MODE = MIRRORING::HORIZONTAL;
 };
 
 bool PARSE_FILE(std::string filename, CART &cartridge);

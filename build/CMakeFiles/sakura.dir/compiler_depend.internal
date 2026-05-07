@@ -7,8 +7,10 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o
 
 CMakeFiles/sakura.dir/CORE/BUS/bus.cpp.o
  /home/Hunter/Documents/Github/sakura/CORE/BUS/bus.cpp
+ /home/Hunter/Documents/Github/sakura/CORE/MAPPERS/mapper.h
  /home/Hunter/Documents/Github/sakura/CORE/CART/cart.h
  /home/Hunter/Documents/Github/sakura/CORE/CPU_6502/core.h
+ /home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/core_ppu.h
  /home/Hunter/Documents/Github/sakura/CORE/BUS/bus.h
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h

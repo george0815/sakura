@@ -5,8 +5,10 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o: /home/Hunter/Documents/Github
   /usr/include/stdc-predef.h
 
 CMakeFiles/sakura.dir/CORE/BUS/bus.cpp.o: /home/Hunter/Documents/Github/sakura/CORE/BUS/bus.cpp \
+  /home/Hunter/Documents/Github/sakura/CORE/MAPPERS/mapper.h \
   /home/Hunter/Documents/Github/sakura/CORE/CART/cart.h \
   /home/Hunter/Documents/Github/sakura/CORE/CPU_6502/core.h \
+  /home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/core_ppu.h \
   /home/Hunter/Documents/Github/sakura/CORE/BUS/bus.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -1356,13 +1358,9 @@ CMakeFiles/sakura.dir/MAIN/sakura.cpp.o:
 
 CMakeFiles/sakura.dir/MAIN/main.cpp.o:
 
-/usr/include/c++/15.2.1/bits/stl_function.h:
+CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o:
 
-/usr/include/c++/15.2.1/bits/invoke.h:
-
-/usr/include/bits/endian.h:
-
-/usr/include/c++/15.2.1/bits/stl_algobase.h:
+CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 
 /usr/include/gnu/stubs-64.h:
 
@@ -1402,15 +1400,13 @@ CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o:
 
 /usr/lib/ld-linux-x86-64.so.2:
 
+/usr/include/c++/15.2.1/bits/invoke.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/c++/15.2.1/bits/stl_function.h:
+
 /usr/include/c++/15.2.1/bits/exception_ptr.h:
-
-/usr/include/c++/15.2.1/bits/exception.h:
-
-/usr/include/c++/15.2.1/bits/cpp_type_traits.h:
-
-/usr/include/c++/15.2.1/bits/streambuf.tcc:
-
-/usr/include/bits/cpu-set.h:
 
 /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h:
 
@@ -1419,10 +1415,6 @@ CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o:
 /usr/include/c++/15.2.1/bits/concept_check.h:
 
 /usr/include/c++/15.2.1/bits/memory_resource.h:
-
-/usr/include/c++/15.2.1/bits/fstream.tcc:
-
-/usr/include/time.h:
 
 /usr/include/c++/15.2.1/bits/charconv.h:
 
@@ -1443,6 +1435,8 @@ CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o:
 /usr/include/c++/15.2.1/array:
 
 /usr/include/c++/15.2.1/bits/stl_bvector.h:
+
+/usr/include/c++/15.2.1/bits/exception.h:
 
 /usr/include/c++/15.2.1/bits/hash_bytes.h:
 
@@ -1504,11 +1498,21 @@ CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
 
-/usr/include/bits/long-double.h:
-
-/home/Hunter/Documents/Github/sakura/CORE/CART/cart.cpp:
-
 /usr/lib/crti.o:
+
+/usr/include/c++/15.2.1/bits/streambuf.tcc:
+
+/usr/include/bits/cpu-set.h:
+
+/usr/include/c++/15.2.1/bits/cpp_type_traits.h:
+
+/usr/include/time.h:
+
+/usr/include/c++/15.2.1/bits/fstream.tcc:
+
+/usr/include/c++/15.2.1/bits/stl_algobase.h:
+
+/home/Hunter/Documents/Github/sakura/CORE/MAPPERS/mapper.h:
 
 /usr/include/c++/15.2.1/bits/istream.tcc:
 
@@ -1530,9 +1534,9 @@ CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o:
 
 /usr/include/c++/15.2.1/bits/allocator.h:
 
-/home/Hunter/Documents/Github/sakura/MAIN/main.h:
-
 /usr/include/bits/wctype-wchar.h:
+
+/home/Hunter/Documents/Github/sakura/MAIN/main.h:
 
 CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o:
 
@@ -1552,7 +1556,7 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o:
 
 /usr/include/asm/posix_types.h:
 
-/usr/include/bits/stdint-least.h:
+/usr/include/asm-generic/errno-base.h:
 
 /usr/include/bits/libc-header-start.h:
 
@@ -1561,6 +1565,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o:
 /usr/include/bits/timesize.h:
 
 /home/Hunter/Documents/Github/sakura/CORE/CART/cart.h:
+
+/usr/include/bits/stdint-least.h:
 
 /usr/include/bits/floatn.h:
 
@@ -1579,6 +1585,16 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o:
 /home/Hunter/Documents/Github/sakura/CORE/CPU_6502/core.h:
 
 /usr/include/bits/types/cookie_io_functions_t.h:
+
+/home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/core_ppu.h:
+
+/usr/include/c++/15.2.1/ios:
+
+/usr/include/bits/thread-shared-types.h:
+
+/usr/include/c++/15.2.1/debug/debug.h:
+
+/usr/include/c++/15.2.1/type_traits:
 
 /usr/include/c++/15.2.1/bit:
 
@@ -1600,7 +1616,9 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o:
 
 /usr/include/asm/types.h:
 
-/usr/include/asm-generic/errno-base.h:
+/usr/include/bits/long-double.h:
+
+/home/Hunter/Documents/Github/sakura/CORE/CART/cart.cpp:
 
 /usr/include/bits/pthread_stack_min-dynamic.h:
 
@@ -1638,21 +1656,13 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
 
-/usr/include/c++/15.2.1/ios:
-
-/usr/include/bits/thread-shared-types.h:
-
-/usr/include/c++/15.2.1/debug/debug.h:
-
-/usr/include/c++/15.2.1/type_traits:
-
 /usr/include/c++/15.2.1/bits/move.h:
 
 /usr/include/bits/types.h:
 
-/usr/include/bits/sched.h:
-
 /usr/include/features.h:
+
+/usr/include/bits/sched.h:
 
 /usr/include/bits/types/__FILE.h:
 
@@ -1782,8 +1792,6 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o:
 
 /usr/include/pthread.h:
 
-CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o:
-
 /usr/include/wctype.h:
 
 /usr/include/sched.h:
@@ -1809,8 +1817,6 @@ CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o:
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h:
-
-CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 
 /usr/include/string.h:
 

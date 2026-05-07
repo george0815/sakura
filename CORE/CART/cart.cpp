@@ -69,7 +69,7 @@ bool PARSE_FILE(string filename, CART &cartridge) {
   cartridge.USES_BATTERY_BACKED_SRAM = (cartridge.HEADER.FLAGS_6 & 0x02) != 0;
   const bool four = cartridge.HEADER.FLAGS_6 & 0x08;
 
-  cartridge.MIRRORING =
+  cartridge.MIRROR_MODE =
       four ? MIRRORING::FOUR_SCREEN
            : (vert ? MIRRORING::VERTICAL : MIRRORING::HORIZONTAL);
 
