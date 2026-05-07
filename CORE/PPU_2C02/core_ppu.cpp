@@ -2,6 +2,7 @@
 #include "../CPU_6502/core.h"
 
 #include <algorithm>
+#include <cstdint>
 
 const uint32_t NES_PALETTE[64] = {
     0x666666, 0x002A88, 0x1412A7, 0x3B00A4, 0x5C007E, 0x6E0040, 0x6C0600,
@@ -156,4 +157,52 @@ void PPU_2C02::TRANSFER_ADDRESS_Y() {
 
   VRAM_ADDR = (VRAM_ADDR & ~(0x0800 | COARSE_Y_MASK | FINE_Y_MASK)) |
               (TEMP_ADDR & (0x0800 | COARSE_Y_MASK | FINE_Y_MASK));
+}
+
+void PPU_2C02::LOAD_BACKGROUND_SHIFTERS() {
+  BG_PATTERN_SHIFT_LO = (BG_PATTERN_SHIFT_LO & 0xFF00) | NEXT_TILE_LSB;
+  BG_PATTERN_SHIFT_HI = (BG_PATTERN_SHIFT_HI & 0xFF00) | NEXT_TILE_MSB;
+
+  const uint8_t palette_bits = NEXT_TILE_ATTR & 0x03;
+  BG_ATTR_SHIFT_LO =
+      (BG_ATTR_SHIFT_LO & 0xFF00) | ((palette_bits & 0x01) ? 0xFF : 0x00);
+  BG_ATTR_SHIFT_HI =
+      (BG_ATTR_SHIFT_HI & 0xFF00) | ((palette_bits & 0x02) ? 0xFF : 0x00);
+}
+
+void PPU_2C02::UPDATE_BACKGROUND_SHIFTERS() {
+  if (!(MASK & SHOW_BACKGROUND_BIT)) {
+    return;
+  }
+
+  BG_PATTERN_SHIFT_LO <<= 1;
+  BG_PATTERN_SHIFT_HI <<= 1;
+  BG_ATTR_SHIFT_LO <<= 1;
+  BG_ATTR_SHIFT_HI <<= 1;
+}
+
+PPU_2C02::BACKGROUND_PIXEL PPU_2C02::GEN_BACKGROUND_PIXEL() const {
+  BACKGROUND_PIXEL result{};
+
+  const uint16_t bit_mux = (0x8000 >> FINE_X);
+  const uint8_t pixel_lo = (BG_PATTERN_SHIFT_LO & bit_mux) ? 1 : 0;
+  const uint8_t pixel_hi = (BG_PATTERN_SHIFT_HI & bit_mux) ? 1 : 0;
+  result.pixel = (pixel_hi << 1) | pixel_lo;
+
+  const uint8_t attr_lo = (BG_ATTR_SHIFT_LO & bit_mux) ? 1 : 0;
+  const uint8_t attr_hi = (BG_ATTR_SHIFT_HI & bit_mux) ? 1 : 0;
+  result.palette_select = (attr_hi << 1) | attr_lo;
+
+  if (result.pixel == 0) {
+    result.color_idx = palette_read(PALETTE_BASE);
+    return result;
+  }
+
+  result.color_idx =
+      palette_read(PALETTE_BASE + (result.palette_select) + result.pixel);
+  return result;
+}
+
+uint8_t PPU_2C02::SPRITE_HEIGHT() const {
+  return (CTRL & SPRITE_SIZE_BIT) ? 16 : 8;
 }

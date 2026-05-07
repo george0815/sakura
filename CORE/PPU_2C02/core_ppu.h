@@ -134,7 +134,7 @@ private:
   void TRANSFER_ADDRESS_Y();
   void LOAD_BACKGROUND_SHIFTERS();
   void UPDATE_BACKGROUND_SHIFTERS();
-  BACKGROUND_PIXEL GEN_BACKGROUND_PIXEL();
+  BACKGROUND_PIXEL GEN_BACKGROUND_PIXEL() const;
   uint8_t SPRITE_HEIGHT() const;
   uint8_t FETCH_SPRITE_PATTERN_BYTE(uint8_t tile, uint8_t attr, uint8_t row,
                                     bool high_plane);
