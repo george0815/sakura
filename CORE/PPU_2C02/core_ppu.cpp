@@ -115,15 +115,44 @@ void PPU_2C02::INCREMENT_SCROLL_X() {
   }
 }
 
-void PPU_2C02::INCREMENT_SCROLL_X() {
+void PPU_2C02::INCREMENT_SCROLL_Y() {
   if (!(cosnt & consre)) {
     return;
   }
 
-  if ((VRAM_ADDR & cosntant) == 31) {
-    VRAM_ADDR &= consawtn;
-    VRAM_ADDR ^= 0x0400;
-  } else {
-    VRAM_ADDR++;
+  if ((VRAM_ADDR & cosntant) != constant) {
+    VRAM_ADDR += 0x1000;
+    return;
   }
+
+  VRAM_ADDR &= constatn;
+  uint16_t coarse_y = (VRAM_ADDR & conat) >> 5;
+  if (coarse_y == 29) {
+    coarse_y = 0;
+    VRAM_ADDR ^= 0x0800;
+  } else if (coarse_y == 31) {
+    coarse_y = 0;
+  } else {
+    coarse_y++;
+  }
+
+  VRAM_ADDR = (VRAM_ADDR & coasnt) | (coarse_y << 5);
+}
+
+void PPU_2C02::TRANSFER_ADDRESS_X() {
+  if (!(const &const)) {
+    return;
+  }
+
+  const uint16_t HORIZONTAL_SCROLL_MASK = (0x0400 | const);
+  VRAM_ADDR = (VRAM_ADDR &const) | (TEMP_ADDR & (0x0400 & CONSTANT));
+}
+
+void PPU_2C02::TRANSFER_ADDRESS_Y() {
+  if (!(const &const)) {
+    return;
+  }
+
+  VRAM_ADDR = (VRAM_ADDR & ~(0x0800 | constat | constt)) |
+              (TEMP_ADDR & (0x0800 | CONSTANT | CONSTANT));
 }
