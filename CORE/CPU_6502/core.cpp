@@ -29,7 +29,7 @@ void CPU_6502::BRANCH(uint16_t target, bool condition) {
 void CPU_6502::RESET_HANDLER() {
 
   // clear status register except unused bit
-  STATUS_REGISTER = 0x00 | UNUSED;
+  STATUS_REGISTER = 0x00 | UNUSED | INTERRUPT_DISABLE;
 
   // clear other registers
   A = 0x00;
@@ -147,7 +147,7 @@ void CPU_6502::step() {
     cout << "A:" << hex << (int)A << " ";
     cout << "X:" << hex << (int)X << " ";
     cout << "Y:" << hex << (int)Y << " ";
-    cout << "P:" << (int)STATUS_REGISTER << " ";
+    cout << "P:" << hex << (int)STATUS_REGISTER << " ";
     cout << "SP:" << hex << (int)SP << endl;
 
     // Execute instruction
@@ -171,14 +171,15 @@ uint8_t CPU_6502::pull() {
   return data;
 }
 
-// Helper function for getting flags
-void CPU_6502::GET_FLAG() {}
-
 // Helper function for setting flags
 void CPU_6502::SET_FLAG(STATUS value, bool condition) {
 
+  // cout << " " << to_string(value) << " :" << to_string(condition) << endl;
+
+  // cout << "P:" << (int)STATUS_REGISTER << " " << endl;
   STATUS_REGISTER =
-      condition ? STATUS_REGISTER | (value) : STATUS_REGISTER | (~value);
+      condition ? (STATUS_REGISTER | (value)) : (STATUS_REGISTER & (~value));
+  //  cout << "P:" << (int)STATUS_REGISTER << " " << endl;
 }
 
 void CPU_6502::connect_bus(BUS *b) {

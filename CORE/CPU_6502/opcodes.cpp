@@ -54,7 +54,11 @@ void CPU_6502::BCC(uint16_t addr) { BRANCH(addr, !GET_FLAG(CARRY)); }
 
 // Branch if carry set, if the carry is set then branches by adding the offset
 // to the PC, offset is signed and has a range of -128 -> 127
-void CPU_6502::BCS(uint16_t addr) { BRANCH(addr, GET_FLAG(CARRY)); }
+void CPU_6502::BCS(uint16_t addr) {
+  // cout << " CARRY: " << to_string(GET_FLAG(CARRY)) << endl;
+
+  BRANCH(addr, GET_FLAG(CARRY));
+}
 
 // Branch if equal, if the zero flag is set then branches by adding the offset
 // to the PC, offset is signed and has a range of -128 -> 127
@@ -115,15 +119,19 @@ void CPU_6502::BRK(uint16_t addr) {
 }
 
 // Clear carry, clears the carry flag
-void CPU_6502::CLC(uint16_t addr) { SET_FLAG(CARRY, false); }
+void CPU_6502::CLC(uint16_t addr) {
+  SET_FLAG(CARRY, false);
 
-// Clear carry, clears the decimal flag
+  //  cout << " CARRY: " << to_string(GET_FLAG(CARRY)) << endl;
+}
+
+// Clear decimal, clears the decimal flag
 void CPU_6502::CLD(uint16_t addr) { SET_FLAG(DECIMAL, false); }
 
-// Clear carry, clears the interrupt disable flag
+// Clear interrupt disable, clears the interrupt disable flag
 void CPU_6502::CLI(uint16_t addr) { SET_FLAG(INTERRUPT_DISABLE, false); }
 
-// Clear carry, clears the overflow flag
+// Clear overflow, clears the overflow flag
 void CPU_6502::CLV(uint16_t addr) { SET_FLAG(OVERFLOW, false); }
 
 // Compare A, compares the accumulator to a memory value

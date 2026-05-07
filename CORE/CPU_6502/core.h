@@ -97,7 +97,7 @@ public:
   bool GET_FLAG(STATUS value);
 
   // status register
-  uint8_t STATUS_REGISTER = 0x00 | STATUS::UNUSED;
+  uint8_t STATUS_REGISTER = 0x00 | STATUS::UNUSED | STATUS::INTERRUPT_DISABLE;
 
   // Read and write
   uint8_t read(uint16_t addr);
