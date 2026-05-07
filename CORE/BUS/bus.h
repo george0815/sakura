@@ -27,7 +27,6 @@ public:
   void connect_cpu(CPU_6502 &cpu);
   void connect_ppu(PPU_2C02 &ppu);
   void step();
-
   // READ/WRITE
   uint8_t read(uint16_t addr);
   void write(uint16_t addr, uint8_t data);
