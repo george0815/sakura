@@ -43,6 +43,23 @@ uint8_t BUS::read(uint16_t addr) {
                                    // as your dealing with binary numbers)
   }
 
+  else if (addr > 0x2000 && addr <= 0x3FFF) {
+    const uint16_t reg = 0x2000 + (addr & 0x0007);
+
+    if (reg == 0x2002 || reg == 0x2004 || reg == 0x2007) {
+      if (PPU) {
+        return PPU->cpu_read(reg);
+      }
+    }
+    return SHADOW[reg];
+  }
+
+  if (addr < 0x8000) {
+    if (addr >= 0x6000 && !PRG_RAM.empty()) {
+      return PRG_RAM[addr - 0x6000];
+    }
+  }
+
   else if (addr > 0x8000) {
 
     // If ROM size is 16KB (0x4000 = 16KB)
@@ -68,13 +85,60 @@ uint8_t BUS::read(uint16_t addr) {
                               // CPU wont try an address thats out of range
     }
   }
+  if (MAPPER) {
+    return MAPPER->ppu_read(addr);
+  }
+
+  return 0;
 }
 
 void BUS::write(uint16_t addr, uint8_t data) {
 
   // If address falls into the 8KB addressable range for internal CPU CPU_RAM
-  if (addr < 0x2000)
+  if (addr < 0x2000) {
     CPU_RAM[addr & 0x07FF] = data; // here we mirror it every 2KB again
+  }
+
+  else if (addr > 0x2000 && addr <= 0x3FFF) {
+    const uint16_t reg = 0x2000 + (addr & 0x0007);
+
+    SHADOW[reg] = data;
+
+    if (PPU) {
+      PPU->cpu_write(reg, data);
+    }
+
+    return;
+  }
+
+  if (addr == 0x4014) {
+    SHADOW[addr] = data;
+    if (PPU) {
+      const uint16_t page_base = data << 8;
+      for (uint16_t offset = 0; offset < 0x0100; ++offset) {
+        PPU->oam_dma_write(read(page_base + offset));
+      }
+    }
+    return;
+  }
+
+  if (addr < 0x8000) {
+    if (addr >= 0x6000 && !PRG_RAM.empty()) {
+      PRG_RAM[addr - 0x6000] = data;
+    } else {
+      SHADOW[addr] = data;
+    }
+    if (MAPPER && addr >= 0x6000) {
+      MAPPER->cpu_write(addr, data);
+    }
+    return;
+  }
+
+  if (MAPPER) {
+    MAPPER->cpu_write(addr, data);
+  }
+
+  return;
 }
 
 void BUS::connect_cpu(CPU_6502 &cpu) {
