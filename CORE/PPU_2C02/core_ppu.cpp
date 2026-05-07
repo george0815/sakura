@@ -3,6 +3,7 @@
 
 #include <algorithm>
 #include <cstdint>
+#include <pthread.h>
 
 const uint32_t NES_PALETTE[64] = {
     0x666666, 0x002A88, 0x1412A7, 0x3B00A4, 0x5C007E, 0x6E0040, 0x6C0600,
@@ -206,3 +207,16 @@ PPU_2C02::BACKGROUND_PIXEL PPU_2C02::GEN_BACKGROUND_PIXEL() const {
 uint8_t PPU_2C02::SPRITE_HEIGHT() const {
   return (CTRL & SPRITE_SIZE_BIT) ? 16 : 8;
 }
+
+uint8_t PPU_2C02::FETCH_SPRITE_PATTERN_BYTE(uint8_t tile, uint8_t attr,
+                                            uint8_t row, bool high_plane) {}
+
+void PPU_2C02::EVALUATE_SPRITES_FOR_SCANLINE(int target_scanline) {}
+
+PPU_2C02::SPRITE_PIXEL PPU_2C02::GEN_SPRITE_PIXEL(int x) const {}
+
+uint8_t PPU_2C02::cpu_read(uint16_t addr) {}
+
+void PPU_2C02::cpu_write(uint16_t addr, uint8_t data) {}
+
+void PPU_2C02::step() {}
