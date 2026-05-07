@@ -64,6 +64,21 @@ bool PARSE_FILE(string filename, CART &cartridge) {
   cout << "NES\n";
   return true;
 
-  // Parse flags, this is mainly for the PPU, and since I want a fully working
-  // CPU, I'll implement this later
+  // Parse flags, this is mainly for the PPU
+  const bool vert = cartridge.HEADER.FLAGS_6 & 0x01;
+  cartridge.USES_BATTERY_BACKED_SRAM = (cartridge.HEADER.FLAGS_6 & 0x02) != 0;
+  const bool four = cartridge.HEADER.FLAGS_6 & 0x08;
+
+  cartridge.MIRRORING =
+      four ? MIRRORING::FOUR_SCREEN
+           : (vert ? MIRRORING::VERTICAL : MIRRORING::HORIZONTAL);
+
+  cartridge.PRG_RAM_SIZE =
+      (cartridge.HEADER.FLAGS_8
+           ? cartridge.HEADER.FLAGS_8 * PRG_RAM_SIZE
+           : (cartridge.USES_BATTERY_BACKED_SRAM ? PRG_RAM_SIZE : 0));
+
+  cartridge.MAPPER_ID =
+      ((cartridge.HEADER.FLAGS_6 >> 4) | (cartridge.HEADER.FLAGS_7 & 0xF0));
+  return true;
 }
