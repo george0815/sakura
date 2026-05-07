@@ -15,7 +15,8 @@ int main(int arc, char *argv[]) {
 
   CART cart;
 
-  int test = PARSE_FILE("nestest.nes", cart);
+  int test = PARSE_FILE("smb.nes", cart);
+  // int test = PARSE_FILE("nestest.nes", cart);
 
   bus.insert_cartridge(cart);
   bus.connect_cpu(cpu);

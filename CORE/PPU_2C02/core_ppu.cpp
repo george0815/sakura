@@ -59,7 +59,7 @@ uint16_t PPU_2C02::MIRROR_ADDR(uint16_t addr) const {
     table = 1;
     break;
   }
-  return (table * NAMETABLE_SIZE * offset);
+  return (table * NAMETABLE_SIZE + offset);
 }
 
 uint8_t PPU_2C02::ppu_read(uint16_t addr) {
