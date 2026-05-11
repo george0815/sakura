@@ -16,6 +16,25 @@ class PPU_2C02;
 class BUS {
 
 public:
+  enum CONTROLLER_BUTTON {
+
+    A = 0,
+    B = 1,
+    SELECT = 2,
+    START = 3,
+    UP = 4,
+    DOWN = 5,
+    LEFT = 6,
+    RIGHT = 7
+
+  };
+
+  void SET_CONTROLLER_BUTTON(int port, CONTROLLER_BUTTON button, bool pressed);
+
+  bool CONTROLLER_STROBE = false;
+  array<uint8_t, 2> CONTROLLER_STATE{};
+  array<uint8_t, 2> CONTROLLER_SHIFT{};
+
   // CPU has access to 2KB of internal RAM, its fixed so I'll be using an array
   array<uint8_t, 0x0800> CPU_RAM;
 

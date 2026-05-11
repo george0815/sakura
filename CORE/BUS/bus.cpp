@@ -54,6 +54,13 @@ uint8_t BUS::read(uint16_t addr) {
     return SHADOW[reg];
   }
 
+  if (addr == 0x4016 || addr == 0x4017) {
+    const int port = (addr == 0x4016) ? 0 : 1;
+    if (CONTROLLER_STROBE) {
+      return CONTROLLER_STATE[port] & 0x01;
+    }
+  }
+
   if (addr < 0x8000) {
     if (addr >= 0x6000 && !PRG_RAM.empty()) {
       return PRG_RAM[addr - 0x6000];
@@ -97,6 +104,13 @@ void BUS::write(uint16_t addr, uint8_t data) {
     return;
   }
 
+  if (addr == 0x4016) {
+    SHADOW[addr] = data;
+    CONTROLLER_STROBE = (data & 0x01) != 0;
+    CONTROLLER_SHIFT = CONTROLLER_STATE;
+    return;
+  }
+
   if (addr < 0x8000) {
     if (addr >= 0x6000 && !PRG_RAM.empty()) {
       PRG_RAM[addr - 0x6000] = data;
@@ -131,6 +145,24 @@ void BUS::connect_ppu(PPU_2C02 &ppu) {
     PPU->connect_cpu(CPU);
   }
   cout << "BUS <- PPU\n" << endl;
+}
+
+void BUS::SET_CONTROLLER_BUTTON(int port, CONTROLLER_BUTTON button,
+                                bool pressed) {
+  if (port < 0 || port >= CONTROLLER_STATE.size()) {
+    return;
+  }
+
+  const uint8_t mask = 1u << button;
+  if (pressed) {
+    CONTROLLER_STATE[port] |= mask;
+  } else {
+    CONTROLLER_STATE[port] &= ~mask;
+  }
+
+  if (CONTROLLER_STROBE) {
+    CONTROLLER_SHIFT[port] = CONTROLLER_STATE[port];
+  }
 }
 
 void BUS::insert_cartridge(CART &cart) {
