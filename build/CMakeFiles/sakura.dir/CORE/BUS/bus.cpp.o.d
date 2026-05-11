@@ -116,10 +116,9 @@ CMakeFiles/sakura.dir/CORE/BUS/bus.cpp.o: \
  /usr/include/c++/15.2.1/bits/charconv.h \
  /usr/include/c++/15.2.1/bits/basic_string.tcc \
  /home/Hunter/Documents/Github/sakura/CORE/BUS/../CPU_6502/core.h \
- /home/Hunter/Documents/Github/sakura/CORE/BUS/../PPU_2C02/core_ppu.h \
- /usr/include/c++/15.2.1/iostream /usr/include/c++/15.2.1/ostream \
- /usr/include/c++/15.2.1/bits/ostream.h /usr/include/c++/15.2.1/ios \
- /usr/include/c++/15.2.1/exception \
+ /home/Hunter/Documents/Github/sakura/CORE/BUS/../CPU_6502/../LOGGER/logger.h \
+ /usr/include/c++/15.2.1/fstream /usr/include/c++/15.2.1/istream \
+ /usr/include/c++/15.2.1/ios /usr/include/c++/15.2.1/exception \
  /usr/include/c++/15.2.1/bits/exception_ptr.h \
  /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h \
  /usr/include/c++/15.2.1/typeinfo \
@@ -158,5 +157,12 @@ CMakeFiles/sakura.dir/CORE/BUS/bus.cpp.o: \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h \
  /usr/include/c++/15.2.1/bits/locale_facets.tcc \
  /usr/include/c++/15.2.1/bits/basic_ios.tcc \
- /usr/include/c++/15.2.1/bits/ostream.tcc /usr/include/c++/15.2.1/istream \
- /usr/include/c++/15.2.1/bits/istream.tcc
+ /usr/include/c++/15.2.1/ostream /usr/include/c++/15.2.1/bits/ostream.h \
+ /usr/include/c++/15.2.1/bits/ostream.tcc \
+ /usr/include/c++/15.2.1/bits/istream.tcc \
+ /usr/include/c++/15.2.1/bits/codecvt.h \
+ /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/include/c++/15.2.1/bits/fstream.tcc \
+ /usr/include/c++/15.2.1/iostream \
+ /home/Hunter/Documents/Github/sakura/CORE/BUS/../PPU_2C02/core_ppu.h

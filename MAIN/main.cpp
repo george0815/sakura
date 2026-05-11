@@ -1,8 +1,10 @@
 #include "main.h"
 #include "../CORE/CART/cart.h"
+#include "../CORE/LOGGER/logger.h"
 #include "./render.h"
-
 #include <SDL2/SDL_events.h>
+#include <SDL2/SDL_timer.h>
+#include <cstdint>
 #include <iostream>
 
 using namespace std;
@@ -13,29 +15,32 @@ int main(int arc, char *argv[]) {
     return -1;
   }
 
-  CART cart;
+  const double TARGET_FRAME_MS = 1000.0 / 60.0988;
 
-  // int test = PARSE_FILE("smb.nes", cart);
-  int test = PARSE_FILE("nestest.nes", cart);
+  CART cart;
+  LOGGER *logger = new LOGGER(false);
+
+  int test = PARSE_FILE("smb.nes", cart);
+  // int test = PARSE_FILE("nestest.nes", cart);
 
   bus.insert_cartridge(cart);
   cpu.connect_bus(&bus);
   bus.connect_cpu(cpu);
   bus.connect_ppu(ppu);
+
   cpu.RESET_HANDLER();
+
+  cpu.init_logger(logger);
 
   bool running = true;
 
   SDL_Event event;
 
   cout << "\nDONE" << endl;
-  int counter = 0;
 
   while (running) {
 
-    if (counter >= 1000000000) {
-      break;
-    }
+    uint64_t start = SDL_GetTicks64();
 
     while (SDL_PollEvent(&event)) {
       if (event.type == SDL_QUIT) {
@@ -45,20 +50,16 @@ int main(int arc, char *argv[]) {
 
     while (!ppu.FRAME_COMPLETE()) {
       cpu.step();
-      if (cpu.CYCLES > 0) {
-        cpu.step();
-      }
-
-      if (counter >= 1000000000) {
-        break;
-      }
-      counter++;
     }
-
-    cout << "COUNTER:" << to_string(counter) << endl;
 
     ppu.CLEAR_FRAME_FLAG();
 
     render_frame(ppu.FRAMEBUFFER_DATA());
+
+    uint64_t elapsed = SDL_GetTicks64() - start;
+
+    if (elapsed < TARGET_FRAME_MS) {
+      SDL_Delay((uint32_t)TARGET_FRAME_MS - elapsed);
+    }
   }
 }

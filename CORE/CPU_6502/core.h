@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../BUS/bus.h"
+#include "../LOGGER/logger.h"
 #include <array>
 #include <cstdint>
 #include <string>
@@ -13,6 +14,24 @@ class CPU_6502 {
 public:
   // Builds lookup table on initialization
   CPU_6502();
+
+  // Struct representing an opcode, this is so that an opcode's corresponding
+  // instruction and addressing mode can be called easily in the CPU's clock
+  // function without having a huge fucking switch statement
+  struct OPCODE {
+
+    const char *mnemonic; // used for logging
+
+    int cycles; // number of cycles, some instructions may take multiple cycles
+                // so its important to know
+
+    int bytes; // amount of bytes the instruction takes, used for debugging
+
+    void (CPU_6502::*opcode)(uint16_t); // pointer to the opcode's instruction
+
+    uint16_t (CPU_6502::*addr_mode)(
+        void); // pointer to the opcode's addressing mode
+  };
 
   // Builds lookup table, which is basically an vector of INSTRUCTION structs
   // using the opcode as the index
@@ -37,12 +56,18 @@ public:
   // bus, the bus is basically the motherboard of the NES
   BUS *B;
 
+  // Logger instance
+  LOGGER *LOGGER_INSTANCE;
+
   // bool for detecting whether a page has been crossed, used by addressing
   // modes
   bool PAGE_CROSSED = false;
 
   // connects bus, will implement later
   void connect_bus(BUS *bus);
+
+  // sets up logger
+  void init_logger(LOGGER *logger);
 
   // 2 byte program counter, holds the address of the next opcode to be executed
   uint16_t PC = 0xC000;
@@ -205,24 +230,6 @@ private:
   void TAS(uint16_t addr);
   void XAA(uint16_t addr);
   void LXA(uint16_t addr);
-
-  // Struct representing an opcode, this is so that an opcode's corresponding
-  // instruction and addressing mode can be called easily in the CPU's clock
-  // function without having a huge fucking switch statement
-  struct OPCODE {
-
-    const char *mnemonic; // used for logging
-
-    int cycles; // number of cycles, some instructions may take multiple cycles
-                // so its important to know
-
-    int bytes; // amount of bytes the instruction takes, used for debugging
-
-    void (CPU_6502::*opcode)(uint16_t); // pointer to the opcode's instruction
-
-    uint16_t (CPU_6502::*addr_mode)(
-        void); // pointer to the opcode's addressing mode
-  };
 
   // Lookup table, this is basically the brain of the implementation, it is an
   // array of OPCODE structs using the opcode as the index for each execution of

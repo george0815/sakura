@@ -90,8 +90,8 @@ uint16_t CPU_6502::RELATIVE() {
 // Then a new address is constructed
 // Using that new address, I read in another hi byte then low byte to construct
 // another address
-// This is then added to the program counter then excecution procceeds from
-// there
+// The program counter is then set to the new address then excecution procceeds
+// from there
 
 uint16_t CPU_6502::INDIRECT() {
 
@@ -130,7 +130,7 @@ uint16_t CPU_6502::INDIRECT() {
 
   uint16_t new_addr = (new_hi << 8) | new_lo; // combine final address
 
-  return PC + new_addr; // add to program counter then return
+  return new_addr; // add to program counter then return
 }
 
 // INDEXED ADDRESSING MODES

@@ -12,6 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sakura.dir/CORE/CPU_6502/core.cpp.o.d"
   "CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o"
   "CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o.d"
+  "CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.o"
+  "CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.o.d"
   "CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.o"
   "CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.o.d"
   "CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o"

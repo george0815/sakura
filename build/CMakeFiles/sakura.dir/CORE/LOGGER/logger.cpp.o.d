@@ -1,10 +1,7 @@
-CMakeFiles/sakura.dir/CORE/CART/cart.cpp.o: \
- /home/Hunter/Documents/Github/sakura/CORE/CART/cart.cpp \
+CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.o: \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/logger.cpp \
  /usr/include/stdc-predef.h \
- /home/Hunter/Documents/Github/sakura/CORE/CART/cart.h \
- /home/Hunter/Documents/Github/sakura/CORE/CART/../BUS/bus.h \
- /home/Hunter/Documents/Github/sakura/CORE/CART/../BUS/../CPU_6502/core.h \
- /home/Hunter/Documents/Github/sakura/CORE/CART/../BUS/../CPU_6502/../LOGGER/logger.h \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/logger.h \
  /usr/include/c++/15.2.1/fstream \
  /usr/include/c++/15.2.1/bits/requires_hosted.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -154,17 +151,4 @@ CMakeFiles/sakura.dir/CORE/CART/cart.cpp.o: \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
  /usr/include/c++/15.2.1/bits/fstream.tcc \
- /usr/include/c++/15.2.1/iostream /usr/include/c++/15.2.1/array \
- /usr/include/c++/15.2.1/compare /usr/include/c++/15.2.1/cstdint \
- /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
- /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h \
- /home/Hunter/Documents/Github/sakura/CORE/CART/../BUS/../MAPPERS/mapper.h \
- /usr/include/c++/15.2.1/vector \
- /usr/include/c++/15.2.1/bits/stl_uninitialized.h \
- /usr/include/c++/15.2.1/bits/stl_vector.h \
- /usr/include/c++/15.2.1/bits/stl_bvector.h \
- /usr/include/c++/15.2.1/bits/vector.tcc \
- /home/Hunter/Documents/Github/sakura/CORE/CART/../BUS/../PPU_2C02/core_ppu.h \
- /usr/include/c++/15.2.1/cstring /usr/include/string.h \
- /usr/include/strings.h
+ /usr/include/c++/15.2.1/iostream

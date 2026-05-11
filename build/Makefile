@@ -274,6 +274,30 @@ CORE/CPU_6502/opcodes.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.s
 .PHONY : CORE/CPU_6502/opcodes.cpp.s
 
+CORE/LOGGER/logger.o: CORE/LOGGER/logger.cpp.o
+.PHONY : CORE/LOGGER/logger.o
+
+# target to build an object file
+CORE/LOGGER/logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.o
+.PHONY : CORE/LOGGER/logger.cpp.o
+
+CORE/LOGGER/logger.i: CORE/LOGGER/logger.cpp.i
+.PHONY : CORE/LOGGER/logger.i
+
+# target to preprocess a source file
+CORE/LOGGER/logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.i
+.PHONY : CORE/LOGGER/logger.cpp.i
+
+CORE/LOGGER/logger.s: CORE/LOGGER/logger.cpp.s
+.PHONY : CORE/LOGGER/logger.s
+
+# target to generate assembly for a file
+CORE/LOGGER/logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.s
+.PHONY : CORE/LOGGER/logger.cpp.s
+
 CORE/MAPPERS/mapper0.o: CORE/MAPPERS/mapper0.cpp.o
 .PHONY : CORE/MAPPERS/mapper0.o
 
@@ -421,6 +445,9 @@ help:
 	@echo "... CORE/CPU_6502/opcodes.o"
 	@echo "... CORE/CPU_6502/opcodes.i"
 	@echo "... CORE/CPU_6502/opcodes.s"
+	@echo "... CORE/LOGGER/logger.o"
+	@echo "... CORE/LOGGER/logger.i"
+	@echo "... CORE/LOGGER/logger.s"
 	@echo "... CORE/MAPPERS/mapper0.o"
 	@echo "... CORE/MAPPERS/mapper0.i"
 	@echo "... CORE/MAPPERS/mapper0.s"

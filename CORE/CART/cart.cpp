@@ -62,7 +62,6 @@ bool PARSE_FILE(string filename, CART &cartridge) {
 
   // For testing TODO REMOVE LATER
   cout << "NES\n";
-  return true;
 
   // Parse flags, this is mainly for the PPU
   const bool vert = cartridge.HEADER.FLAGS_6 & 0x01;
@@ -80,5 +79,11 @@ bool PARSE_FILE(string filename, CART &cartridge) {
 
   cartridge.MAPPER_ID =
       ((cartridge.HEADER.FLAGS_6 >> 4) | (cartridge.HEADER.FLAGS_7 & 0xF0));
+
+  // printf("Mapper: %d\n", cartridge.MAPPER_ID);
+  // printf("PRG_SIZE: %zu\n", cartridge.PRG.size());
+  // printf("RESET VECTOR: %02X %02X\n", cartridge.PRG[0x7FFC],
+  //       cartridge.PRG[0x7FFD]);
+
   return true;
 }

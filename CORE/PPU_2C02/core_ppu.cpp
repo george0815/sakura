@@ -533,13 +533,13 @@ void PPU_2C02::step() {
 
   if (CYCLES >= PPU_CYCLES_PER_LINE) {
     CYCLES = 0;
-    cout << "CYCLES CLEAR" << endl;
+    // cout << "CYCLES CLEAR" << endl;
     SCANLINE++;
   }
 
   if (SCANLINE == 241 && CYCLES == 1) {
     STATUS |= VBLANK_BIT;
-    cout << "VBLANK SET" << endl;
+    // cout << "VBLANK SET" << endl;
     FRAME_DONE = true;
     if (CPU && (CTRL & NMI_ENABLE_BIT)) {
       CPU->NMI_HANDLER();
@@ -548,7 +548,7 @@ void PPU_2C02::step() {
 
   if (SCANLINE == 261 && CYCLES == 1) {
     STATUS &= ~VBLANK_BIT;
-    cout << "VBLANK CLEAR" << endl;
+    //  cout << "VBLANK CLEAR" << endl;
   }
 
   if (SCANLINE >= PPU_SCANLINES) {

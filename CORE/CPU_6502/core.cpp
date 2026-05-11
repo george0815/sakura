@@ -1,6 +1,8 @@
 #include "core.h"
 #include <cstdint>
+#include <iomanip>
 #include <iostream>
+#include <sstream>
 #include <string>
 
 using namespace std;
@@ -129,27 +131,33 @@ void CPU_6502::step() {
   if (CYCLES == 0) {
 
     // DEBUG LOGS
-    cout << uppercase << hex << PC << " ";
+    stringstream temp_buffer;
+    // temp_buffer << "PC: " << hex << uppercase << hex << PC << setw(10);
 
     // fetch instruction using PC
     uint8_t opcode_byte = read(PC++);
     OPCODE &op = LOOKUP[opcode_byte];
 
-    cout << hex << uppercase << (int)opcode_byte << " " << op.mnemonic << " $";
+    // temp_buffer << "OPCODE: " << hex << uppercase << (int)opcode_byte << " "
+    //<< op.mnemonic << " $";
+
     // Reset page crossed
     PAGE_CROSSED = false;
 
     // Execute addressing mode function
     uint16_t addr = (this->*op.addr_mode)();
-    cout << hex << uppercase << addr << "          ";
+    // temp_buffer << hex << uppercase << addr << setw(10);
+
     // Set cycles
     CYCLES = op.cycles;
-
-    cout << "A:" << hex << (int)A << " ";
-    cout << "X:" << hex << (int)X << " ";
-    cout << "Y:" << hex << (int)Y << " ";
-    cout << "P:" << hex << (int)STATUS_REGISTER << " ";
-    cout << "SP:" << hex << (int)SP << endl;
+    /*
+        temp_buffer << "A:" << hex << (int)A << " ";
+        temp_buffer << "X:" << hex << (int)X << " ";
+        temp_buffer << "Y:" << hex << (int)Y << " ";
+        temp_buffer << "P:" << hex << (int)STATUS_REGISTER << " ";
+        temp_buffer << "SP:" << hex << (int)SP;
+        LOGGER_INSTANCE->LOG("", temp_buffer.str());
+        temp_buffer.clear(); */
 
     // Execute instruction
     (this->*op.opcode)(addr);
@@ -181,18 +189,16 @@ uint8_t CPU_6502::pull() {
 // Helper function for setting flags
 void CPU_6502::SET_FLAG(STATUS value, bool condition) {
 
-  // cout << " " << to_string(value) << " :" << to_string(condition) << endl;
-
-  // cout << "P:" << (int)STATUS_REGISTER << " " << endl;
   STATUS_REGISTER =
       condition ? (STATUS_REGISTER | (value)) : (STATUS_REGISTER & (~value));
-  //  cout << "P:" << (int)STATUS_REGISTER << " " << endl;
 }
 
 void CPU_6502::connect_bus(BUS *b) {
   B = b;
   cout << "CPU <- BUS";
 }
+
+void CPU_6502::init_logger(LOGGER *l) { LOGGER_INSTANCE = l; }
 
 // Helper function for getting flags
 bool CPU_6502::GET_FLAG(STATUS value) {
