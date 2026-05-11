@@ -43,7 +43,7 @@ uint8_t BUS::read(uint16_t addr) {
                                    // as your dealing with binary numbers)
   }
 
-  else if (addr > 0x2000 && addr <= 0x3FFF) {
+  else if (addr >= 0x2000 && addr <= 0x3FFF) {
     const uint16_t reg = 0x2000 + (addr & 0x0007);
 
     if (reg == 0x2002 || reg == 0x2004 || reg == 0x2007) {
@@ -60,33 +60,8 @@ uint8_t BUS::read(uint16_t addr) {
     }
   }
 
-  else if (addr > 0x8000) {
-
-    // If ROM size is 16KB (0x4000 = 16KB)
-    if (PRG_ROM.size() == 0x4000) {
-      return PRG_ROM
-          [addr &
-           0x3FFF]; // here I use the same principle discussed earlier, &
-                    // 0x3FFF mirrors the addr every 16kb, so for every 16kb
-                    // the address starts from 0 again
-                    // 1. To properly emulate hardware behavior, since thats
-                    // what the NES will do if it the address is outside the
-                    // 16KB range for a 16KB ROM
-                    // 2. To make the index fit into the PRG_ROM vector rnage
-    }
-    // If ROM size is 32KB
-    else if (PRG_ROM.size() > 0x4000) {
-      return PRG_ROM[addr -
-                     0x8000]; // I subtract 0x8000 here because the PRG_ROM
-                              // vector starts at index 0, but the CPU is
-                              // addressing from 0x8000, so I'm normalizing
-                              // the index I don't mirror here because the ROM
-                              // in this situation is already 32 KB, so the
-                              // CPU wont try an address thats out of range
-    }
-  }
   if (MAPPER) {
-    return MAPPER->ppu_read(addr);
+    return MAPPER->cpu_read(addr);
   }
 
   return 0;
@@ -99,7 +74,7 @@ void BUS::write(uint16_t addr, uint8_t data) {
     CPU_RAM[addr & 0x07FF] = data; // here we mirror it every 2KB again
   }
 
-  else if (addr > 0x2000 && addr <= 0x3FFF) {
+  else if (addr >= 0x2000 && addr <= 0x3FFF) {
     const uint16_t reg = 0x2000 + (addr & 0x0007);
 
     SHADOW[reg] = data;

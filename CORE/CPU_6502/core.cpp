@@ -11,14 +11,15 @@ using namespace std;
 // a page is crossed
 void CPU_6502::BRANCH(uint16_t target, bool condition) {
 
-  CYCLES++; // increment cycles
-
   if (condition) {
 
-    if (target && PAGE_MASK != PC && PAGE_MASK) { // check for page crossing
-      PAGE_CROSSED = true;
-      CYCLES++;    // increment cycle again
-      PC = target; // set PC to target
+    CYCLES++; // increment cycles
+
+    if ((target & PAGE_MASK) != (PC & PAGE_MASK)) { // check for page crossing
+      CYCLES++;                                     // increment cycle again
+      PC = target;                                  // set PC to target
+    } else {
+      PC = target;
     }
   }
 }
@@ -173,7 +174,7 @@ void CPU_6502::step() {
 uint8_t CPU_6502::pull() {
 
   SP++;
-  uint8_t data = read(0x0100);
+  uint8_t data = read(0x0100 + SP);
   return data;
 }
 

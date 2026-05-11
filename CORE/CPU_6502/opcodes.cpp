@@ -210,8 +210,8 @@ void CPU_6502::INC(uint16_t addr) {
 // Increment Y, 1 is added to the Y register
 void CPU_6502::INY(uint16_t addr) {
   Y++;
-  SET_FLAG(ZERO, X == 0);
-  SET_FLAG(NEGATIVE, X & 0x80);
+  SET_FLAG(ZERO, Y == 0);
+  SET_FLAG(NEGATIVE, Y & 0x80);
 }
 
 // Increment X, 1 is added to the X register
@@ -233,7 +233,7 @@ void CPU_6502::JMP(uint16_t addr) { PC = addr; }
 void CPU_6502::JSR(uint16_t addr) {
   PC--;
   push((PC >> 8));             // push PC hi
-  push((PC | ZERO_PAGE_MASK)); // push PC lo
+  push((PC & ZERO_PAGE_MASK)); // push PC lo
   PC = addr;
 }
 
@@ -265,13 +265,13 @@ void CPU_6502::LDY(uint16_t addr) {
 void CPU_6502::LSR(uint16_t addr) {
 
   if (LOOKUP[read(PC - 1)].addr_mode == &CPU_6502::ACCUMULATOR) {
-    SET_FLAG(CARRY, A & 0x10);
+    SET_FLAG(CARRY, A & 0x01);
     A >>= 1;
     SET_FLAG(ZERO, A == 0);
     SET_FLAG(NEGATIVE, false);
   } else {
     uint8_t data = read(addr);
-    SET_FLAG(CARRY, data & 0x10);
+    SET_FLAG(CARRY, data & 0x01);
     data >>= 1;
     write(addr, data);
     SET_FLAG(ZERO, data == 0);
@@ -390,7 +390,7 @@ void CPU_6502::SBC(uint16_t addr) {
   SET_FLAG(ZERO, (sum & ZERO_PAGE_MASK) == 0);
   SET_FLAG(OVERFLOW, (sum ^ A) & (sum & value) & 0x80);
   SET_FLAG(NEGATIVE, sum & 0x80);
-  A = sum;
+  A = sum & ZERO_PAGE_MASK;
 }
 
 // Set carry, sets the carry flag
@@ -515,7 +515,7 @@ void CPU_6502::LAX(uint16_t addr) {
 }
 
 void CPU_6502::DCP(uint16_t addr) {
-  uint8_t data = read(addr);
+  uint8_t data = read(addr) - 1;
   write(addr, data);
   uint16_t difference = A - data;
   SET_FLAG(CARRY, A >= data);
@@ -524,7 +524,7 @@ void CPU_6502::DCP(uint16_t addr) {
 }
 
 void CPU_6502::ISC(uint16_t addr) {
-  uint8_t data = read(addr) - 1;
+  uint8_t data = read(addr) + 1;
   write(addr, data);
   uint16_t value = data ^ ZERO_PAGE_MASK;
   uint16_t sum = A + value + (GET_FLAG(CARRY) ? 1 : 0);
@@ -542,7 +542,6 @@ void CPU_6502::ANC(uint16_t addr) {
   SET_FLAG(CARRY, A & 0x80);
   SET_FLAG(CARRY, A & 0x80);
 }
-
 void CPU_6502::ALR(uint16_t addr) {
   A = A & read(addr);
   SET_FLAG(CARRY, A & 0x01);
@@ -559,7 +558,7 @@ void CPU_6502::ARR(uint16_t addr) {
   SET_FLAG(OVERFLOW, ((result & 0x40) >> 6) ^ ((result & 0x20) >> 5));
   A = result;
   SET_FLAG(ZERO, A == 0);
-  SET_FLAG(ZERO, A & 0x80);
+  SET_FLAG(NEGATIVE, A & 0x80);
 }
 
 void CPU_6502::AXS(uint16_t addr) {
@@ -768,12 +767,12 @@ void CPU_6502::BUILD_LOOKUP() {
   INSERT_INSTRUCTION(0xF6, "INC", 6, &CPU_6502::INC,
                      &CPU_6502::ZERO_PAGE_INDEXED_X);
   INSERT_INSTRUCTION(0xEE, "INC", 6, &CPU_6502::INC, &CPU_6502::ABSOLUTE);
-  INSERT_INSTRUCTION(0xFF, "INC", 7, &CPU_6502::INC,
+  INSERT_INSTRUCTION(0xFE, "INC", 7, &CPU_6502::INC,
                      &CPU_6502::ABSOLUTE_INDEXED_X);
 
   // INX/INY
   INSERT_INSTRUCTION(0xE8, "INX", 2, &CPU_6502::INX, &CPU_6502::IMPLICIT);
-  INSERT_INSTRUCTION(0xC8, "INY", 2, &CPU_6502::INX, &CPU_6502::IMPLICIT);
+  INSERT_INSTRUCTION(0xC8, "INY", 2, &CPU_6502::INY, &CPU_6502::IMPLICIT);
 
   // JMP/JSR
   INSERT_INSTRUCTION(0x4C, "JMP", 3, &CPU_6502::JMP, &CPU_6502::ABSOLUTE);

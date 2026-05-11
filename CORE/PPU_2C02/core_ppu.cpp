@@ -1,17 +1,26 @@
 #include "./core_ppu.h"
 #include "../CPU_6502/core.h"
-
 #include <algorithm>
 #include <cinttypes>
 #include <cstdint>
+#include <iostream>
 #include <pthread.h>
+#include <string>
 #include <sys/types.h>
+
+using namespace std;
 
 const uint32_t NES_PALETTE[64] = {
     0x666666, 0x002A88, 0x1412A7, 0x3B00A4, 0x5C007E, 0x6E0040, 0x6C0600,
     0x561D00, 0x333500, 0x0B4800, 0x005200, 0x004F08, 0x00404D, 0x000000,
     0x000000, 0x000000, 0xADADAD, 0x155FD9, 0x4240FF, 0x7527FE, 0xA01ACC,
-    0xB71E7B, 0xB53120, 0x994E00
+    0xB71E7B, 0xB53120, 0x994E00, 0x6B6D00, 0x388700, 0x0E9300, 0x008F32,
+    0x007C8D, 0x000000, 0x000000, 0x000000, 0xFFFEFF, 0x64B0FF, 0x9290FF,
+    0xC676FF, 0xF36AFF, 0xFE6ECC, 0xFE8170, 0xEA9E22, 0xBCBE00, 0x88D800,
+    0x5CE430, 0x45E082, 0x48CDDE, 0x4F4F4F, 0x000000, 0x000000, 0xFFFEFF,
+    0xC0DFFF, 0xD3D2FF, 0xE8C8FF, 0xFBC2FF, 0xFEC4EA, 0xFECCC5, 0xF7D8A5,
+    0xE4E594, 0xCFEE96, 0xBDF4AB, 0xB3F3CC, 0xB5EBF2, 0xB8B8B8, 0x000000,
+    0x000000
 
 };
 
@@ -19,7 +28,7 @@ PPU_2C02::PPU_2C02() {
   PALETTE.fill(0);
   NAMETABLES.fill(0);
   OAM.fill(0);
-  FRAMEBUFFER.fill(0xFF000000);
+  FRAMEBUFFER.fill(0xFFFFFFFF);
 }
 
 void PPU_2C02::connect_mapper(Mapper *m, MIRRORING mirroring) {
@@ -48,7 +57,7 @@ uint16_t PPU_2C02::MIRROR_ADDR(uint16_t addr) const {
     break;
 
   case MIRRORING::FOUR_SCREEN:
-    return (table * NAMETABLE_SIZE * offset);
+    return (table * NAMETABLE_SIZE + offset);
     break;
 
   case MIRRORING::SINGLE_SCREEN_LOWER:
@@ -63,6 +72,7 @@ uint16_t PPU_2C02::MIRROR_ADDR(uint16_t addr) const {
 }
 
 uint8_t PPU_2C02::ppu_read(uint16_t addr) {
+  addr &= 0x3FFF;
   if (addr < PATTERN_TABLE_END) {
     return MAPPER ? MAPPER->ppu_read(addr) : 0;
   } else if (addr < PALETTE_BASE) {
@@ -112,7 +122,7 @@ void PPU_2C02::INCREMENT_SCROLL_X() {
   }
 
   if ((VRAM_ADDR & COARSE_X_MASK) == 31) {
-    VRAM_ADDR &= COARSE_X_MASK;
+    VRAM_ADDR &= ~COARSE_X_MASK;
     VRAM_ADDR ^= 0x0400;
   } else {
     VRAM_ADDR++;
@@ -129,7 +139,7 @@ void PPU_2C02::INCREMENT_SCROLL_Y() {
     return;
   }
 
-  VRAM_ADDR &= FINE_Y_MASK;
+  VRAM_ADDR &= ~FINE_Y_MASK;
   uint16_t coarse_y = (VRAM_ADDR & COARSE_Y_MASK) >> 5;
   if (coarse_y == 29) {
     coarse_y = 0;
@@ -140,7 +150,7 @@ void PPU_2C02::INCREMENT_SCROLL_Y() {
     coarse_y++;
   }
 
-  VRAM_ADDR = (VRAM_ADDR & COARSE_Y_MASK) | (coarse_y << 5);
+  VRAM_ADDR = (VRAM_ADDR & ~COARSE_Y_MASK) | (coarse_y << 5);
 }
 
 void PPU_2C02::TRANSFER_ADDRESS_X() {
@@ -149,8 +159,8 @@ void PPU_2C02::TRANSFER_ADDRESS_X() {
   }
 
   const uint16_t HORIZONTAL_SCROLL_MASK = (0x0400 | COARSE_X_MASK);
-  VRAM_ADDR = (VRAM_ADDR & HORIZONTAL_SCROLL_MASK) |
-              (TEMP_ADDR & (0x0400 & COARSE_X_MASK));
+  VRAM_ADDR = (VRAM_ADDR & ~HORIZONTAL_SCROLL_MASK) |
+              (TEMP_ADDR & (0x0400 | COARSE_X_MASK));
 }
 
 void PPU_2C02::TRANSFER_ADDRESS_Y() {
@@ -202,7 +212,7 @@ PPU_2C02::BACKGROUND_PIXEL PPU_2C02::GEN_BACKGROUND_PIXEL() const {
   }
 
   result.color_idx =
-      palette_read(PALETTE_BASE + (result.palette_select) + result.pixel);
+      palette_read(PALETTE_BASE + (result.palette_select << 2) + result.pixel);
   return result;
 }
 
@@ -380,7 +390,7 @@ void PPU_2C02::cpu_write(uint16_t addr, uint8_t data) {
     break;
   case 0x2006:
     if (!ADDR_LATCH) {
-      TEMP_ADDR = (TEMP_ADDR & 0x00FF) | ((data & 0x3F) >> 8);
+      TEMP_ADDR = (TEMP_ADDR & 0x00FF) | ((data & 0x3F) << 8);
       ADDR_LATCH = true;
     } else {
       TEMP_ADDR = (TEMP_ADDR & 0x7F00) | data;
@@ -398,6 +408,10 @@ void PPU_2C02::cpu_write(uint16_t addr, uint8_t data) {
 }
 
 void PPU_2C02::step() {
+
+  // cout << "SCANLINE: " << to_string(SCANLINE) << endl;
+  // cout << "CYCLES: " << to_string(CYCLES) << endl;
+
   const bool pre_render_line = (SCANLINE == 261);
   const bool visible_line = (SCANLINE >= 0 && SCANLINE < FRAME_HEIGHT);
   const bool render_line = visible_line || pre_render_line;
@@ -519,11 +533,13 @@ void PPU_2C02::step() {
 
   if (CYCLES >= PPU_CYCLES_PER_LINE) {
     CYCLES = 0;
+    cout << "CYCLES CLEAR" << endl;
     SCANLINE++;
   }
 
   if (SCANLINE == 241 && CYCLES == 1) {
     STATUS |= VBLANK_BIT;
+    cout << "VBLANK SET" << endl;
     FRAME_DONE = true;
     if (CPU && (CTRL & NMI_ENABLE_BIT)) {
       CPU->NMI_HANDLER();
@@ -532,6 +548,7 @@ void PPU_2C02::step() {
 
   if (SCANLINE == 261 && CYCLES == 1) {
     STATUS &= ~VBLANK_BIT;
+    cout << "VBLANK CLEAR" << endl;
   }
 
   if (SCANLINE >= PPU_SCANLINES) {
