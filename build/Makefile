@@ -682,6 +682,30 @@ MAIN/render.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/MAIN/render.cpp.s
 .PHONY : MAIN/render.cpp.s
 
+MAIN/save.o: MAIN/save.cpp.o
+.PHONY : MAIN/save.o
+
+# target to build an object file
+MAIN/save.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/MAIN/save.cpp.o
+.PHONY : MAIN/save.cpp.o
+
+MAIN/save.i: MAIN/save.cpp.i
+.PHONY : MAIN/save.i
+
+# target to preprocess a source file
+MAIN/save.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/MAIN/save.cpp.i
+.PHONY : MAIN/save.cpp.i
+
+MAIN/save.s: MAIN/save.cpp.s
+.PHONY : MAIN/save.s
+
+# target to generate assembly for a file
+MAIN/save.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/MAIN/save.cpp.s
+.PHONY : MAIN/save.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -760,6 +784,9 @@ help:
 	@echo "... MAIN/render.o"
 	@echo "... MAIN/render.i"
 	@echo "... MAIN/render.s"
+	@echo "... MAIN/save.o"
+	@echo "... MAIN/save.i"
+	@echo "... MAIN/save.s"
 .PHONY : help
 
 

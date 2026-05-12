@@ -46,6 +46,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/sakura.dir/MAIN/main.cpp.o.d"
   "CMakeFiles/sakura.dir/MAIN/render.cpp.o"
   "CMakeFiles/sakura.dir/MAIN/render.cpp.o.d"
+  "CMakeFiles/sakura.dir/MAIN/save.cpp.o"
+  "CMakeFiles/sakura.dir/MAIN/save.cpp.o.d"
   "sakura"
   "sakura.pdb"
 )

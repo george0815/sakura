@@ -192,6 +192,14 @@ void BUS::END_AUDIO_FRAME(uint64_t cpu_cycle) { APU.END_FRAME(cpu_cycle); }
 
 vector<int16_t> BUS::TAKE_AUDIO_SAMPLES() { return APU.TAKE_SAMPLES(); }
 
+bool BUS::LOAD_BATTERY_BACKED_SRAM(const vector<uint8_t> &data) {
+  if (!HAS_BATTERY_BACKED_SRAM() || data.size() != PRG_RAM.size()) {
+    return false;
+  }
+  PRG_RAM = data;
+  return true;
+}
+
 void BUS::insert_cartridge(CART &cart) {
   PRG_ROM = cart.PRG;
   CHR_MEM = cart.CHR;

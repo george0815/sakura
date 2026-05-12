@@ -3,6 +3,7 @@
 #include "../CORE/CART/cart.h"
 #include "../CORE/LOGGER/logger.h"
 #include "./render.h"
+#include "save.h"
 #include <SDL2/SDL_audio.h>
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_keycode.h>
@@ -45,6 +46,7 @@ int main(int arc, char *argv[]) {
   // int test = PARSE_FILE("nestest.nes", cart);
 
   bus.insert_cartridge(cart);
+  SAVE_MANAGER::LOAD_SRAM("./test.sav", &bus);
   cpu.connect_bus(&bus);
   bus.connect_cpu(cpu);
   bus.connect_ppu(ppu);

@@ -72,6 +72,9 @@ public:
   uint16_t MAPPER_ID = 0;
   uint32_t CART_SIGN = 0;
   MIRRORING MIRROR_MODE = HORIZONTAL;
+  bool HAS_BATTERY_BACKED_SRAM() { return BATTERY_BACKED && !PRG_RAM.empty(); };
+
+  bool LOAD_BATTERY_BACKED_SRAM(const vector<uint8_t> &data);
 
   void END_AUDIO_FRAME(uint64_t cpu_cycle);
 

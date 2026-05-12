@@ -80,10 +80,5 @@ bool PARSE_FILE(string filename, CART &cartridge) {
   cartridge.MAPPER_ID =
       ((cartridge.HEADER.FLAGS_6 >> 4) | (cartridge.HEADER.FLAGS_7 & 0xF0));
 
-  // printf("Mapper: %d\n", cartridge.MAPPER_ID);
-  // printf("PRG_SIZE: %zu\n", cartridge.PRG.size());
-  // printf("RESET VECTOR: %02X %02X\n", cartridge.PRG[0x7FFC],
-  //       cartridge.PRG[0x7FFD]);
-
   return true;
 }
