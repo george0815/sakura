@@ -30,6 +30,11 @@ BUS::~BUS() { delete MAPPER; }
 
 uint8_t BUS::read(uint16_t addr) {
 
+  if (addr == 0x4015) {
+    const uint64_t cpu_cycle = CPU ? CPU->CYCLES : 0;
+    return APU.read_status(cpu_cycle);
+  }
+
   // If address is within the 8KB addressable range for the CPU RAM
   if (addr < 0x2000) {
 
@@ -108,6 +113,13 @@ void BUS::write(uint16_t addr, uint8_t data) {
     return;
   }
 
+  if ((addr >= 0x4000 && addr <= 0x4013) || addr == 0x4015 || addr == 0x4017) {
+    SHADOW[addr] = data;
+    const uint64_t cpu_cycle = CPU ? CPU->CYCLES : 0;
+    APU.write_register(cpu_cycle, addr, data);
+    return;
+  }
+
   if (addr == 0x4016) {
     SHADOW[addr] = data;
 
@@ -175,6 +187,10 @@ void BUS::SET_CONTROLLER_BUTTON(int port, CONTROLLER_BUTTON button,
     CONTROLLER_SHIFT[port] = CONTROLLER_STATE[port];
   }
 }
+
+void BUS::END_AUDIO_FRAME(uint64_t cpu_cycle) { APU.END_FRAME(cpu_cycle); }
+
+vector<int16_t> BUS::TAKE_AUDIO_SAMPLES() { return APU.TAKE_SAMPLES(); }
 
 void BUS::insert_cartridge(CART &cart) {
   PRG_ROM = cart.PRG;

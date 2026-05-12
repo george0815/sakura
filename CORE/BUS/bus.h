@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../APU_2A03/wrapper.h"
 #include "../CART/cart.h"
 #include "../CPU_6502/core.h"
 #include "../MAPPERS/mapper.h"
@@ -12,6 +13,7 @@ struct CART;
 
 class CPU_6502;
 class PPU_2C02;
+class APU_2A03;
 
 class BUS {
 
@@ -62,6 +64,7 @@ public:
   CPU_6502 *CPU;
   PPU_2C02 *PPU;
   Mapper *MAPPER;
+  mutable APU_2A03 APU;
 
   // METADATA
   bool HAS_PRG = false;
@@ -70,4 +73,8 @@ public:
   uint16_t MAPPER_ID = 0;
   uint32_t CART_SIGN = 0;
   MIRRORING MIRROR_MODE = HORIZONTAL;
+
+  void END_AUDIO_FRAME(uint64_t cpu_cycle);
+
+  vector<int16_t> TAKE_AUDIO_SAMPLES();
 };
