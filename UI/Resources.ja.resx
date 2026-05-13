@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Create" xml:space="preserve">
+    <value>作成</value>
+  </data>
+  <data name="File/Folder" xml:space="preserve">
+    <value>ファイル/フォルダ：</value>
+  </data>
+  <data name="Outputpath" xml:space="preserve">
+    <value>出力先：</value>
+  </data>
+  <data name="Trackers" xml:space="preserve">
+    <value>トラッカー：</value>
+  </data>
+  <data name="Piecesize" xml:space="preserve">
+    <value>ピースサイズ：</value>
+  </data>
+  <data name="16KB" xml:space="preserve">
+    <value>16 KB</value>
+  </data>
+  <data name="32KB" xml:space="preserve">
+    <value>32 KB</value>
+  </data>
+  <data name="64KB" xml:space="preserve">
+    <value>64 KB</value>
+  </data>
+  <data name="128KB" xml:space="preserve">
+    <value>128 KB</value>
+  </data>
+  <data name="256KB" xml:space="preserve">
+    <value>256 KB</value>
+  </data>
+  <data name="512KB" xml:space="preserve">
+    <value>512 KB</value>
+  </data>
+  <data name="1MB" xml:space="preserve">
+    <value>1 MB</value>
+  </data>
+  <data name="2MB" xml:space="preserve">
+    <value>2 MB</value>
+  </data>
+  <data name="Startseedingaftercreation" xml:space="preserve">
+    <value>作成後にシードを開始</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>プライベート</value>
+  </data>
+  <data name="Publisher" xml:space="preserve">
+    <value>公開者：</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>コメント：</value>
+  </data>
+  <data name="Selectfolder" xml:space="preserve">
+    <value>フォルダを選択</value>
+  </data>
+  <data name="Selectthefolderthatcontainsyourfiles" xml:space="preserve">
+    <value>ファイルが含まれるフォルダを選択してください。</value>
+  </data>
+  <data name="Selectoutputfile" xml:space="preserve">
+    <value>出力ファイルを選択</value>
+  </data>
+  <data name="Selecttheoutputtorrentfilepath" xml:space="preserve">
+    <value>出力する.torrentファイルのパスを選択してください。</value>
+  </data>
+  <data name="torrent" xml:space="preserve">
+    <value>.torrent</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="Invalidfile/folderpath" xml:space="preserve">
+    <value>ファイル/フォルダのパスが無効です。</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Outputpathdoesnotexist" xml:space="preserve">
+    <value>出力先が存在しません。</value>
+  </data>
+  <data name="InvalidtrackerURL" xml:space="preserve">
+    <value>トラッカーのURLが無効です：</value>
+  </data>
+  <data name="trimmed" xml:space="preserve">
+    <value>{trimmed}</value>
+  </data>
+  <data name="Torrentcreationfailed" xml:space="preserve">
+    <value>トレントの作成に失敗しました:</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="Torrentcreatedsuccessfully!" xml:space="preserve">
+    <value>トレントが正常に作成されました!</value>
+  </data>
+  <data name="Unexpectederror" xml:space="preserve">
+    <value>予期しないエラー：</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>ダウンロード</value>
+  </data>
+  <data name="Magnetlink" xml:space="preserve">
+    <value>マグネットリンク：</value>
+  </data>
+  <data name="Usemagnetlink" xml:space="preserve">
+    <value>マグネットリンクを使用</value>
+  </data>
+  <data name="Torrentfilepath" xml:space="preserve">
+    <value>トレントファイルのパス：</value>
+  </data>
+  <data name="Downloadpath" xml:space="preserve">
+    <value>ダウンロード先：</value>
+  </data>
+  <data name="Maxconnections" xml:space="preserve">
+    <value>最大接続数：</value>
+  </data>
+  <data name="Maxdownload(MB/s)" xml:space="preserve">
+    <value>最大ダウンロード速度(MB/秒)：</value>
+  </data>
+  <data name="Maxupload(MB/s)" xml:space="preserve">
+    <value>最大アップロード速度(MB/秒)：</value>
+  </data>
+  <data name="EnableDHT" xml:space="preserve">
+    <value>DHTを有効にする</value>
+  </data>
+  <data name="Selecttorrentfile" xml:space="preserve">
+    <value>トレントファイルを選択</value>
+  </data>
+  <data name="Selectatorrentfile" xml:space="preserve">
+    <value>.torrentファイルを選択してください</value>
+  </data>
+  <data name="Selectdownloadfolder" xml:space="preserve">
+    <value>ダウンロードフォルダを選択</value>
+  </data>
+  <data name="Youmustselecteitheramagnetlinkoratorrentfile" xml:space="preserve">
+    <value>マグネットリンクまたはトレントファイルのいずれかを選択する必要があります。</value>
+  </data>
+  <data name="Magnetlinkisempty" xml:space="preserve">
+    <value>マグネットリンクが空です。</value>
+  </data>
+  <data name="Thisdoesnotappeartobeavalidmagnetlink" xml:space="preserve">
+    <value>有効なマグネットリンクではないようです。</value>
+  </data>
+  <data name="Torrentfiledoesnotexist" xml:space="preserve">
+    <value>トレントファイルが存在しません。</value>
+  </data>
+  <data name="MissingDirectory" xml:space="preserve">
+    <value>ディレクトリが見つかりません</value>
+  </data>
+  <data name="DownloadpathdoesnotexistCreateit?" xml:space="preserve">
+    <value>ダウンロード先が存在しません。作成しますか?</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="Invalidmaximumconnectionsvalue" xml:space="preserve">
+    <value>最大接続数の値が無効です。</value>
+  </data>
+  <data name="Invaliddownloadspeedlimit" xml:space="preserve">
+    <value>ダウンロード速度制限の値が無効です。</value>
+  </data>
+  <data name="Invaliduploadspeedlimit" xml:space="preserve">
+    <value>アップロード速度制限の値が無効です。</value>
+  </data>
+  <data name="Torrentdownloadstarted" xml:space="preserve">
+    <value>トレントのダウンロードが開始されました。</value>
+  </data>
+  <data name="TorrentstartupfailedexMessage" xml:space="preserve">
+    <value>トレントの開始に失敗しました：</value>
+  </data>
+  <data name="yyyy-MM-dd" xml:space="preserve">
+    <value>yyyy-MM-dd</value>
+  </data>
+  <data name="ActiveTorrents" xml:space="preserve">
+    <value>アクティブなトレント：</value>
+  </data>
+  <data name="Noactivetorrents" xml:space="preserve">
+    <value>アクティブなトレントはありません</value>
+  </data>
+  <data name="Operatingonport" xml:space="preserve">
+    <value>動作ポート：</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>開始：</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>停止：</value>
+  </data>
+  <data name="Startseeding" xml:space="preserve">
+    <value>シード開始:：</value>
+  </data>
+  <data name="Stopseeding" xml:space="preserve">
+    <value>シード停止：</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>削除:：</value>
+  </data>
+  <data name="Log" xml:space="preserve">
+    <value>ログ</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>検索</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>黒</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>青</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>緑</value>
+  </data>
+  <data name="Cyan" xml:space="preserve">
+    <value>シアン</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>赤</value>
+  </data>
+  <data name="Magenta" xml:space="preserve">
+    <value>マゼンタ</value>
+  </data>
+  <data name="Brown" xml:space="preserve">
+    <value>茶色</value>
+  </data>
+  <data name="Gray" xml:space="preserve">
+    <value>灰色</value>
+  </data>
+  <data name="DarkGray" xml:space="preserve">
+    <value>濃い灰色</value>
+  </data>
+  <data name="BrightBlue" xml:space="preserve">
+    <value>明るい青</value>
+  </data>
+  <data name="BrightGreen" xml:space="preserve">
+    <value>明るい緑</value>
+  </data>
+  <data name="BrightCyan" xml:space="preserve">
+    <value>明るいシアン</value>
+  </data>
+  <data name="BrightRed" xml:space="preserve">
+    <value>明るい赤</value>
+  </data>
+  <data name="BrightMagenta" xml:space="preserve">
+    <value>明るいマゼンタ</value>
+  </data>
+  <data name="BrightYellow" xml:space="preserve">
+    <value>明るい黄色</value>
+  </data>
+  <data name="White" xml:space="preserve">
+    <value>白</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>設定</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>ポート：</value>
+  </data>
+  <data name="DHTport" xml:space="preserve">
+    <value>DHTポート：</value>
+  </data>
+  <data name="Maxtotalconnections" xml:space="preserve">
+    <value>最大総接続数：</value>
+  </data>
+  <data name="Maxtotaldownloadspeed(MB/s)" xml:space="preserve">
+    <value>最大総ダウンロード速度(MB/秒)：</value>
+  </data>
+  <data name="Maxtotaluploadspeed(MB/s)" xml:space="preserve">
+    <value>最大総アップロード速度(MB/秒)：</value>
+  </data>
+  <data name="Progressrefreshrate(ms)" xml:space="preserve">
+    <value>進捗更新レート(ミリ秒)：</value>
+  </data>
+  <data name="StopSeedingWhenFinished" xml:space="preserve">
+    <value>完了時にシードを停止</value>
+  </data>
+  <data name="Disablecoloredhotkeyinformation" xml:space="preserve">
+    <value>カラーホットキー情報を無効にする</value>
+  </data>
+  <data name="Enabledetailedlogging" xml:space="preserve">
+    <value>詳細ログを有効にする</value>
+  </data>
+  <data name="EnablePortForwarding" xml:space="preserve">
+    <value>ポートフォワーディングを有効にする</value>
+  </data>
+  <data name="Usesystemconsole" xml:space="preserve">
+    <value>システムコンソールを使用する</value>
+  </data>
+  <data name="Hidetextcursor" xml:space="preserve">
+    <value>テキストカーソルを非表示</value>
+  </data>
+  <data name="DefaultDownloadPath" xml:space="preserve">
+    <value>デフォルトのダウンロード先：</value>
+  </data>
+  <data name="LogPath" xml:space="preserve">
+    <value>ログのパス：</value>
+  </data>
+  <data name="SettingsPath" xml:space="preserve">
+    <value>設定のパス：</value>
+  </data>
+  <data name="Backgroundcolor" xml:space="preserve">
+    <value>背景色：</value>
+  </data>
+  <data name="Textcolor" xml:space="preserve">
+    <value>テキスト色：</value>
+  </data>
+  <data name="Focusbackgroundcolor" xml:space="preserve">
+    <value>フォーカス背景色：</value>
+  </data>
+  <data name="Focustextcolor" xml:space="preserve">
+    <value>フォーカステキスト色：</value>
+  </data>
+  <data name="Hotkeytextcolor" xml:space="preserve">
+    <value>ホットキーテキスト色：</value>
+  </data>
+  <data name="ASCIIcolor" xml:space="preserve">
+    <value>ASCII色：</value>
+  </data>
+  <data name="DisableASCII" xml:space="preserve">
+    <value>ASCIIを無効にする</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Selectlogfilepath" xml:space="preserve">
+    <value>ログファイルのパスを選択</value>
+  </data>
+  <data name="Selectfilenameforthelogfile" xml:space="preserve">
+    <value>ログファイルのファイル名を選択してください。</value>
+  </data>
+  <data name="Selectconfigfilepath" xml:space="preserve">
+    <value>設定ファイルのパスを選択</value>
+  </data>
+  <data name="Selectfilenamefortheconfigfile" xml:space="preserve">
+    <value>設定ファイルのファイル名を選択してください。</value>
+  </data>
+  <data name="Selectdefaultdownloadfolder" xml:space="preserve">
+    <value>デフォルトのダウンロードフォルダを選択</value>
+  </data>
+  <data name="Selectthedefaultdownloadfolderpath" xml:space="preserve">
+    <value>デフォルトのダウンロードフォルダのパスを選択してください。</value>
+  </data>
+  <data name="Invalidportnumber" xml:space="preserve">
+    <value>ポート番号が無効です。</value>
+  </data>
+  <data name="InvalidDHTportnumber" xml:space="preserve">
+    <value>DHTポート番号が無効です。</value>
+  </data>
+  <data name="Invalidmaxconnections" xml:space="preserve">
+    <value>最大接続数が無効です。</value>
+  </data>
+  <data name="Invalidmaxdownloadspeed" xml:space="preserve">
+    <value>最大ダウンロード速度が無効です。</value>
+  </data>
+  <data name="Invalidmaxuploadspeed" xml:space="preserve">
+    <value>最大アップロード速度が無効です。</value>
+  </data>
+  <data name="Invalidprogressrefreshrate" xml:space="preserve">
+    <value>進捗更新レートが無効です。</value>
+  </data>
+  <data name="Downloadpathcannotbeempty" xml:space="preserve">
+    <value>ダウンロード先を空にすることはできません。</value>
+  </data>
+  <data name="Logpathcannotbeempty" xml:space="preserve">
+    <value>ログのパスを空にすることはできません。</value>
+  </data>
+  <data name="Settingspathcannotbeempty" xml:space="preserve">
+    <value>設定のパスを空にすることはできません。</value>
+  </data>
+  <data name="FatalError" xml:space="preserve">
+    <value>致命的なエラー</value>
+  </data>
+  <data name="Torrents" xml:space="preserve">
+    <value>トレント</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>進捗</value>
+  </data>
+  <data name="Peers" xml:space="preserve">
+    <value>ピア</value>
+  </data>
+  <data name="Leechers" xml:space="preserve">
+    <value>リーチャー</value>
+  </data>
+  <data name="Seeders" xml:space="preserve">
+    <value>シーダー</value>
+  </data>
+  <data name="Downloadrate" xml:space="preserve">
+    <value>ダウンロード速度</value>
+  </data>
+  <data name="Uploadrate" xml:space="preserve">
+    <value>アップロード速度</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>不明</value>
+  </data>
+  <data name="MagnetlinkgeneratedmagnetToV1String()" xml:space="preserve">
+    <value>マグネットリンクが生成されました：</value>
+  </data>
+  <data name="Magnetlinkcopiedtoclipboard" xml:space="preserve">
+    <value>マグネットリンクがクリップボードにコピーされました。</value>
+  </data>
+  <data name="Deletedownloadedfiles?" xml:space="preserve">
+    <value>ダウンロードしたファイルを削除しますか?</value>
+  </data>
+  <data name="0" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ChooseColor" xml:space="preserve">
+    <value>色を選択</value>
+  </data>
+  <data name="c" xml:space="preserve">
+    <value> {c} </value>
+  </data>
+  <data name="Invalidpath" xml:space="preserve">
+    <value>パスが無効です。</value>
+  </data>
+  <data name="InvalidFile" xml:space="preserve">
+    <value>ファイルが無効</value>
+  </data>
+  <data name="Selectedfiledoesnotexist" xml:space="preserve">
+    <value>選択されたファイルが存在しません。</value>
+  </data>
+  <data name="InvalidFolder" xml:space="preserve">
+    <value>フォルダが無効</value>
+  </data>
+  <data name="Selectedfolderdoesnotexist" xml:space="preserve">
+    <value>選択されたフォルダが存在しません。</value>
+  </data>
+  <data name="HEADER" xml:space="preserve">
+    <value>ヘッダー</value>
+  </data>
+  <data name="StartSettingsCurrentControlsStartDownload" xml:space="preserve">
+    <value>開始：</value>
+  </data>
+  <data name="StartseedingSettingsCurrentControlsStartSeeding" xml:space="preserve">
+    <value>シード開始：</value>
+  </data>
+  <data name="DeleteSettingsCurrentControlsRemoveTorrent" xml:space="preserve">
+    <value>削除:</value>
+  </data>
+  <data name="GeneratemagnetlinkSettingsCurrentControlsGenMagLink" xml:space="preserve">
+    <value>マグネットリンクを生成:：</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>終了</value>
+  </data>
+  <data name="Exit?" xml:space="preserve">
+    <value>終了しますか?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="/logtxt" xml:space="preserve">
+    <value>./log.txt</value>
+  </data>
+  <data name="cfgjson" xml:space="preserve">
+    <value>cfg.json</value>
+  </data>
+  <data name="main" xml:space="preserve">
+    <value>メイン</value>
+  </data>
+  <data name="ErrorsavingsettingsexMessage" xml:space="preserve">
+    <value>設定の保存中にエラーが発生しました：</value>
+  </data>
+  <data name="ErrorloadingsettingsexMessage" xml:space="preserve">
+    <value>設定の読み込み中にエラーが発生しました：</value>
+  </data>
+  <data name="LainTorrentClient" xml:space="preserve">
+    <value>Lain トレントクライアント</value>
+  </data>
+  <data name="Downloadingfrommagnetlink" xml:space="preserve">
+    <value>マグネットリンクからダウンロード中...</value>
+  </data>
+  <data name="Statechanged" xml:space="preserve">
+    <value>状態が変更されました：</value>
+  </data>
+  <data name="DHTEngineDhtState" xml:space="preserve">
+    <value>DHT：</value>
+  </data>
+  <data name="Piecehashed" xml:space="preserve">
+    <value>ピースがハッシュ化されました：</value>
+  </data>
+  <data name="Savedfastresumedata" xml:space="preserve">
+    <value>高速再開データが保存されました</value>
+  </data>
+  <data name="Errorsavingfastresumedataex" xml:space="preserve">
+    <value>高速再開データの保存中にエラーが発生しました：</value>
+  </data>
+  <data name="torrentsjson" xml:space="preserve">
+    <value>torrents.json</value>
+  </data>
+  <data name="ErrorsavingtorrentsexMessage" xml:space="preserve">
+    <value>トレントの保存中にエラーが発生しました：</value>
+  </data>
+  <data name="FastresumedatasavedfortorrentManagers[index]Torrent?Name" xml:space="preserve">
+    <value>トレントの高速再開データが保存されました:</value>
+  </data>
+  <data name="PausedtorrentmanagerTorrent?Name" xml:space="preserve">
+    <value>トレントを一時停止しました：</value>
+  </data>
+  <data name="ErrorpausingtorrentexMessage" xml:space="preserve">
+    <value>トレントの一時停止中にエラーが発生しました：</value>
+  </data>
+  <data name="ResumedtorrentmanagerTorrent?Name" xml:space="preserve">
+    <value>トレントを再開しました：</value>
+  </data>
+  <data name="ErrorresumingtorrentexMessage" xml:space="preserve">
+    <value>トレントの再開中にエラーが発生しました：</value>
+  </data>
+  <data name="StartedseedingmanagerTorrent?Name" xml:space="preserve">
+    <value>シードを開始しました：</value>
+  </data>
+  <data name="ErrorstartingseedingexMessage" xml:space="preserve">
+    <value>シードの開始中にエラーが発生しました：</value>
+  </data>
+  <data name="StoppedseedingmanagerTorrent?Name" xml:space="preserve">
+    <value>シードを停止しました：</value>
+  </data>
+  <data name="ErrorstoppingseedingexMessage" xml:space="preserve">
+    <value>シードの停止中にエラーが発生しました：</value>
+  </data>
+  <data name="DeletedtorrentmanagerTorrent?Name" xml:space="preserve">
+    <value>トレントを削除しました:：</value>
+  </data>
+  <data name="DeletedfilesatmanagerSavePath" xml:space="preserve">
+    <value>ファイルを削除しました:：</value>
+  </data>
+  <data name="ErrordeletingtorrentexMessage" xml:space="preserve">
+    <value>トレントの削除中にエラーが発生しました：</value>
+  </data>
+  <data name="Settingssavedsuccessfully" xml:space="preserve">
+    <value>設定が正常に保存されました。
+一部の変更は再起動後に有効になります。</value>
+  </data>
+  <data name="Torrentdownloadfailed" xml:space="preserve">
+    <value>トレントのダウンロードが失敗しました:</value>
+  </data>
+  <data name="Settingssaved" xml:space="preserve">
+    <value>設定が保存されました。</value>
+  </data>
+  <data name="Creating" xml:space="preserve">
+    <value>作成中...</value>
+  </data>
+  <data name="Downloadingfromtorrentfile" xml:space="preserve">
+    <value>トレントのファイルからダウンロード中...</value>
+  </data>
+  <data name="Errorloadingtorrents" xml:space="preserve">
+    <value>トレントの読み込み中にエラーが発生しました：</value>
+  </data>
+  <data name="Selectthedownloadfolder" xml:space="preserve">
+    <value>ダウンロードフォルダを選択してください</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>サイズ</value>
+  </data>
+  <data name="Url" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>カテゴリ</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>配信元</value>
+  </data>
+  <data name="Hash" xml:space="preserve">
+    <value>ハッシュ</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>日付</value>
+  </data>
+  <data name="MagnetLinkSearch" xml:space="preserve">
+    <value>マグネットリンク</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>ゲーム</value>
+  </data>
+  <data name="Movies" xml:space="preserve">
+    <value>映画</value>
+  </data>
+  <data name="TVshows" xml:space="preserve">
+    <value>テレビ番組</value>
+  </data>
+  <data name="Software" xml:space="preserve">
+    <value>ソフトウェア</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>その他</value>
+  </data>
+  <data name="Ghidoraherror" xml:space="preserve">
+    <value>ギドラの初期化中にエラーが発生しました</value>
+  </data>
+  <data name="Choosecategories" xml:space="preserve">
+    <value>カテゴリを選択</value>
+  </data>
+  <data name="Choosesources" xml:space="preserve">
+    <value> 配信元を選択</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>カテゴリ：</value>
+  </data>
+  <data name="Searchresultslimit" xml:space="preserve">
+    <value>検索結果数の上限：</value>
+  </data>
+  <data name="Sources" xml:space="preserve">
+    <value>配信元：</value>
+  </data>
+  <data name="Sortby" xml:space="preserve">
+    <value>並び替え：</value>
+  </data>
+  <data name="Invalidtorlimit" xml:space="preserve">
+    <value>検索結果数の上限が無効です。</value>
+  </data>
+  <data name="Searchresultslimitpersource" xml:space="preserve">
+    <value>配信元ごとの検索結果数の上限：</value>
+  </data>
+  <data name="Ghidorahtimeout" xml:space="preserve">
+    <value>ギドラの処理がタイムアウトしました。</value>
+  </data>
+  <data name="Nomagnetlink" xml:space="preserve">
+    <value>マグネットリンクは利用できません。</value>
+  </data>
+  <data name="Searching" xml:space="preserve">
+    <value>検索中...</value>
+  </data>
+  <data name="Searchtimeout" xml:space="preserve">
+    <value>検索のタイムアウト：</value>
+  </data>
+  <data name="Invalidtorlimitpersource" xml:space="preserve">
+    <value>配信元ごとの検索結果数の上限が無効です。</value>
+  </data>
+  <data name="Invalidtimeout" xml:space="preserve">
+    <value>検索のタイムアウトの上限が無効です。</value>
+  </data>
+  <data name="Useqbittorrentplugins" xml:space="preserve">
+    <value>qBittorrent プラグインを使用する</value>
+  </data>
+  <data name="Importantifusing" xml:space="preserve">
+    <value>重要：qBittorrent プラグインを使用する場合、トレントごとの制限は無視され、カテゴリの選択は1つのみに制限されます。また、多くのプラグインではデフォルトで「すべて（all）」が選択されます。</value>
+  </data>
+  <data name="Checkstatus" xml:space="preserve">
+    <value>ステータスを確認</value>
+  </data>
+  <data name="Ghidorah" xml:space="preserve">
+    <value>ギドラ</value>
+  </data>
+  <data name="Noqbittorrentpluginsfound" xml:space="preserve">
+    <value>qBittorrentプラグインが見つかりません。</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>オンライン</value>
+  </data>
+  <data name="Checkingstatus" xml:space="preserve">
+    <value>ステータスを確認中</value>
+  </data>
+  <data name="Results" xml:space="preserve">
+    <value>件の結果</value>
+  </data>
+  <data name="Ghidorahpluginstatus" xml:space="preserve">
+    <value>ギドラ - プラグインのステータス</value>
+  </data>
+  <data name="Unknownerror" xml:space="preserve">
+    <value>不明なエラー</value>
+  </data>
+  <data name="Errors" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="Errorwrittentolog" xml:space="preserve">
+    <value>ギドラの初期化中にエラーが発生しました。詳細はログを確認してください。</value>
+  </data>
+  <data name="Startingdownload" xml:space="preserve">
+    <value>ダウンロードを開始しています：</value>
+  </data>
+  <data name="Downloadstarted" xml:space="preserve">
+    <value>ダウンロード開始。完了待ち…</value>
+  </data>
+  <data name="Alldownloadscomplete" xml:space="preserve">
+    <value>すべてのダウンロードが完了しました。</value>
+  </data>
+  <data name="Resultssavedtojson" xml:space="preserve">
+    <value>検索結果をJSONファイルに保存しました。</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>ヘルプ</value>
+  </data>
+  <data name="Query" xml:space="preserve">
+    <value>検索語</value>
+  </data>
+  <data name="Torrentfile" xml:space="preserve">
+    <value>トレントファイル</value>
+  </data>
+  <data name="Magnetlinklower" xml:space="preserve">
+    <value>マグネットリンク</value>
+  </data>
+  <data name="Folderslashfilepath" xml:space="preserve">
+    <value>ファイル/フォルダ</value>
+  </data>
+  <data name="Outputpathlower" xml:space="preserve">
+    <value>出力先</value>
+  </data>
+  <data name="Trackerlink" xml:space="preserve">
+    <value>トラッカー</value>
+  </data>
+  <data name="Music" xml:space="preserve">
+    <value>音楽</value>
+  </data>
+</root>

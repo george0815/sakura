@@ -1,4 +1,4 @@
-using Terminal.Gui.Drawing;
+using Terminal.Gui;
 using System.Text.Json;
 using sakura.helpers;
 
@@ -48,14 +48,14 @@ namespace sakura
         public string SettingsPath { get; set; } = "cfg.json";    // Settings file
 
         // ------------------------------
-        // UI Colors
+        // UI Terminal.Gui.Colors
         // ------------------------------
-        public Color BackgroundColor { get; set; } = Color.Black;
-        public Color TextColor { get; set; } = Color.White;
-        public Color FocusBackgroundColor { get; set; } = Color.White;
-        public Color FocusTextColor { get; set; } = Color.Black;
-        public Color HotTextColor { get; set; } = Color.BrightYellow;
-        public Color LogoColor { get; set; } = Color.BrightCyan;
+        public Terminal.Gui.Color BackgroundColor { get; set; } = Terminal.Gui.Color.Black;
+        public Terminal.Gui.Color TextColor { get; set; } = Terminal.Gui.Color.White;
+        public Terminal.Gui.Color FocusBackgroundColor { get; set; } = Terminal.Gui.Color.White;
+        public Terminal.Gui.Color FocusTextColor { get; set; } = Terminal.Gui.Color.Black;
+        public Terminal.Gui.Color HotTextColor { get; set; } = Terminal.Gui.Color.BrightYellow;
+        public Terminal.Gui.Color LogoColor { get; set; } = Terminal.Gui.Color.BrightCyan;
 
 
         // ------------------------------

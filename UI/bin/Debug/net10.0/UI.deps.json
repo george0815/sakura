@@ -8,231 +8,72 @@
     ".NETCoreApp,Version=v10.0": {
       "UI/1.0.0": {
         "dependencies": {
-          "Terminal.Gui": "2.1.0"
+          "Terminal.Gui": "1.19.0"
         },
         "runtime": {
           "UI.dll": {}
-        }
-      },
-      "ColorHelper/1.8.1": {
-        "runtime": {
-          "lib/netstandard2.0/ColorHelper.dll": {
-            "assemblyVersion": "1.8.1.0",
-            "fileVersion": "1.8.1.0"
+        },
+        "resources": {
+          "ja/UI.resources.dll": {
+            "locale": "ja"
           }
         }
       },
-      "JetBrains.Annotations/2025.2.4": {
+      "NStack.Core/1.1.1": {
         "runtime": {
-          "lib/netstandard2.0/JetBrains.Annotations.dll": {
-            "assemblyVersion": "4242.42.42.42",
-            "fileVersion": "2025.2.4.0"
+          "lib/netstandard2.0/NStack.dll": {
+            "assemblyVersion": "1.1.1.0",
+            "fileVersion": "1.1.1.0"
           }
         }
       },
-      "Markdig/1.1.3": {
+      "System.CodeDom/9.0.4": {
         "runtime": {
-          "lib/net10.0/Markdig.dll": {
-            "assemblyVersion": "1.1.0.0",
-            "fileVersion": "1.1.3.0"
+          "lib/net9.0/System.CodeDom.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.425.16305"
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.7": {
-        "runtime": {
-          "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.726.21808"
-          }
-        }
-      },
-      "Microsoft.Extensions.Logging.Abstractions/10.0.7": {
+      "System.Management/9.0.4": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.7"
+          "System.CodeDom": "9.0.4"
         },
         "runtime": {
-          "lib/net10.0/Microsoft.Extensions.Logging.Abstractions.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.726.21808"
-          }
-        }
-      },
-      "Onigwrap/1.0.10": {
-        "runtime": {
-          "lib/netstandard2.0/Onigwrap.dll": {
-            "assemblyVersion": "1.0.10.0",
-            "fileVersion": "1.0.10.0"
+          "lib/net9.0/System.Management.dll": {
+            "assemblyVersion": "9.0.0.4",
+            "fileVersion": "9.0.425.16305"
           }
         },
         "runtimeTargets": {
-          "runtimes/linux-arm64/native/libonigwrap.so": {
-            "rid": "linux-arm64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/linux-bionic-arm64/native/libonigwrap.so": {
-            "rid": "linux-bionic-arm64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/linux-bionic-x64/native/libonigwrap.so": {
-            "rid": "linux-bionic-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/linux-musl-arm64/native/libonigwrap.so": {
-            "rid": "linux-musl-arm64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/linux-musl-x64/native/libonigwrap.so": {
-            "rid": "linux-musl-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/linux-x64/native/libonigwrap.so": {
-            "rid": "linux-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/maccatalyst-arm64/native/libonigwrap.dylib": {
-            "rid": "maccatalyst-arm64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/maccatalyst-x64/native/libonigwrap.dylib": {
-            "rid": "maccatalyst-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/osx-arm64/native/libonigwrap.dylib": {
-            "rid": "osx-arm64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/osx-x64/native/libonigwrap.dylib": {
-            "rid": "osx-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/win-arm64/native/libonigwrap.dll": {
-            "rid": "win-arm64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/win-x64/native/libonigwrap.dll": {
-            "rid": "win-x64",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
-          },
-          "runtimes/win-x86/native/libonigwrap.dll": {
-            "rid": "win-x86",
-            "assetType": "native",
-            "fileVersion": "0.0.0.0"
+          "runtimes/win/lib/net9.0/System.Management.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.4",
+            "fileVersion": "9.0.425.16305"
           }
         }
       },
-      "System.IO.Abstractions/22.1.1": {
+      "Terminal.Gui/1.19.0": {
         "dependencies": {
-          "TestableIO.System.IO.Abstractions": "22.1.1",
-          "TestableIO.System.IO.Abstractions.Wrappers": "22.1.1"
+          "NStack.Core": "1.1.1",
+          "System.Management": "9.0.4"
         },
         "runtime": {
-          "lib/net10.0/System.IO.Abstractions.dll": {
-            "assemblyVersion": "22.1.1.0",
-            "fileVersion": "22.1.1.0"
-          }
-        }
-      },
-      "Terminal.Gui/2.1.0": {
-        "dependencies": {
-          "ColorHelper": "1.8.1",
-          "JetBrains.Annotations": "2025.2.4",
-          "Markdig": "1.1.3",
-          "Microsoft.Extensions.Logging.Abstractions": "10.0.7",
-          "System.IO.Abstractions": "22.1.1",
-          "TextMateSharp": "2.0.3",
-          "TextMateSharp.Grammars": "2.0.3",
-          "Wcwidth": "4.0.1"
-        },
-        "runtime": {
-          "lib/net10.0/Terminal.Gui.dll": {
-            "assemblyVersion": "2.1.0.0",
-            "fileVersion": "2.1.0.0"
+          "lib/net8.0/Terminal.Gui.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         },
         "resources": {
-          "lib/net10.0/fr-FR/Terminal.Gui.resources.dll": {
+          "lib/net8.0/fr-FR/Terminal.Gui.resources.dll": {
             "locale": "fr-FR"
           },
-          "lib/net10.0/ja-JP/Terminal.Gui.resources.dll": {
+          "lib/net8.0/ja-JP/Terminal.Gui.resources.dll": {
             "locale": "ja-JP"
           },
-          "lib/net10.0/pt-PT/Terminal.Gui.resources.dll": {
+          "lib/net8.0/pt-PT/Terminal.Gui.resources.dll": {
             "locale": "pt-PT"
-          },
-          "lib/net10.0/zh-Hans/Terminal.Gui.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "TestableIO.System.IO.Abstractions/22.1.1": {
-        "dependencies": {
-          "Testably.Abstractions.FileSystem.Interface": "10.1.0"
-        },
-        "runtime": {
-          "lib/net10.0/TestableIO.System.IO.Abstractions.dll": {
-            "assemblyVersion": "22.1.1.0",
-            "fileVersion": "22.1.1.0"
-          }
-        }
-      },
-      "TestableIO.System.IO.Abstractions.Wrappers/22.1.1": {
-        "dependencies": {
-          "Testably.Abstractions.FileSystem.Interface": "10.1.0"
-        },
-        "runtime": {
-          "lib/net10.0/TestableIO.System.IO.Abstractions.Wrappers.dll": {
-            "assemblyVersion": "22.1.1.0",
-            "fileVersion": "22.1.1.0"
-          }
-        }
-      },
-      "Testably.Abstractions.FileSystem.Interface/10.1.0": {
-        "runtime": {
-          "lib/net10.0/Testably.Abstractions.FileSystem.Interface.dll": {
-            "assemblyVersion": "10.1.0.0",
-            "fileVersion": "10.1.0.0"
-          }
-        }
-      },
-      "TextMateSharp/2.0.3": {
-        "dependencies": {
-          "Onigwrap": "1.0.10"
-        },
-        "runtime": {
-          "lib/netstandard2.0/TextMateSharp.dll": {
-            "assemblyVersion": "2.0.3.0",
-            "fileVersion": "2.0.3.0"
-          }
-        }
-      },
-      "TextMateSharp.Grammars/2.0.3": {
-        "dependencies": {
-          "TextMateSharp": "2.0.3"
-        },
-        "runtime": {
-          "lib/netstandard2.0/TextMateSharp.Grammars.dll": {
-            "assemblyVersion": "2.0.3.0",
-            "fileVersion": "2.0.3.0"
-          }
-        }
-      },
-      "Wcwidth/4.0.1": {
-        "runtime": {
-          "lib/net10.0/Wcwidth.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.1.0"
           }
         }
       }
@@ -244,103 +85,33 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ColorHelper/1.8.1": {
+    "NStack.Core/1.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rblWXd/02TfwJjX53xEfQnbnDRKxCm09VtavV8JaIcmIFWt9efNf6xTQ3WeXgy/she5R31eRTtnizFoUoDrs5w==",
-      "path": "colorhelper/1.8.1",
-      "hashPath": "colorhelper.1.8.1.nupkg.sha512"
+      "sha512": "sha512-5LhlYsmAe3A55zl8xCSD7AbuhDqZODpsfdMGgtygeBlHZmlb0tHmK5/PeKODnwYUhC6EbL2qHKGskPNvpY+z3w==",
+      "path": "nstack.core/1.1.1",
+      "hashPath": "nstack.core.1.1.1.nupkg.sha512"
     },
-    "JetBrains.Annotations/2025.2.4": {
+    "System.CodeDom/9.0.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TwbgxAkXxY+vNEhNVx/QXjJ4vqxmepOjsgRvvImQPbHkHMMb4W+ahL3laMsxXKtNT7iMy+E1B3xkqao2hf1n3A==",
-      "path": "jetbrains.annotations/2025.2.4",
-      "hashPath": "jetbrains.annotations.2025.2.4.nupkg.sha512"
+      "sha512": "sha512-aJdv7Z87PoPW8ijvGIincocooYRbH3Umtlz7OrJKf6GDInbdu1bvk5X1fFlmbl7WP+9ntoIBd7NjKz+siVFdHA==",
+      "path": "system.codedom/9.0.4",
+      "hashPath": "system.codedom.9.0.4.nupkg.sha512"
     },
-    "Markdig/1.1.3": {
+    "System.Management/9.0.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wboYc6YToID7koq+onej7rjd/kv4urZaZ4QMiJoF/jXt/ZlXe2Af9gWG4nOe5tk654UaOPYvKL64iFum7qWEYA==",
-      "path": "markdig/1.1.3",
-      "hashPath": "markdig.1.1.3.nupkg.sha512"
+      "sha512": "sha512-MfY9+SrkSvchAoFiChTkhQYCAjBaQQ9u3LwiKmho7oTbujucnxCzORlPgLhId/ChLSptsQ/1UmtPGLZaKYVdsA==",
+      "path": "system.management/9.0.4",
+      "hashPath": "system.management.9.0.4.nupkg.sha512"
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.7": {
+    "Terminal.Gui/1.19.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Z6mfFEaFcwCfSboxJwOLfu7/31npCY9q70WUamHW/vRQhDvBKOT4Vf9YkZj5J6hLvJpb0oDEYfHunQZj0xxvKw==",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/10.0.7",
-      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.10.0.7.nupkg.sha512"
-    },
-    "Microsoft.Extensions.Logging.Abstractions/10.0.7": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-tIEcQ2gvERrH2KiCjdsVcHGhXt9lIsuDStfOIeZWr7/fP8IXhGiYfx0/80PNI7WPO2IYuFtlZLSlnTS8+/Mchw==",
-      "path": "microsoft.extensions.logging.abstractions/10.0.7",
-      "hashPath": "microsoft.extensions.logging.abstractions.10.0.7.nupkg.sha512"
-    },
-    "Onigwrap/1.0.10": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-eujNEpEhCl4UiqHTG0CeG/sWS8v/iYXGqUpaVkgBmYRZp3Utmz/aw38fuFL2rcnhj1FNfHwHaxGDeLY34a3nEA==",
-      "path": "onigwrap/1.0.10",
-      "hashPath": "onigwrap.1.0.10.nupkg.sha512"
-    },
-    "System.IO.Abstractions/22.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-nm4sNhAoN1NyiIVT6MS3EEzNjnir3PC1HE0mKGGUFg6RBW1HmRvWKuRDPkij1etOoQkpyIFmjVGcM6TpBGF3qQ==",
-      "path": "system.io.abstractions/22.1.1",
-      "hashPath": "system.io.abstractions.22.1.1.nupkg.sha512"
-    },
-    "Terminal.Gui/2.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Bzk79yOGn/Eg5vKX1g9Dw9MmmX8L6/D/gaqVdWNUt7PpI0K7n1gp0M4NgWIOZBZCAEADbVGDoMthC5P5AduWfw==",
-      "path": "terminal.gui/2.1.0",
-      "hashPath": "terminal.gui.2.1.0.nupkg.sha512"
-    },
-    "TestableIO.System.IO.Abstractions/22.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-EJmXIKfwvJHvSHWP+NjA213avUdofV4SmBx2aWxc3SzPkrHHVKxUMC3fSa/epzk/SVITwuU2EAntgQTvobAqwQ==",
-      "path": "testableio.system.io.abstractions/22.1.1",
-      "hashPath": "testableio.system.io.abstractions.22.1.1.nupkg.sha512"
-    },
-    "TestableIO.System.IO.Abstractions.Wrappers/22.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-J91zmSwuMY75ybtkqAFMC3vDNMkLJ/kiDDLhORITEwTKNhEwEYfxAQGv+f0jGYZg/H0YbnGcx5Ky0FgFJwrrWQ==",
-      "path": "testableio.system.io.abstractions.wrappers/22.1.1",
-      "hashPath": "testableio.system.io.abstractions.wrappers.22.1.1.nupkg.sha512"
-    },
-    "Testably.Abstractions.FileSystem.Interface/10.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-0R+m7DvS2QuDcFOfDGtyGErRrgXOl4/z2tbNLX2RfvlYJjlVcKG+wMIBfZO8vxGtTNwNxffTG4ibFRwd0jkM7w==",
-      "path": "testably.abstractions.filesystem.interface/10.1.0",
-      "hashPath": "testably.abstractions.filesystem.interface.10.1.0.nupkg.sha512"
-    },
-    "TextMateSharp/2.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-w0wGeqlBi9SYrzxpS1DBcEfiVCs5NY18Yl5YBIsHzXTXQd0OLOh3mP4LRuFvcktR/1MG8nSBHSMJj0rFvrPk+A==",
-      "path": "textmatesharp/2.0.3",
-      "hashPath": "textmatesharp.2.0.3.nupkg.sha512"
-    },
-    "TextMateSharp.Grammars/2.0.3": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-qkI1ogusuyGCGTgeyhljDM+GEfATOexoUTqLIgSb5P0ojmfhRXWfSTRXXJRpZkLDErShJ7RWOb+p10lHfhhO+Q==",
-      "path": "textmatesharp.grammars/2.0.3",
-      "hashPath": "textmatesharp.grammars.2.0.3.nupkg.sha512"
-    },
-    "Wcwidth/4.0.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-PMU8u3pGf9nUkee39KMrB8qqId7u7kyGWaZpOh9E4Mal3xChq+relS/hHQOicGAswyzi7F5DjXjac0mTnRBX8Q==",
-      "path": "wcwidth/4.0.1",
-      "hashPath": "wcwidth.4.0.1.nupkg.sha512"
+      "sha512": "sha512-Pgdlgout2KsBX+tO4t4mmg3YAL0vhT8falV4T77ohuQECel0q9agGKDWEfB0Cs1EnsGlrs7kCxocwphguKOVww==",
+      "path": "terminal.gui/1.19.0",
+      "hashPath": "terminal.gui.1.19.0.nupkg.sha512"
     }
   }
 }

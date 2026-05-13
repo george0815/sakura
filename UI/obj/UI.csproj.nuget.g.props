@@ -12,7 +12,4 @@
   <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <SourceRoot Include="/home/Hunter/.nuget/packages/" />
   </ItemGroup>
-  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)onigwrap/1.0.10/buildTransitive/netstandard1.0/Onigwrap.props" Condition="Exists('$(NuGetPackageRoot)onigwrap/1.0.10/buildTransitive/netstandard1.0/Onigwrap.props')" />
-  </ImportGroup>
 </Project>

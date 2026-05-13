@@ -2,50 +2,24 @@
   "version": 3,
   "targets": {
     "net10.0": {
-      "ColorHelper/1.8.1": {
+      "NStack.Core/1.1.1": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/ColorHelper.dll": {}
+          "lib/netstandard2.0/NStack.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/ColorHelper.dll": {}
+          "lib/netstandard2.0/NStack.dll": {}
         }
       },
-      "JetBrains.Annotations/2025.2.4": {
+      "System.CodeDom/9.0.4": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/JetBrains.Annotations.dll": {
-            "related": ".deps.json;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/JetBrains.Annotations.dll": {
-            "related": ".deps.json;.xml"
-          }
-        }
-      },
-      "Markdig/1.1.3": {
-        "type": "package",
-        "compile": {
-          "lib/net10.0/Markdig.dll": {
+          "lib/net9.0/System.CodeDom.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net10.0/Markdig.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.7": {
-        "type": "package",
-        "compile": {
-          "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+          "lib/net9.0/System.CodeDom.dll": {
             "related": ".xml"
           }
         },
@@ -53,604 +27,175 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/10.0.7": {
+      "System.Management/9.0.4": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.7"
+          "System.CodeDom": "9.0.4"
         },
         "compile": {
-          "lib/net10.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+          "lib/net9.0/System.Management.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net10.0/Microsoft.Extensions.Logging.Abstractions.dll": {
+          "lib/net9.0/System.Management.dll": {
             "related": ".xml"
           }
         },
         "build": {
-          "buildTransitive/net8.0/Microsoft.Extensions.Logging.Abstractions.targets": {}
-        }
-      },
-      "Onigwrap/1.0.10": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Onigwrap.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Onigwrap.dll": {}
-        },
-        "build": {
-          "buildTransitive/netstandard1.0/Onigwrap.props": {},
-          "buildTransitive/netstandard1.0/Onigwrap.targets": {}
+          "buildTransitive/net8.0/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/linux-arm64/native/libonigwrap.so": {
-            "assetType": "native",
-            "rid": "linux-arm64"
-          },
-          "runtimes/linux-bionic-arm64/native/libonigwrap.so": {
-            "assetType": "native",
-            "rid": "linux-bionic-arm64"
-          },
-          "runtimes/linux-bionic-x64/native/libonigwrap.so": {
-            "assetType": "native",
-            "rid": "linux-bionic-x64"
-          },
-          "runtimes/linux-musl-arm64/native/libonigwrap.so": {
-            "assetType": "native",
-            "rid": "linux-musl-arm64"
-          },
-          "runtimes/linux-musl-x64/native/libonigwrap.so": {
-            "assetType": "native",
-            "rid": "linux-musl-x64"
-          },
-          "runtimes/linux-x64/native/libonigwrap.so": {
-            "assetType": "native",
-            "rid": "linux-x64"
-          },
-          "runtimes/maccatalyst-arm64/native/libonigwrap.dylib": {
-            "assetType": "native",
-            "rid": "maccatalyst-arm64"
-          },
-          "runtimes/maccatalyst-x64/native/libonigwrap.dylib": {
-            "assetType": "native",
-            "rid": "maccatalyst-x64"
-          },
-          "runtimes/osx-arm64/native/libonigwrap.dylib": {
-            "assetType": "native",
-            "rid": "osx-arm64"
-          },
-          "runtimes/osx-x64/native/libonigwrap.dylib": {
-            "assetType": "native",
-            "rid": "osx-x64"
-          },
-          "runtimes/win-arm64/native/libonigwrap.dll": {
-            "assetType": "native",
-            "rid": "win-arm64"
-          },
-          "runtimes/win-x64/native/libonigwrap.dll": {
-            "assetType": "native",
-            "rid": "win-x64"
-          },
-          "runtimes/win-x86/native/libonigwrap.dll": {
-            "assetType": "native",
-            "rid": "win-x86"
+          "runtimes/win/lib/net9.0/System.Management.dll": {
+            "assetType": "runtime",
+            "rid": "win"
           }
         }
       },
-      "System.IO.Abstractions/22.1.1": {
+      "Terminal.Gui/1.19.0": {
         "type": "package",
         "dependencies": {
-          "TestableIO.System.IO.Abstractions": "22.1.1",
-          "TestableIO.System.IO.Abstractions.Wrappers": "22.1.1"
+          "NStack.Core": "1.1.1",
+          "System.Management": "9.0.4"
         },
         "compile": {
-          "lib/net10.0/System.IO.Abstractions.dll": {
+          "lib/net8.0/Terminal.Gui.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net10.0/System.IO.Abstractions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Terminal.Gui/2.1.0": {
-        "type": "package",
-        "dependencies": {
-          "ColorHelper": "1.8.1",
-          "JetBrains.Annotations": "2025.2.4",
-          "Markdig": "1.1.3",
-          "Microsoft.Extensions.Logging.Abstractions": "10.0.7",
-          "System.IO.Abstractions": "22.1.1",
-          "TextMateSharp": "2.0.3",
-          "TextMateSharp.Grammars": "2.0.3",
-          "Wcwidth": "4.0.1"
-        },
-        "compile": {
-          "lib/net10.0/Terminal.Gui.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Terminal.Gui.dll": {
+          "lib/net8.0/Terminal.Gui.dll": {
             "related": ".xml"
           }
         },
         "resource": {
-          "lib/net10.0/fr-FR/Terminal.Gui.resources.dll": {
+          "lib/net8.0/fr-FR/Terminal.Gui.resources.dll": {
             "locale": "fr-FR"
           },
-          "lib/net10.0/ja-JP/Terminal.Gui.resources.dll": {
+          "lib/net8.0/ja-JP/Terminal.Gui.resources.dll": {
             "locale": "ja-JP"
           },
-          "lib/net10.0/pt-PT/Terminal.Gui.resources.dll": {
+          "lib/net8.0/pt-PT/Terminal.Gui.resources.dll": {
             "locale": "pt-PT"
-          },
-          "lib/net10.0/zh-Hans/Terminal.Gui.resources.dll": {
-            "locale": "zh-Hans"
-          }
-        }
-      },
-      "TestableIO.System.IO.Abstractions/22.1.1": {
-        "type": "package",
-        "dependencies": {
-          "Testably.Abstractions.FileSystem.Interface": "10.1.0"
-        },
-        "compile": {
-          "lib/net10.0/TestableIO.System.IO.Abstractions.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/TestableIO.System.IO.Abstractions.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "TestableIO.System.IO.Abstractions.Wrappers/22.1.1": {
-        "type": "package",
-        "dependencies": {
-          "Testably.Abstractions.FileSystem.Interface": "10.1.0"
-        },
-        "compile": {
-          "lib/net10.0/TestableIO.System.IO.Abstractions.Wrappers.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/TestableIO.System.IO.Abstractions.Wrappers.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Testably.Abstractions.FileSystem.Interface/10.1.0": {
-        "type": "package",
-        "compile": {
-          "lib/net10.0/Testably.Abstractions.FileSystem.Interface.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Testably.Abstractions.FileSystem.Interface.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "TextMateSharp/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "Onigwrap": "1.0.10"
-        },
-        "compile": {
-          "lib/netstandard2.0/TextMateSharp.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/TextMateSharp.dll": {}
-        }
-      },
-      "TextMateSharp.Grammars/2.0.3": {
-        "type": "package",
-        "dependencies": {
-          "TextMateSharp": "2.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/TextMateSharp.Grammars.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/TextMateSharp.Grammars.dll": {}
-        }
-      },
-      "Wcwidth/4.0.1": {
-        "type": "package",
-        "compile": {
-          "lib/net10.0/Wcwidth.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Wcwidth.dll": {
-            "related": ".xml"
           }
         }
       }
     }
   },
   "libraries": {
-    "ColorHelper/1.8.1": {
-      "sha512": "rblWXd/02TfwJjX53xEfQnbnDRKxCm09VtavV8JaIcmIFWt9efNf6xTQ3WeXgy/she5R31eRTtnizFoUoDrs5w==",
+    "NStack.Core/1.1.1": {
+      "sha512": "5LhlYsmAe3A55zl8xCSD7AbuhDqZODpsfdMGgtygeBlHZmlb0tHmK5/PeKODnwYUhC6EbL2qHKGskPNvpY+z3w==",
       "type": "package",
-      "path": "colorhelper/1.8.1",
+      "path": "nstack.core/1.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "colorhelper.1.8.1.nupkg.sha512",
-        "colorhelper.nuspec",
-        "lib/netstandard2.0/ColorHelper.dll",
-        "logo.jpg"
+        "README.md",
+        "lib/netstandard2.0/NStack.dll",
+        "logo48.png",
+        "nstack.core.1.1.1.nupkg.sha512",
+        "nstack.core.nuspec"
       ]
     },
-    "JetBrains.Annotations/2025.2.4": {
-      "sha512": "TwbgxAkXxY+vNEhNVx/QXjJ4vqxmepOjsgRvvImQPbHkHMMb4W+ahL3laMsxXKtNT7iMy+E1B3xkqao2hf1n3A==",
+    "System.CodeDom/9.0.4": {
+      "sha512": "aJdv7Z87PoPW8ijvGIincocooYRbH3Umtlz7OrJKf6GDInbdu1bvk5X1fFlmbl7WP+9ntoIBd7NjKz+siVFdHA==",
       "type": "package",
-      "path": "jetbrains.annotations/2025.2.4",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "jetbrains.annotations.2025.2.4.nupkg.sha512",
-        "jetbrains.annotations.nuspec",
-        "lib/net20/JetBrains.Annotations.dll",
-        "lib/net20/JetBrains.Annotations.xml",
-        "lib/netstandard1.0/JetBrains.Annotations.deps.json",
-        "lib/netstandard1.0/JetBrains.Annotations.dll",
-        "lib/netstandard1.0/JetBrains.Annotations.xml",
-        "lib/netstandard2.0/JetBrains.Annotations.deps.json",
-        "lib/netstandard2.0/JetBrains.Annotations.dll",
-        "lib/netstandard2.0/JetBrains.Annotations.xml",
-        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.dll",
-        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.xml",
-        "readme.md"
-      ]
-    },
-    "Markdig/1.1.3": {
-      "sha512": "wboYc6YToID7koq+onej7rjd/kv4urZaZ4QMiJoF/jXt/ZlXe2Af9gWG4nOe5tk654UaOPYvKL64iFum7qWEYA==",
-      "type": "package",
-      "path": "markdig/1.1.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net10.0/Markdig.dll",
-        "lib/net10.0/Markdig.xml",
-        "lib/net462/Markdig.dll",
-        "lib/net462/Markdig.xml",
-        "lib/net8.0/Markdig.dll",
-        "lib/net8.0/Markdig.xml",
-        "lib/netstandard2.0/Markdig.dll",
-        "lib/netstandard2.0/Markdig.xml",
-        "lib/netstandard2.1/Markdig.dll",
-        "lib/netstandard2.1/Markdig.xml",
-        "markdig.1.1.3.nupkg.sha512",
-        "markdig.nuspec",
-        "markdig.png",
-        "readme.md"
-      ]
-    },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/10.0.7": {
-      "sha512": "Z6mfFEaFcwCfSboxJwOLfu7/31npCY9q70WUamHW/vRQhDvBKOT4Vf9YkZj5J6hLvJpb0oDEYfHunQZj0xxvKw==",
-      "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/10.0.7",
+      "path": "system.codedom/9.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "LICENSE.TXT",
         "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/net461/System.CodeDom.targets",
         "buildTransitive/net462/_._",
         "buildTransitive/net8.0/_._",
-        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
-        "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/net10.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.10.0.7.nupkg.sha512",
-        "microsoft.extensions.dependencyinjection.abstractions.nuspec",
+        "buildTransitive/netcoreapp2.0/System.CodeDom.targets",
+        "lib/net462/System.CodeDom.dll",
+        "lib/net462/System.CodeDom.xml",
+        "lib/net8.0/System.CodeDom.dll",
+        "lib/net8.0/System.CodeDom.xml",
+        "lib/net9.0/System.CodeDom.dll",
+        "lib/net9.0/System.CodeDom.xml",
+        "lib/netstandard2.0/System.CodeDom.dll",
+        "lib/netstandard2.0/System.CodeDom.xml",
+        "system.codedom.9.0.4.nupkg.sha512",
+        "system.codedom.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.Logging.Abstractions/10.0.7": {
-      "sha512": "tIEcQ2gvERrH2KiCjdsVcHGhXt9lIsuDStfOIeZWr7/fP8IXhGiYfx0/80PNI7WPO2IYuFtlZLSlnTS8+/Mchw==",
+    "System.Management/9.0.4": {
+      "sha512": "MfY9+SrkSvchAoFiChTkhQYCAjBaQQ9u3LwiKmho7oTbujucnxCzORlPgLhId/ChLSptsQ/1UmtPGLZaKYVdsA==",
       "type": "package",
-      "path": "microsoft.extensions.logging.abstractions/10.0.7",
+      "path": "system.management/9.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "LICENSE.TXT",
         "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "analyzers/dotnet/roslyn3.11/cs/Microsoft.Extensions.Logging.Generators.dll",
-        "analyzers/dotnet/roslyn3.11/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn3.11/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/Microsoft.Extensions.Logging.Generators.dll",
-        "analyzers/dotnet/roslyn4.0/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.0/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.4/cs/Microsoft.Extensions.Logging.Generators.dll",
-        "analyzers/dotnet/roslyn4.4/cs/cs/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.4/cs/de/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.4/cs/es/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.4/cs/fr/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.4/cs/it/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.4/cs/ja/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.4/cs/ko/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.4/cs/pl/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.4/cs/pt-BR/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.4/cs/ru/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.4/cs/tr/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.4/cs/zh-Hans/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "analyzers/dotnet/roslyn4.4/cs/zh-Hant/Microsoft.Extensions.Logging.Generators.resources.dll",
-        "buildTransitive/net461/Microsoft.Extensions.Logging.Abstractions.targets",
-        "buildTransitive/net462/Microsoft.Extensions.Logging.Abstractions.targets",
-        "buildTransitive/net8.0/Microsoft.Extensions.Logging.Abstractions.targets",
-        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Logging.Abstractions.targets",
-        "buildTransitive/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.targets",
-        "lib/net10.0/Microsoft.Extensions.Logging.Abstractions.dll",
-        "lib/net10.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "lib/net462/Microsoft.Extensions.Logging.Abstractions.dll",
-        "lib/net462/Microsoft.Extensions.Logging.Abstractions.xml",
-        "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.dll",
-        "lib/net8.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.dll",
-        "lib/net9.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Logging.Abstractions.xml",
-        "microsoft.extensions.logging.abstractions.10.0.7.nupkg.sha512",
-        "microsoft.extensions.logging.abstractions.nuspec",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Management.targets",
+        "lib/net462/_._",
+        "lib/net8.0/System.Management.dll",
+        "lib/net8.0/System.Management.xml",
+        "lib/net9.0/System.Management.dll",
+        "lib/net9.0/System.Management.xml",
+        "lib/netstandard2.0/System.Management.dll",
+        "lib/netstandard2.0/System.Management.xml",
+        "runtimes/win/lib/net8.0/System.Management.dll",
+        "runtimes/win/lib/net8.0/System.Management.xml",
+        "runtimes/win/lib/net9.0/System.Management.dll",
+        "runtimes/win/lib/net9.0/System.Management.xml",
+        "system.management.9.0.4.nupkg.sha512",
+        "system.management.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
-    "Onigwrap/1.0.10": {
-      "sha512": "eujNEpEhCl4UiqHTG0CeG/sWS8v/iYXGqUpaVkgBmYRZp3Utmz/aw38fuFL2rcnhj1FNfHwHaxGDeLY34a3nEA==",
+    "Terminal.Gui/1.19.0": {
+      "sha512": "Pgdlgout2KsBX+tO4t4mmg3YAL0vhT8falV4T77ohuQECel0q9agGKDWEfB0Cs1EnsGlrs7kCxocwphguKOVww==",
       "type": "package",
-      "path": "onigwrap/1.0.10",
+      "path": "terminal.gui/1.19.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/net471/Onigwrap.props",
-        "buildTransitive/net471/Onigwrap.targets",
-        "buildTransitive/netstandard1.0/Onigwrap.props",
-        "buildTransitive/netstandard1.0/Onigwrap.targets",
-        "buildTransitive/netstandard1.0/wasm/2.0.23/st/libonigwrap.a",
-        "buildTransitive/netstandard1.0/wasm/3.1.12/mt/libonigwrap.a",
-        "buildTransitive/netstandard1.0/wasm/3.1.12/st/libonigwrap.a",
-        "buildTransitive/netstandard1.0/wasm/3.1.34/mt/libonigwrap.a",
-        "buildTransitive/netstandard1.0/wasm/3.1.34/st/libonigwrap.a",
-        "buildTransitive/netstandard1.0/wasm/3.1.56/mt/libonigwrap.a",
-        "buildTransitive/netstandard1.0/wasm/3.1.56/st/libonigwrap.a",
-        "lib/net471/Onigwrap.dll",
-        "lib/netstandard2.0/Onigwrap.dll",
-        "onigwrap.1.0.10.nupkg.sha512",
-        "onigwrap.nuspec",
-        "runtimes/linux-arm64/native/libonigwrap.so",
-        "runtimes/linux-bionic-arm64/native/libonigwrap.so",
-        "runtimes/linux-bionic-x64/native/libonigwrap.so",
-        "runtimes/linux-musl-arm64/native/libonigwrap.so",
-        "runtimes/linux-musl-x64/native/libonigwrap.so",
-        "runtimes/linux-x64/native/libonigwrap.so",
-        "runtimes/maccatalyst-arm64/native/libonigwrap.dylib",
-        "runtimes/maccatalyst-x64/native/libonigwrap.dylib",
-        "runtimes/osx-arm64/native/libonigwrap.dylib",
-        "runtimes/osx-x64/native/libonigwrap.dylib",
-        "runtimes/win-arm64/native/libonigwrap.dll",
-        "runtimes/win-x64/native/libonigwrap.dll",
-        "runtimes/win-x86/native/libonigwrap.dll"
-      ]
-    },
-    "System.IO.Abstractions/22.1.1": {
-      "sha512": "nm4sNhAoN1NyiIVT6MS3EEzNjnir3PC1HE0mKGGUFg6RBW1HmRvWKuRDPkij1etOoQkpyIFmjVGcM6TpBGF3qQ==",
-      "type": "package",
-      "path": "system.io.abstractions/22.1.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "icon_256x256.png",
-        "lib/net10.0/System.IO.Abstractions.dll",
-        "lib/net10.0/System.IO.Abstractions.xml",
-        "lib/net472/System.IO.Abstractions.dll",
-        "lib/net472/System.IO.Abstractions.xml",
-        "lib/net6.0/System.IO.Abstractions.dll",
-        "lib/net6.0/System.IO.Abstractions.xml",
-        "lib/net8.0/System.IO.Abstractions.dll",
-        "lib/net8.0/System.IO.Abstractions.xml",
-        "lib/net9.0/System.IO.Abstractions.dll",
-        "lib/net9.0/System.IO.Abstractions.xml",
-        "lib/netstandard2.0/System.IO.Abstractions.dll",
-        "lib/netstandard2.0/System.IO.Abstractions.xml",
-        "lib/netstandard2.1/System.IO.Abstractions.dll",
-        "lib/netstandard2.1/System.IO.Abstractions.xml",
-        "system.io.abstractions.22.1.1.nupkg.sha512",
-        "system.io.abstractions.nuspec"
-      ]
-    },
-    "Terminal.Gui/2.1.0": {
-      "sha512": "Bzk79yOGn/Eg5vKX1g9Dw9MmmX8L6/D/gaqVdWNUt7PpI0K7n1gp0M4NgWIOZBZCAEADbVGDoMthC5P5AduWfw==",
-      "type": "package",
-      "path": "terminal.gui/2.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "lib/net10.0/Terminal.Gui.dll",
-        "lib/net10.0/Terminal.Gui.xml",
-        "lib/net10.0/fr-FR/Terminal.Gui.resources.dll",
-        "lib/net10.0/ja-JP/Terminal.Gui.resources.dll",
-        "lib/net10.0/pt-PT/Terminal.Gui.resources.dll",
-        "lib/net10.0/zh-Hans/Terminal.Gui.resources.dll",
+        "lib/net472/Terminal.Gui.dll",
+        "lib/net472/Terminal.Gui.xml",
+        "lib/net472/fr-FR/Terminal.Gui.resources.dll",
+        "lib/net472/ja-JP/Terminal.Gui.resources.dll",
+        "lib/net472/pt-PT/Terminal.Gui.resources.dll",
+        "lib/net6.0/Terminal.Gui.dll",
+        "lib/net6.0/Terminal.Gui.xml",
+        "lib/net6.0/fr-FR/Terminal.Gui.resources.dll",
+        "lib/net6.0/ja-JP/Terminal.Gui.resources.dll",
+        "lib/net6.0/pt-PT/Terminal.Gui.resources.dll",
+        "lib/net8.0/Terminal.Gui.dll",
+        "lib/net8.0/Terminal.Gui.xml",
+        "lib/net8.0/fr-FR/Terminal.Gui.resources.dll",
+        "lib/net8.0/ja-JP/Terminal.Gui.resources.dll",
+        "lib/net8.0/pt-PT/Terminal.Gui.resources.dll",
+        "lib/netstandard2.0/Terminal.Gui.dll",
+        "lib/netstandard2.0/Terminal.Gui.xml",
+        "lib/netstandard2.0/fr-FR/Terminal.Gui.resources.dll",
+        "lib/netstandard2.0/ja-JP/Terminal.Gui.resources.dll",
+        "lib/netstandard2.0/pt-PT/Terminal.Gui.resources.dll",
+        "lib/netstandard2.1/Terminal.Gui.dll",
+        "lib/netstandard2.1/Terminal.Gui.xml",
+        "lib/netstandard2.1/fr-FR/Terminal.Gui.resources.dll",
+        "lib/netstandard2.1/ja-JP/Terminal.Gui.resources.dll",
+        "lib/netstandard2.1/pt-PT/Terminal.Gui.resources.dll",
         "logo.png",
-        "terminal.gui.2.1.0.nupkg.sha512",
+        "terminal.gui.1.19.0.nupkg.sha512",
         "terminal.gui.nuspec"
-      ]
-    },
-    "TestableIO.System.IO.Abstractions/22.1.1": {
-      "sha512": "EJmXIKfwvJHvSHWP+NjA213avUdofV4SmBx2aWxc3SzPkrHHVKxUMC3fSa/epzk/SVITwuU2EAntgQTvobAqwQ==",
-      "type": "package",
-      "path": "testableio.system.io.abstractions/22.1.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "icon_256x256.png",
-        "lib/net10.0/TestableIO.System.IO.Abstractions.dll",
-        "lib/net10.0/TestableIO.System.IO.Abstractions.xml",
-        "lib/net472/TestableIO.System.IO.Abstractions.dll",
-        "lib/net472/TestableIO.System.IO.Abstractions.xml",
-        "lib/net6.0/TestableIO.System.IO.Abstractions.dll",
-        "lib/net6.0/TestableIO.System.IO.Abstractions.xml",
-        "lib/net8.0/TestableIO.System.IO.Abstractions.dll",
-        "lib/net8.0/TestableIO.System.IO.Abstractions.xml",
-        "lib/net9.0/TestableIO.System.IO.Abstractions.dll",
-        "lib/net9.0/TestableIO.System.IO.Abstractions.xml",
-        "lib/netstandard2.0/TestableIO.System.IO.Abstractions.dll",
-        "lib/netstandard2.0/TestableIO.System.IO.Abstractions.xml",
-        "lib/netstandard2.1/TestableIO.System.IO.Abstractions.dll",
-        "lib/netstandard2.1/TestableIO.System.IO.Abstractions.xml",
-        "testableio.system.io.abstractions.22.1.1.nupkg.sha512",
-        "testableio.system.io.abstractions.nuspec"
-      ]
-    },
-    "TestableIO.System.IO.Abstractions.Wrappers/22.1.1": {
-      "sha512": "J91zmSwuMY75ybtkqAFMC3vDNMkLJ/kiDDLhORITEwTKNhEwEYfxAQGv+f0jGYZg/H0YbnGcx5Ky0FgFJwrrWQ==",
-      "type": "package",
-      "path": "testableio.system.io.abstractions.wrappers/22.1.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "icon_256x256.png",
-        "lib/net10.0/TestableIO.System.IO.Abstractions.Wrappers.dll",
-        "lib/net10.0/TestableIO.System.IO.Abstractions.Wrappers.xml",
-        "lib/net472/TestableIO.System.IO.Abstractions.Wrappers.dll",
-        "lib/net472/TestableIO.System.IO.Abstractions.Wrappers.xml",
-        "lib/net6.0/TestableIO.System.IO.Abstractions.Wrappers.dll",
-        "lib/net6.0/TestableIO.System.IO.Abstractions.Wrappers.xml",
-        "lib/net8.0/TestableIO.System.IO.Abstractions.Wrappers.dll",
-        "lib/net8.0/TestableIO.System.IO.Abstractions.Wrappers.xml",
-        "lib/net9.0/TestableIO.System.IO.Abstractions.Wrappers.dll",
-        "lib/net9.0/TestableIO.System.IO.Abstractions.Wrappers.xml",
-        "lib/netstandard2.0/TestableIO.System.IO.Abstractions.Wrappers.dll",
-        "lib/netstandard2.0/TestableIO.System.IO.Abstractions.Wrappers.xml",
-        "lib/netstandard2.1/TestableIO.System.IO.Abstractions.Wrappers.dll",
-        "lib/netstandard2.1/TestableIO.System.IO.Abstractions.Wrappers.xml",
-        "testableio.system.io.abstractions.wrappers.22.1.1.nupkg.sha512",
-        "testableio.system.io.abstractions.wrappers.nuspec"
-      ]
-    },
-    "Testably.Abstractions.FileSystem.Interface/10.1.0": {
-      "sha512": "0R+m7DvS2QuDcFOfDGtyGErRrgXOl4/z2tbNLX2RfvlYJjlVcKG+wMIBfZO8vxGtTNwNxffTG4ibFRwd0jkM7w==",
-      "type": "package",
-      "path": "testably.abstractions.filesystem.interface/10.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Docs/Interface.md",
-        "Docs/logo_256x256.png",
-        "lib/net10.0/Testably.Abstractions.FileSystem.Interface.dll",
-        "lib/net10.0/Testably.Abstractions.FileSystem.Interface.xml",
-        "lib/net6.0/Testably.Abstractions.FileSystem.Interface.dll",
-        "lib/net6.0/Testably.Abstractions.FileSystem.Interface.xml",
-        "lib/net8.0/Testably.Abstractions.FileSystem.Interface.dll",
-        "lib/net8.0/Testably.Abstractions.FileSystem.Interface.xml",
-        "lib/net9.0/Testably.Abstractions.FileSystem.Interface.dll",
-        "lib/net9.0/Testably.Abstractions.FileSystem.Interface.xml",
-        "lib/netstandard2.0/Testably.Abstractions.FileSystem.Interface.dll",
-        "lib/netstandard2.0/Testably.Abstractions.FileSystem.Interface.xml",
-        "lib/netstandard2.1/Testably.Abstractions.FileSystem.Interface.dll",
-        "lib/netstandard2.1/Testably.Abstractions.FileSystem.Interface.xml",
-        "testably.abstractions.filesystem.interface.10.1.0.nupkg.sha512",
-        "testably.abstractions.filesystem.interface.nuspec"
-      ]
-    },
-    "TextMateSharp/2.0.3": {
-      "sha512": "w0wGeqlBi9SYrzxpS1DBcEfiVCs5NY18Yl5YBIsHzXTXQd0OLOh3mP4LRuFvcktR/1MG8nSBHSMJj0rFvrPk+A==",
-      "type": "package",
-      "path": "textmatesharp/2.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/TextMateSharp.dll",
-        "textmatesharp.2.0.3.nupkg.sha512",
-        "textmatesharp.nuspec"
-      ]
-    },
-    "TextMateSharp.Grammars/2.0.3": {
-      "sha512": "qkI1ogusuyGCGTgeyhljDM+GEfATOexoUTqLIgSb5P0ojmfhRXWfSTRXXJRpZkLDErShJ7RWOb+p10lHfhhO+Q==",
-      "type": "package",
-      "path": "textmatesharp.grammars/2.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/TextMateSharp.Grammars.dll",
-        "textmatesharp.grammars.2.0.3.nupkg.sha512",
-        "textmatesharp.grammars.nuspec"
-      ]
-    },
-    "Wcwidth/4.0.1": {
-      "sha512": "PMU8u3pGf9nUkee39KMrB8qqId7u7kyGWaZpOh9E4Mal3xChq+relS/hHQOicGAswyzi7F5DjXjac0mTnRBX8Q==",
-      "type": "package",
-      "path": "wcwidth/4.0.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net10.0/Wcwidth.dll",
-        "lib/net10.0/Wcwidth.xml",
-        "lib/net8.0/Wcwidth.dll",
-        "lib/net8.0/Wcwidth.xml",
-        "lib/net9.0/Wcwidth.dll",
-        "lib/net9.0/Wcwidth.xml",
-        "lib/netstandard2.0/Wcwidth.dll",
-        "lib/netstandard2.0/Wcwidth.xml",
-        "wcwidth.4.0.1.nupkg.sha512",
-        "wcwidth.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Terminal.Gui >= 2.1.0"
+      "Terminal.Gui >= 1.19.0"
     ]
   },
   "packageFolders": {
@@ -698,7 +243,7 @@
         "dependencies": {
           "Terminal.Gui": {
             "target": "Package",
-            "version": "[2.1.0, )"
+            "version": "[1.19.0, )"
           }
         },
         "imports": [

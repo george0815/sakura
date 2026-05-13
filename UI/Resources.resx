@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="File/Folder" xml:space="preserve">
+    <value>File/Folder:</value>
+  </data>
+  <data name="Outputpath" xml:space="preserve">
+    <value>Output path:</value>
+  </data>
+  <data name="Trackers" xml:space="preserve">
+    <value>Trackers:</value>
+  </data>
+  <data name="Piecesize" xml:space="preserve">
+    <value>Piece size:</value>
+  </data>
+  <data name="16KB" xml:space="preserve">
+    <value>16 KB</value>
+  </data>
+  <data name="32KB" xml:space="preserve">
+    <value>32 KB</value>
+  </data>
+  <data name="64KB" xml:space="preserve">
+    <value>64 KB</value>
+  </data>
+  <data name="128KB" xml:space="preserve">
+    <value>128 KB</value>
+  </data>
+  <data name="256KB" xml:space="preserve">
+    <value>256 KB</value>
+  </data>
+  <data name="512KB" xml:space="preserve">
+    <value>512 KB</value>
+  </data>
+  <data name="1MB" xml:space="preserve">
+    <value>1 MB</value>
+  </data>
+  <data name="2MB" xml:space="preserve">
+    <value>2 MB</value>
+  </data>
+  <data name="Startseedingaftercreation" xml:space="preserve">
+    <value>Start seeding after creation</value>
+  </data>
+  <data name="Private" xml:space="preserve">
+    <value>Private</value>
+  </data>
+  <data name="Publisher" xml:space="preserve">
+    <value>Publisher:</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>Comment:</value>
+  </data>
+  <data name="Selectfolder" xml:space="preserve">
+    <value>Select Folder</value>
+  </data>
+  <data name="Selectthefolderthatcontainsyourfiles" xml:space="preserve">
+    <value>Select the folder that contains your files.</value>
+  </data>
+  <data name="Selectoutputfile" xml:space="preserve">
+    <value>Select output file</value>
+  </data>
+  <data name="Selecttheoutputtorrentfilepath" xml:space="preserve">
+    <value>Select the output .torrent file path.</value>
+  </data>
+  <data name="torrent" xml:space="preserve">
+    <value>.torrent</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Invalidfile/folderpath" xml:space="preserve">
+    <value>Invalid file/folder path.</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Outputpathdoesnotexist" xml:space="preserve">
+    <value>Output path does not exist.</value>
+  </data>
+  <data name="InvalidtrackerURL" xml:space="preserve">
+    <value>Invalid tracker URL:</value>
+  </data>
+  <data name="trimmed" xml:space="preserve">
+    <value>{trimmed}</value>
+  </data>
+  <data name="Torrentcreationfailed" xml:space="preserve">
+    <value>Torrent creation failed:</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Torrentcreatedsuccessfully!" xml:space="preserve">
+    <value>Torrent created successfully!</value>
+  </data>
+  <data name="Unexpectederror" xml:space="preserve">
+    <value>Unexpected error:</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Download</value>
+  </data>
+  <data name="Magnetlink" xml:space="preserve">
+    <value>Magnet link:</value>
+  </data>
+  <data name="Usemagnetlink" xml:space="preserve">
+    <value>Use magnet link</value>
+  </data>
+  <data name="Torrentfilepath" xml:space="preserve">
+    <value>Torrent file path:</value>
+  </data>
+  <data name="Downloadpath" xml:space="preserve">
+    <value>Download path:</value>
+  </data>
+  <data name="Maxconnections" xml:space="preserve">
+    <value>Maximum connections:</value>
+  </data>
+  <data name="Maxdownload(MB/s)" xml:space="preserve">
+    <value>Maximum download rate (MB/s):</value>
+  </data>
+  <data name="Maxupload(MB/s)" xml:space="preserve">
+    <value>Maximum upload rate (MB/s):</value>
+  </data>
+  <data name="EnableDHT" xml:space="preserve">
+    <value>Enable DHT</value>
+  </data>
+  <data name="Selecttorrentfile" xml:space="preserve">
+    <value>Select torrent file</value>
+  </data>
+  <data name="Selectatorrentfile" xml:space="preserve">
+    <value>Select the .torrent file</value>
+  </data>
+  <data name="Selectdownloadfolder" xml:space="preserve">
+    <value>Select download folder</value>
+  </data>
+  <data name="Youmustselecteitheramagnetlinkoratorrentfile" xml:space="preserve">
+    <value>You must select either a magnet link or a torrent file.</value>
+  </data>
+  <data name="Magnetlinkisempty" xml:space="preserve">
+    <value>Magnet link is empty.</value>
+  </data>
+  <data name="Thisdoesnotappeartobeavalidmagnetlink" xml:space="preserve">
+    <value>This does not appear to be a valid magnet link.</value>
+  </data>
+  <data name="Torrentfiledoesnotexist" xml:space="preserve">
+    <value>Torrent file does not exist.</value>
+  </data>
+  <data name="MissingDirectory" xml:space="preserve">
+    <value>Missing Directory</value>
+  </data>
+  <data name="DownloadpathdoesnotexistCreateit?" xml:space="preserve">
+    <value>Download path does not exist. Create it?</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Invalidmaximumconnectionsvalue" xml:space="preserve">
+    <value>Invalid maximum connections value.</value>
+  </data>
+  <data name="Invaliddownloadspeedlimit" xml:space="preserve">
+    <value>Invalid download rate limit.</value>
+  </data>
+  <data name="Invaliduploadspeedlimit" xml:space="preserve">
+    <value>Invalid upload rate limit.</value>
+  </data>
+  <data name="Torrentdownloadstarted" xml:space="preserve">
+    <value>Torrent download started.</value>
+  </data>
+  <data name="TorrentstartupfailedexMessage" xml:space="preserve">
+    <value>Torrent startup failed:</value>
+  </data>
+  <data name="yyyy-MM-dd" xml:space="preserve">
+    <value>yyyy-MM-dd</value>
+  </data>
+  <data name="ActiveTorrents" xml:space="preserve">
+    <value>Active torrents: </value>
+  </data>
+  <data name="Noactivetorrents" xml:space="preserve">
+    <value>No active torrents</value>
+  </data>
+  <data name="Operatingonport" xml:space="preserve">
+    <value>Operating on port: </value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Start: </value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Stop: </value>
+  </data>
+  <data name="Startseeding" xml:space="preserve">
+    <value>Start seeding: </value>
+  </data>
+  <data name="Stopseeding" xml:space="preserve">
+    <value>Stop seeding: </value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete: </value>
+  </data>
+  <data name="Log" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="Blue" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="Green" xml:space="preserve">
+    <value>Green</value>
+  </data>
+  <data name="Cyan" xml:space="preserve">
+    <value>Cyan</value>
+  </data>
+  <data name="Red" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="Magenta" xml:space="preserve">
+    <value>Magenta</value>
+  </data>
+  <data name="Brown" xml:space="preserve">
+    <value>Brown</value>
+  </data>
+  <data name="Gray" xml:space="preserve">
+    <value>Gray</value>
+  </data>
+  <data name="DarkGray" xml:space="preserve">
+    <value>DarkGray</value>
+  </data>
+  <data name="BrightBlue" xml:space="preserve">
+    <value>BrightBlue</value>
+  </data>
+  <data name="BrightGreen" xml:space="preserve">
+    <value>BrightGreen</value>
+  </data>
+  <data name="BrightCyan" xml:space="preserve">
+    <value>BrightCyan</value>
+  </data>
+  <data name="BrightRed" xml:space="preserve">
+    <value>BrightRed</value>
+  </data>
+  <data name="BrightMagenta" xml:space="preserve">
+    <value>BrightMagenta</value>
+  </data>
+  <data name="BrightYellow" xml:space="preserve">
+    <value>BrightYellow</value>
+  </data>
+  <data name="White" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>Port:</value>
+  </data>
+  <data name="DHTport" xml:space="preserve">
+    <value>DHT port:</value>
+  </data>
+  <data name="Maxtotalconnections" xml:space="preserve">
+    <value>Maximum total connections:</value>
+  </data>
+  <data name="Maxtotaldownloadspeed(MB/s)" xml:space="preserve">
+    <value>Total download rate limit (MB/s):</value>
+  </data>
+  <data name="Maxtotaluploadspeed(MB/s)" xml:space="preserve">
+    <value>Total upload rate limit (MB/s):</value>
+  </data>
+  <data name="Progressrefreshrate(ms)" xml:space="preserve">
+    <value>Progress refresh rate (ms):</value>
+  </data>
+  <data name="StopSeedingWhenFinished" xml:space="preserve">
+    <value>Stop Seeding When Finished</value>
+  </data>
+  <data name="Disablecoloredhotkeyinformation" xml:space="preserve">
+    <value>Disable colored hotkey information</value>
+  </data>
+  <data name="Enabledetailedlogging" xml:space="preserve">
+    <value>Enable detailed logging</value>
+  </data>
+  <data name="EnablePortForwarding" xml:space="preserve">
+    <value>Enable Port Forwarding</value>
+  </data>
+  <data name="Usesystemconsole" xml:space="preserve">
+    <value>Use system console</value>
+  </data>
+  <data name="Hidetextcursor" xml:space="preserve">
+    <value>Hide text cursor</value>
+  </data>
+  <data name="DefaultDownloadPath" xml:space="preserve">
+    <value>Default Download Path:</value>
+  </data>
+  <data name="LogPath" xml:space="preserve">
+    <value>Log Path:</value>
+  </data>
+  <data name="SettingsPath" xml:space="preserve">
+    <value>Settings Path:</value>
+  </data>
+  <data name="Backgroundcolor" xml:space="preserve">
+    <value>Background color:</value>
+  </data>
+  <data name="Textcolor" xml:space="preserve">
+    <value>Text color:</value>
+  </data>
+  <data name="Focusbackgroundcolor" xml:space="preserve">
+    <value>Focus background color:</value>
+  </data>
+  <data name="Focustextcolor" xml:space="preserve">
+    <value>Focus text color:</value>
+  </data>
+  <data name="Hotkeytextcolor" xml:space="preserve">
+    <value>Hotkey text color:</value>
+  </data>
+  <data name="ASCIIcolor" xml:space="preserve">
+    <value>ASCII color:</value>
+  </data>
+  <data name="DisableASCII" xml:space="preserve">
+    <value>Disable ASCII</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Selectlogfilepath" xml:space="preserve">
+    <value>Select log file path</value>
+  </data>
+  <data name="Selectfilenameforthelogfile" xml:space="preserve">
+    <value>Select filename for the log file.</value>
+  </data>
+  <data name="Selectconfigfilepath" xml:space="preserve">
+    <value>Select config file path</value>
+  </data>
+  <data name="Selectfilenamefortheconfigfile" xml:space="preserve">
+    <value>Select filename for the config file.</value>
+  </data>
+  <data name="Selectdefaultdownloadfolder" xml:space="preserve">
+    <value>Select default download folder</value>
+  </data>
+  <data name="Selectthedefaultdownloadfolderpath" xml:space="preserve">
+    <value>Select the default download folder path.</value>
+  </data>
+  <data name="Invalidportnumber" xml:space="preserve">
+    <value>Invalid port number.</value>
+  </data>
+  <data name="InvalidDHTportnumber" xml:space="preserve">
+    <value>Invalid DHT port number.</value>
+  </data>
+  <data name="Invalidmaxconnections" xml:space="preserve">
+    <value>Invalid maximum connections value.</value>
+  </data>
+  <data name="Invalidmaxdownloadspeed" xml:space="preserve">
+    <value>Invalid maximum download rate value.</value>
+  </data>
+  <data name="Invalidmaxuploadspeed" xml:space="preserve">
+    <value>Invalid maximum upload rate value.</value>
+  </data>
+  <data name="Invalidprogressrefreshrate" xml:space="preserve">
+    <value>Invalid progress refresh rate.</value>
+  </data>
+  <data name="Downloadpathcannotbeempty" xml:space="preserve">
+    <value>Download path cannot be empty.</value>
+  </data>
+  <data name="Logpathcannotbeempty" xml:space="preserve">
+    <value>Log path cannot be empty.</value>
+  </data>
+  <data name="Settingspathcannotbeempty" xml:space="preserve">
+    <value>Settings path cannot be empty.</value>
+  </data>
+  <data name="FatalError" xml:space="preserve">
+    <value>Fatal Error</value>
+  </data>
+  <data name="Torrents" xml:space="preserve">
+    <value>Torrents</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="Peers" xml:space="preserve">
+    <value>Peers</value>
+  </data>
+  <data name="Leechers" xml:space="preserve">
+    <value>Leechers</value>
+  </data>
+  <data name="Seeders" xml:space="preserve">
+    <value>Seeders</value>
+  </data>
+  <data name="Downloadrate" xml:space="preserve">
+    <value>Download rate</value>
+  </data>
+  <data name="Uploadrate" xml:space="preserve">
+    <value>Upload rate</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="MagnetlinkgeneratedmagnetToV1String()" xml:space="preserve">
+    <value>Magnet link generated: </value>
+  </data>
+  <data name="Magnetlinkcopiedtoclipboard" xml:space="preserve">
+    <value>Magnet link copied to clipboard.</value>
+  </data>
+  <data name="Deletedownloadedfiles?" xml:space="preserve">
+    <value>Delete downloaded files?</value>
+  </data>
+  <data name="0" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ChooseColor" xml:space="preserve">
+    <value>Choose color</value>
+  </data>
+  <data name="c" xml:space="preserve">
+    <value> {c} </value>
+  </data>
+  <data name="Invalidpath" xml:space="preserve">
+    <value>Invalid path.</value>
+  </data>
+  <data name="InvalidFile" xml:space="preserve">
+    <value>Invalid file</value>
+  </data>
+  <data name="Selectedfiledoesnotexist" xml:space="preserve">
+    <value>Selected file does not exist.</value>
+  </data>
+  <data name="InvalidFolder" xml:space="preserve">
+    <value>Invalid folder</value>
+  </data>
+  <data name="Selectedfolderdoesnotexist" xml:space="preserve">
+    <value>Selected folder does not exist.</value>
+  </data>
+  <data name="HEADER" xml:space="preserve">
+    <value>HEADER</value>
+  </data>
+  <data name="StartSettingsCurrentControlsStartDownload" xml:space="preserve">
+    <value>Start:</value>
+  </data>
+  <data name="StartseedingSettingsCurrentControlsStartSeeding" xml:space="preserve">
+    <value>Start seeding:</value>
+  </data>
+  <data name="DeleteSettingsCurrentControlsRemoveTorrent" xml:space="preserve">
+    <value>Delete:</value>
+  </data>
+  <data name="GeneratemagnetlinkSettingsCurrentControlsGenMagLink" xml:space="preserve">
+    <value>Generate magnet link: </value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Exit?" xml:space="preserve">
+    <value>Exit?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="/logtxt" xml:space="preserve">
+    <value>./log.txt</value>
+  </data>
+  <data name="cfgjson" xml:space="preserve">
+    <value>cfg.json</value>
+  </data>
+  <data name="main" xml:space="preserve">
+    <value>main</value>
+  </data>
+  <data name="ErrorsavingsettingsexMessage" xml:space="preserve">
+    <value>Error saving settings:</value>
+  </data>
+  <data name="ErrorloadingsettingsexMessage" xml:space="preserve">
+    <value>Error loading settings:</value>
+  </data>
+  <data name="LainTorrentClient" xml:space="preserve">
+    <value>Lain Torrent Client</value>
+  </data>
+  <data name="Downloadingfrommagnetlink" xml:space="preserve">
+    <value>Downloading from magnet link...</value>
+  </data>
+  <data name="Statechanged" xml:space="preserve">
+    <value>State changed:</value>
+  </data>
+  <data name="DHTEngineDhtState" xml:space="preserve">
+    <value>DHT:</value>
+  </data>
+  <data name="Piecehashed" xml:space="preserve">
+    <value>Piece hashed:</value>
+  </data>
+  <data name="Savedfastresumedata" xml:space="preserve">
+    <value>Saved fast resume data</value>
+  </data>
+  <data name="Errorsavingfastresumedataex" xml:space="preserve">
+    <value>Error saving fastresume data:</value>
+  </data>
+  <data name="torrentsjson" xml:space="preserve">
+    <value>torrents.json</value>
+  </data>
+  <data name="ErrorsavingtorrentsexMessage" xml:space="preserve">
+    <value>Error saving torrents:</value>
+  </data>
+  <data name="FastresumedatasavedfortorrentManagers[index]Torrent?Name" xml:space="preserve">
+    <value>Fast resume data saved for torrent: </value>
+  </data>
+  <data name="PausedtorrentmanagerTorrent?Name" xml:space="preserve">
+    <value>Paused torrent:</value>
+  </data>
+  <data name="ErrorpausingtorrentexMessage" xml:space="preserve">
+    <value>Error pausing torrent:</value>
+  </data>
+  <data name="ResumedtorrentmanagerTorrent?Name" xml:space="preserve">
+    <value>Resumed torrent:</value>
+  </data>
+  <data name="ErrorresumingtorrentexMessage" xml:space="preserve">
+    <value>Error resuming torrent:</value>
+  </data>
+  <data name="StartedseedingmanagerTorrent?Name" xml:space="preserve">
+    <value>Started seeding:</value>
+  </data>
+  <data name="ErrorstartingseedingexMessage" xml:space="preserve">
+    <value>Error starting seeding:</value>
+  </data>
+  <data name="StoppedseedingmanagerTorrent?Name" xml:space="preserve">
+    <value>Stopped seeding:</value>
+  </data>
+  <data name="ErrorstoppingseedingexMessage" xml:space="preserve">
+    <value>Error stopping seeding:</value>
+  </data>
+  <data name="DeletedtorrentmanagerTorrent?Name" xml:space="preserve">
+    <value>Deleted torrent: </value>
+  </data>
+  <data name="DeletedfilesatmanagerSavePath" xml:space="preserve">
+    <value>Deleted files at: </value>
+  </data>
+  <data name="ErrordeletingtorrentexMessage" xml:space="preserve">
+    <value>Error deleting torrent:</value>
+  </data>
+  <data name="Settingssavedsuccessfully" xml:space="preserve">
+    <value>Settings saved successfully.
+ Some changes will take effect after restarting.</value>
+  </data>
+  <data name="Torrentdownloadfailed" xml:space="preserve">
+    <value>Torrent download failed:</value>
+  </data>
+  <data name="Settingssaved" xml:space="preserve">
+    <value>Settings saved</value>
+  </data>
+  <data name="Creating" xml:space="preserve">
+    <value>Creating...</value>
+  </data>
+  <data name="Downloadingfromtorrentfile" xml:space="preserve">
+    <value>Downloading from torrent file...</value>
+  </data>
+  <data name="Errorloadingtorrents" xml:space="preserve">
+    <value>Error loading torrents:</value>
+  </data>
+  <data name="Selectthedownloadfolder" xml:space="preserve">
+    <value>Select the download folder</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="Url" xml:space="preserve">
+    <value>Url</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="Hash" xml:space="preserve">
+    <value>Hash</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="MagnetLinkSearch" xml:space="preserve">
+    <value>Magnet link</value>
+  </data>
+  <data name="Games" xml:space="preserve">
+    <value>Games</value>
+  </data>
+  <data name="Movies" xml:space="preserve">
+    <value>Movies</value>
+  </data>
+  <data name="TVshows" xml:space="preserve">
+    <value>TV shows</value>
+  </data>
+  <data name="Software" xml:space="preserve">
+    <value>Software</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="Ghidoraherror" xml:space="preserve">
+    <value>Error initializing Ghidorah:</value>
+  </data>
+  <data name="Choosecategories" xml:space="preserve">
+    <value>Choose categories</value>
+  </data>
+  <data name="Choosesources" xml:space="preserve">
+    <value>Choose sources</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Categories:</value>
+  </data>
+  <data name="Searchresultslimit" xml:space="preserve">
+    <value>Search results limit: </value>
+  </data>
+  <data name="Sources" xml:space="preserve">
+    <value>Sources:</value>
+  </data>
+  <data name="Sortby" xml:space="preserve">
+    <value>Sort by:</value>
+  </data>
+  <data name="Invalidtorlimit" xml:space="preserve">
+    <value>Invalid value for search results limit.</value>
+  </data>
+  <data name="Searchresultslimitpersource" xml:space="preserve">
+    <value>Search results limit per source: </value>
+  </data>
+  <data name="Ghidorahtimeout" xml:space="preserve">
+    <value>Error: Ghidorah process timed out.</value>
+  </data>
+  <data name="Nomagnetlink" xml:space="preserve">
+    <value>No magnet link available. </value>
+  </data>
+  <data name="Searching" xml:space="preserve">
+    <value>Searching...</value>
+  </data>
+  <data name="Searchtimeout" xml:space="preserve">
+    <value>Search timeout:</value>
+  </data>
+  <data name="Invalidtorlimitpersource" xml:space="preserve">
+    <value>Invalid value for search results limit per source.</value>
+  </data>
+  <data name="Invalidtimeout" xml:space="preserve">
+    <value>Invalid value for search timeout.</value>
+  </data>
+  <data name="Useqbittorrentplugins" xml:space="preserve">
+    <value>Use qBittorrent plugins</value>
+  </data>
+  <data name="Importantifusing" xml:space="preserve">
+    <value>IMPORTANT: if using qBittorrent plugins, the per torrent limit is ignored, and category selection is limited to one category only. Additionally, many plugins will default to "all".</value>
+  </data>
+  <data name="Checkstatus" xml:space="preserve">
+    <value>Check status</value>
+  </data>
+  <data name="Ghidorah" xml:space="preserve">
+    <value>Ghidorah</value>
+  </data>
+  <data name="Noqbittorrentpluginsfound" xml:space="preserve">
+    <value>No qBittorrent plugins found.</value>
+  </data>
+  <data name="Online" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="Checkingstatus" xml:space="preserve">
+    <value>Checking status</value>
+  </data>
+  <data name="Results" xml:space="preserve">
+    <value>result(s)</value>
+  </data>
+  <data name="Ghidorahpluginstatus" xml:space="preserve">
+    <value>Ghidorah - Plugin Status</value>
+  </data>
+  <data name="Unknownerror" xml:space="preserve">
+    <value>Unknown error</value>
+  </data>
+  <data name="Errors" xml:space="preserve">
+    <value>Errors</value>
+  </data>
+  <data name="Errorwrittentolog" xml:space="preserve">
+    <value>Error initializing Ghidorah, see log for more details.</value>
+  </data>
+  <data name="Startingdownload" xml:space="preserve">
+    <value>Starting download:</value>
+  </data>
+  <data name="Downloadstarted" xml:space="preserve">
+    <value>Download started, waiting for completion...</value>
+  </data>
+  <data name="Alldownloadscomplete" xml:space="preserve">
+    <value>All downloads complete.</value>
+  </data>
+  <data name="Resultssavedtojson" xml:space="preserve">
+    <value>Results saved to JSON.</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>HELP</value>
+  </data>
+  <data name="Query" xml:space="preserve">
+    <value>query</value>
+  </data>
+  <data name="Torrentfile" xml:space="preserve">
+    <value>torrent file</value>
+  </data>
+  <data name="Magnetlinklower" xml:space="preserve">
+    <value>magnet link</value>
+  </data>
+  <data name="Folderslashfilepath" xml:space="preserve">
+    <value>folder/file path</value>
+  </data>
+  <data name="Outputpathlower" xml:space="preserve">
+    <value>output path</value>
+  </data>
+  <data name="Trackerlink" xml:space="preserve">
+    <value>tracker link</value>
+  </data>
+  <data name="Music" xml:space="preserve">
+    <value>Music</value>
+  </data>
+</root>
