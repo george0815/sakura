@@ -42,14 +42,15 @@ int main(int arc, char *argv[]) {
   CART cart;
   LOGGER *logger = new LOGGER(false);
 
-  int test = PARSE_FILE("smb3.nes", cart);
-  // int test = PARSE_FILE("nestest.nes", cart);
+  // int test = PARSE_FILE("smb3.nes", cart);
+  int test = PARSE_FILE("nestest.nes", cart);
 
   bus.insert_cartridge(cart);
   SAVE_MANAGER::LOAD_SRAM("./test.sav", &bus);
   cpu.connect_bus(&bus);
   bus.connect_cpu(cpu);
   bus.connect_ppu(ppu);
+  ppu.connect_mapper(bus.MAPPER, bus.MIRROR_MODE);
 
   cpu.RESET_HANDLER();
 

@@ -388,7 +388,7 @@ void CPU_6502::SBC(uint16_t addr) {
   uint16_t sum = A + value + (GET_FLAG(CARRY) ? 1 : 0);
   SET_FLAG(CARRY, sum & PAGE_MASK);
   SET_FLAG(ZERO, (sum & ZERO_PAGE_MASK) == 0);
-  SET_FLAG(OVERFLOW, (sum ^ A) & (sum & value) & 0x80);
+  SET_FLAG(OVERFLOW, ((sum ^ A) & (sum ^ value) & 0x80) != 0);
   SET_FLAG(NEGATIVE, sum & 0x80);
   A = sum & ZERO_PAGE_MASK;
 }
@@ -498,7 +498,7 @@ void CPU_6502::RRA(uint16_t addr) {
   SET_FLAG(CARRY, sum > ZERO_PAGE_MASK);
   SET_FLAG(ZERO, (sum & ZERO_PAGE_MASK) == 0);
   SET_FLAG(OVERFLOW, (~(A ^ data) & (A ^ sum) & 0x80) != 0);
-  SET_FLAG(NEGATIVE, sum & ZERO_PAGE_MASK);
+  SET_FLAG(NEGATIVE, sum & 0x80);
   A = sum;
 }
 
@@ -539,7 +539,7 @@ void CPU_6502::ANC(uint16_t addr) {
   uint8_t value = read(addr);
   A = A & value;
   SET_FLAG(ZERO, A == 0);
-  SET_FLAG(CARRY, A & 0x80);
+  SET_FLAG(NEGATIVE, A & 0x80);
   SET_FLAG(CARRY, A & 0x80);
 }
 void CPU_6502::ALR(uint16_t addr) {
@@ -590,7 +590,7 @@ void CPU_6502::SHY(uint16_t addr) {
 }
 
 void CPU_6502::TAS(uint16_t addr) {
-  uint8_t target = read(addr);
+  uint16_t target = read(addr);
   uint8_t value = A & X;
   SP = value;
   write(addr, value & ((target >> 8) + 1));
@@ -866,6 +866,7 @@ void CPU_6502::BUILD_LOOKUP() {
 
   // SBC
   INSERT_INSTRUCTION(0xE9, "SBC", 2, &CPU_6502::SBC, &CPU_6502::IMMEDIATE);
+  INSERT_INSTRUCTION(0xEB, "SBC", 2, &CPU_6502::SBC, &CPU_6502::IMMEDIATE);
   INSERT_INSTRUCTION(0xE5, "SBC", 3, &CPU_6502::SBC, &CPU_6502::ZERO_PAGE);
   INSERT_INSTRUCTION(0xF5, "SBC", 4, &CPU_6502::SBC,
                      &CPU_6502::ZERO_PAGE_INDEXED_X);
