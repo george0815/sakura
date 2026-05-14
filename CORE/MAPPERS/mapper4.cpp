@@ -99,6 +99,7 @@ void Mapper4::cpu_write(uint16_t addr, uint8_t data) {
     if ((addr & 0x01) == 0) {
       BANK_SELECT = (data & 0x07);
       PRG_MODE = (data & 0x40) != 0;
+      CHR_INVERSION = (data & 0x80) != 0;
     } else {
       BANK_REGS[BANK_SELECT] = data;
     }
@@ -112,6 +113,7 @@ void Mapper4::cpu_write(uint16_t addr, uint8_t data) {
             (data & 0x01) ? MIRRORING::HORIZONTAL : MIRRORING::VERTICAL;
       }
     }
+    return;
   }
 
   if (addr <= 0xDFFF) {
@@ -159,6 +161,8 @@ void Mapper4::CLOCK_IRQ_COUNTER(CPU_6502 *cpu) {
     IRQ_COUNTER--;
   }
   if (IRQ_COUNTER == 0 && IRQ_ENABLED && cpu) {
-    CLOCK_IRQ_COUNTER(cpu);
+    cpu->IRQ_HANDLER();
   }
 }
+
+void Mapper4::on_ppu_scanline(CPU_6502 *cpu) { CLOCK_IRQ_COUNTER(cpu); }

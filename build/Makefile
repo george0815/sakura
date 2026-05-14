@@ -586,6 +586,30 @@ CORE/MAPPERS/mapper0.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.s
 .PHONY : CORE/MAPPERS/mapper0.cpp.s
 
+CORE/MAPPERS/mapper4.o: CORE/MAPPERS/mapper4.cpp.o
+.PHONY : CORE/MAPPERS/mapper4.o
+
+# target to build an object file
+CORE/MAPPERS/mapper4.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/MAPPERS/mapper4.cpp.o
+.PHONY : CORE/MAPPERS/mapper4.cpp.o
+
+CORE/MAPPERS/mapper4.i: CORE/MAPPERS/mapper4.cpp.i
+.PHONY : CORE/MAPPERS/mapper4.i
+
+# target to preprocess a source file
+CORE/MAPPERS/mapper4.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/MAPPERS/mapper4.cpp.i
+.PHONY : CORE/MAPPERS/mapper4.cpp.i
+
+CORE/MAPPERS/mapper4.s: CORE/MAPPERS/mapper4.cpp.s
+.PHONY : CORE/MAPPERS/mapper4.s
+
+# target to generate assembly for a file
+CORE/MAPPERS/mapper4.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/MAPPERS/mapper4.cpp.s
+.PHONY : CORE/MAPPERS/mapper4.cpp.s
+
 CORE/PPU_2C02/core_ppu.o: CORE/PPU_2C02/core_ppu.cpp.o
 .PHONY : CORE/PPU_2C02/core_ppu.o
 
@@ -772,6 +796,9 @@ help:
 	@echo "... CORE/MAPPERS/mapper0.o"
 	@echo "... CORE/MAPPERS/mapper0.i"
 	@echo "... CORE/MAPPERS/mapper0.s"
+	@echo "... CORE/MAPPERS/mapper4.o"
+	@echo "... CORE/MAPPERS/mapper4.i"
+	@echo "... CORE/MAPPERS/mapper4.s"
 	@echo "... CORE/PPU_2C02/core_ppu.o"
 	@echo "... CORE/PPU_2C02/core_ppu.i"
 	@echo "... CORE/PPU_2C02/core_ppu.s"

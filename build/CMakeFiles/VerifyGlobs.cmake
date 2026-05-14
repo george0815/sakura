@@ -23,6 +23,7 @@ set(OLD_GLOB
   "/home/Hunter/Documents/Github/sakura/CORE/CPU_6502/opcodes.cpp"
   "/home/Hunter/Documents/Github/sakura/CORE/LOGGER/logger.cpp"
   "/home/Hunter/Documents/Github/sakura/CORE/MAPPERS/mapper0.cpp"
+  "/home/Hunter/Documents/Github/sakura/CORE/MAPPERS/mapper4.cpp"
   "/home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/core_ppu.cpp"
   "/home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/utils_ppu.cpp"
   )

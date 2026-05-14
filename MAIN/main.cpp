@@ -42,7 +42,7 @@ int main(int arc, char *argv[]) {
   CART cart;
   LOGGER *logger = new LOGGER(false);
 
-  int test = PARSE_FILE("smb.nes", cart);
+  int test = PARSE_FILE("smb3.nes", cart);
   // int test = PARSE_FILE("nestest.nes", cart);
 
   bus.insert_cartridge(cart);

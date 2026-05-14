@@ -27,6 +27,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/Hunter/Documents/Github/sakura/CORE/CPU_6502/opcodes.cpp" "CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o" "gcc" "CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o.d"
   "/home/Hunter/Documents/Github/sakura/CORE/LOGGER/logger.cpp" "CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.o" "gcc" "CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.o.d"
   "/home/Hunter/Documents/Github/sakura/CORE/MAPPERS/mapper0.cpp" "CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.o" "gcc" "CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.o.d"
+  "/home/Hunter/Documents/Github/sakura/CORE/MAPPERS/mapper4.cpp" "CMakeFiles/sakura.dir/CORE/MAPPERS/mapper4.cpp.o" "gcc" "CMakeFiles/sakura.dir/CORE/MAPPERS/mapper4.cpp.o.d"
   "/home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/core_ppu.cpp" "CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o" "gcc" "CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o.d"
   "/home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/utils_ppu.cpp" "CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o" "gcc" "CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o.d"
   "/home/Hunter/Documents/Github/sakura/MAIN/main.cpp" "CMakeFiles/sakura.dir/MAIN/main.cpp.o" "gcc" "CMakeFiles/sakura.dir/MAIN/main.cpp.o.d"

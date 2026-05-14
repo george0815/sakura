@@ -217,6 +217,9 @@ void BUS::insert_cartridge(CART &cart) {
   case 0:
     MAPPER = new Mapper0(PRG_ROM, CHR_MEM, CHR_IS_RAM, MIRROR_MODE);
     break;
+  case 4:
+    MAPPER = new Mapper4(PRG_ROM, CHR_MEM, CHR_IS_RAM, MIRROR_MODE);
+    break;
   default:
     MAPPER = new Mapper0(PRG_ROM, CHR_MEM, CHR_IS_RAM, MIRROR_MODE);
     break;
