@@ -73,6 +73,11 @@ uint16_t PPU_2C02::MIRROR_ADDR(uint16_t addr) const {
 
 uint8_t PPU_2C02::ppu_read(uint16_t addr) {
   addr &= 0x3FFF;
+
+  if (MAPPER) {
+    MAPPER->NOTIFY_PPU_ADDRESS(addr);
+  }
+
   if (addr < PATTERN_TABLE_END) {
     return MAPPER ? MAPPER->ppu_read(addr) : 0;
   } else if (addr < PALETTE_BASE) {
@@ -85,6 +90,11 @@ uint8_t PPU_2C02::ppu_read(uint16_t addr) {
 
 void PPU_2C02::ppu_write(uint16_t addr, uint8_t data) {
   addr &= 0x3FFF;
+
+  if (MAPPER) {
+    MAPPER->NOTIFY_PPU_ADDRESS(addr);
+  }
+
   if (addr < PATTERN_TABLE_END) {
     if (MAPPER) {
       MAPPER->ppu_write(addr, data);
@@ -347,12 +357,20 @@ uint8_t PPU_2C02::cpu_read(uint16_t addr) {
   case 0x2007: {
     const uint16_t paddr = VRAM_ADDR;
     const uint8_t data = ppu_read(paddr);
-    VRAM_ADDR += (CTRL & VRAM_INCREMENT_BIT) ? 32 : 1;
+
     uint8_t ret = BUFFERED_DATA;
     BUFFERED_DATA = data;
+
     if (paddr >= PALETTE_BASE) {
       ret = data;
     }
+
+    VRAM_ADDR += (CTRL & VRAM_INCREMENT_BIT) ? 32 : 1;
+
+    if (MAPPER) {
+      MAPPER->NOTIFY_PPU_ADDRESS(VRAM_ADDR);
+    }
+
     return ret;
   }
   default: {
@@ -400,12 +418,18 @@ void PPU_2C02::cpu_write(uint16_t addr, uint8_t data) {
     } else {
       TEMP_ADDR = (TEMP_ADDR & 0x7F00) | data;
       VRAM_ADDR = TEMP_ADDR;
+      if (MAPPER) {
+        MAPPER->NOTIFY_PPU_ADDRESS(VRAM_ADDR);
+      }
       ADDR_LATCH = false;
     }
     break;
   case 0x2007:
     ppu_write(VRAM_ADDR, data);
     VRAM_ADDR += (CTRL & VRAM_INCREMENT_BIT) ? 32 : 1;
+    if (MAPPER) {
+      MAPPER->NOTIFY_PPU_ADDRESS(VRAM_ADDR);
+    }
     break;
   default:
     break;
@@ -523,7 +547,7 @@ void PPU_2C02::step() {
       TRANSFER_ADDRESS_Y();
     }
 
-    if (visible_line && CYCLES == 270 && MAPPER &&
+    /*if (visible_line && CYCLES == 270 && MAPPER &&
         (MASK & (SHOW_BACKGROUND_BIT | SHOW_SPRITES_BIT))) {
       static int clock_count = 0;
       if (clock_count++ < 100) {
@@ -531,7 +555,13 @@ void PPU_2C02::step() {
              << " CYCLE=" << CYCLES << " mask=" << hex << int(MASK) << dec
              << endl;
       }
-      MAPPER->on_ppu_scanline(CPU);
+      // MAPPER->on_ppu_scanline(CPU);
+    } */
+
+    if (render_line && CYCLES == 260 && MAPPER &&
+        (MASK & (SHOW_BACKGROUND_BIT | SHOW_SPRITES_BIT))) {
+      MAPPER->NOTIFY_PPU_ADDRESS(0x1000);
+      MAPPER->NOTIFY_PPU_ADDRESS(0x0000);
     }
   }
 

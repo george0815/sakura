@@ -176,3 +176,13 @@ void Mapper4::CLOCK_IRQ_COUNTER(CPU_6502 *cpu) {
 }
 
 void Mapper4::on_ppu_scanline(CPU_6502 *cpu) { CLOCK_IRQ_COUNTER(cpu); }
+
+void Mapper4::NOTIFY_PPU_ADDRESS(uint16_t addr) {
+  bool a12 = (addr & 0x1000) != 0;
+
+  if (!PREV_A12 && a12) {
+    CLOCK_IRQ_COUNTER(nullptr);
+  }
+
+  PREV_A12 = a12;
+}

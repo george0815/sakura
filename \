@@ -42,13 +42,12 @@ int main(int arc, char *argv[]) {
   CART cart;
   LOGGER *logger = new LOGGER(false);
 
-  int test = PARSE_FILE("kirb.nes", cart);
+  // int test = PARSE_FILE("ng3.nes", cart);
   // int test = PARSE_FILE("mmc3_clock_test.nes", cart);
-  // int test = PARSE_FILE("mmc3_details_test.nes", cart);
-
   // int test = PARSE_FILE("mmc3_a12_test.nes", cart);
   // int test = PARSE_FILE("mmc3_scanline_test.nes", cart);
-  //   int test = PARSE_FILE("nestest.nes", cart);
+  int test = PARSE_FILE("mmc3_details_test.nes", cart);
+  // int test = PARSE_FILE("nestest.nes", cart);
 
   bus.insert_cartridge(cart);
   // SAVE_MANAGER::LOAD_SRAM("./test.sav", &bus);
