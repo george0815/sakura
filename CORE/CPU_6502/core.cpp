@@ -78,7 +78,7 @@ void CPU_6502::IRQ_HANDLER() {
     PC = (hi << 8) | lo;
 
     // Set cycles
-    CYCLES = 7;
+    CYCLES = 2;
   }
 }
 
@@ -104,7 +104,7 @@ void CPU_6502::NMI_HANDLER() {
   PC = (hi << 8) | lo;
 
   // Set cycles
-  CYCLES = 8;
+  CYCLES = 2;
 }
 
 // Read a value from memory, this basically just calls the bus's read fucntion,
@@ -133,43 +133,43 @@ void CPU_6502::step() {
     if (B && B->MAPPER && B->MAPPER->IS_IRQ_PENDING() &&
         !GET_FLAG(INTERRUPT_DISABLE)) {
       IRQ_HANDLER();
-      return;
-    }
+    } else {
 
-    // DEBUG LOGS
-    stringstream temp_buffer;
-    temp_buffer << "PC: " << hex << uppercase << hex << PC << setw(10);
+      // DEBUG LOGS
+      stringstream temp_buffer;
+      temp_buffer << "PC: " << hex << uppercase << hex << PC << setw(10);
 
-    // fetch instruction using PC
-    uint8_t opcode_byte = read(PC++);
-    OPCODE &op = LOOKUP[opcode_byte];
+      // fetch instruction using PC
+      uint8_t opcode_byte = read(PC++);
+      OPCODE &op = LOOKUP[opcode_byte];
 
-    temp_buffer << "OPCODE: " << hex << uppercase << (int)opcode_byte << " "
-                << op.mnemonic << " $";
+      temp_buffer << "OPCODE: " << hex << uppercase << (int)opcode_byte << " "
+                  << op.mnemonic << " $";
 
-    // Reset page crossed
-    PAGE_CROSSED = false;
+      // Reset page crossed
+      PAGE_CROSSED = false;
 
-    // Execute addressing mode function
-    uint16_t addr = (this->*op.addr_mode)();
-    // temp_buffer << hex << uppercase << addr << setw(10);
+      // Execute addressing mode function
+      uint16_t addr = (this->*op.addr_mode)();
+      // temp_buffer << hex << uppercase << addr << setw(10);
 
-    // Set cycles
-    CYCLES = op.cycles;
+      // Set cycles
+      CYCLES = op.cycles;
 
-    temp_buffer << "A:" << hex << (int)A << " ";
-    temp_buffer << "X:" << hex << (int)X << " ";
-    temp_buffer << "Y:" << hex << (int)Y << " ";
-    temp_buffer << "P:" << hex << (int)STATUS_REGISTER << " ";
-    temp_buffer << "SP:" << hex << (int)SP;
-    //    LOGGER_INSTANCE->LOG("", temp_buffer.str());
-    temp_buffer.clear();
+      temp_buffer << "A:" << hex << (int)A << " ";
+      temp_buffer << "X:" << hex << (int)X << " ";
+      temp_buffer << "Y:" << hex << (int)Y << " ";
+      temp_buffer << "P:" << hex << (int)STATUS_REGISTER << " ";
+      temp_buffer << "SP:" << hex << (int)SP;
+      //    LOGGER_INSTANCE->LOG("", temp_buffer.str());
+      temp_buffer.clear();
 
-    // Execute instruction
-    (this->*op.opcode)(addr);
+      // Execute instruction
+      (this->*op.opcode)(addr);
 
-    if (op.page_cycle && PAGE_CROSSED) {
-      CYCLES++;
+      if (op.page_cycle && PAGE_CROSSED) {
+        CYCLES++;
+      }
     }
   }
 
