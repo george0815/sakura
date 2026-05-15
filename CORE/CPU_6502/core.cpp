@@ -95,8 +95,8 @@ void CPU_6502::NMI_HANDLER() {
   // Set flags and push status register
   SET_FLAG(B_FLAG, 0);
   SET_FLAG(UNUSED, 1);
-  SET_FLAG(INTERRUPT_DISABLE, 1);
   push(STATUS_REGISTER);
+  SET_FLAG(INTERRUPT_DISABLE, 1);
 
   // construct new PC from vecor
   uint8_t lo = read(NMI_VECTOR);
@@ -129,6 +129,12 @@ void CPU_6502::step() {
 
   // No cycles left, time to execute another instruction
   if (CYCLES == 0) {
+
+    if (B && B->MAPPER && B->MAPPER->IS_IRQ_PENDING() &&
+        !GET_FLAG(INTERRUPT_DISABLE)) {
+      IRQ_HANDLER();
+      return;
+    }
 
     // DEBUG LOGS
     stringstream temp_buffer;

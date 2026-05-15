@@ -117,7 +117,7 @@ void PPU_2C02::palette_write(uint16_t addr, uint8_t data) {
 void PPU_2C02::oam_dma_write(uint8_t data) { OAM[OAM_ADDR++] = data; }
 
 void PPU_2C02::INCREMENT_SCROLL_X() {
-  if (!(MASK & SHOW_BACKGROUND_BIT)) {
+  if (!(MASK & (SHOW_BACKGROUND_BIT | SHOW_SPRITES_BIT))) {
     return;
   }
 
@@ -130,7 +130,7 @@ void PPU_2C02::INCREMENT_SCROLL_X() {
 }
 
 void PPU_2C02::INCREMENT_SCROLL_Y() {
-  if (!(MASK & SHOW_BACKGROUND_BIT)) {
+  if (!(MASK & (SHOW_BACKGROUND_BIT | SHOW_SPRITES_BIT))) {
     return;
   }
 
@@ -154,7 +154,7 @@ void PPU_2C02::INCREMENT_SCROLL_Y() {
 }
 
 void PPU_2C02::TRANSFER_ADDRESS_X() {
-  if (!(MASK & SHOW_BACKGROUND_BIT)) {
+  if (!(MASK & (SHOW_BACKGROUND_BIT | SHOW_SPRITES_BIT))) {
     return;
   }
 
@@ -164,7 +164,7 @@ void PPU_2C02::TRANSFER_ADDRESS_X() {
 }
 
 void PPU_2C02::TRANSFER_ADDRESS_Y() {
-  if (!(MASK & SHOW_BACKGROUND_BIT)) {
+  if (!(MASK & (SHOW_BACKGROUND_BIT | SHOW_SPRITES_BIT))) {
     return;
   }
 
@@ -184,7 +184,7 @@ void PPU_2C02::LOAD_BACKGROUND_SHIFTERS() {
 }
 
 void PPU_2C02::UPDATE_BACKGROUND_SHIFTERS() {
-  if (!(MASK & SHOW_BACKGROUND_BIT)) {
+  if (!(MASK & (SHOW_BACKGROUND_BIT | SHOW_SPRITES_BIT))) {
     return;
   }
 
@@ -523,7 +523,7 @@ void PPU_2C02::step() {
       TRANSFER_ADDRESS_Y();
     }
 
-    if (visible_line && CYCLES == 260 && MAPPER &&
+    if (visible_line && CYCLES == 270 && MAPPER &&
         (MASK & (SHOW_BACKGROUND_BIT | SHOW_SPRITES_BIT))) {
       static int clock_count = 0;
       if (clock_count++ < 100) {

@@ -133,6 +133,7 @@ void Mapper4::cpu_write(uint16_t addr, uint8_t data) {
 
   if ((addr & 0x01) == 0) {
     IRQ_ENABLED = false;
+    IRQ_PENDING = false;
   } else {
     IRQ_ENABLED = true;
   }
@@ -169,11 +170,8 @@ void Mapper4::CLOCK_IRQ_COUNTER(CPU_6502 *cpu) {
 
   IRQ_RELOAD = false;
 
-  if (IRQ_COUNTER == 0 && IRQ_ENABLED && !IRQ_PENDING) {
+  if (IRQ_COUNTER == 0 && IRQ_ENABLED) {
     IRQ_PENDING = true;
-    if (cpu) {
-      cpu->IRQ_HANDLER();
-    }
   }
 }
 

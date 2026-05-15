@@ -35,6 +35,7 @@ public:
 
   virtual MIRRORING mirroring_mode() const = 0;
   virtual void on_ppu_scanline(CPU_6502 *cpu) { (void)cpu; }
+  virtual bool IS_IRQ_PENDING() { return false; }
 };
 
 class Mapper0 : public Mapper {
@@ -69,6 +70,7 @@ public:
   void ppu_write(uint16_t addr, uint8_t data) override;
   MIRRORING mirroring_mode() const override { return mirror_mode; }
   void on_ppu_scanline(CPU_6502 *cpu) override;
+  bool IS_IRQ_PENDING() override { return IRQ_PENDING; }
 
 private:
   static const size_t PRG_BANK_SIZE = 0x2000;
