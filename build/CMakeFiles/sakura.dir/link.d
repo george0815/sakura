@@ -28,6 +28,8 @@ sakura: \
   CMakeFiles/sakura.dir/MAIN/render.cpp.o \
   CMakeFiles/sakura.dir/MAIN/save.cpp.o \
   /usr/lib/libSDL2-2.0.so.0.3200.66 \
+  /usr/lib/libboost_program_options.so.1.90.0 \
+  /usr/lib/libboost_container.so.1.90.0 \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
@@ -113,6 +115,10 @@ CMakeFiles/sakura.dir/MAIN/render.cpp.o:
 CMakeFiles/sakura.dir/MAIN/save.cpp.o:
 
 /usr/lib/libSDL2-2.0.so.0.3200.66:
+
+/usr/lib/libboost_program_options.so.1.90.0:
+
+/usr/lib/libboost_container.so.1.90.0:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libstdc++.so:
 

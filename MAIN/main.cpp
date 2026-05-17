@@ -8,13 +8,32 @@
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_keycode.h>
 #include <SDL2/SDL_timer.h>
+#include <boost/program_options.hpp>
+#include <boost/program_options/detail/parsers.hpp>
+#include <boost/program_options/options_description.hpp>
+#include <boost/program_options/variables_map.hpp>
 #include <cstdint>
 #include <iostream>
-#include <mutex>
 
 using namespace std;
+using namespace boost::program_options;
 
 int main(int arc, char *argv[]) {
+
+  string rom_path = "";
+
+  options_description desc("Allowed options");
+
+  desc.add_options()("rom", value<string>(), "path to rom");
+
+  variables_map vm;
+
+  store(parse_command_line(arc, argv, desc), vm);
+  notify(vm);
+
+  rom_path = vm["rom"].as<string>();
+  cout << "FGheionhtiowentoinweoq" << endl;
+  cout << rom_path << endl;
 
   if (!init_sdl()) {
     return -1;
@@ -42,7 +61,7 @@ int main(int arc, char *argv[]) {
   CART cart;
   LOGGER *logger = new LOGGER(false);
 
-  int test = PARSE_FILE("rr1.nes", cart);
+  int test = PARSE_FILE(rom_path, cart);
   //  int test = PARSE_FILE("mmc3_clock_test.nes", cart);
   //  int test = PARSE_FILE("mmc3_details_test.nes", cart);
 

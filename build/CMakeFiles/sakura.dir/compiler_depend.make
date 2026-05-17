@@ -4004,6 +4004,14 @@ CMakeFiles/sakura.dir/MAIN/main.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
   /usr/include/bits/xopen_lim.h \
+  /usr/include/boost/any.hpp \
+  /usr/include/boost/any/bad_any_cast.hpp \
+  /usr/include/boost/any/detail/config.hpp \
+  /usr/include/boost/any/detail/placeholder.hpp \
+  /usr/include/boost/any/fwd.hpp \
+  /usr/include/boost/assert.hpp \
+  /usr/include/boost/assert/source_location.hpp \
+  /usr/include/boost/bind/mem_fn.hpp \
   /usr/include/boost/config.hpp \
   /usr/include/boost/config/compiler/gcc.hpp \
   /usr/include/boost/config/detail/cxx_composite.hpp \
@@ -4013,18 +4021,113 @@ CMakeFiles/sakura.dir/MAIN/main.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /usr/include/boost/config/detail/select_stdlib_config.hpp \
   /usr/include/boost/config/detail/suffix.hpp \
   /usr/include/boost/config/helper_macros.hpp \
+  /usr/include/boost/config/no_tr1/memory.hpp \
   /usr/include/boost/config/platform/linux.hpp \
+  /usr/include/boost/config/pragma_message.hpp \
   /usr/include/boost/config/stdlib/libstdcpp3.hpp \
   /usr/include/boost/config/user.hpp \
   /usr/include/boost/config/workaround.hpp \
+  /usr/include/boost/container/container_fwd.hpp \
+  /usr/include/boost/container/detail/std_fwd.hpp \
+  /usr/include/boost/container/detail/workaround.hpp \
+  /usr/include/boost/container_hash/hash_fwd.hpp \
+  /usr/include/boost/core/addressof.hpp \
+  /usr/include/boost/core/checked_delete.hpp \
+  /usr/include/boost/core/cmath.hpp \
+  /usr/include/boost/core/demangle.hpp \
+  /usr/include/boost/core/detail/sp_thread_pause.hpp \
+  /usr/include/boost/core/detail/sp_thread_sleep.hpp \
+  /usr/include/boost/core/detail/sp_thread_yield.hpp \
+  /usr/include/boost/core/enable_if.hpp \
+  /usr/include/boost/core/no_exceptions_support.hpp \
+  /usr/include/boost/core/noncopyable.hpp \
+  /usr/include/boost/core/ref.hpp \
+  /usr/include/boost/core/snprintf.hpp \
+  /usr/include/boost/core/typeinfo.hpp \
+  /usr/include/boost/core/yield_primitives.hpp \
   /usr/include/boost/cstdint.hpp \
+  /usr/include/boost/detail/basic_pointerbuf.hpp \
+  /usr/include/boost/detail/lcast_precision.hpp \
   /usr/include/boost/detail/workaround.hpp \
+  /usr/include/boost/exception/exception.hpp \
+  /usr/include/boost/function.hpp \
+  /usr/include/boost/function/function1.hpp \
+  /usr/include/boost/function/function_base.hpp \
+  /usr/include/boost/function/function_fwd.hpp \
+  /usr/include/boost/function/function_template.hpp \
+  /usr/include/boost/function_equal.hpp \
+  /usr/include/boost/get_pointer.hpp \
+  /usr/include/boost/lexical_cast.hpp \
+  /usr/include/boost/lexical_cast/bad_lexical_cast.hpp \
+  /usr/include/boost/lexical_cast/detail/buffer_view.hpp \
+  /usr/include/boost/lexical_cast/detail/converter_lexical.hpp \
+  /usr/include/boost/lexical_cast/detail/converter_lexical_streams.hpp \
+  /usr/include/boost/lexical_cast/detail/converter_numeric.hpp \
+  /usr/include/boost/lexical_cast/detail/inf_nan.hpp \
+  /usr/include/boost/lexical_cast/detail/is_character.hpp \
+  /usr/include/boost/lexical_cast/detail/lcast_basic_unlockedbuf.hpp \
+  /usr/include/boost/lexical_cast/detail/lcast_char_constants.hpp \
+  /usr/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp \
+  /usr/include/boost/lexical_cast/detail/type_traits.hpp \
+  /usr/include/boost/lexical_cast/detail/widest_char.hpp \
+  /usr/include/boost/lexical_cast/try_lexical_convert.hpp \
+  /usr/include/boost/limits.hpp \
+  /usr/include/boost/mem_fn.hpp \
+  /usr/include/boost/move/detail/std_ns_begin.hpp \
+  /usr/include/boost/move/detail/std_ns_end.hpp \
+  /usr/include/boost/program_options.hpp \
+  /usr/include/boost/program_options/cmdline.hpp \
+  /usr/include/boost/program_options/config.hpp \
+  /usr/include/boost/program_options/detail/cmdline.hpp \
+  /usr/include/boost/program_options/detail/convert.hpp \
+  /usr/include/boost/program_options/detail/parsers.hpp \
+  /usr/include/boost/program_options/detail/value_semantic.hpp \
+  /usr/include/boost/program_options/errors.hpp \
+  /usr/include/boost/program_options/option.hpp \
+  /usr/include/boost/program_options/options_description.hpp \
+  /usr/include/boost/program_options/parsers.hpp \
+  /usr/include/boost/program_options/positional_options.hpp \
+  /usr/include/boost/program_options/value_semantic.hpp \
+  /usr/include/boost/program_options/variables_map.hpp \
+  /usr/include/boost/program_options/version.hpp \
+  /usr/include/boost/shared_ptr.hpp \
+  /usr/include/boost/smart_ptr/bad_weak_ptr.hpp \
+  /usr/include/boost/smart_ptr/detail/deprecated_macros.hpp \
+  /usr/include/boost/smart_ptr/detail/local_counted_base.hpp \
+  /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp \
+  /usr/include/boost/smart_ptr/detail/shared_count.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_convertible.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_counted_base.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_counted_base_std_atomic.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_counted_impl.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_noexcept.hpp \
+  /usr/include/boost/smart_ptr/detail/sp_typeinfo_.hpp \
+  /usr/include/boost/smart_ptr/detail/spinlock.hpp \
+  /usr/include/boost/smart_ptr/detail/spinlock_pool.hpp \
+  /usr/include/boost/smart_ptr/detail/spinlock_std_atomic.hpp \
+  /usr/include/boost/smart_ptr/detail/yield_k.hpp \
+  /usr/include/boost/smart_ptr/shared_ptr.hpp \
   /usr/include/boost/static_assert.hpp \
+  /usr/include/boost/throw_exception.hpp \
+  /usr/include/boost/type_index.hpp \
+  /usr/include/boost/type_index/detail/config.hpp \
+  /usr/include/boost/type_index/stl_type_index.hpp \
+  /usr/include/boost/type_index/type_index_facade.hpp \
+  /usr/include/boost/version.hpp \
+  /usr/include/c++/15.2.1/algorithm \
   /usr/include/c++/15.2.1/array \
+  /usr/include/c++/15.2.1/atomic \
+  /usr/include/c++/15.2.1/backward/auto_ptr.h \
   /usr/include/c++/15.2.1/backward/binders.h \
   /usr/include/c++/15.2.1/bit \
+  /usr/include/c++/15.2.1/bits/algorithmfwd.h \
+  /usr/include/c++/15.2.1/bits/align.h \
   /usr/include/c++/15.2.1/bits/alloc_traits.h \
+  /usr/include/c++/15.2.1/bits/allocated_ptr.h \
   /usr/include/c++/15.2.1/bits/allocator.h \
+  /usr/include/c++/15.2.1/bits/atomic_base.h \
+  /usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h \
   /usr/include/c++/15.2.1/bits/basic_ios.h \
   /usr/include/c++/15.2.1/bits/basic_ios.tcc \
   /usr/include/c++/15.2.1/bits/basic_string.h \
@@ -4038,6 +4141,8 @@ CMakeFiles/sakura.dir/MAIN/main.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /usr/include/c++/15.2.1/bits/cxxabi_forced.h \
   /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h \
   /usr/include/c++/15.2.1/bits/deque.tcc \
+  /usr/include/c++/15.2.1/bits/enable_special_members.h \
+  /usr/include/c++/15.2.1/bits/erase_if.h \
   /usr/include/c++/15.2.1/bits/exception.h \
   /usr/include/c++/15.2.1/bits/exception_defines.h \
   /usr/include/c++/15.2.1/bits/exception_ptr.h \
@@ -4045,19 +4150,25 @@ CMakeFiles/sakura.dir/MAIN/main.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /usr/include/c++/15.2.1/bits/functexcept.h \
   /usr/include/c++/15.2.1/bits/functional_hash.h \
   /usr/include/c++/15.2.1/bits/hash_bytes.h \
+  /usr/include/c++/15.2.1/bits/hashtable.h \
+  /usr/include/c++/15.2.1/bits/hashtable_policy.h \
   /usr/include/c++/15.2.1/bits/invoke.h \
   /usr/include/c++/15.2.1/bits/ios_base.h \
   /usr/include/c++/15.2.1/bits/istream.tcc \
   /usr/include/c++/15.2.1/bits/locale_classes.h \
   /usr/include/c++/15.2.1/bits/locale_classes.tcc \
+  /usr/include/c++/15.2.1/bits/locale_conv.h \
   /usr/include/c++/15.2.1/bits/locale_facets.h \
   /usr/include/c++/15.2.1/bits/locale_facets.tcc \
+  /usr/include/c++/15.2.1/bits/locale_facets_nonio.h \
+  /usr/include/c++/15.2.1/bits/locale_facets_nonio.tcc \
   /usr/include/c++/15.2.1/bits/localefwd.h \
   /usr/include/c++/15.2.1/bits/memory_resource.h \
   /usr/include/c++/15.2.1/bits/memoryfwd.h \
   /usr/include/c++/15.2.1/bits/move.h \
   /usr/include/c++/15.2.1/bits/nested_exception.h \
   /usr/include/c++/15.2.1/bits/new_allocator.h \
+  /usr/include/c++/15.2.1/bits/node_handle.h \
   /usr/include/c++/15.2.1/bits/ostream.h \
   /usr/include/c++/15.2.1/bits/ostream.tcc \
   /usr/include/c++/15.2.1/bits/ostream_insert.h \
@@ -4068,25 +4179,44 @@ CMakeFiles/sakura.dir/MAIN/main.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /usr/include/c++/15.2.1/bits/range_access.h \
   /usr/include/c++/15.2.1/bits/refwrap.h \
   /usr/include/c++/15.2.1/bits/requires_hosted.h \
+  /usr/include/c++/15.2.1/bits/shared_ptr.h \
+  /usr/include/c++/15.2.1/bits/shared_ptr_atomic.h \
+  /usr/include/c++/15.2.1/bits/shared_ptr_base.h \
   /usr/include/c++/15.2.1/bits/specfun.h \
+  /usr/include/c++/15.2.1/bits/sstream.tcc \
   /usr/include/c++/15.2.1/bits/std_abs.h \
+  /usr/include/c++/15.2.1/bits/std_function.h \
   /usr/include/c++/15.2.1/bits/std_mutex.h \
+  /usr/include/c++/15.2.1/bits/stl_algo.h \
   /usr/include/c++/15.2.1/bits/stl_algobase.h \
   /usr/include/c++/15.2.1/bits/stl_bvector.h \
   /usr/include/c++/15.2.1/bits/stl_construct.h \
   /usr/include/c++/15.2.1/bits/stl_deque.h \
   /usr/include/c++/15.2.1/bits/stl_function.h \
+  /usr/include/c++/15.2.1/bits/stl_heap.h \
   /usr/include/c++/15.2.1/bits/stl_iterator.h \
   /usr/include/c++/15.2.1/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15.2.1/bits/stl_iterator_base_types.h \
+  /usr/include/c++/15.2.1/bits/stl_map.h \
+  /usr/include/c++/15.2.1/bits/stl_multimap.h \
+  /usr/include/c++/15.2.1/bits/stl_multiset.h \
   /usr/include/c++/15.2.1/bits/stl_pair.h \
+  /usr/include/c++/15.2.1/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/15.2.1/bits/stl_relops.h \
+  /usr/include/c++/15.2.1/bits/stl_set.h \
+  /usr/include/c++/15.2.1/bits/stl_tempbuf.h \
+  /usr/include/c++/15.2.1/bits/stl_tree.h \
   /usr/include/c++/15.2.1/bits/stl_uninitialized.h \
   /usr/include/c++/15.2.1/bits/stl_vector.h \
+  /usr/include/c++/15.2.1/bits/stream_iterator.h \
   /usr/include/c++/15.2.1/bits/streambuf.tcc \
   /usr/include/c++/15.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/15.2.1/bits/string_view.tcc \
   /usr/include/c++/15.2.1/bits/stringfwd.h \
+  /usr/include/c++/15.2.1/bits/uniform_int_dist.h \
   /usr/include/c++/15.2.1/bits/unique_lock.h \
+  /usr/include/c++/15.2.1/bits/unique_ptr.h \
+  /usr/include/c++/15.2.1/bits/unordered_map.h \
   /usr/include/c++/15.2.1/bits/uses_allocator.h \
   /usr/include/c++/15.2.1/bits/uses_allocator_args.h \
   /usr/include/c++/15.2.1/bits/utility.h \
@@ -4095,6 +4225,7 @@ CMakeFiles/sakura.dir/MAIN/main.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /usr/include/c++/15.2.1/cassert \
   /usr/include/c++/15.2.1/cctype \
   /usr/include/c++/15.2.1/cerrno \
+  /usr/include/c++/15.2.1/climits \
   /usr/include/c++/15.2.1/clocale \
   /usr/include/c++/15.2.1/cmath \
   /usr/include/c++/15.2.1/compare \
@@ -4103,31 +4234,46 @@ CMakeFiles/sakura.dir/MAIN/main.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /usr/include/c++/15.2.1/cstdint \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/ctime \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
+  /usr/include/c++/15.2.1/cxxabi.h \
   /usr/include/c++/15.2.1/debug/assertions.h \
   /usr/include/c++/15.2.1/debug/debug.h \
   /usr/include/c++/15.2.1/deque \
   /usr/include/c++/15.2.1/exception \
+  /usr/include/c++/15.2.1/ext/aligned_buffer.h \
   /usr/include/c++/15.2.1/ext/alloc_traits.h \
   /usr/include/c++/15.2.1/ext/atomicity.h \
+  /usr/include/c++/15.2.1/ext/concurrence.h \
   /usr/include/c++/15.2.1/ext/numeric_traits.h \
   /usr/include/c++/15.2.1/ext/string_conversions.h \
   /usr/include/c++/15.2.1/ext/type_traits.h \
   /usr/include/c++/15.2.1/fstream \
+  /usr/include/c++/15.2.1/functional \
   /usr/include/c++/15.2.1/initializer_list \
   /usr/include/c++/15.2.1/ios \
   /usr/include/c++/15.2.1/iosfwd \
   /usr/include/c++/15.2.1/iostream \
   /usr/include/c++/15.2.1/istream \
+  /usr/include/c++/15.2.1/iterator \
   /usr/include/c++/15.2.1/limits \
+  /usr/include/c++/15.2.1/locale \
+  /usr/include/c++/15.2.1/map \
   /usr/include/c++/15.2.1/math.h \
+  /usr/include/c++/15.2.1/memory \
   /usr/include/c++/15.2.1/mutex \
   /usr/include/c++/15.2.1/new \
+  /usr/include/c++/15.2.1/optional \
   /usr/include/c++/15.2.1/ostream \
+  /usr/include/c++/15.2.1/pstl/execution_defs.h \
+  /usr/include/c++/15.2.1/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/15.2.1/pstl/glue_memory_defs.h \
   /usr/include/c++/15.2.1/pstl/pstl_config.h \
   /usr/include/c++/15.2.1/ratio \
+  /usr/include/c++/15.2.1/set \
+  /usr/include/c++/15.2.1/sstream \
   /usr/include/c++/15.2.1/stdexcept \
   /usr/include/c++/15.2.1/stdlib.h \
   /usr/include/c++/15.2.1/streambuf \
@@ -4149,6 +4295,8 @@ CMakeFiles/sakura.dir/MAIN/main.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /usr/include/c++/15.2.1/tuple \
   /usr/include/c++/15.2.1/type_traits \
   /usr/include/c++/15.2.1/typeinfo \
+  /usr/include/c++/15.2.1/unordered_map \
+  /usr/include/c++/15.2.1/utility \
   /usr/include/c++/15.2.1/vector \
   /usr/include/c++/15.2.1/version \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h \
@@ -4160,10 +4308,13 @@ CMakeFiles/sakura.dir/MAIN/main.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/ctype_inline.h \
+  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cxxabi_tweaks.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/error_constants.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr-default.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr.h \
+  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/messages_members.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
+  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/time_members.h \
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
@@ -4172,6 +4323,7 @@ CMakeFiles/sakura.dir/MAIN/main.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/inttypes.h \
+  /usr/include/libintl.h \
   /usr/include/limits.h \
   /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
@@ -5044,6 +5196,8 @@ sakura: /usr/lib/Scrt1.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a \
   /usr/lib/ld-linux-x86-64.so.2 \
   /usr/lib/libSDL2-2.0.so.0.3200.66 \
+  /usr/lib/libboost_container.so.1.90.0 \
+  /usr/lib/libboost_program_options.so.1.90.0 \
   /usr/lib/libc.so.6 \
   /usr/lib/libc_nonshared.a \
   /usr/lib/libm.so.6 \
@@ -5097,8 +5251,6 @@ CMakeFiles/sakura.dir/CORE/CART/cart.cpp.o:
 
 CMakeFiles/sakura.dir/CORE/BUS/bus.cpp.o:
 
-CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o:
-
 CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/apu_snapshot.cpp.o:
 
 CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Buffer.cpp.o:
@@ -5109,11 +5261,11 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/Sound_Queue.cpp.o:
 
 /usr/lib/libm.so.6:
 
+/usr/lib/libboost_program_options.so.1.90.0:
+
 /usr/lib/libSDL2-2.0.so.0.3200.66:
 
 /usr/lib/ld-linux-x86-64.so.2:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o:
 
@@ -5129,7 +5281,153 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/Sound_Queue.cpp.o:
 
 /usr/include/c++/15.2.1/filesystem:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512fp16vlintrin.h:
+/usr/include/c++/15.2.1/codecvt:
+
+/usr/include/c++/15.2.1/utility:
+
+/usr/include/c++/15.2.1/unordered_map:
+
+/usr/include/c++/15.2.1/set:
+
+/usr/include/c++/15.2.1/ratio:
+
+/usr/include/c++/15.2.1/pstl/glue_memory_defs.h:
+
+/usr/include/c++/15.2.1/optional:
+
+/usr/include/c++/15.2.1/mutex:
+
+/usr/include/c++/15.2.1/memory:
+
+/usr/include/c++/15.2.1/functional:
+
+/usr/include/c++/15.2.1/bits/unordered_map.h:
+
+/usr/include/c++/15.2.1/bits/unique_ptr.h:
+
+/usr/include/c++/15.2.1/bits/unique_lock.h:
+
+/usr/include/c++/15.2.1/bits/stl_tree.h:
+
+/usr/include/c++/15.2.1/bits/stl_set.h:
+
+/usr/include/c++/15.2.1/bits/stl_relops.h:
+
+/usr/include/c++/15.2.1/bits/stl_raw_storage_iter.h:
+
+/usr/include/c++/15.2.1/bits/stl_multiset.h:
+
+/usr/include/c++/15.2.1/bits/stl_map.h:
+
+/usr/include/c++/15.2.1/bits/stl_deque.h:
+
+/usr/include/c++/15.2.1/bits/std_mutex.h:
+
+/usr/include/c++/15.2.1/bits/std_function.h:
+
+/usr/include/c++/15.2.1/bits/shared_ptr_atomic.h:
+
+/usr/include/c++/15.2.1/bits/shared_ptr.h:
+
+/usr/include/c++/15.2.1/bits/parse_numbers.h:
+
+/usr/include/c++/15.2.1/bits/hashtable_policy.h:
+
+/usr/include/c++/15.2.1/bits/fs_fwd.h:
+
+/usr/include/c++/15.2.1/bits/hashtable.h:
+
+CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o:
+
+/usr/include/c++/15.2.1/bits/atomic_lockfree_defines.h:
+
+/usr/include/c++/15.2.1/bits/fs_ops.h:
+
+/usr/include/c++/15.2.1/bits/atomic_base.h:
+
+/usr/include/c++/15.2.1/bits/stream_iterator.h:
+
+/usr/include/c++/15.2.1/bits/allocated_ptr.h:
+
+/usr/include/c++/15.2.1/bits/align.h:
+
+/usr/include/c++/15.2.1/atomic:
+
+/usr/include/boost/version.hpp:
+
+/usr/include/boost/type_index.hpp:
+
+/usr/include/boost/throw_exception.hpp:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o:
+
+/usr/include/boost/smart_ptr/detail/yield_k.hpp:
+
+/usr/include/boost/smart_ptr/detail/spinlock.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_noexcept.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_disable_deprecated.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_counted_impl.hpp:
+
+/usr/include/boost/smart_ptr/detail/sp_counted_base_std_atomic.hpp:
+
+/usr/include/boost/smart_ptr/detail/shared_count.hpp:
+
+/usr/include/c++/15.2.1/backward/auto_ptr.h:
+
+/usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp:
+
+/usr/include/boost/smart_ptr/detail/deprecated_macros.hpp:
+
+/usr/include/boost/shared_ptr.hpp:
+
+/usr/include/boost/program_options/value_semantic.hpp:
+
+/usr/include/boost/program_options/positional_options.hpp:
+
+/usr/include/boost/program_options/parsers.hpp:
+
+/usr/include/boost/program_options/option.hpp:
+
+/usr/include/boost/program_options/errors.hpp:
+
+/usr/include/boost/program_options/detail/value_semantic.hpp:
+
+/usr/include/boost/program_options/detail/parsers.hpp:
+
+/usr/include/boost/program_options/cmdline.hpp:
+
+/usr/include/boost/limits.hpp:
+
+/usr/include/boost/lexical_cast/detail/type_traits.hpp:
+
+/usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cxxabi_tweaks.h:
+
+/usr/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp:
+
+/usr/include/boost/lexical_cast/detail/lcast_char_constants.hpp:
+
+/usr/include/boost/lexical_cast/detail/inf_nan.hpp:
+
+/usr/include/boost/lexical_cast.hpp:
+
+/usr/include/boost/function_equal.hpp:
+
+/usr/include/boost/function/function_template.hpp:
+
+/usr/include/boost/function/function_fwd.hpp:
+
+/usr/include/boost/function/function_base.hpp:
+
+/usr/include/boost/function/function1.hpp:
+
+/usr/include/boost/detail/basic_pointerbuf.hpp:
+
+/usr/include/boost/core/ref.hpp:
+
+/usr/include/boost/core/no_exceptions_support.hpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512dqintrin.h:
 
@@ -5150,6 +5448,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/Sound_Queue.cpp.o:
 /usr/include/c++/15.2.1/tr1/bessel_function.tcc:
 
 /home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/core_ppu.h:
+
+/usr/include/boost/lexical_cast/detail/converter_numeric.hpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/gfniintrin.h:
 
@@ -5173,6 +5473,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/Sound_Queue.cpp.o:
 
 /usr/include/strings.h:
 
+/usr/include/boost/detail/lcast_precision.hpp:
+
 /usr/include/stdio.h:
 
 /usr/include/bits/wordsize.h:
@@ -5182,6 +5484,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/Sound_Queue.cpp.o:
 /usr/include/c++/15.2.1/tr1/riemann_zeta.tcc:
 
 /usr/include/c++/15.2.1/tr1/poly_hermite.tcc:
+
+/usr/include/boost/program_options/config.hpp:
 
 /usr/include/bits/types/timer_t.h:
 
@@ -5209,15 +5513,23 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/Sound_Queue.cpp.o:
 
 /usr/include/c++/15.2.1/bits/exception_defines.h:
 
+/usr/include/boost/lexical_cast/detail/lcast_basic_unlockedbuf.hpp:
+
 /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Synth.h:
 
 /usr/include/c++/15.2.1/vector:
 
 /usr/include/bits/types/wint_t.h:
 
+/usr/include/boost/core/enable_if.hpp:
+
+/usr/include/boost/program_options/version.hpp:
+
 /usr/include/bits/types/struct_FILE.h:
 
 /usr/include/bits/environments.h:
+
+/usr/include/boost/smart_ptr/detail/spinlock_std_atomic.hpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512ifmaintrin.h:
 
@@ -5227,9 +5539,13 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/Sound_Queue.cpp.o:
 
 /usr/include/bits/types/cookie_io_functions_t.h:
 
+/usr/include/boost/mem_fn.hpp:
+
 /usr/include/bits/types/__FILE.h:
 
 /usr/include/features.h:
+
+/usr/include/boost/smart_ptr/detail/sp_counted_base.hpp:
 
 /usr/include/bits/stdio_lim.h:
 
@@ -5237,11 +5553,7 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.cpp.o:
 
 /home/Hunter/Documents/Github/sakura/CORE/BUS/bus.h:
 
-/usr/include/c++/15.2.1/bits/fs_dir.h:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx10_2mediaintrin.h:
-
-/usr/include/c++/15.2.1/bits/shared_ptr_base.h:
 
 /usr/include/bits/mathcalls-macros.h:
 
@@ -5259,6 +5571,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.cpp.o:
 
 /usr/include/c++/15.2.1/bits/exception.h:
 
+/usr/include/boost/move/detail/std_ns_end.hpp:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avxintrin.h:
 
 /usr/lib/libm.so:
@@ -5269,6 +5583,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.cpp.o:
 
 /usr/include/bits/iscanonical.h:
 
+/usr/include/boost/config/pragma_message.hpp:
+
 /usr/lib/libc.so.6:
 
 /usr/include/bits/fp-fast.h:
@@ -5277,9 +5593,15 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.cpp.o:
 
 /usr/include/wctype.h:
 
+/usr/include/c++/15.2.1/ext/aligned_buffer.h:
+
+/usr/include/boost/config/no_tr1/memory.hpp:
+
 /usr/include/bits/flt-eval-method.h:
 
 /usr/include/SDL2/SDL_version.h:
+
+/usr/include/boost/program_options/detail/convert.hpp:
 
 /usr/include/SDL2/begin_code.h:
 
@@ -5291,6 +5613,10 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.cpp.o:
 
 /usr/include/SDL2/SDL_sensor.h:
 
+/home/Hunter/Documents/Github/sakura/MAIN/render.cpp:
+
+/usr/include/SDL2/SDL_scancode.h:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512bwintrin.h:
 
 /usr/include/c++/15.2.1/tr1/beta_function.tcc:
@@ -5301,9 +5627,9 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.cpp.o:
 
 /usr/include/SDL2/SDL_shape.h:
 
-/usr/include/SDL2/SDL_quit.h:
+/usr/include/boost/core/snprintf.hpp:
 
-/usr/include/c++/15.2.1/bits/fs_ops.h:
+/usr/include/SDL2/SDL_quit.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/amxint8intrin.h:
 
@@ -5343,8 +5669,6 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/emmintrin.h:
 
-/usr/include/boost/config.hpp:
-
 /usr/include/c++/15.2.1/tr1/ell_integral.tcc:
 
 /usr/lib/libc_nonshared.a:
@@ -5354,6 +5678,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.cpp.o:
 /usr/include/bits/wchar.h:
 
 /usr/include/bits/waitstatus.h:
+
+/usr/include/boost/smart_ptr/detail/spinlock_pool.hpp:
 
 /usr/include/bits/types/struct___jmp_buf_tag.h:
 
@@ -5369,6 +5695,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.cpp.o:
 
 CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Vrc6.cpp.o:
 
+/usr/include/boost/type_index/type_index_facade.hpp:
+
 /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.h:
 
 /usr/include/c++/15.2.1/math.h:
@@ -5383,15 +5711,17 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Vrc6.cpp.o:
 
 /usr/include/SDL2/SDL_endian.h:
 
+/usr/include/boost/container_hash/hash_fwd.hpp:
+
+/usr/include/boost/container/detail/workaround.hpp:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx10_2-512bf16intrin.h:
 
 /usr/include/bits/types/clockid_t.h:
 
-/usr/include/SDL2/SDL_scancode.h:
-
-/home/Hunter/Documents/Github/sakura/MAIN/render.cpp:
-
 /usr/include/c++/15.2.1/bits/move.h:
+
+/usr/include/boost/any/detail/config.hpp:
 
 /usr/include/bits/struct_mutex.h:
 
@@ -5399,11 +5729,15 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Vrc6.cpp.o:
 
 /usr/include/c++/15.2.1/bits/istream.tcc:
 
+/usr/include/boost/program_options.hpp:
+
 /usr/include/SDL2/SDL_rect.h:
 
 /usr/include/c++/15.2.1/bits/stl_construct.h:
 
 /usr/include/SDL2/SDL_stdinc.h:
+
+/usr/include/c++/15.2.1/bits/erase_if.h:
 
 /usr/include/bits/mathcalls-narrow.h:
 
@@ -5419,15 +5753,25 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Vrc6.cpp.o:
 
 /usr/include/c++/15.2.1/bits/stl_pair.h:
 
+/usr/include/boost/lexical_cast/detail/buffer_view.hpp:
+
 /usr/include/bits/waitflags.h:
 
 /usr/include/inttypes.h:
 
 /usr/include/c++/15.2.1/cstring:
 
+/usr/include/c++/15.2.1/bits/fs_path.h:
+
+/usr/include/c++/15.2.1/cstddef:
+
+/usr/include/boost/smart_ptr/detail/sp_convertible.hpp:
+
 /usr/include/boost/config/platform/linux.hpp:
 
 /usr/include/bits/types/__sigset_t.h:
+
+/usr/include/boost/smart_ptr/detail/local_counted_base.hpp:
 
 /usr/include/bits/endian.h:
 
@@ -5438,6 +5782,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Vrc6.cpp.o:
 /usr/include/SDL2/SDL_power.h:
 
 /usr/include/bits/stdint-least.h:
+
+/usr/include/c++/15.2.1/map:
 
 /usr/include/c++/15.2.1/new:
 
@@ -5465,6 +5811,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Oscs.cpp.o:
 
 /usr/include/c++/15.2.1/cinttypes:
 
+/usr/include/boost/core/detail/sp_thread_sleep.hpp:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512bitalgvlintrin.h:
 
 /usr/include/bits/long-double.h:
@@ -5474,6 +5822,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Oscs.cpp.o:
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/waitpkgintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/amxtileintrin.h:
+
+/usr/include/c++/15.2.1/bits/stl_multimap.h:
 
 /usr/include/SDL2/SDL_cpuinfo.h:
 
@@ -5489,11 +5839,25 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Oscs.cpp.o:
 
 /usr/include/c++/15.2.1/bits/uses_allocator.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512fp16vlintrin.h:
+
+/usr/include/boost/container/detail/std_fwd.hpp:
+
 /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/Simple_Apu.h:
 
 /usr/include/c++/15.2.1/stdexcept:
 
 /usr/include/c++/15.2.1/bits/stl_iterator.h:
+
+/usr/include/c++/15.2.1/bits/chrono.h:
+
+/usr/include/boost/smart_ptr/bad_weak_ptr.hpp:
+
+/usr/include/c++/15.2.1/bits/stl_function.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/boost/core/checked_delete.hpp:
 
 /usr/include/ctype.h:
 
@@ -5503,9 +5867,9 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Oscs.cpp.o:
 
 /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Oscs.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/limits.h:
+/usr/include/boost/core/demangle.hpp:
 
-/usr/include/c++/15.2.1/ratio:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/limits.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512fp16intrin.h:
 
@@ -5535,13 +5899,21 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Oscs.cpp.o:
 
 /usr/include/c++/15.2.1/ext/numeric_traits.h:
 
+/usr/include/boost/smart_ptr/shared_ptr.hpp:
+
 /usr/include/bits/getopt_core.h:
+
+/usr/include/boost/get_pointer.hpp:
 
 /usr/include/SDL2/SDL_blendmode.h:
 
 /usr/include/bits/local_lim.h:
 
+/usr/include/boost/core/detail/sp_thread_pause.hpp:
+
 /usr/include/bits/select.h:
+
+/usr/include/boost/lexical_cast/try_lexical_convert.hpp:
 
 /usr/include/c++/15.2.1/bits/locale_facets_nonio.tcc:
 
@@ -5571,7 +5943,15 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Namco.cpp.o:
 
 /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Buffer.h:
 
+/usr/include/boost/config.hpp:
+
+/usr/include/boost/any/fwd.hpp:
+
 /usr/include/sys/types.h:
+
+/usr/include/c++/15.2.1/bits/deque.tcc:
+
+/usr/include/boost/config/detail/posix_features.hpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx10_2convertintrin.h:
 
@@ -5580,6 +5960,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Namco.cpp.o:
 /usr/include/SDL2/SDL_filesystem.h:
 
 /usr/include/c++/15.2.1/pstl/execution_defs.h:
+
+/usr/include/boost/lexical_cast/detail/widest_char.hpp:
 
 /usr/include/boost/config/detail/select_platform_config.hpp:
 
@@ -5599,6 +5981,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nonlinear_Buffer.cpp.o:
 
 /usr/include/boost/config/workaround.hpp:
 
+/usr/include/boost/core/noncopyable.hpp:
+
 /usr/include/c++/15.2.1/climits:
 
 /usr/include/SDL2/SDL_keycode.h:
@@ -5612,6 +5996,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nonlinear_Buffer.cpp.o:
 /usr/include/c++/15.2.1/bits/version.h:
 
 /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.cpp:
+
+/usr/include/c++/15.2.1/cxxabi.h:
 
 /usr/include/bits/stdint-uintn.h:
 
@@ -5637,8 +6023,6 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nonlinear_Buffer.cpp.o:
 
 /usr/include/c++/15.2.1/bits/quoted_string.h:
 
-/usr/include/c++/15.2.1/bits/fs_fwd.h:
-
 /usr/include/SDL2/SDL_main.h:
 
 /usr/include/gnu/stubs.h:
@@ -5661,6 +6045,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nonlinear_Buffer.cpp.o:
 
 /usr/include/SDL2/SDL_assert.h:
 
+/usr/include/boost/lexical_cast/detail/converter_lexical.hpp:
+
 /usr/include/stdlib.h:
 
 /usr/include/sys/cdefs.h:
@@ -5668,6 +6054,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nonlinear_Buffer.cpp.o:
 CMakeFiles/sakura.dir/CORE/CPU_6502/core.cpp.o:
 
 CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/Simple_Apu.cpp.o:
+
+/usr/include/boost/exception/exception.hpp:
 
 /usr/include/unistd.h:
 
@@ -5691,9 +6079,11 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 
 /usr/include/bits/unistd_ext.h:
 
-/usr/include/c++/15.2.1/ext/alloc_traits.h:
+/usr/include/boost/move/detail/std_ns_begin.hpp:
 
-/usr/include/c++/15.2.1/mutex:
+/usr/include/boost/core/typeinfo.hpp:
+
+/usr/include/c++/15.2.1/ext/alloc_traits.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h:
 
@@ -5755,11 +6145,17 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 
 /usr/include/c++/15.2.1/istream:
 
+/usr/include/c++/15.2.1/bits/enable_special_members.h:
+
 /usr/include/bits/atomic_wide_counter.h:
+
+/usr/include/boost/core/detail/sp_thread_yield.hpp:
 
 /usr/include/bits/posix_opt.h:
 
 /usr/include/SDL2/SDL_hints.h:
+
+/usr/include/boost/smart_ptr/detail/sp_typeinfo_.hpp:
 
 /usr/include/c++/15.2.1/bits/stl_uninitialized.h:
 
@@ -5769,15 +6165,21 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512ifmavlintrin.h:
 
+/usr/include/boost/type_index/detail/config.hpp:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/clzerointrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512vbmi2intrin.h:
 
 /usr/include/c++/15.2.1/sstream:
 
+/usr/include/boost/program_options/detail/cmdline.hpp:
+
 /usr/include/bits/libc-header-start.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512vbmi2vlintrin.h:
+
+/usr/include/boost/program_options/variables_map.hpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512bitalgintrin.h:
 
@@ -5795,8 +6197,6 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512vldqintrin.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512vlintrin.h:
-
 /usr/include/c++/15.2.1/compare:
 
 /usr/include/c++/15.2.1/cwctype:
@@ -5804,6 +6204,10 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512vp2intersectintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512vpopcntdqvlintrin.h:
+
+/usr/include/c++/15.2.1/bits/node_handle.h:
+
+/usr/include/boost/function.hpp:
 
 /usr/include/bits/types/struct_timeval.h:
 
@@ -5818,6 +6222,10 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 /usr/include/SDL2/SDL_rwops.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avxvnniint16intrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512vlintrin.h:
+
+/usr/include/boost/bind/mem_fn.hpp:
 
 /usr/include/assert.h:
 
@@ -5913,6 +6321,8 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/sgxintrin.h:
 
+/usr/include/boost/assert.hpp:
+
 /usr/include/c++/15.2.1/iterator:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/sha512intrin.h:
@@ -5935,13 +6345,19 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 
 /usr/include/c++/15.2.1/bits/ostream.tcc:
 
+/usr/include/boost/core/cmath.hpp:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/tbmintrin.h:
 
 /usr/include/c++/15.2.1/bits/codecvt.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/tsxldtrkintrin.h:
 
+/usr/include/boost/core/yield_primitives.hpp:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/uintrintrin.h:
+
+/usr/include/boost/type_index/stl_type_index.hpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/usermsrintrin.h:
 
@@ -5985,6 +6401,8 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 
 /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Multi_Buffer.cpp:
 
+/usr/include/boost/lexical_cast/bad_lexical_cast.hpp:
+
 /usr/include/bits/getopt_posix.h:
 
 /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Multi_Buffer.h:
@@ -5994,6 +6412,10 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Namco.cpp:
 
 /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Namco.h:
+
+/usr/include/c++/15.2.1/deque:
+
+/home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/apu_snapshot.cpp:
 
 /home/Hunter/Documents/Github/sakura/CORE/LOGGER/logger.cpp:
 
@@ -6015,6 +6437,8 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 
 /usr/include/c++/15.2.1/exception:
 
+/usr/include/boost/lexical_cast/detail/converter_lexical_streams.hpp:
+
 /usr/include/c++/15.2.1/bits/stl_heap.h:
 
 /usr/include/asm-generic/errno-base.h:
@@ -6028,6 +6452,8 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 /usr/include/bits/time.h:
 
 /usr/include/asm/types.h:
+
+/usr/include/boost/any.hpp:
 
 /usr/include/bits/errno.h:
 
@@ -6055,6 +6481,8 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 
 /usr/include/c++/15.2.1/bits/basic_string.h:
 
+/usr/include/boost/lexical_cast/detail/is_character.hpp:
+
 /usr/include/c++/15.2.1/bits/uses_allocator_args.h:
 
 /usr/include/c++/15.2.1/bits/basic_string.tcc:
@@ -6078,6 +6506,8 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 /usr/include/c++/15.2.1/bits/locale_classes.tcc:
 
 /usr/include/c++/15.2.1/bits/locale_facets.h:
+
+/usr/include/boost/container/container_fwd.hpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/bmiintrin.h:
 
@@ -6141,9 +6571,9 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
 
-/usr/include/c++/15.2.1/bits/parse_numbers.h:
-
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h:
+
+/usr/lib/libboost_container.so.1.90.0:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++locale.h:
 
@@ -6156,6 +6586,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Multi_Buffer.cpp.o:
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/amxtf32intrin.h:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr.h:
+
+/usr/include/boost/program_options/options_description.hpp:
 
 /home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/utils_ppu.cpp:
 
@@ -6172,8 +6604,6 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Multi_Buffer.cpp.o:
 /usr/include/asm-generic/errno.h:
 
 /usr/include/sys/single_threaded.h:
-
-/usr/include/c++/15.2.1/bits/shared_ptr.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/fmaintrin.h:
 
@@ -6197,8 +6627,6 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Multi_Buffer.cpp.o:
 
 /usr/include/c++/15.2.1/locale:
 
-/usr/include/c++/15.2.1/ext/aligned_buffer.h:
-
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/time_members.h:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
@@ -6215,34 +6643,14 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Multi_Buffer.cpp.o:
 
 /home/Hunter/Documents/Github/sakura/MAIN/render.h:
 
-/usr/include/c++/15.2.1/bits/stl_function.h:
+/usr/include/c++/15.2.1/bits/fs_dir.h:
 
-/usr/include/sys/select.h:
+/usr/include/boost/any/bad_any_cast.hpp:
 
-/usr/include/c++/15.2.1/bits/chrono.h:
+/usr/include/c++/15.2.1/bits/shared_ptr_base.h:
 
-/usr/include/boost/config/detail/posix_features.hpp:
+/usr/include/boost/any/detail/placeholder.hpp:
 
-/usr/include/c++/15.2.1/bits/deque.tcc:
+/usr/include/boost/assert/source_location.hpp:
 
-/usr/include/c++/15.2.1/bits/std_mutex.h:
-
-/usr/include/c++/15.2.1/bits/stl_deque.h:
-
-/usr/include/c++/15.2.1/bits/unique_lock.h:
-
-/home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/apu_snapshot.cpp:
-
-/usr/include/c++/15.2.1/deque:
-
-/usr/include/c++/15.2.1/cstddef:
-
-/usr/include/c++/15.2.1/bits/fs_path.h:
-
-/usr/include/c++/15.2.1/bits/allocated_ptr.h:
-
-/usr/include/c++/15.2.1/bits/stream_iterator.h:
-
-/usr/include/c++/15.2.1/bits/unique_ptr.h:
-
-/usr/include/c++/15.2.1/codecvt:
+/usr/include/boost/core/addressof.hpp:
