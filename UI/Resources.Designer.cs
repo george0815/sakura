@@ -80,6 +80,18 @@ namespace sakura
             }
         }
 
+
+        /// <summary>
+        ///   Looks up a localized string similar to 128 KB.
+        /// </summary>
+        internal static string Roms
+        {
+            get
+            {
+                return ResourceManager.GetString("Roms", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to 128 KB.
         /// </summary>

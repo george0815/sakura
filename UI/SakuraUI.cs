@@ -22,9 +22,15 @@ namespace sakura
         // Header components
         readonly private FrameView header;
         readonly private Label romCount;
+        private List<Rom> roms;
 
         public SakuraUI()
         {
+
+            //Get rom list
+            roms = Rom.GetAllRoms();
+
+
             #region HEADER
 
             // Header container
@@ -98,7 +104,7 @@ namespace sakura
             {
                 X = (Settings.Current.DisableASCII ? 30 : SettingsData.LogoWidth) + 2,
                 Y = (Settings.Current.DisableASCII ? 1 : 3),
-                Text = $"{"Roms: "}{"1"}"
+                Text = $"{Resources.Roms}: {roms.Count}"
             };
 
 
@@ -129,11 +135,11 @@ namespace sakura
             // Sidebar menu
             var menu = new ListView(new string[]
             {
-                "Roms",
+                Resources.Roms,
                 "Saves",
-                "Settings",
+                Resources.Settings,
                 "Controls",
-                "Log",
+                Resources.Log,
             })
             {
                 X = 1,
@@ -151,7 +157,7 @@ namespace sakura
             sidebar.Add(menu);
 
             // Exit button
-            var exitButton = new Button("Exit")
+            var exitButton = new Button(Resources.Exit)
             {
                 X = 1,
                 Y = Pos.Bottom(menu),
@@ -170,7 +176,7 @@ namespace sakura
 
             #region CONTENT VIEWS
 
-            romListView = new RomListView(new List<string>() { "test" });
+            romListView = new RomListView(roms);
             savesView = new SavesView();
             settingsView = new SettingsView();
             controlsView = new ControlsView();
@@ -190,9 +196,9 @@ namespace sakura
         /// </summary>
         private static void ShowExitDialog()
         {
-            var dialog = new Dialog("Exit", 50, 10) { Height = 3 };
-            var ok = new Button("Ok");
-            var cancel = new Button("Cancel");
+            var dialog = new Dialog(Resources.Exit, 50, 10) { Height = 3 };
+            var ok = new Button(Resources.OK);
+            var cancel = new Button(Resources.Cancel);
 
             bool exitRequested = false;
 

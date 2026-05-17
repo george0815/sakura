@@ -1,5 +1,4 @@
 
-using sakura.helpers;
 using System.Data;
 using Terminal.Gui;
 
@@ -16,7 +15,7 @@ public class RomListView : FrameView
     /// <summary>
     /// List of roms backing this view.
     /// </summary>
-    private readonly List<string> _roms;
+    private readonly List<Rom> _roms;
 
     /// <summary>
     /// Terminal.Gui table showing rom info.
@@ -29,11 +28,11 @@ public class RomListView : FrameView
     private readonly DataTable _tableData;
 
     /// <summary>
-    /// Initialize the rom list view with the provided managers.
+    /// Initialize the rom list view with the provided roms.
     /// </summary>
     /// <param name="roms">List of rom objects</param>
-    public RomListView(List<string> roms)
-        : base(Resources.Torrents)
+    public RomListView(List<Rom> roms)
+        : base(Resources.Roms)
     {
         _roms = roms;
 

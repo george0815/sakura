@@ -1,4 +1,3 @@
-using Terminal.Gui;
 using System.Text.Json;
 using sakura.helpers;
 
@@ -43,7 +42,9 @@ namespace sakura
         // ------------------------------
         // Paths
         // ------------------------------
-        public string? DefaultDownloadPath { get; set; } = "./";  // Default download folder
+        public string? DefaultRomPath { get; set; } = "./";  // Default download folder
+        public string? DefaultSramPath { get; set; } = "./saves/sram";  // Default download folder
+        public List<string> AllRomPaths { get; set; } = new List<string>() { "./" };
         public string? LogPath { get; set; } = "./log.txt";       // Log file path
         public string SettingsPath { get; set; } = "cfg.json";    // Settings file
 
@@ -108,7 +109,7 @@ namespace sakura
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{"Error saving settings"} {ex.Message}");
+                Console.WriteLine($"{Resources.ErrorsavingsettingsexMessage} {ex.Message}");
             }
         }
 
@@ -143,7 +144,7 @@ namespace sakura
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{"Error loading settigns"} {ex.Message}");
+                Console.WriteLine($"{Resources.ErrorloadingsettingsexMessage} {ex.Message}");
                 Settings.Save();
             }
         }

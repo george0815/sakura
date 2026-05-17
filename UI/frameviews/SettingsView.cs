@@ -130,7 +130,7 @@ namespace sakura.frameviews
             // Default rom directory
             scroll.Add(new Label(Resources.DefaultDownloadPath) { X = 1, Y = y });
             var romPathField =
-                new TextField(Settings.Current.DefaultDownloadPath ?? "")
+                new TextField(Settings.Current.DefaultRomPath ?? "")
                 {
                     X = 30,
                     Y = y,
@@ -406,24 +406,24 @@ namespace sakura.frameviews
 
                     // --- path validation ---
 
-                    string downloadPath = romPathField.Text.ToString()!.Trim();
+                    string romPath = romPathField.Text.ToString()!.Trim();
                     string logPath = logPathField.Text.ToString()!.Trim();
                     string settingsPath = settingsPathField.Text.ToString()!.Trim();
 
-                    if (string.IsNullOrWhiteSpace(downloadPath))
+                    if (string.IsNullOrWhiteSpace(romPath))
                     {
                         MessageBox.ErrorQuery(Resources.Error, Resources.Downloadpathcannotbeempty, Resources.OK);
                         return;
                     }
 
-                    if (!Directory.Exists(downloadPath))
+                    if (!Directory.Exists(romPath))
                     {
                         if (MessageBox.Query(
                             Resources.MissingDirectory,
                             Resources.DownloadpathdoesnotexistCreateit_,
                             Resources.Yes, Resources.No) == 0)
                         {
-                            Directory.CreateDirectory(downloadPath);
+                            Directory.CreateDirectory(romPath);
                         }
                         else return;
                     }
@@ -449,7 +449,7 @@ namespace sakura.frameviews
                     Settings.Current.HidetextCursor = hideTextCursor.Checked;
                     Settings.Current.UseSystemConsole = useSystemConsole.Checked;
 
-                    Settings.Current.DefaultDownloadPath = downloadPath;
+                    Settings.Current.DefaultRomPath = romPath;
                     Settings.Current.LogPath = logPath;
                     Settings.Current.SettingsPath = settingsPath;
 
