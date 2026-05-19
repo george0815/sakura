@@ -1,3 +1,4 @@
+//TODO: RESOURCE STRINGS, HOTKEY INFO, AND
 using sakura.frameviews;
 using sakura.helpers;
 using Terminal.Gui;
@@ -5,7 +6,7 @@ using Terminal.Gui;
 namespace sakura
 {
     /// <summary>
-    /// Main UI window for Lain application using Terminal.Gui.
+    /// Main UI window for sakura application using Terminal.Gui.
     /// Contains header, sidebar menu, and various content panels.
     /// </summary>
     public class SakuraUI : Window

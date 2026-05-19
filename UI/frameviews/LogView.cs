@@ -1,4 +1,4 @@
-
+//TODO: FIX LOG DISPLAY
 using sakura;
 using sakura.helpers;
 using Terminal.Gui;

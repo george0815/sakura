@@ -1,4 +1,4 @@
-
+//TODO: RESOURCE STRINGS AND ROM KEY HANDLERS
 using System.Data;
 using Terminal.Gui;
 using sakura.helpers;
@@ -7,8 +7,7 @@ namespace sakura.frameviews
 {
 
     /// <summary>
-    /// Displays a list of active torrents with progress, peers, rates, and controls
-    /// for starting, stopping, seeding, and removing torrents.
+    /// Displays a list of roms with name, SRAM path, path, and display type
     /// 
     /// This view is backed by a TableView and synchronizes with TorrentOperations events.
     /// </summary>
@@ -75,8 +74,8 @@ namespace sakura.frameviews
         }
 
         /// <summary>
-        /// Handles keyboard input for torrent control.
-        /// Supports start/stop download, start/stop seeding, remove, and magnet link generation.
+        /// Handles keyboard input for control.
+        /// Supports start/stop, open path, and open SRAM path
         /// </summary>
         /// <param name="keyEvent">The key event pressed by the user</param>
         /// <returns>True if the key was handled, otherwise false</returns>
@@ -86,32 +85,28 @@ namespace sakura.frameviews
             if (_table.SelectedRow < 0 || _table.SelectedRow >= _roms.Count)
                 return base.ProcessKey(keyEvent);
 
-            // --- Start download ---
+            // --- Start rom ---
             if (keyEvent.Key == Settings.Current.Controls.StartRom)
             {
-                // Task.Run(async () =>
-
-                SearchArgs args = new SearchArgs()
+                Task.Run(async () =>
                 {
-                    RomPath = _roms[_table.SelectedRow].RomPath,
-                };
-                Log.Write($"STARTING {_roms[_table.SelectedRow].RomPath}");
-                CoreWrapper.Launch(args);
+                    SearchArgs args = new SearchArgs()
+                    {
+                        RomPath = _roms[_table.SelectedRow].RomPath!,
+                    };
+                    CoreWrapper.Launch(args);
+                });
 
-
-                Log.Write(_table.SelectedRow.ToString());
-                Log.Write("STARTING ROM");
                 return true;
             }
 
-            // --- Stop download ---
+            // --- Stop rom---
             else if (keyEvent.Key == Settings.Current.Controls.StopRom)
             {
                 Task.Run(async () =>
                 {
                 });
 
-                Log.Write(_table.SelectedRow.ToString());
                 return true;
             }
 

@@ -1,30 +1,14 @@
-using System.Collections.Generic;
+//TODO: RESOURCE STRINGS
 using System.Diagnostics;
 using System.Text;
 using System.Text.Json;
-using Terminal.Gui;
-using System.Text.Json.Serialization;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace sakura.helpers
 {
-    /// <summary>
-    /// Represents the JSON response returned by Ghidorah for status queries.
-    /// </summary>
-    public class StatusResponse
-    {
-        [JsonPropertyName("paths")]
-        public string? Paths { get; set; }  // Paths used in Ghidorah execution
-
-        [JsonPropertyName("message")]
-        public string? Message { get; set; } // Optional message from Ghidorah
-
-    }
 
 
     /// <summary>
-    /// Struct to hold arguments for a Ghidorah search.
+    /// Struct to hold arguments for launching a rom
     /// </summary>
     internal struct SearchArgs
     {
@@ -32,7 +16,7 @@ namespace sakura.helpers
     }
 
     /// <summary>
-    /// Handles interaction with the Ghidorah executable for searches and plugin checks.
+    /// Handles interaction with the sakura core executable for searches and plugin checks.
     /// </summary>
     internal class CoreWrapper
     {
@@ -46,7 +30,7 @@ namespace sakura.helpers
 
 
         /// <summary>
-        /// Executes a search using Ghidorah with the given arguments.
+        /// Launches the sakura emulator core with the given arguements
         /// </summary>
         internal static string Launch(SearchArgs args)
         {
@@ -57,11 +41,6 @@ namespace sakura.helpers
                 FileName = ExeFileName,
                 Arguments =
                     $"--rom {args.RomPath}",
-                //$"--limit {NormArgs.Limit} ",
-                /* $"--total_limit {NormArgs.TotalLimit} " +
-                 $"--categories {categories} " +
-                 $"--sort_by {NormArgs.SortBy} " +
-                 $"--sources {sources}", */
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
                 UseShellExecute = false,
@@ -69,8 +48,6 @@ namespace sakura.helpers
                 StandardOutputEncoding = Encoding.UTF8,
                 StandardErrorEncoding = Encoding.UTF8
             };
-
-            Log.Write("STARTING");
 
             using var process = new Process { StartInfo = psi };
             process.Start();
@@ -87,8 +64,8 @@ namespace sakura.helpers
 
             if (process.ExitCode != 0)
             {
-                Log.Write($"{Resources.Ghidoraherror} {error}");
-                return $"{{\"data\":[],\"errors\":[\"{Resources.Errorwrittentolog}\"]}}";
+                Log.Write($"{"There was an error launching the sakura core"} {error}");
+                return $"{{\"data\":[],\"errors\":[\"There was an error lauching the sakura core\"]}}";
             }
 
             return output; // Return JSON search result

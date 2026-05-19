@@ -1,12 +1,10 @@
-using sakura.helpers;
+//TODO: DOC STRINGS, COMMENTS, AND PARSING ROM DATA
 
+using sakura.helpers;
 
 namespace sakura;
 
-
-
-
-//Class represents NES rom
+//Class that represents NES rom
 public class Rom
 {
 
@@ -23,9 +21,6 @@ public class Rom
     internal static List<Rom> GetAllRoms()
     {
 
-        Log.Write("GETTING ROMS");
-
-
         List<Rom> roms = new List<Rom>();
         foreach (string path in Settings.Current.AllRomPaths)
         {
@@ -35,7 +30,6 @@ public class Rom
             }
         }
 
-        Log.Write(String.Join(" ", roms));
         return roms;
 
     }
@@ -45,11 +39,7 @@ public class Rom
 
 
         List<Rom> tempRoms = new List<Rom>();
-
         DirectoryInfo DirInfo = new DirectoryInfo(path);
-
-
-        Log.Write(path);
 
         foreach (FileInfo file in DirInfo.EnumerateFiles())
         {
@@ -65,7 +55,7 @@ public class Rom
                 Rom tempRom = new Rom()
                 {
                     Name = name,
-                    RomPath = Path.Combine(file.DirectoryName, file.Name),
+                    RomPath = Path.Combine(file.DirectoryName!, file.Name),
                     SramPath = Path.Combine(Settings.Current.DefaultSramPath!, name),
                     NTSC = true,
                 };
@@ -80,9 +70,6 @@ public class Rom
               .Equals("nes", StringComparison.OrdinalIgnoreCase)))
         {
             //call parser TODO: IMPLEMENT PARSER 
-
-            Log.Write("TEST");
-
 
 
         }

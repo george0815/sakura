@@ -70,146 +70,24 @@ namespace sakura
         }
 
         /// <summary>
-        ///   Looks up a localized string similar to 0.
+        ///   Looks up a localized string similar to ASCII color:.
         /// </summary>
-        internal static string _0
+        internal static string ErrorloadingsettingsexMessage
         {
             get
             {
-                return ResourceManager.GetString("0", resourceCulture);
+                return ResourceManager.GetString("ErrorloadingsettingsexMessage", resourceCulture);
             }
         }
 
-
         /// <summary>
-        ///   Looks up a localized string similar to 128 KB.
+        ///   Looks up a localized string similar to ASCII color:.
         /// </summary>
         internal static string Roms
         {
             get
             {
                 return ResourceManager.GetString("Roms", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to 128 KB.
-        /// </summary>
-        internal static string _128KB
-        {
-            get
-            {
-                return ResourceManager.GetString("128KB", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to 16 KB.
-        /// </summary>
-        internal static string _16KB
-        {
-            get
-            {
-                return ResourceManager.GetString("16KB", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to 1 MB.
-        /// </summary>
-        internal static string _1MB
-        {
-            get
-            {
-                return ResourceManager.GetString("1MB", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to 256 KB.
-        /// </summary>
-        internal static string _256KB
-        {
-            get
-            {
-                return ResourceManager.GetString("256KB", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to 2 MB.
-        /// </summary>
-        internal static string _2MB
-        {
-            get
-            {
-                return ResourceManager.GetString("2MB", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to 32 KB.
-        /// </summary>
-        internal static string _32KB
-        {
-            get
-            {
-                return ResourceManager.GetString("32KB", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to 512 KB.
-        /// </summary>
-        internal static string _512KB
-        {
-            get
-            {
-                return ResourceManager.GetString("512KB", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to 64 KB.
-        /// </summary>
-        internal static string _64KB
-        {
-            get
-            {
-                return ResourceManager.GetString("64KB", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to ./log.txt.
-        /// </summary>
-        internal static string _logtxt
-        {
-            get
-            {
-                return ResourceManager.GetString("/logtxt", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Active torrents: .
-        /// </summary>
-        internal static string ActiveTorrents
-        {
-            get
-            {
-                return ResourceManager.GetString("ActiveTorrents", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to All downloads complete..
-        /// </summary>
-        internal static string Alldownloadscomplete
-        {
-            get
-            {
-                return ResourceManager.GetString("Alldownloadscomplete", resourceCulture);
             }
         }
 
@@ -334,16 +212,6 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to  {c} .
-        /// </summary>
-        internal static string c
-        {
-            get
-            {
-                return ResourceManager.GetString("c", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
@@ -356,71 +224,6 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Categories:.
-        /// </summary>
-        internal static string Categories
-        {
-            get
-            {
-                return ResourceManager.GetString("Categories", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Category.
-        /// </summary>
-        internal static string Category
-        {
-            get
-            {
-                return ResourceManager.GetString("Category", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to cfg.json.
-        /// </summary>
-        internal static string cfgjson
-        {
-            get
-            {
-                return ResourceManager.GetString("cfgjson", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Checking status.
-        /// </summary>
-        internal static string Checkingstatus
-        {
-            get
-            {
-                return ResourceManager.GetString("Checkingstatus", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Check status.
-        /// </summary>
-        internal static string Checkstatus
-        {
-            get
-            {
-                return ResourceManager.GetString("Checkstatus", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Choose categories.
-        /// </summary>
-        internal static string Choosecategories
-        {
-            get
-            {
-                return ResourceManager.GetString("Choosecategories", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Choose color.
@@ -430,50 +233,6 @@ namespace sakura
             get
             {
                 return ResourceManager.GetString("ChooseColor", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Choose sources.
-        /// </summary>
-        internal static string Choosesources
-        {
-            get
-            {
-                return ResourceManager.GetString("Choosesources", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Comment:.
-        /// </summary>
-        internal static string Comment
-        {
-            get
-            {
-                return ResourceManager.GetString("Comment", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Create.
-        /// </summary>
-        internal static string Create
-        {
-            get
-            {
-                return ResourceManager.GetString("Create", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Creating....
-        /// </summary>
-        internal static string Creating
-        {
-            get
-            {
-                return ResourceManager.GetString("Creating", resourceCulture);
             }
         }
 
@@ -510,16 +269,6 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Default Download Path:.
-        /// </summary>
-        internal static string DefaultDownloadPath
-        {
-            get
-            {
-                return ResourceManager.GetString("DefaultDownloadPath", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Delete: .
@@ -532,71 +281,6 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Deleted files at: .
-        /// </summary>
-        internal static string DeletedfilesatmanagerSavePath
-        {
-            get
-            {
-                return ResourceManager.GetString("DeletedfilesatmanagerSavePath", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Delete downloaded files?.
-        /// </summary>
-        internal static string Deletedownloadedfiles_
-        {
-            get
-            {
-                return ResourceManager.GetString("Deletedownloadedfiles?", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Deleted torrent: .
-        /// </summary>
-        internal static string DeletedtorrentmanagerTorrent_Name
-        {
-            get
-            {
-                return ResourceManager.GetString("DeletedtorrentmanagerTorrent?Name", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Delete:.
-        /// </summary>
-        internal static string DeleteSettingsCurrentControlsRemoveTorrent
-        {
-            get
-            {
-                return ResourceManager.GetString("DeleteSettingsCurrentControlsRemoveTorrent", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to DHT:.
-        /// </summary>
-        internal static string DHTEngineDhtState
-        {
-            get
-            {
-                return ResourceManager.GetString("DHTEngineDhtState", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to DHT port:.
-        /// </summary>
-        internal static string DHTport
-        {
-            get
-            {
-                return ResourceManager.GetString("DHTport", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Disable ASCII.
@@ -620,93 +304,6 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Download.
-        /// </summary>
-        internal static string Download
-        {
-            get
-            {
-                return ResourceManager.GetString("Download", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Downloading from magnet link....
-        /// </summary>
-        internal static string Downloadingfrommagnetlink
-        {
-            get
-            {
-                return ResourceManager.GetString("Downloadingfrommagnetlink", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Downloading from torrent file....
-        /// </summary>
-        internal static string Downloadingfromtorrentfile
-        {
-            get
-            {
-                return ResourceManager.GetString("Downloadingfromtorrentfile", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Download path:.
-        /// </summary>
-        internal static string Downloadpath
-        {
-            get
-            {
-                return ResourceManager.GetString("Downloadpath", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Download path cannot be empty..
-        /// </summary>
-        internal static string Downloadpathcannotbeempty
-        {
-            get
-            {
-                return ResourceManager.GetString("Downloadpathcannotbeempty", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Download path does not exist. Create it?.
-        /// </summary>
-        internal static string DownloadpathdoesnotexistCreateit_
-        {
-            get
-            {
-                return ResourceManager.GetString("DownloadpathdoesnotexistCreateit?", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Download rate.
-        /// </summary>
-        internal static string Downloadrate
-        {
-            get
-            {
-                return ResourceManager.GetString("Downloadrate", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Download started, waiting for completion....
-        /// </summary>
-        internal static string Downloadstarted
-        {
-            get
-            {
-                return ResourceManager.GetString("Downloadstarted", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Enable detailed logging.
@@ -719,27 +316,6 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Enable DHT.
-        /// </summary>
-        internal static string EnableDHT
-        {
-            get
-            {
-                return ResourceManager.GetString("EnableDHT", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Enable Port Forwarding.
-        /// </summary>
-        internal static string EnablePortForwarding
-        {
-            get
-            {
-                return ResourceManager.GetString("EnablePortForwarding", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Error.
@@ -752,60 +328,7 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Error deleting torrent:.
-        /// </summary>
-        internal static string ErrordeletingtorrentexMessage
-        {
-            get
-            {
-                return ResourceManager.GetString("ErrordeletingtorrentexMessage", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Error loading settings:.
-        /// </summary>
-        internal static string ErrorloadingsettingsexMessage
-        {
-            get
-            {
-                return ResourceManager.GetString("ErrorloadingsettingsexMessage", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Error loading torrents:.
-        /// </summary>
-        internal static string Errorloadingtorrents
-        {
-            get
-            {
-                return ResourceManager.GetString("Errorloadingtorrents", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Error pausing torrent:.
-        /// </summary>
-        internal static string ErrorpausingtorrentexMessage
-        {
-            get
-            {
-                return ResourceManager.GetString("ErrorpausingtorrentexMessage", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Error resuming torrent:.
-        /// </summary>
-        internal static string ErrorresumingtorrentexMessage
-        {
-            get
-            {
-                return ResourceManager.GetString("ErrorresumingtorrentexMessage", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Errors.
@@ -818,16 +341,6 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Error saving fastresume data:.
-        /// </summary>
-        internal static string Errorsavingfastresumedataex
-        {
-            get
-            {
-                return ResourceManager.GetString("Errorsavingfastresumedataex", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Error saving settings:.
@@ -840,49 +353,7 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Error saving torrents:.
-        /// </summary>
-        internal static string ErrorsavingtorrentsexMessage
-        {
-            get
-            {
-                return ResourceManager.GetString("ErrorsavingtorrentsexMessage", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Error starting seeding:.
-        /// </summary>
-        internal static string ErrorstartingseedingexMessage
-        {
-            get
-            {
-                return ResourceManager.GetString("ErrorstartingseedingexMessage", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Error stopping seeding:.
-        /// </summary>
-        internal static string ErrorstoppingseedingexMessage
-        {
-            get
-            {
-                return ResourceManager.GetString("ErrorstoppingseedingexMessage", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Error initializing Ghidorah, see log for more details..
-        /// </summary>
-        internal static string Errorwrittentolog
-        {
-            get
-            {
-                return ResourceManager.GetString("Errorwrittentolog", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Exit.
@@ -906,16 +377,6 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Fast resume data saved for torrent: .
-        /// </summary>
-        internal static string FastresumedatasavedfortorrentManagers_index_Torrent_Name
-        {
-            get
-            {
-                return ResourceManager.GetString("FastresumedatasavedfortorrentManagers[index]Torrent?Name", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Fatal Error.
@@ -972,71 +433,9 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Games.
-        /// </summary>
-        internal static string Games
-        {
-            get
-            {
-                return ResourceManager.GetString("Games", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Generate magnet link: .
-        /// </summary>
-        internal static string GeneratemagnetlinkSettingsCurrentControlsGenMagLink
-        {
-            get
-            {
-                return ResourceManager.GetString("GeneratemagnetlinkSettingsCurrentControlsGenMagLink", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Ghidorah.
-        /// </summary>
-        internal static string Ghidorah
-        {
-            get
-            {
-                return ResourceManager.GetString("Ghidorah", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Error initializing Ghidorah:.
-        /// </summary>
-        internal static string Ghidoraherror
-        {
-            get
-            {
-                return ResourceManager.GetString("Ghidoraherror", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Ghidorah - Plugin Status.
-        /// </summary>
-        internal static string Ghidorahpluginstatus
-        {
-            get
-            {
-                return ResourceManager.GetString("Ghidorahpluginstatus", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Error: Ghidorah process timed out..
-        /// </summary>
-        internal static string Ghidorahtimeout
-        {
-            get
-            {
-                return ResourceManager.GetString("Ghidorahtimeout", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Gray.
@@ -1060,27 +459,7 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Hash.
-        /// </summary>
-        internal static string Hash
-        {
-            get
-            {
-                return ResourceManager.GetString("Hash", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to HEADER.
-        /// </summary>
-        internal static string HEADER
-        {
-            get
-            {
-                return ResourceManager.GetString("HEADER", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to HELP.
@@ -1129,38 +508,8 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to IMPORTANT: if using qBittorrent plugins, the per torrent limit is ignored, and category selection is limited to one category only. Additionally, many plugins will default to &quot;all&quot;..
-        /// </summary>
-        internal static string Importantifusing
-        {
-            get
-            {
-                return ResourceManager.GetString("Importantifusing", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid DHT port number..
-        /// </summary>
-        internal static string InvalidDHTportnumber
-        {
-            get
-            {
-                return ResourceManager.GetString("InvalidDHTportnumber", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid download rate limit..
-        /// </summary>
-        internal static string Invaliddownloadspeedlimit
-        {
-            get
-            {
-                return ResourceManager.GetString("Invaliddownloadspeedlimit", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Invalid file.
@@ -1195,49 +544,9 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid maximum connections value..
-        /// </summary>
-        internal static string Invalidmaxconnections
-        {
-            get
-            {
-                return ResourceManager.GetString("Invalidmaxconnections", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid maximum download rate value..
-        /// </summary>
-        internal static string Invalidmaxdownloadspeed
-        {
-            get
-            {
-                return ResourceManager.GetString("Invalidmaxdownloadspeed", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid maximum connections value..
-        /// </summary>
-        internal static string Invalidmaximumconnectionsvalue
-        {
-            get
-            {
-                return ResourceManager.GetString("Invalidmaximumconnectionsvalue", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid maximum upload rate value..
-        /// </summary>
-        internal static string Invalidmaxuploadspeed
-        {
-            get
-            {
-                return ResourceManager.GetString("Invalidmaxuploadspeed", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Invalid path..
@@ -1250,104 +559,7 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid port number..
-        /// </summary>
-        internal static string Invalidportnumber
-        {
-            get
-            {
-                return ResourceManager.GetString("Invalidportnumber", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid progress refresh rate..
-        /// </summary>
-        internal static string Invalidprogressrefreshrate
-        {
-            get
-            {
-                return ResourceManager.GetString("Invalidprogressrefreshrate", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid value for search timeout..
-        /// </summary>
-        internal static string Invalidtimeout
-        {
-            get
-            {
-                return ResourceManager.GetString("Invalidtimeout", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid value for search results limit..
-        /// </summary>
-        internal static string Invalidtorlimit
-        {
-            get
-            {
-                return ResourceManager.GetString("Invalidtorlimit", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid value for search results limit per source..
-        /// </summary>
-        internal static string Invalidtorlimitpersource
-        {
-            get
-            {
-                return ResourceManager.GetString("Invalidtorlimitpersource", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid tracker URL:.
-        /// </summary>
-        internal static string InvalidtrackerURL
-        {
-            get
-            {
-                return ResourceManager.GetString("InvalidtrackerURL", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Invalid upload rate limit..
-        /// </summary>
-        internal static string Invaliduploadspeedlimit
-        {
-            get
-            {
-                return ResourceManager.GetString("Invaliduploadspeedlimit", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Lain Torrent Client.
-        /// </summary>
-        internal static string LainTorrentClient
-        {
-            get
-            {
-                return ResourceManager.GetString("LainTorrentClient", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Leechers.
-        /// </summary>
-        internal static string Leechers
-        {
-            get
-            {
-                return ResourceManager.GetString("Leechers", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Log.
@@ -1393,148 +605,7 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Magnet link:.
-        /// </summary>
-        internal static string Magnetlink
-        {
-            get
-            {
-                return ResourceManager.GetString("Magnetlink", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Magnet link copied to clipboard..
-        /// </summary>
-        internal static string Magnetlinkcopiedtoclipboard
-        {
-            get
-            {
-                return ResourceManager.GetString("Magnetlinkcopiedtoclipboard", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Magnet link generated: .
-        /// </summary>
-        internal static string MagnetlinkgeneratedmagnetToV1String__
-        {
-            get
-            {
-                return ResourceManager.GetString("MagnetlinkgeneratedmagnetToV1String()", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Magnet link is empty..
-        /// </summary>
-        internal static string Magnetlinkisempty
-        {
-            get
-            {
-                return ResourceManager.GetString("Magnetlinkisempty", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to magnet link.
-        /// </summary>
-        internal static string Magnetlinklower
-        {
-            get
-            {
-                return ResourceManager.GetString("Magnetlinklower", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Magnet link.
-        /// </summary>
-        internal static string MagnetLinkSearch
-        {
-            get
-            {
-                return ResourceManager.GetString("MagnetLinkSearch", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to main.
-        /// </summary>
-        internal static string main
-        {
-            get
-            {
-                return ResourceManager.GetString("main", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Maximum connections:.
-        /// </summary>
-        internal static string Maxconnections
-        {
-            get
-            {
-                return ResourceManager.GetString("Maxconnections", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Maximum download rate (MB/s):.
-        /// </summary>
-        internal static string Maxdownload_MB_s_
-        {
-            get
-            {
-                return ResourceManager.GetString("Maxdownload(MB/s)", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Maximum total connections:.
-        /// </summary>
-        internal static string Maxtotalconnections
-        {
-            get
-            {
-                return ResourceManager.GetString("Maxtotalconnections", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Total download rate limit (MB/s):.
-        /// </summary>
-        internal static string Maxtotaldownloadspeed_MB_s_
-        {
-            get
-            {
-                return ResourceManager.GetString("Maxtotaldownloadspeed(MB/s)", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Total upload rate limit (MB/s):.
-        /// </summary>
-        internal static string Maxtotaluploadspeed_MB_s_
-        {
-            get
-            {
-                return ResourceManager.GetString("Maxtotaluploadspeed(MB/s)", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Maximum upload rate (MB/s):.
-        /// </summary>
-        internal static string Maxupload_MB_s_
-        {
-            get
-            {
-                return ResourceManager.GetString("Maxupload(MB/s)", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Missing Directory.
@@ -1547,27 +618,7 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Movies.
-        /// </summary>
-        internal static string Movies
-        {
-            get
-            {
-                return ResourceManager.GetString("Movies", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Music.
-        /// </summary>
-        internal static string Music
-        {
-            get
-            {
-                return ResourceManager.GetString("Music", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Name.
@@ -1591,38 +642,8 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to No active torrents.
-        /// </summary>
-        internal static string Noactivetorrents
-        {
-            get
-            {
-                return ResourceManager.GetString("Noactivetorrents", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to No magnet link available. .
-        /// </summary>
-        internal static string Nomagnetlink
-        {
-            get
-            {
-                return ResourceManager.GetString("Nomagnetlink", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to No qBittorrent plugins found..
-        /// </summary>
-        internal static string Noqbittorrentpluginsfound
-        {
-            get
-            {
-                return ResourceManager.GetString("Noqbittorrentpluginsfound", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to OK.
@@ -1635,181 +656,9 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Online.
-        /// </summary>
-        internal static string Online
-        {
-            get
-            {
-                return ResourceManager.GetString("Online", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Operating on port: .
-        /// </summary>
-        internal static string Operatingonport
-        {
-            get
-            {
-                return ResourceManager.GetString("Operatingonport", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Other.
-        /// </summary>
-        internal static string Other
-        {
-            get
-            {
-                return ResourceManager.GetString("Other", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Output path:.
-        /// </summary>
-        internal static string Outputpath
-        {
-            get
-            {
-                return ResourceManager.GetString("Outputpath", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Output path does not exist..
-        /// </summary>
-        internal static string Outputpathdoesnotexist
-        {
-            get
-            {
-                return ResourceManager.GetString("Outputpathdoesnotexist", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to output path.
-        /// </summary>
-        internal static string Outputpathlower
-        {
-            get
-            {
-                return ResourceManager.GetString("Outputpathlower", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Paused torrent:.
-        /// </summary>
-        internal static string PausedtorrentmanagerTorrent_Name
-        {
-            get
-            {
-                return ResourceManager.GetString("PausedtorrentmanagerTorrent?Name", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Peers.
-        /// </summary>
-        internal static string Peers
-        {
-            get
-            {
-                return ResourceManager.GetString("Peers", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Piece hashed:.
-        /// </summary>
-        internal static string Piecehashed
-        {
-            get
-            {
-                return ResourceManager.GetString("Piecehashed", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Piece size:.
-        /// </summary>
-        internal static string Piecesize
-        {
-            get
-            {
-                return ResourceManager.GetString("Piecesize", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Port:.
-        /// </summary>
-        internal static string Port
-        {
-            get
-            {
-                return ResourceManager.GetString("Port", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Private.
-        /// </summary>
-        internal static string Private
-        {
-            get
-            {
-                return ResourceManager.GetString("Private", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Progress.
-        /// </summary>
-        internal static string Progress
-        {
-            get
-            {
-                return ResourceManager.GetString("Progress", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Progress refresh rate (ms):.
-        /// </summary>
-        internal static string Progressrefreshrate_ms_
-        {
-            get
-            {
-                return ResourceManager.GetString("Progressrefreshrate(ms)", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Publisher:.
-        /// </summary>
-        internal static string Publisher
-        {
-            get
-            {
-                return ResourceManager.GetString("Publisher", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to query.
-        /// </summary>
-        internal static string Query
-        {
-            get
-            {
-                return ResourceManager.GetString("Query", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Red.
@@ -1822,38 +671,6 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to result(s).
-        /// </summary>
-        internal static string Results
-        {
-            get
-            {
-                return ResourceManager.GetString("Results", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Results saved to JSON..
-        /// </summary>
-        internal static string Resultssavedtojson
-        {
-            get
-            {
-                return ResourceManager.GetString("Resultssavedtojson", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Resumed torrent:.
-        /// </summary>
-        internal static string ResumedtorrentmanagerTorrent_Name
-        {
-            get
-            {
-                return ResourceManager.GetString("ResumedtorrentmanagerTorrent?Name", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Save.
@@ -1866,93 +683,7 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Saved fast resume data.
-        /// </summary>
-        internal static string Savedfastresumedata
-        {
-            get
-            {
-                return ResourceManager.GetString("Savedfastresumedata", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Search.
-        /// </summary>
-        internal static string Search
-        {
-            get
-            {
-                return ResourceManager.GetString("Search", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Searching....
-        /// </summary>
-        internal static string Searching
-        {
-            get
-            {
-                return ResourceManager.GetString("Searching", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Search results limit: .
-        /// </summary>
-        internal static string Searchresultslimit
-        {
-            get
-            {
-                return ResourceManager.GetString("Searchresultslimit", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Search results limit per source: .
-        /// </summary>
-        internal static string Searchresultslimitpersource
-        {
-            get
-            {
-                return ResourceManager.GetString("Searchresultslimitpersource", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Search timeout:.
-        /// </summary>
-        internal static string Searchtimeout
-        {
-            get
-            {
-                return ResourceManager.GetString("Searchtimeout", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Seeders.
-        /// </summary>
-        internal static string Seeders
-        {
-            get
-            {
-                return ResourceManager.GetString("Seeders", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Select the .torrent file.
-        /// </summary>
-        internal static string Selectatorrentfile
-        {
-            get
-            {
-                return ResourceManager.GetString("Selectatorrentfile", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Select config file path.
@@ -1965,27 +696,7 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Select default download folder.
-        /// </summary>
-        internal static string Selectdefaultdownloadfolder
-        {
-            get
-            {
-                return ResourceManager.GetString("Selectdefaultdownloadfolder", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Select download folder.
-        /// </summary>
-        internal static string Selectdownloadfolder
-        {
-            get
-            {
-                return ResourceManager.GetString("Selectdownloadfolder", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Selected file does not exist..
@@ -2053,71 +764,6 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Select output file.
-        /// </summary>
-        internal static string Selectoutputfile
-        {
-            get
-            {
-                return ResourceManager.GetString("Selectoutputfile", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Select the default download folder path..
-        /// </summary>
-        internal static string Selectthedefaultdownloadfolderpath
-        {
-            get
-            {
-                return ResourceManager.GetString("Selectthedefaultdownloadfolderpath", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Select the download folder.
-        /// </summary>
-        internal static string Selectthedownloadfolder
-        {
-            get
-            {
-                return ResourceManager.GetString("Selectthedownloadfolder", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Select the folder that contains your files..
-        /// </summary>
-        internal static string Selectthefolderthatcontainsyourfiles
-        {
-            get
-            {
-                return ResourceManager.GetString("Selectthefolderthatcontainsyourfiles", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Select the output .torrent file path..
-        /// </summary>
-        internal static string Selecttheoutputtorrentfilepath
-        {
-            get
-            {
-                return ResourceManager.GetString("Selecttheoutputtorrentfilepath", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Select torrent file.
-        /// </summary>
-        internal static string Selecttorrentfile
-        {
-            get
-            {
-                return ResourceManager.GetString("Selecttorrentfile", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Settings.
@@ -2175,60 +821,7 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Size.
-        /// </summary>
-        internal static string Size
-        {
-            get
-            {
-                return ResourceManager.GetString("Size", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Software.
-        /// </summary>
-        internal static string Software
-        {
-            get
-            {
-                return ResourceManager.GetString("Software", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Sort by:.
-        /// </summary>
-        internal static string Sortby
-        {
-            get
-            {
-                return ResourceManager.GetString("Sortby", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Source.
-        /// </summary>
-        internal static string Source
-        {
-            get
-            {
-                return ResourceManager.GetString("Source", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Sources:.
-        /// </summary>
-        internal static string Sources
-        {
-            get
-            {
-                return ResourceManager.GetString("Sources", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Start: .
@@ -2241,60 +834,8 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Started seeding:.
-        /// </summary>
-        internal static string StartedseedingmanagerTorrent_Name
-        {
-            get
-            {
-                return ResourceManager.GetString("StartedseedingmanagerTorrent?Name", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Starting download:.
-        /// </summary>
-        internal static string Startingdownload
-        {
-            get
-            {
-                return ResourceManager.GetString("Startingdownload", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Start seeding: .
-        /// </summary>
-        internal static string Startseeding
-        {
-            get
-            {
-                return ResourceManager.GetString("Startseeding", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Start seeding after creation.
-        /// </summary>
-        internal static string Startseedingaftercreation
-        {
-            get
-            {
-                return ResourceManager.GetString("Startseedingaftercreation", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Start seeding:.
-        /// </summary>
-        internal static string StartseedingSettingsCurrentControlsStartSeeding
-        {
-            get
-            {
-                return ResourceManager.GetString("StartseedingSettingsCurrentControlsStartSeeding", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Start:.
@@ -2307,27 +848,7 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to State.
-        /// </summary>
-        internal static string State
-        {
-            get
-            {
-                return ResourceManager.GetString("State", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to State changed:.
-        /// </summary>
-        internal static string Statechanged
-        {
-            get
-            {
-                return ResourceManager.GetString("Statechanged", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Stop: .
@@ -2340,49 +861,8 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Stopped seeding:.
-        /// </summary>
-        internal static string StoppedseedingmanagerTorrent_Name
-        {
-            get
-            {
-                return ResourceManager.GetString("StoppedseedingmanagerTorrent?Name", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Stop seeding: .
-        /// </summary>
-        internal static string Stopseeding
-        {
-            get
-            {
-                return ResourceManager.GetString("Stopseeding", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Stop Seeding When Finished.
-        /// </summary>
-        internal static string StopSeedingWhenFinished
-        {
-            get
-            {
-                return ResourceManager.GetString("StopSeedingWhenFinished", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Success.
-        /// </summary>
-        internal static string Success
-        {
-            get
-            {
-                return ResourceManager.GetString("Success", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to Text color:.
@@ -2392,182 +872,6 @@ namespace sakura
             get
             {
                 return ResourceManager.GetString("Textcolor", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to This does not appear to be a valid magnet link..
-        /// </summary>
-        internal static string Thisdoesnotappeartobeavalidmagnetlink
-        {
-            get
-            {
-                return ResourceManager.GetString("Thisdoesnotappeartobeavalidmagnetlink", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to .torrent.
-        /// </summary>
-        internal static string torrent
-        {
-            get
-            {
-                return ResourceManager.GetString("torrent", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Torrent created successfully!.
-        /// </summary>
-        internal static string Torrentcreatedsuccessfully_
-        {
-            get
-            {
-                return ResourceManager.GetString("Torrentcreatedsuccessfully!", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Torrent creation failed:.
-        /// </summary>
-        internal static string Torrentcreationfailed
-        {
-            get
-            {
-                return ResourceManager.GetString("Torrentcreationfailed", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Torrent download failed:.
-        /// </summary>
-        internal static string Torrentdownloadfailed
-        {
-            get
-            {
-                return ResourceManager.GetString("Torrentdownloadfailed", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Torrent download started..
-        /// </summary>
-        internal static string Torrentdownloadstarted
-        {
-            get
-            {
-                return ResourceManager.GetString("Torrentdownloadstarted", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to torrent file.
-        /// </summary>
-        internal static string Torrentfile
-        {
-            get
-            {
-                return ResourceManager.GetString("Torrentfile", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Torrent file does not exist..
-        /// </summary>
-        internal static string Torrentfiledoesnotexist
-        {
-            get
-            {
-                return ResourceManager.GetString("Torrentfiledoesnotexist", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Torrent file path:.
-        /// </summary>
-        internal static string Torrentfilepath
-        {
-            get
-            {
-                return ResourceManager.GetString("Torrentfilepath", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Torrents.
-        /// </summary>
-        internal static string Torrents
-        {
-            get
-            {
-                return ResourceManager.GetString("Torrents", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to torrents.json.
-        /// </summary>
-        internal static string torrentsjson
-        {
-            get
-            {
-                return ResourceManager.GetString("torrentsjson", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Torrent startup failed:.
-        /// </summary>
-        internal static string TorrentstartupfailedexMessage
-        {
-            get
-            {
-                return ResourceManager.GetString("TorrentstartupfailedexMessage", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to tracker link.
-        /// </summary>
-        internal static string Trackerlink
-        {
-            get
-            {
-                return ResourceManager.GetString("Trackerlink", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Trackers:.
-        /// </summary>
-        internal static string Trackers
-        {
-            get
-            {
-                return ResourceManager.GetString("Trackers", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to {trimmed}.
-        /// </summary>
-        internal static string trimmed
-        {
-            get
-            {
-                return ResourceManager.GetString("trimmed", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to TV shows.
-        /// </summary>
-        internal static string TVshows
-        {
-            get
-            {
-                return ResourceManager.GetString("TVshows", resourceCulture);
             }
         }
 
@@ -2604,49 +908,7 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Upload rate.
-        /// </summary>
-        internal static string Uploadrate
-        {
-            get
-            {
-                return ResourceManager.GetString("Uploadrate", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to Url.
-        /// </summary>
-        internal static string Url
-        {
-            get
-            {
-                return ResourceManager.GetString("Url", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Use magnet link.
-        /// </summary>
-        internal static string Usemagnetlink
-        {
-            get
-            {
-                return ResourceManager.GetString("Usemagnetlink", resourceCulture);
-            }
-        }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Use qBittorrent plugins.
-        /// </summary>
-        internal static string Useqbittorrentplugins
-        {
-            get
-            {
-                return ResourceManager.GetString("Useqbittorrentplugins", resourceCulture);
-            }
-        }
 
         /// <summary>
         ///   Looks up a localized string similar to White.
@@ -2670,26 +932,6 @@ namespace sakura
             }
         }
 
-        /// <summary>
-        ///   Looks up a localized string similar to You must select either a magnet link or a torrent file..
-        /// </summary>
-        internal static string Youmustselecteitheramagnetlinkoratorrentfile
-        {
-            get
-            {
-                return ResourceManager.GetString("Youmustselecteitheramagnetlinkoratorrentfile", resourceCulture);
-            }
-        }
 
-        /// <summary>
-        ///   Looks up a localized string similar to yyyy-MM-dd.
-        /// </summary>
-        internal static string yyyy_MM_dd
-        {
-            get
-            {
-                return ResourceManager.GetString("yyyy-MM-dd", resourceCulture);
-            }
-        }
     }
 }

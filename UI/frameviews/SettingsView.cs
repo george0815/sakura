@@ -1,4 +1,4 @@
-
+//TODO: RESOURCE STRINGS
 using Terminal.Gui;
 using sakura.helpers;
 
@@ -141,7 +141,7 @@ namespace sakura.frameviews
 
 
             // Default rom directory
-            scroll.Add(new Label(Resources.DefaultDownloadPath) { X = 1, Y = y });
+            scroll.Add(new Label("Default rom path") { X = 1, Y = y });
             var romPathField =
                 new TextField(Settings.Current.DefaultRomPath ?? "")
                 {
@@ -399,8 +399,8 @@ namespace sakura.frameviews
             {
                 string? path =
                     DialogHelpers.ShowSaveFileDialog(
-                        Resources.Selectdefaultdownloadfolder,
-                        Resources.Selectthedefaultdownloadfolderpath,
+                        "Select rom folder",
+                        "Select the folder that has roms in it",
                         [""]);
 
                 if (!string.IsNullOrWhiteSpace(path))
@@ -440,7 +440,7 @@ namespace sakura.frameviews
 
                     if (string.IsNullOrWhiteSpace(romPath))
                     {
-                        MessageBox.ErrorQuery(Resources.Error, Resources.Downloadpathcannotbeempty, Resources.OK);
+                        MessageBox.ErrorQuery(Resources.Error, "Rom path cannot be empty", Resources.OK);
                         return;
                     }
 
@@ -448,7 +448,7 @@ namespace sakura.frameviews
                     {
                         if (MessageBox.Query(
                             Resources.MissingDirectory,
-                            Resources.DownloadpathdoesnotexistCreateit_,
+                            "Rom path does not exist, create it?",
                             Resources.Yes, Resources.No) == 0)
                         {
                             Directory.CreateDirectory(romPath);

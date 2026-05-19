@@ -74,10 +74,8 @@ namespace sakura
         {
             StartRom = Key.F3,
             StopRom = Key.F4,
-            StartSeeding = Key.F5,
-            StopSeeding = Key.F6,
-            RemoveTorrent = Key.F7,
-            GenMagLink = Key.F8
+            OpenRomPath = Key.F5,
+            OpenSramPath = Key.F6,
         };
 
         // ------------------------------

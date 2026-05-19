@@ -1,17 +1,15 @@
 ﻿
 using sakura.helpers;
-using System.Globalization;
 using System.Text;
-using System.Text.Json;
 using Terminal.Gui;
 
 namespace sakura
 {
-    /// <summary> Entry point for the Lain application.
+    /// <summary> Entry point 
     /// Initializes settings, plugins, and starts the Terminal.Gui interface.
     /// </summary>
     /// <author>George Hunter S.</author>
-    /// <created>Jan, 2026</created>
+    /// <created>May, 2026</created>
     class Program
     {
         public static async Task Main(string[] args)
