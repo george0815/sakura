@@ -1,4 +1,4 @@
-//TODO: IMPLEMENT SAVES VIEW
+//TODO: IMPLEMENT SAVES VIEW AND RESOURCE STRING
 using sakura;
 using Terminal.Gui;
 
@@ -11,7 +11,7 @@ internal class SavesView : FrameView
 {
 
     public SavesView()
-        : base(Resources.Log)
+        : base("Saves")
     {
         // Position the frame consistently with other views.
         X = 20;

@@ -1,4 +1,4 @@
-//TODO: IMPLEMENT CONTROLS VIEW
+//TODO: IMPLEMENT CONTROLS VIEW AND RESOURCE STRING
 using sakura;
 using Terminal.Gui;
 
@@ -11,7 +11,7 @@ internal class ControlsView : FrameView
 {
 
     public ControlsView()
-        : base(Resources.Log)
+        : base("Controls")
     {
         // Position the frame consistently with other views.
         X = 20;

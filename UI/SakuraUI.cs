@@ -119,6 +119,52 @@ namespace sakura
             #endregion
 
 
+            #region HOTKEY INFO
+
+            // Add hotkey instructions with colored text
+            headerScroll.Add(new Label($"{Resources.Start}{Settings.Current.Controls.StartRom}")
+            {
+                ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
+                {
+                    Normal = Application.Driver.MakeAttribute(Color.Green, Settings.Current.BackgroundColor)
+                }),
+                X = (Settings.Current.DisableASCII ? 30 : SettingsData.LogoWidth) + 30,
+                Y = 1
+            });
+
+            headerScroll.Add(new Label($"{Resources.Stop}{Settings.Current.Controls.StopRom}")
+            {
+                ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
+                {
+                    Normal = Application.Driver.MakeAttribute(Color.Red, Settings.Current.BackgroundColor)
+                }),
+                X = (Settings.Current.DisableASCII ? 30 : SettingsData.LogoWidth) + 30,
+                Y = 3
+            });
+
+            headerScroll.Add(new Label($"{"Open rom path: "}{Settings.Current.Controls.OpenRomPath}")
+            {
+                ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
+                {
+                    Normal = Application.Driver.MakeAttribute(Color.Cyan, Settings.Current.BackgroundColor)
+                }),
+                X = (Settings.Current.DisableASCII ? 42 : SettingsData.LogoWidth) + 30,
+                Y = (Settings.Current.DisableASCII ? 1 : 5)
+            });
+
+            headerScroll.Add(new Label($"{"Open SRAM path: "}{Settings.Current.Controls.OpenSramPath}")
+            {
+                ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
+                {
+                    Normal = Application.Driver.MakeAttribute(Color.Blue, Settings.Current.BackgroundColor)
+                }),
+                X = (Settings.Current.DisableASCII ? 42 : SettingsData.LogoWidth) + 30,
+                Y = (Settings.Current.DisableASCII ? 3 : 7)
+
+            });
+
+            #endregion
+
             #endregion
 
             #region SIDEBAR AND MENU
@@ -135,13 +181,13 @@ namespace sakura
 
             // Sidebar menu
             var menu = new ListView(new string[]
-            {
+        {
                 Resources.Roms,
                 "Saves",
                 Resources.Settings,
                 "Controls",
                 Resources.Log,
-            })
+        })
             {
                 X = 1,
                 Y = 0,
@@ -250,7 +296,7 @@ namespace sakura
                 case 1: Add(savesView); break;
                 case 2: Add(settingsView); break;
                 case 3: Add(controlsView); break;
-                case 6: Add(logView); break;
+                case 4: Add(logView); break;
             }
 
             SetNeedsDisplay();
