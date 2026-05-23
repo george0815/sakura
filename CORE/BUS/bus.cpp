@@ -197,6 +197,7 @@ bool BUS::LOAD_BATTERY_BACKED_SRAM(const vector<uint8_t> &data) {
   if (!HAS_BATTERY_BACKED_SRAM() || data.size() != PRG_RAM.size()) {
     return false;
   }
+  cout << data.size() << "TESTET " << endl;
   PRG_RAM = data;
   return true;
 }

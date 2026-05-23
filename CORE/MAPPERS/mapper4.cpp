@@ -93,8 +93,8 @@ uint8_t Mapper4::cpu_read(uint16_t addr) {
 void Mapper4::cpu_write(uint16_t addr, uint8_t data) {
 
   if (addr >= 0xC000 && addr <= 0xFFFF) {
-    cout << "MMC3 IRQ write addr=" << hex << addr << " data=" << (int)data
-         << dec << endl;
+    /// cout << "MMC3 IRQ write addr=" << hex << addr << " data=" << (int)data
+    //     << dec << endl;
   }
 
   if (addr < PRG_BASE) {

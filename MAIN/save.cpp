@@ -9,7 +9,8 @@
 
 bool SAVE_MANAGER::SAVE_SRAM(const string path, BUS *bus) {
 
-  if (!bus->HAS_BATTERY_BACKED_SRAM()) {
+  if (!bus->BATTERY_BACKED) {
+    cout << "NO  SRAM";
     return true;
   }
 
@@ -21,15 +22,17 @@ bool SAVE_MANAGER::SAVE_SRAM(const string path, BUS *bus) {
              static_cast<streamsize>(data.size()));
 
   if (!file.good()) {
-    return -1;
+    cout << "SOMETYHING WRONG WITH FILE";
+    return false;
   }
 
+  cout << "RAM SAVED";
   return true;
 }
 
 bool SAVE_MANAGER::LOAD_SRAM(const string path, BUS *bus) {
 
-  if (!bus->HAS_BATTERY_BACKED_SRAM()) {
+  if (!bus->BATTERY_BACKED) {
     return true;
   }
 
@@ -50,13 +53,16 @@ bool SAVE_MANAGER::LOAD_SRAM(const string path, BUS *bus) {
 
   data.resize(static_cast<size_t>(size));
 
+  file.read(reinterpret_cast<char *>(data.data()), size);
+
   if (!file.good() && !file.eof()) {
+    cout << "FILE AINT GOOD";
     return false;
   }
-
   if (!bus->LOAD_BATTERY_BACKED_SRAM(data)) {
+    cout << "SOMETHIGN  WENT WRONG LOADING DATA";
     return false;
   }
-
+  cout << "SRAM LOADED";
   return true;
 }

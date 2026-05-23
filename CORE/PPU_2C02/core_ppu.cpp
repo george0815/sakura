@@ -382,8 +382,9 @@ uint8_t PPU_2C02::cpu_read(uint16_t addr) {
 void PPU_2C02::cpu_write(uint16_t addr, uint8_t data) {
 
   if (addr == 0x2000 || addr == 0x2001 || addr == 0x2005 || addr == 0x2006) {
-    cout << "PPU write $" << hex << addr << " = $" << (int)data
-         << " at scanline=" << dec << SCANLINE << " cycle=" << CYCLES << endl;
+    //    cout << "PPU write $" << hex << addr << " = $" << (int)data
+    //        << " at scanline=" << dec << SCANLINE << " cycle=" << CYCLES <<
+    //        endl;
   }
 
   switch (addr & 0x2007) {

@@ -6,6 +6,7 @@
 #include <stdexcept>
 
 using namespace std;
+using namespace SAVE_MANAGER;
 
 APU_2A03::APU_2A03() {
   if (const char *err = BUFFER.sample_rate(SAMPLE_RATE, 100)) {
@@ -61,3 +62,21 @@ cpu_time_t APU_2A03::FRAME_RELATIVE_TIME(uint64_t cpu_cycle) const {
 }
 
 int APU_2A03::dmc_read(cpu_addr_t addr) const { return B ? B->read(addr) : 0; }
+
+void APU_2A03::save_state(StateWriter &writer) const {
+  writer.plain_data(FRAME_START_CYCLE);
+  apu_snapshot_t snapshot{};
+  APU.save_snapshot(&snapshot);
+  writer.plain_data(snapshot);
+}
+
+bool APU_2A03::load_state(StateReader &reader) {
+  apu_snapshot_t snapshot{};
+  if (!reader.plain_data(FRAME_START_CYCLE) || !reader.plain_data(snapshot)) {
+    return false;
+  }
+
+  BUFFER.clear();
+  APU.load_snapshot(snapshot);
+  return true;
+}

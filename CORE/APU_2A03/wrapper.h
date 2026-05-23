@@ -1,11 +1,13 @@
 #pragma once
 
+#include "../../MAIN/save.h"
 #include "Nes_Snd_Emu/nes_apu/Blip_Buffer.h"
 #include "Nes_Snd_Emu/nes_apu/Nes_Apu.h"
 #include <cstdint>
 #include <vector>
 
 using namespace std;
+using namespace SAVE_MANAGER;
 
 class BUS;
 
@@ -21,6 +23,9 @@ public:
   uint8_t read_status(uint64_t cpu_cycle);
   void END_FRAME(uint64_t cpu_cycle);
   vector<int16_t> TAKE_SAMPLES();
+
+  void save_state(StateWriter &writer) const;
+  bool load_state(StateReader &reader);
 
   const long SAMPLE_RATE = 44100;
   const long CPU_CLOCK_RATE = 1789773;

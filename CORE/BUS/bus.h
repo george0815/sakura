@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../../MAIN/save.h"
 #include "../APU_2A03/wrapper.h"
 #include "../CART/cart.h"
 #include "../CPU_6502/core.h"

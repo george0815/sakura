@@ -70,7 +70,7 @@ int main(int arc, char *argv[]) {
   //    int test = PARSE_FILE("nestest.nes", cart);
 
   bus.insert_cartridge(cart);
-  // SAVE_MANAGER::LOAD_SRAM("./test.sav", &bus);
+  SAVE_MANAGER::LOAD_SRAM("TEST.sav", &bus);
   cpu.connect_bus(&bus);
   bus.connect_cpu(cpu);
   bus.connect_ppu(ppu);
@@ -149,6 +149,10 @@ int main(int arc, char *argv[]) {
           break;
         case SDLK_RIGHT:
           bus.SET_CONTROLLER_BUTTON(0, BUS::CONTROLLER_BUTTON::RIGHT, false);
+          break;
+        case SDLK_r: // temporary save ram button
+          cout << "R PRESSED";
+          SAVE_MANAGER::SAVE_SRAM("TEST.sav", &bus);
           break;
         }
       }
