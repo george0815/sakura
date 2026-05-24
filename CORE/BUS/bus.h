@@ -76,6 +76,7 @@ public:
   uint32_t CART_SIGN = 0;
   MIRRORING MIRROR_MODE = HORIZONTAL;
   bool HAS_BATTERY_BACKED_SRAM() { return BATTERY_BACKED && !PRG_RAM.empty(); };
+  uint32_t fnv1a(const vector<uint8_t> bytes, uint32_t hash = 2166136261u);
 
   bool LOAD_BATTERY_BACKED_SRAM(const vector<uint8_t> &data);
 

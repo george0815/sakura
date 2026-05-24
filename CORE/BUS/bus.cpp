@@ -27,6 +27,14 @@ using namespace std;
  *
  * */
 
+uint32_t BUS::fnv1a(const vector<uint8_t> bytes, uint32_t hash) {
+  for (uint8_t byte : bytes) {
+    hash ^= byte;
+    hash *= 16777619u;
+  }
+  return hash;
+}
+
 BUS::~BUS() { delete MAPPER; }
 
 uint8_t BUS::read(uint16_t addr) {
@@ -212,7 +220,7 @@ void BUS::insert_cartridge(CART &cart) {
   BATTERY_BACKED = cart.USES_BATTERY_BACKED_SRAM;
   MAPPER_ID = cart.MAPPER_ID;
   MIRROR_MODE = cart.MIRROR_MODE;
-  // TODO add cart sign
+  CART_SIGN = fnv1a(CHR_MEM, fnv1a(PRG_ROM));
   if (MAPPER) {
     delete MAPPER;
   }
@@ -265,9 +273,9 @@ bool BUS::load_state(StateReader &reader) {
 
   if (!reader.plain_data(version) || version != 2 ||
       !reader.plain_data(saved_mapper_id) || saved_mapper_id != MAPPER_ID ||
-      saved_signature != CART_SIGN || !reader.plain_data(saved_signature) ||
-      !reader.array(SHADOW) || !reader.array(CPU_RAM) ||
-      !reader.bytes(saved_prg_ram) || !reader.bytes(saved_chr_mem) ||
+      !reader.plain_data(saved_signature) || saved_signature != CART_SIGN ||
+      !reader.array(CPU_RAM) || !reader.array(SHADOW) ||
+      !reader.bytes(saved_chr_mem) || !reader.bytes(saved_prg_ram) ||
       !reader.plain_data(saved_has_prg) ||
       !reader.plain_data(saved_chr_is_ram) ||
       !reader.plain_data(saved_battery_backed) ||
@@ -276,6 +284,7 @@ bool BUS::load_state(StateReader &reader) {
       !reader.plain_data(MIRROR_MODE)
 
   ) {
+    cout << "BUS LOAD STATE FAILED" << endl;
     return false;
   }
 
@@ -283,16 +292,19 @@ bool BUS::load_state(StateReader &reader) {
       saved_battery_backed != BATTERY_BACKED ||
       saved_chr_mem.size() != CHR_MEM.size() ||
       saved_prg_ram.size() != PRG_RAM.size()) {
+    cout << " SOME OTHER BUS THING LOAD STATE FAILED" << endl;
     return false;
   }
 
   CHR_MEM = saved_chr_mem;
   PRG_RAM = saved_prg_ram;
   if (!APU.load_state(reader)) {
+    cout << "APU LOAD STATE FAILED" << endl;
     return false;
   }
 
   if (MAPPER && !MAPPER->load_state(reader)) {
+    cout << "MAPPER LOAD STATE FAILED" << endl;
     return false;
   }
 

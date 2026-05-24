@@ -8,6 +8,7 @@
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_keycode.h>
 #include <SDL2/SDL_timer.h>
+#include <SDL2/SDL_video.h>
 #include <boost/program_options.hpp>
 #include <boost/program_options/detail/parsers.hpp>
 #include <boost/program_options/options_description.hpp>
@@ -30,6 +31,12 @@ int main(int arc, char *argv[]) {
   SDL_AudioDeviceID AUDIO_DEVICE;
 
   string rom_path = "";
+
+  bool pending_save_state = false;
+
+  bool pending_load_state = false;
+
+  int last_audio_cycle = 0;
 
   options_description desc("Allowed options");
 
@@ -163,11 +170,39 @@ int main(int arc, char *argv[]) {
           cout << "R PRESSED";
           SAVE_SRAM("TEST.sav", &bus);
           break;
+        case SDLK_k: // temporary save state button
+          cout << "K PRESSED";
+          pending_save_state = true;
+          break;
+        case SDLK_l: // temporary load state button
+          cout << "L PRESSED";
+          pending_load_state = true;
+
+          break;
         }
       }
     }
 
+    if (pending_load_state) {
+      pending_load_state = false;
+
+      SDL_ClearQueuedAudio(AUDIO_DEVICE);
+
+      if (!LOAD_STATE("TEST.state", &bus)) {
+        cerr << "Failed to load save state";
+        running = false;
+        continue;
+      }
+
+      SDL_ClearQueuedAudio(AUDIO_DEVICE);
+      ppu.CLEAR_FRAME_FLAG();
+
+      continue;
+    }
+
     int guard = 0;
+
+    uint64_t frame_start_cycle = cpu.TOTAL_CYCLES;
 
     while (!ppu.FRAME_COMPLETE() && guard < 1000000) {
       cpu.step();
@@ -180,6 +215,13 @@ int main(int arc, char *argv[]) {
     }
 
     bus.END_AUDIO_FRAME(cpu.TOTAL_CYCLES);
+
+    if (pending_save_state) {
+      pending_save_state = false;
+      SAVE_STATE("TEST.state", &bus);
+    }
+
+    last_audio_cycle = cpu.TOTAL_CYCLES;
 
     auto samples = bus.TAKE_AUDIO_SAMPLES();
 
@@ -197,4 +239,7 @@ int main(int arc, char *argv[]) {
       SDL_Delay(1);
     }
   }
+
+  SDL_DestroyWindow(window);
+  SDL_Quit();
 }

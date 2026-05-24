@@ -1,6 +1,8 @@
 #pragma once
+
 #include <cstdint>
 #include <cstring>
+#include <iostream>
 #include <string>
 #include <type_traits>
 #include <vector>
@@ -13,7 +15,11 @@ namespace SAVE_MANAGER {
 
 bool LOAD_SRAM(const string path, BUS *bus);
 
+bool LOAD_STATE(const string path, BUS *bus);
+
 bool SAVE_SRAM(const string path, BUS *bus);
+
+bool SAVE_STATE(const string path, BUS *bus);
 
 class StateWriter {
 
@@ -53,11 +59,13 @@ public:
                   "plain data requires data that can be copied easily");
     if (!can_read(sizeof(T))) {
       ok_ = false;
+      cout << "FALSE" << endl;
       return false;
     }
 
     memcpy(&value, data.data() + offset, sizeof(T));
     offset += sizeof(T);
+    cout << "TRUE" << endl;
     return true;
   }
 
@@ -67,11 +75,13 @@ public:
     const size_t bytes = sizeof(T) * N;
     if (!can_read(bytes)) {
       ok_ = false;
+      cout << "FALSE" << endl;
       return false;
     }
 
     memcpy(values.data(), data.data() + offset, bytes);
     offset += bytes;
+    cout << "TRUE" << endl;
     return true;
   }
 
@@ -79,6 +89,7 @@ public:
     uint32_t size = 0;
     if (!plain_data(size) || !can_read(size)) {
       ok_ = false;
+      cout << "FALSE" << endl;
       return false;
     }
 
@@ -87,6 +98,7 @@ public:
 
     offset += size;
 
+    cout << "TRUE" << endl;
     return true;
   }
 
