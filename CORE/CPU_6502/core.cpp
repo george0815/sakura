@@ -3,7 +3,6 @@
 #include <iomanip>
 #include <iostream>
 #include <sstream>
-#include <string>
 
 using namespace std;
 
@@ -213,4 +212,24 @@ bool CPU_6502::GET_FLAG(STATUS value) {
   return (STATUS_REGISTER & value) !=
          0x00; // If flag is clear, then this evaluates to false
                //
+}
+
+void CPU_6502::save_state(StateWriter &writer) const {
+  writer.plain_data(A);
+  writer.plain_data(X);
+  writer.plain_data(Y);
+  writer.plain_data(SP);
+  writer.plain_data(PC);
+  writer.plain_data(STATUS_REGISTER);
+  writer.plain_data(CYCLES);
+  writer.plain_data(TOTAL_CYCLES);
+  writer.plain_data(PAGE_CROSSED);
+}
+
+bool CPU_6502::load_state(StateReader &reader) {
+
+  return reader.plain_data(A) && reader.plain_data(X) && reader.plain_data(Y) &&
+         reader.plain_data(SP) && reader.plain_data(PC) &&
+         reader.plain_data(STATUS_REGISTER) && reader.plain_data(CYCLES) &&
+         reader.plain_data(TOTAL_CYCLES) && reader.plain_data(PAGE_CROSSED);
 }

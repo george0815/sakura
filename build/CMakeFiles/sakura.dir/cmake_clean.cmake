@@ -42,8 +42,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/sakura.dir/CORE/MAPPERS/mapper4.cpp.o.d"
   "CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o"
   "CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o.d"
-  "CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o"
-  "CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o.d"
   "CMakeFiles/sakura.dir/MAIN/main.cpp.o"
   "CMakeFiles/sakura.dir/MAIN/main.cpp.o.d"
   "CMakeFiles/sakura.dir/MAIN/render.cpp.o"

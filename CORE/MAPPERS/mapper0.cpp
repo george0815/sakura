@@ -32,3 +32,7 @@ void Mapper0::ppu_write(uint16_t addr, uint8_t data) {
     CHR_MEM[addr % CHR_MEM.size()] = data;
   }
 }
+
+bool Mapper0::load_state(StateReader &reader) { return reader.ok(); }
+
+void Mapper0::save_state(StateWriter &) const {}

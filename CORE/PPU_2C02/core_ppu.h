@@ -19,6 +19,9 @@ public:
   void connect_mapper(Mapper *mapper, MIRRORING mirroring);
   void connect_cpu(class CPU_6502 *cpu_ptr) { CPU = cpu_ptr; }
 
+  void save_state(StateWriter &writer) const;
+  bool load_state(StateReader &reader);
+
   uint8_t cpu_read(uint16_t addr);
   void cpu_write(uint16_t addr, uint8_t data);
   void oam_dma_write(uint8_t data);

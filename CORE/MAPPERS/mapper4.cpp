@@ -186,3 +186,23 @@ void Mapper4::NOTIFY_PPU_ADDRESS(uint16_t addr) {
 
   PREV_A12 = a12;
 }
+
+void Mapper4::save_state(StateWriter &writer) const {
+  writer.plain_data(mirror_mode);
+  writer.array(BANK_REGS);
+  writer.plain_data(BANK_SELECT);
+  writer.plain_data(PRG_MODE);
+  writer.plain_data(CHR_INVERSION);
+  writer.plain_data(IRQ_LATCH);
+  writer.plain_data(IRQ_COUNTER);
+  writer.plain_data(IRQ_RELOAD);
+  writer.plain_data(IRQ_ENABLED);
+}
+
+bool Mapper4::load_state(StateReader &reader) {
+  return reader.plain_data(mirror_mode) && reader.array(BANK_REGS) &&
+         reader.plain_data(BANK_SELECT) && reader.plain_data(PRG_MODE) &&
+         reader.plain_data(CHR_INVERSION) && reader.plain_data(IRQ_LATCH) &&
+         reader.plain_data(IRQ_COUNTER) && reader.plain_data(IRQ_RELOAD) &&
+         reader.plain_data(IRQ_ENABLED);
+}

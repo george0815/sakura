@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../../MAIN/save.h"
 #include <array>
 #include <cstddef>
 #include <cstdint>
@@ -7,6 +8,7 @@
 #include <vector>
 
 using namespace std;
+using namespace SAVE_MANAGER;
 
 class CPU_6502;
 
@@ -37,6 +39,8 @@ public:
   virtual void on_ppu_scanline(CPU_6502 *cpu) { (void)cpu; }
   virtual bool IS_IRQ_PENDING() { return false; }
   virtual void NOTIFY_PPU_ADDRESS(uint16_t addr) {}
+  virtual void save_state(StateWriter &writer) const = 0;
+  virtual bool load_state(StateReader &reader) = 0;
 };
 
 class Mapper0 : public Mapper {
@@ -52,6 +56,8 @@ public:
   void ppu_write(uint16_t addr, uint8_t data) override;
 
   MIRRORING mirroring_mode() const override { return MIRROR; };
+  void save_state(StateWriter &writer) const override;
+  bool load_state(StateReader &reader) override;
 
 private:
   const vector<uint8_t> &PRG_ROM;
@@ -73,7 +79,9 @@ public:
   void on_ppu_scanline(CPU_6502 *cpu) override;
   bool IS_IRQ_PENDING() override { return IRQ_PENDING; }
   bool PREV_A12 = false;
-  void NOTIFY_PPU_ADDRESS(uint16_t addr);
+  void NOTIFY_PPU_ADDRESS(uint16_t addr) override;
+  void save_state(StateWriter &writer) const override;
+  bool load_state(StateReader &reader) override;
 
 private:
   static const size_t PRG_BANK_SIZE = 0x2000;

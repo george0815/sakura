@@ -11,9 +11,9 @@ class BUS;
 
 namespace SAVE_MANAGER {
 
-static bool LOAD_SRAM(const string path, BUS *bus);
+bool LOAD_SRAM(const string path, BUS *bus);
 
-static bool SAVE_SRAM(const string path, BUS *bus);
+bool SAVE_SRAM(const string path, BUS *bus);
 
 class StateWriter {
 
@@ -65,7 +65,7 @@ public:
     static_assert(is_trivially_copyable_v<T>,
                   "array requires data that can be copied easily");
     const size_t bytes = sizeof(T) * N;
-    if (!can_read(sizeof(T))) {
+    if (!can_read(bytes)) {
       ok_ = false;
       return false;
     }
@@ -75,7 +75,7 @@ public:
     return true;
   }
 
-  template <typename T> bool bytes(vector<uint8_t> &values) {
+  bool bytes(vector<uint8_t> &values) {
     uint32_t size = 0;
     if (!plain_data(size) || !can_read(size)) {
       ok_ = false;

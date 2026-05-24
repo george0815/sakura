@@ -17,8 +17,17 @@
 
 using namespace std;
 using namespace boost::program_options;
+using namespace SAVE_MANAGER;
 
 int main(int arc, char *argv[]) {
+
+  BUS bus;
+  CPU_6502 cpu;
+  PPU_2C02 ppu;
+
+  deque<int16_t> AUDIO_QUEUE;
+  mutex AUDIO_MUTEX;
+  SDL_AudioDeviceID AUDIO_DEVICE;
 
   string rom_path = "";
 
@@ -70,7 +79,7 @@ int main(int arc, char *argv[]) {
   //    int test = PARSE_FILE("nestest.nes", cart);
 
   bus.insert_cartridge(cart);
-  SAVE_MANAGER::LOAD_SRAM("TEST.sav", &bus);
+  LOAD_SRAM("TEST.sav", &bus);
   cpu.connect_bus(&bus);
   bus.connect_cpu(cpu);
   bus.connect_ppu(ppu);
@@ -152,7 +161,7 @@ int main(int arc, char *argv[]) {
           break;
         case SDLK_r: // temporary save ram button
           cout << "R PRESSED";
-          SAVE_MANAGER::SAVE_SRAM("TEST.sav", &bus);
+          SAVE_SRAM("TEST.sav", &bus);
           break;
         }
       }

@@ -8,14 +8,6 @@
 #include <deque>
 #include <mutex>
 
-BUS bus;
-CPU_6502 cpu;
-PPU_2C02 ppu;
-
-deque<int16_t> AUDIO_QUEUE;
-mutex AUDIO_MUTEX;
-SDL_AudioDeviceID AUDIO_DEVICE;
-
 const uint32_t TARGET_AUDIO_LATENCY_MS = 40;
 
 const uint32_t BYTES_PER_SAMPLE = sizeof(int16_t);

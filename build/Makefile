@@ -634,30 +634,6 @@ CORE/PPU_2C02/core_ppu.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.s
 .PHONY : CORE/PPU_2C02/core_ppu.cpp.s
 
-CORE/PPU_2C02/utils_ppu.o: CORE/PPU_2C02/utils_ppu.cpp.o
-.PHONY : CORE/PPU_2C02/utils_ppu.o
-
-# target to build an object file
-CORE/PPU_2C02/utils_ppu.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o
-.PHONY : CORE/PPU_2C02/utils_ppu.cpp.o
-
-CORE/PPU_2C02/utils_ppu.i: CORE/PPU_2C02/utils_ppu.cpp.i
-.PHONY : CORE/PPU_2C02/utils_ppu.i
-
-# target to preprocess a source file
-CORE/PPU_2C02/utils_ppu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.i
-.PHONY : CORE/PPU_2C02/utils_ppu.cpp.i
-
-CORE/PPU_2C02/utils_ppu.s: CORE/PPU_2C02/utils_ppu.cpp.s
-.PHONY : CORE/PPU_2C02/utils_ppu.s
-
-# target to generate assembly for a file
-CORE/PPU_2C02/utils_ppu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.s
-.PHONY : CORE/PPU_2C02/utils_ppu.cpp.s
-
 MAIN/main.o: MAIN/main.cpp.o
 .PHONY : MAIN/main.o
 
@@ -802,9 +778,6 @@ help:
 	@echo "... CORE/PPU_2C02/core_ppu.o"
 	@echo "... CORE/PPU_2C02/core_ppu.i"
 	@echo "... CORE/PPU_2C02/core_ppu.s"
-	@echo "... CORE/PPU_2C02/utils_ppu.o"
-	@echo "... CORE/PPU_2C02/utils_ppu.i"
-	@echo "... CORE/PPU_2C02/utils_ppu.s"
 	@echo "... MAIN/main.o"
 	@echo "... MAIN/main.i"
 	@echo "... MAIN/main.s"

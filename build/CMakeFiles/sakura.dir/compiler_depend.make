@@ -1369,6 +1369,7 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/apu_snapshot.cpp.o: /hom
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h
 
 CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o: /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/wrapper.cpp \
+  /home/Hunter/Documents/Github/sakura/MAIN/save.h \
   /home/Hunter/Documents/Github/sakura/CORE/MAPPERS/mapper.h \
   /home/Hunter/Documents/Github/sakura/CORE/CART/cart.h \
   /home/Hunter/Documents/Github/sakura/CORE/LOGGER/logger.h \
@@ -1558,6 +1559,7 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o: /home/Hunter/Documents/Github
   /usr/include/c++/15.2.1/cstdint \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
   /usr/include/c++/15.2.1/debug/assertions.h \
@@ -1622,6 +1624,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o: /home/Hunter/Documents/Github
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -1637,6 +1641,7 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o: /home/Hunter/Documents/Github
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h
 
 CMakeFiles/sakura.dir/CORE/BUS/bus.cpp.o: /home/Hunter/Documents/Github/sakura/CORE/BUS/bus.cpp \
+  /home/Hunter/Documents/Github/sakura/MAIN/save.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Buffer.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Synth.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.h \
@@ -1825,6 +1830,7 @@ CMakeFiles/sakura.dir/CORE/BUS/bus.cpp.o: /home/Hunter/Documents/Github/sakura/C
   /usr/include/c++/15.2.1/cstdint \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
   /usr/include/c++/15.2.1/debug/assertions.h \
@@ -1889,6 +1895,8 @@ CMakeFiles/sakura.dir/CORE/BUS/bus.cpp.o: /home/Hunter/Documents/Github/sakura/C
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -1904,6 +1912,7 @@ CMakeFiles/sakura.dir/CORE/BUS/bus.cpp.o: /home/Hunter/Documents/Github/sakura/C
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h
 
 CMakeFiles/sakura.dir/CORE/CART/cart.cpp.o: /home/Hunter/Documents/Github/sakura/CORE/CART/cart.cpp \
+  /home/Hunter/Documents/Github/sakura/MAIN/save.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Buffer.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Synth.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.h \
@@ -2174,6 +2183,7 @@ CMakeFiles/sakura.dir/CORE/CART/cart.cpp.o: /home/Hunter/Documents/Github/sakura
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h
 
 CMakeFiles/sakura.dir/CORE/CPU_6502/addressing_modes.cpp.o: /home/Hunter/Documents/Github/sakura/CORE/CPU_6502/addressing_modes.cpp \
+  /home/Hunter/Documents/Github/sakura/MAIN/save.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Buffer.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Synth.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.h \
@@ -2362,6 +2372,7 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/addressing_modes.cpp.o: /home/Hunter/Documen
   /usr/include/c++/15.2.1/cstdint \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
   /usr/include/c++/15.2.1/debug/assertions.h \
@@ -2426,6 +2437,8 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/addressing_modes.cpp.o: /home/Hunter/Documen
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -2441,6 +2454,7 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/addressing_modes.cpp.o: /home/Hunter/Documen
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h
 
 CMakeFiles/sakura.dir/CORE/CPU_6502/core.cpp.o: /home/Hunter/Documents/Github/sakura/CORE/CPU_6502/core.cpp \
+  /home/Hunter/Documents/Github/sakura/MAIN/save.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Buffer.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Synth.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.h \
@@ -2634,6 +2648,7 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/core.cpp.o: /home/Hunter/Documents/Github/sa
   /usr/include/c++/15.2.1/cstdint \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/ctime \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
@@ -2705,6 +2720,8 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/core.cpp.o: /home/Hunter/Documents/Github/sa
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -2720,6 +2737,7 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/core.cpp.o: /home/Hunter/Documents/Github/sa
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h
 
 CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o: /home/Hunter/Documents/Github/sakura/CORE/CPU_6502/opcodes.cpp \
+  /home/Hunter/Documents/Github/sakura/MAIN/save.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Buffer.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Synth.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.h \
@@ -2908,6 +2926,7 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o: /home/Hunter/Documents/Github
   /usr/include/c++/15.2.1/cstdint \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
   /usr/include/c++/15.2.1/debug/assertions.h \
@@ -2972,6 +2991,8 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o: /home/Hunter/Documents/Github
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -3195,12 +3216,21 @@ CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.o: /home/Hunter/Documents/Github/sa
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h
 
 CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.o: /home/Hunter/Documents/Github/sakura/CORE/MAPPERS/mapper0.cpp \
+  /home/Hunter/Documents/Github/sakura/MAIN/save.h \
   /home/Hunter/Documents/Github/sakura/CORE/MAPPERS/mapper.h \
+  /usr/include/alloca.h \
+  /usr/include/asm-generic/errno-base.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm/errno.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/endianness.h \
+  /usr/include/bits/errno.h \
+  /usr/include/bits/floatn-common.h \
+  /usr/include/bits/floatn.h \
   /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -3208,22 +3238,38 @@ CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.o: /home/Hunter/Documents/Github/
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
+  /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
   /usr/include/bits/thread-shared-types.h \
   /usr/include/bits/time64.h \
   /usr/include/bits/timesize.h \
   /usr/include/bits/types.h \
+  /usr/include/bits/types/FILE.h \
+  /usr/include/bits/types/__FILE.h \
+  /usr/include/bits/types/__fpos64_t.h \
+  /usr/include/bits/types/__fpos_t.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/bits/types/__mbstate_t.h \
   /usr/include/bits/types/__sigset_t.h \
   /usr/include/bits/types/clock_t.h \
   /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/cookie_io_functions_t.h \
+  /usr/include/bits/types/error_t.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/types/mbstate_t.h \
   /usr/include/bits/types/sigset_t.h \
+  /usr/include/bits/types/struct_FILE.h \
   /usr/include/bits/types/struct_timespec.h \
   /usr/include/bits/types/struct_timeval.h \
   /usr/include/bits/types/time_t.h \
   /usr/include/bits/types/timer_t.h \
+  /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/waitflags.h \
+  /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wordsize.h \
   /usr/include/c++/15.2.1/array \
@@ -3231,23 +3277,32 @@ CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.o: /home/Hunter/Documents/Github/
   /usr/include/c++/15.2.1/bit \
   /usr/include/c++/15.2.1/bits/alloc_traits.h \
   /usr/include/c++/15.2.1/bits/allocator.h \
+  /usr/include/c++/15.2.1/bits/basic_string.h \
+  /usr/include/c++/15.2.1/bits/basic_string.tcc \
+  /usr/include/c++/15.2.1/bits/char_traits.h \
+  /usr/include/c++/15.2.1/bits/charconv.h \
   /usr/include/c++/15.2.1/bits/concept_check.h \
   /usr/include/c++/15.2.1/bits/cpp_type_traits.h \
+  /usr/include/c++/15.2.1/bits/cxxabi_forced.h \
   /usr/include/c++/15.2.1/bits/exception.h \
   /usr/include/c++/15.2.1/bits/exception_defines.h \
   /usr/include/c++/15.2.1/bits/functexcept.h \
   /usr/include/c++/15.2.1/bits/functional_hash.h \
   /usr/include/c++/15.2.1/bits/hash_bytes.h \
   /usr/include/c++/15.2.1/bits/invoke.h \
+  /usr/include/c++/15.2.1/bits/localefwd.h \
   /usr/include/c++/15.2.1/bits/memory_resource.h \
   /usr/include/c++/15.2.1/bits/memoryfwd.h \
   /usr/include/c++/15.2.1/bits/move.h \
   /usr/include/c++/15.2.1/bits/new_allocator.h \
+  /usr/include/c++/15.2.1/bits/ostream_insert.h \
+  /usr/include/c++/15.2.1/bits/postypes.h \
   /usr/include/c++/15.2.1/bits/predefined_ops.h \
   /usr/include/c++/15.2.1/bits/ptr_traits.h \
   /usr/include/c++/15.2.1/bits/range_access.h \
   /usr/include/c++/15.2.1/bits/refwrap.h \
   /usr/include/c++/15.2.1/bits/requires_hosted.h \
+  /usr/include/c++/15.2.1/bits/std_abs.h \
   /usr/include/c++/15.2.1/bits/stl_algobase.h \
   /usr/include/c++/15.2.1/bits/stl_bvector.h \
   /usr/include/c++/15.2.1/bits/stl_construct.h \
@@ -3258,44 +3313,69 @@ CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.o: /home/Hunter/Documents/Github/
   /usr/include/c++/15.2.1/bits/stl_pair.h \
   /usr/include/c++/15.2.1/bits/stl_uninitialized.h \
   /usr/include/c++/15.2.1/bits/stl_vector.h \
+  /usr/include/c++/15.2.1/bits/string_view.tcc \
+  /usr/include/c++/15.2.1/bits/stringfwd.h \
   /usr/include/c++/15.2.1/bits/uses_allocator.h \
   /usr/include/c++/15.2.1/bits/uses_allocator_args.h \
   /usr/include/c++/15.2.1/bits/utility.h \
   /usr/include/c++/15.2.1/bits/vector.tcc \
   /usr/include/c++/15.2.1/bits/version.h \
+  /usr/include/c++/15.2.1/cctype \
+  /usr/include/c++/15.2.1/cerrno \
+  /usr/include/c++/15.2.1/clocale \
   /usr/include/c++/15.2.1/compare \
   /usr/include/c++/15.2.1/concepts \
   /usr/include/c++/15.2.1/cstddef \
   /usr/include/c++/15.2.1/cstdint \
+  /usr/include/c++/15.2.1/cstdio \
+  /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
+  /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/debug/assertions.h \
   /usr/include/c++/15.2.1/debug/debug.h \
   /usr/include/c++/15.2.1/ext/alloc_traits.h \
   /usr/include/c++/15.2.1/ext/numeric_traits.h \
+  /usr/include/c++/15.2.1/ext/string_conversions.h \
   /usr/include/c++/15.2.1/ext/type_traits.h \
   /usr/include/c++/15.2.1/initializer_list \
+  /usr/include/c++/15.2.1/iosfwd \
   /usr/include/c++/15.2.1/new \
   /usr/include/c++/15.2.1/pstl/pstl_config.h \
+  /usr/include/c++/15.2.1/string \
+  /usr/include/c++/15.2.1/string_view \
   /usr/include/c++/15.2.1/tuple \
   /usr/include/c++/15.2.1/type_traits \
   /usr/include/c++/15.2.1/vector \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
+  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++locale.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
   /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
+  /usr/include/ctype.h \
   /usr/include/endian.h \
+  /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
+  /usr/include/linux/errno.h \
+  /usr/include/locale.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/types.h \
+  /usr/include/wchar.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h
 
 CMakeFiles/sakura.dir/CORE/MAPPERS/mapper4.cpp.o: /home/Hunter/Documents/Github/sakura/CORE/MAPPERS/mapper4.cpp \
+  /home/Hunter/Documents/Github/sakura/MAIN/save.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Buffer.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Synth.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.h \
@@ -3484,6 +3564,7 @@ CMakeFiles/sakura.dir/CORE/MAPPERS/mapper4.cpp.o: /home/Hunter/Documents/Github/
   /usr/include/c++/15.2.1/cstdint \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
   /usr/include/c++/15.2.1/debug/assertions.h \
@@ -3548,6 +3629,8 @@ CMakeFiles/sakura.dir/CORE/MAPPERS/mapper4.cpp.o: /home/Hunter/Documents/Github/
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -3573,6 +3656,7 @@ CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o: /home/Hunter/Documents/Githu
   /home/Hunter/Documents/Github/sakura/CORE/BUS/bus.h \
   /home/Hunter/Documents/Github/sakura/CORE/LOGGER/logger.h \
   /home/Hunter/Documents/Github/sakura/CORE/CPU_6502/core.h \
+  /home/Hunter/Documents/Github/sakura/MAIN/save.h \
   /home/Hunter/Documents/Github/sakura/CORE/MAPPERS/mapper.h \
   /home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/core_ppu.h \
   /usr/include/alloca.h \
@@ -3758,6 +3842,7 @@ CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o: /home/Hunter/Documents/Githu
   /usr/include/c++/15.2.1/cstdint \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
   /usr/include/c++/15.2.1/debug/assertions.h \
@@ -3825,6 +3910,8 @@ CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o: /home/Hunter/Documents/Githu
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -3839,10 +3926,8 @@ CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o: /home/Hunter/Documents/Githu
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h
 
-CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o: /home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/utils_ppu.cpp \
-  /usr/include/stdc-predef.h
-
 CMakeFiles/sakura.dir/MAIN/main.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN/main.cpp \
+  /home/Hunter/Documents/Github/sakura/MAIN/save.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Buffer.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Synth.h \
   /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.h \
@@ -3857,7 +3942,6 @@ CMakeFiles/sakura.dir/MAIN/main.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /home/Hunter/Documents/Github/sakura/CORE/BUS/bus.h \
   /home/Hunter/Documents/Github/sakura/MAIN/render.h \
   /home/Hunter/Documents/Github/sakura/MAIN/main.h \
-  /home/Hunter/Documents/Github/sakura/MAIN/save.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_assert.h \
   /usr/include/SDL2/SDL_atomic.h \
@@ -5070,7 +5154,6 @@ CMakeFiles/sakura.dir/MAIN/save.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /usr/include/c++/15.2.1/bits/stl_pair.h \
   /usr/include/c++/15.2.1/bits/stl_uninitialized.h \
   /usr/include/c++/15.2.1/bits/stl_vector.h \
-  /usr/include/c++/15.2.1/bits/stream_iterator.h \
   /usr/include/c++/15.2.1/bits/streambuf.tcc \
   /usr/include/c++/15.2.1/bits/streambuf_iterator.h \
   /usr/include/c++/15.2.1/bits/string_view.tcc \
@@ -5092,6 +5175,7 @@ CMakeFiles/sakura.dir/MAIN/save.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /usr/include/c++/15.2.1/cstdint \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/ctime \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
@@ -5113,7 +5197,6 @@ CMakeFiles/sakura.dir/MAIN/save.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /usr/include/c++/15.2.1/iosfwd \
   /usr/include/c++/15.2.1/iostream \
   /usr/include/c++/15.2.1/istream \
-  /usr/include/c++/15.2.1/iterator \
   /usr/include/c++/15.2.1/limits \
   /usr/include/c++/15.2.1/locale \
   /usr/include/c++/15.2.1/new \
@@ -5169,6 +5252,8 @@ CMakeFiles/sakura.dir/MAIN/save.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -5389,6 +5474,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o:
 
 /usr/include/boost/program_options/parsers.hpp:
 
+/usr/include/boost/program_options/options_description.hpp:
+
 /usr/include/boost/program_options/option.hpp:
 
 /usr/include/boost/program_options/errors.hpp:
@@ -5427,8 +5514,6 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o:
 
 /usr/include/boost/core/ref.hpp:
 
-/usr/include/boost/core/no_exceptions_support.hpp:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx512dqintrin.h:
 
 /usr/include/linux/errno.h:
@@ -5440,6 +5525,8 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o:
 /usr/include/linux/posix_types.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx10_2satcvtintrin.h:
+
+/usr/include/boost/core/no_exceptions_support.hpp:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx10_2bf16intrin.h:
 
@@ -6387,13 +6474,13 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/xtestintrin.h:
 
+/home/Hunter/Documents/Github/sakura/MAIN/save.h:
+
 /usr/include/c++/15.2.1/ext/atomicity.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/xsavesintrin.h:
 
 /usr/include/c++/15.2.1/bits/allocator.h:
-
-/home/Hunter/Documents/Github/sakura/MAIN/save.h:
 
 /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/Wave_Writer.cpp:
 
@@ -6586,10 +6673,6 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Multi_Buffer.cpp.o:
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/amxtf32intrin.h:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/gthr.h:
-
-/usr/include/boost/program_options/options_description.hpp:
-
-/home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/utils_ppu.cpp:
 
 /usr/include/linux/sched/types.h:
 

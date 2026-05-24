@@ -142,6 +142,9 @@ public:
   // executed one instruction
   void step();
 
+  void save_state(StateWriter &writer) const;
+  bool load_state(StateReader &reader);
+
 private:
   // INDEXED ADDRESSING MODES
   uint16_t ZERO_PAGE_INDEXED_Y();

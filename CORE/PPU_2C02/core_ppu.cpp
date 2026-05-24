@@ -1,11 +1,7 @@
 #include "./core_ppu.h"
 #include "../CPU_6502/core.h"
-#include <algorithm>
-#include <cinttypes>
 #include <cstdint>
-#include <iostream>
 #include <pthread.h>
-#include <string>
 #include <sys/types.h>
 
 using namespace std;
@@ -596,4 +592,55 @@ void PPU_2C02::step() {
   if (SCANLINE >= PPU_SCANLINES) {
     SCANLINE = 0;
   }
+}
+
+void PPU_2C02::save_state(StateWriter &writer) const {
+  writer.plain_data(MIRROR_MODE);
+  writer.plain_data(CTRL);
+  writer.plain_data(MASK);
+  writer.plain_data(STATUS);
+  writer.plain_data(OAM_ADDR);
+  writer.plain_data(OAM_DATA);
+  writer.plain_data(FINE_X);
+  writer.plain_data(VRAM_ADDR);
+  writer.plain_data(TEMP_ADDR);
+  writer.plain_data(ADDR_LATCH);
+  writer.plain_data(BUFFERED_DATA);
+  writer.plain_data(FRAME_DONE);
+  writer.plain_data(SCANLINE);
+  writer.plain_data(CYCLES);
+  writer.array(NAMETABLES);
+  writer.array(SECONDARY_OAM);
+  writer.array(PALETTE);
+  writer.array(OAM);
+  writer.array(FRAMEBUFFER);
+  writer.plain_data(NEXT_TILE_ATTR);
+  writer.plain_data(NEXT_TILE_ID);
+  writer.plain_data(NEXT_TILE_LSB);
+  writer.plain_data(NEXT_TILE_MSB);
+  writer.plain_data(BG_ATTR_SHIFT_HI);
+  writer.plain_data(BG_ATTR_SHIFT_LO);
+  writer.plain_data(BG_PATTERN_SHIFT_HI);
+  writer.plain_data(BG_PATTERN_SHIFT_LO);
+  writer.plain_data(SECONDARY_OAM_COUNT);
+}
+
+bool PPU_2C02::load_state(StateReader &reader) {
+  return (reader.plain_data(MIRROR_MODE) && reader.plain_data(CTRL) &&
+          reader.plain_data(MASK) && reader.plain_data(STATUS) &&
+          reader.plain_data(OAM_ADDR) && reader.plain_data(OAM_DATA) &&
+          reader.plain_data(FINE_X) && reader.plain_data(VRAM_ADDR) &&
+          reader.plain_data(TEMP_ADDR) && reader.plain_data(ADDR_LATCH) &&
+          reader.plain_data(BUFFERED_DATA) && reader.plain_data(FRAME_DONE) &&
+          reader.plain_data(SCANLINE) && reader.plain_data(CYCLES) &&
+          reader.array(NAMETABLES) && reader.array(SECONDARY_OAM) &&
+          reader.array(PALETTE) && reader.array(OAM) &&
+          reader.array(FRAMEBUFFER) && reader.plain_data(NEXT_TILE_ATTR) &&
+          reader.plain_data(NEXT_TILE_ID) && reader.plain_data(NEXT_TILE_LSB) &&
+          reader.plain_data(NEXT_TILE_MSB) &&
+          reader.plain_data(BG_ATTR_SHIFT_HI) &&
+          reader.plain_data(BG_ATTR_SHIFT_LO) &&
+          reader.plain_data(BG_PATTERN_SHIFT_HI) &&
+          reader.plain_data(BG_PATTERN_SHIFT_LO) &&
+          reader.plain_data(SECONDARY_OAM_COUNT));
 }

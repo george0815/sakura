@@ -2,6 +2,7 @@
 #include <array>
 #include <cstdint>
 #include <iostream>
+#include <sys/types.h>
 #include <vector>
 
 using namespace std;
@@ -229,4 +230,71 @@ void BUS::insert_cartridge(CART &cart) {
   if (PPU) {
     PPU->connect_mapper(MAPPER, MIRROR_MODE);
   }
+}
+
+void BUS::save_state(StateWriter &writer) const {
+  writer.plain_data(2);
+  writer.plain_data(MAPPER_ID);
+  writer.plain_data(CART_SIGN);
+  writer.array(CPU_RAM);
+  writer.array(SHADOW);
+  writer.bytes(CHR_MEM);
+  writer.bytes(PRG_RAM);
+  writer.plain_data(HAS_PRG);
+  writer.plain_data(CHR_IS_RAM);
+  writer.plain_data(BATTERY_BACKED);
+  writer.plain_data(CONTROLLER_STROBE);
+  writer.array(CONTROLLER_STATE);
+  writer.array(CONTROLLER_SHIFT);
+  writer.plain_data(MIRROR_MODE);
+  APU.save_state(writer);
+  if (MAPPER) {
+    MAPPER->save_state(writer);
+  }
+}
+
+bool BUS::load_state(StateReader &reader) {
+  uint32_t version = 0;
+  uint16_t saved_mapper_id = 0;
+  uint32_t saved_signature = 0;
+  vector<uint8_t> saved_chr_mem;
+  vector<uint8_t> saved_prg_ram;
+  bool saved_has_prg = false;
+  bool saved_chr_is_ram = false;
+  bool saved_battery_backed = false;
+
+  if (!reader.plain_data(version) || version != 2 ||
+      !reader.plain_data(saved_mapper_id) || saved_mapper_id != MAPPER_ID ||
+      saved_signature != CART_SIGN || !reader.plain_data(saved_signature) ||
+      !reader.array(SHADOW) || !reader.array(CPU_RAM) ||
+      !reader.bytes(saved_prg_ram) || !reader.bytes(saved_chr_mem) ||
+      !reader.plain_data(saved_has_prg) ||
+      !reader.plain_data(saved_chr_is_ram) ||
+      !reader.plain_data(saved_battery_backed) ||
+      !reader.plain_data(CONTROLLER_STROBE) ||
+      !reader.array(CONTROLLER_STATE) || !reader.array(CONTROLLER_SHIFT) ||
+      !reader.plain_data(MIRROR_MODE)
+
+  ) {
+    return false;
+  }
+
+  if (saved_has_prg != HAS_PRG || saved_chr_is_ram != CHR_IS_RAM ||
+      saved_battery_backed != BATTERY_BACKED ||
+      saved_chr_mem.size() != CHR_MEM.size() ||
+      saved_prg_ram.size() != PRG_RAM.size()) {
+    return false;
+  }
+
+  CHR_MEM = saved_chr_mem;
+  PRG_RAM = saved_prg_ram;
+  if (!APU.load_state(reader)) {
+    return false;
+  }
+
+  if (MAPPER && !MAPPER->load_state(reader)) {
+    return false;
+  }
+
+  return reader.ok();
 }

@@ -366,24 +366,10 @@ CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/core_ppu.cpp -o CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.s
 
-CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o: CMakeFiles/sakura.dir/flags.make
-CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o: /home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/utils_ppu.cpp
-CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o: CMakeFiles/sakura.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Hunter/Documents/Github/sakura/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o -MF CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o.d -o CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o -c /home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/utils_ppu.cpp
-
-CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/utils_ppu.cpp > CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.i
-
-CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/Hunter/Documents/Github/sakura/CORE/PPU_2C02/utils_ppu.cpp -o CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.s
-
 CMakeFiles/sakura.dir/MAIN/main.cpp.o: CMakeFiles/sakura.dir/flags.make
 CMakeFiles/sakura.dir/MAIN/main.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN/main.cpp
 CMakeFiles/sakura.dir/MAIN/main.cpp.o: CMakeFiles/sakura.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Hunter/Documents/Github/sakura/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/sakura.dir/MAIN/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Hunter/Documents/Github/sakura/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/sakura.dir/MAIN/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sakura.dir/MAIN/main.cpp.o -MF CMakeFiles/sakura.dir/MAIN/main.cpp.o.d -o CMakeFiles/sakura.dir/MAIN/main.cpp.o -c /home/Hunter/Documents/Github/sakura/MAIN/main.cpp
 
 CMakeFiles/sakura.dir/MAIN/main.cpp.i: cmake_force
@@ -397,7 +383,7 @@ CMakeFiles/sakura.dir/MAIN/main.cpp.s: cmake_force
 CMakeFiles/sakura.dir/MAIN/render.cpp.o: CMakeFiles/sakura.dir/flags.make
 CMakeFiles/sakura.dir/MAIN/render.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN/render.cpp
 CMakeFiles/sakura.dir/MAIN/render.cpp.o: CMakeFiles/sakura.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Hunter/Documents/Github/sakura/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/sakura.dir/MAIN/render.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Hunter/Documents/Github/sakura/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/sakura.dir/MAIN/render.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sakura.dir/MAIN/render.cpp.o -MF CMakeFiles/sakura.dir/MAIN/render.cpp.o.d -o CMakeFiles/sakura.dir/MAIN/render.cpp.o -c /home/Hunter/Documents/Github/sakura/MAIN/render.cpp
 
 CMakeFiles/sakura.dir/MAIN/render.cpp.i: cmake_force
@@ -411,7 +397,7 @@ CMakeFiles/sakura.dir/MAIN/render.cpp.s: cmake_force
 CMakeFiles/sakura.dir/MAIN/save.cpp.o: CMakeFiles/sakura.dir/flags.make
 CMakeFiles/sakura.dir/MAIN/save.cpp.o: /home/Hunter/Documents/Github/sakura/MAIN/save.cpp
 CMakeFiles/sakura.dir/MAIN/save.cpp.o: CMakeFiles/sakura.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Hunter/Documents/Github/sakura/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/sakura.dir/MAIN/save.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/Hunter/Documents/Github/sakura/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/sakura.dir/MAIN/save.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/sakura.dir/MAIN/save.cpp.o -MF CMakeFiles/sakura.dir/MAIN/save.cpp.o.d -o CMakeFiles/sakura.dir/MAIN/save.cpp.o -c /home/Hunter/Documents/Github/sakura/MAIN/save.cpp
 
 CMakeFiles/sakura.dir/MAIN/save.cpp.i: cmake_force
@@ -445,7 +431,6 @@ sakura_OBJECTS = \
 "CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.o" \
 "CMakeFiles/sakura.dir/CORE/MAPPERS/mapper4.cpp.o" \
 "CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o" \
-"CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o" \
 "CMakeFiles/sakura.dir/MAIN/main.cpp.o" \
 "CMakeFiles/sakura.dir/MAIN/render.cpp.o" \
 "CMakeFiles/sakura.dir/MAIN/save.cpp.o"
@@ -474,7 +459,6 @@ sakura: CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.o
 sakura: CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.o
 sakura: CMakeFiles/sakura.dir/CORE/MAPPERS/mapper4.cpp.o
 sakura: CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o
-sakura: CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o
 sakura: CMakeFiles/sakura.dir/MAIN/main.cpp.o
 sakura: CMakeFiles/sakura.dir/MAIN/render.cpp.o
 sakura: CMakeFiles/sakura.dir/MAIN/save.cpp.o
@@ -484,7 +468,7 @@ sakura: /usr/lib/libSDL2-2.0.so.0.3200.66
 sakura: /usr/lib/libboost_program_options.so.1.90.0
 sakura: /usr/lib/libboost_container.so.1.90.0
 sakura: CMakeFiles/sakura.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/Hunter/Documents/Github/sakura/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking CXX executable sakura"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/Hunter/Documents/Github/sakura/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking CXX executable sakura"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sakura.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -23,7 +23,6 @@ sakura: \
   CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.o \
   CMakeFiles/sakura.dir/CORE/MAPPERS/mapper4.cpp.o \
   CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o \
-  CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o \
   CMakeFiles/sakura.dir/MAIN/main.cpp.o \
   CMakeFiles/sakura.dir/MAIN/render.cpp.o \
   CMakeFiles/sakura.dir/MAIN/save.cpp.o \
@@ -105,8 +104,6 @@ CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.o:
 CMakeFiles/sakura.dir/CORE/MAPPERS/mapper4.cpp.o:
 
 CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o:
-
-CMakeFiles/sakura.dir/CORE/PPU_2C02/utils_ppu.cpp.o:
 
 CMakeFiles/sakura.dir/MAIN/main.cpp.o:
 

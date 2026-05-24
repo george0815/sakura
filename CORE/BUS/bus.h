@@ -33,6 +33,8 @@ public:
   };
 
   void SET_CONTROLLER_BUTTON(int port, CONTROLLER_BUTTON button, bool pressed);
+  void save_state(StateWriter &writer) const;
+  bool load_state(StateReader &reader);
 
   bool CONTROLLER_STROBE = false;
   array<uint8_t, 2> CONTROLLER_STATE{};
