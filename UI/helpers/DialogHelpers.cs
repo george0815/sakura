@@ -205,7 +205,7 @@ namespace sakura.helpers
 
             dlg.KeyDown += e =>
             {
-                result = e.KeyEvent.Key.ToString();
+                result = e.KeyEvent.KeyValue.ToString();
                 Application.RequestStop();
                 e.Handled = true;
             };

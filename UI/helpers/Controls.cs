@@ -39,5 +39,59 @@ namespace sakura.helpers
         public Key OpenSramPath { get; set; } = Key.F6;
 
 
+        /// <summary>
+        /// Start button
+        /// Default is a.
+        /// </summary>
+        public Key START { get; set; } = Key.a;
+
+
+        /// <summary>
+        /// Select button
+        /// Default is s.
+        /// </summary>
+        public Key SELECT { get; set; } = Key.s;
+
+
+        /// <summary>
+        /// A button
+        /// Default is z.
+        /// </summary>
+        public Key A { get; set; } = Key.z;
+
+
+        /// <summary>
+        /// B button
+        /// Default is x.
+        /// </summary>
+        public Key B { get; set; } = Key.x;
+
+
+        /// <summary>
+        /// Up button
+        /// Default is up arrow.
+        /// </summary>
+        public Key UP { get; set; } = Key.CursorUp;
+
+
+        /// <summary>
+        /// Up button
+        /// Default is down arrow.
+        /// </summary>
+        public Key DOWN { get; set; } = Key.CursorDown;
+
+
+        /// <summary>
+        /// Up button
+        /// Default is left arrow.
+        /// </summary>
+        public Key LEFT { get; set; } = Key.CursorLeft;
+
+
+        /// <summary>
+        /// Up button
+        /// Default is right arrow.
+        /// </summary>
+        public Key RIGHT { get; set; } = Key.CursorRight;
     }
 }

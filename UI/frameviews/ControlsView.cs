@@ -9,26 +9,6 @@ namespace sakura.frameviews
     /// </summary>
     internal class ControlsView : FrameView
     {
-        internal static Dictionary<string, Terminal.Gui.Color> colors =
-            new()
-            {
-                { Resources.Black,          Terminal.Gui.Color.Black },
-                { Resources.Blue,           Terminal.Gui.Color.Blue },
-                { Resources.Green,          Terminal.Gui.Color.Green },
-                { Resources.Cyan,           Terminal.Gui.Color.Cyan },
-                { Resources.Red,            Terminal.Gui.Color.Red },
-                { Resources.Magenta,        Terminal.Gui.Color.Magenta },
-                { Resources.Brown,          Terminal.Gui.Color.Brown },
-                { Resources.Gray,           Terminal.Gui.Color.Gray },
-                { Resources.DarkGray,       Terminal.Gui.Color.DarkGray },
-                { Resources.BrightBlue,     Terminal.Gui.Color.BrightBlue },
-                { Resources.BrightGreen,    Terminal.Gui.Color.BrightGreen },
-                { Resources.BrightCyan,     Terminal.Gui.Color.BrightCyan },
-                { Resources.BrightRed,      Terminal.Gui.Color.BrightRed },
-                { Resources.BrightMagenta,  Terminal.Gui.Color.BrightMagenta },
-                { Resources.BrightYellow,   Terminal.Gui.Color.BrightYellow },
-                { Resources.White,          Terminal.Gui.Color.White }
-            };
 
         /// <summary>
         /// Initializes the controls UI and wires all controls
@@ -68,15 +48,14 @@ namespace sakura.frameviews
 
             // START 
             scroll.Add(new Label("START: ") { X = 1, Y = y });
-            var myKey =
-                colors.FirstOrDefault(x => x.Value == Settings.Current.BackgroundColor).Key;
+            var myKey = Settings.Current.Controls.START;
             var bgColorCombo = new Button()
             {
                 X = 30,
                 Y = y,
                 Width = 3,
                 Height = 1,
-                Text = myKey
+                Text = myKey.ToString()
             };
 
             bgColorCombo.Clicked += () =>
@@ -97,14 +76,14 @@ namespace sakura.frameviews
 
             // SELECT
             scroll.Add(new Label("SELECT: ") { X = 1, Y = y });
-            myKey = colors.FirstOrDefault(x => x.Value == Settings.Current.TextColor).Key;
+            myKey = Settings.Current.Controls.SELECT;
             var textColorCombo = new Button()
             {
                 X = 30,
                 Y = y,
                 Width = 3,
                 Height = 1,
-                Text = myKey
+                Text = myKey.ToString()
             };
 
             textColorCombo.Clicked += () =>
@@ -120,22 +99,19 @@ namespace sakura.frameviews
 
             // A
             scroll.Add(new Label("A: ") { X = 1, Y = y });
-            myKey =
-                colors.FirstOrDefault(
-                    x => x.Value == Settings.Current.FocusBackgroundColor).Key;
+            myKey = Settings.Current.Controls.A;
             var backgroundFocusColorCombo = new Button()
             {
                 X = 30,
                 Y = y,
                 Width = 3,
                 Height = 1,
-                Text = myKey
+                Text = myKey.ToString()
             };
 
             backgroundFocusColorCombo.Clicked += () =>
             {
                 string tmp = DialogHelpers.PickKey();
-                Settings.Current.FocusBackgroundColor = colors[tmp];
                 backgroundFocusColorCombo.Text = tmp;
                 backgroundFocusColorCombo.SetNeedsDisplay();
                 scroll.SetNeedsDisplay();
@@ -146,22 +122,19 @@ namespace sakura.frameviews
 
             // B
             scroll.Add(new Label("B: ") { X = 1, Y = y });
-            myKey =
-                colors.FirstOrDefault(
-                    x => x.Value == Settings.Current.FocusTextColor).Key;
+            myKey = Settings.Current.Controls.B;
             var textFocusColorCombo = new Button()
             {
                 X = 30,
                 Y = y,
                 Width = 3,
                 Height = 1,
-                Text = myKey
+                Text = myKey.ToString()
             };
 
             textFocusColorCombo.Clicked += () =>
             {
                 string tmp = DialogHelpers.PickKey();
-                Settings.Current.FocusTextColor = colors[tmp];
                 textFocusColorCombo.Text = tmp;
                 textFocusColorCombo.SetNeedsDisplay();
                 scroll.SetNeedsDisplay();
@@ -172,22 +145,19 @@ namespace sakura.frameviews
 
             // UP
             scroll.Add(new Label("UP: ") { X = 1, Y = y });
-            myKey =
-                colors.FirstOrDefault(
-                    x => x.Value == Settings.Current.HotTextColor).Key;
+            myKey = Settings.Current.Controls.UP;
             var hotTextColorCombo = new Button()
             {
                 X = 30,
                 Y = y,
                 Width = 3,
                 Height = 1,
-                Text = myKey
+                Text = myKey.ToString()
             };
 
             hotTextColorCombo.Clicked += () =>
             {
                 string tmp = DialogHelpers.PickKey();
-                Settings.Current.HotTextColor = colors[tmp];
                 hotTextColorCombo.Text = tmp;
                 hotTextColorCombo.SetNeedsDisplay();
                 scroll.SetNeedsDisplay();
@@ -198,22 +168,19 @@ namespace sakura.frameviews
 
             // DOWN
             scroll.Add(new Label("DOWN: ") { X = 1, Y = y });
-            myKey =
-                colors.FirstOrDefault(
-                    x => x.Value == Settings.Current.LogoColor).Key;
+            myKey = Settings.Current.Controls.DOWN;
             var logoColorCombo = new Button()
             {
                 X = 30,
                 Y = y,
                 Width = 3,
                 Height = 1,
-                Text = myKey
+                Text = myKey.ToString()
             };
 
             logoColorCombo.Clicked += () =>
             {
                 string tmp = DialogHelpers.PickKey();
-                Settings.Current.LogoColor = colors[tmp];
                 logoColorCombo.Text = tmp;
                 logoColorCombo.SetNeedsDisplay();
                 scroll.SetNeedsDisplay();
@@ -224,22 +191,19 @@ namespace sakura.frameviews
 
             // LEFT
             scroll.Add(new Label("LEFT: ") { X = 1, Y = y });
-            myKey =
-                colors.FirstOrDefault(
-                    x => x.Value == Settings.Current.LogoColor).Key;
+            myKey = Settings.Current.Controls.LEFT;
             var left = new Button()
             {
                 X = 30,
                 Y = y,
                 Width = 3,
                 Height = 1,
-                Text = myKey
+                Text = myKey.ToString()
             };
 
             logoColorCombo.Clicked += () =>
             {
                 string tmp = DialogHelpers.PickKey();
-                Settings.Current.LogoColor = colors[tmp];
                 logoColorCombo.Text = tmp;
                 logoColorCombo.SetNeedsDisplay();
                 scroll.SetNeedsDisplay();
@@ -251,22 +215,19 @@ namespace sakura.frameviews
 
             // RIGHT
             scroll.Add(new Label("RIGHT: ") { X = 1, Y = y });
-            myKey =
-                colors.FirstOrDefault(
-                    x => x.Value == Settings.Current.LogoColor).Key;
+            myKey = Settings.Current.Controls.RIGHT;
             var right = new Button()
             {
                 X = 30,
                 Y = y,
                 Width = 3,
                 Height = 1,
-                Text = myKey
+                Text = myKey.ToString()
             };
 
             right.Clicked += () =>
             {
                 string tmp = DialogHelpers.PickKey();
-                Settings.Current.LogoColor = colors[tmp];
                 logoColorCombo.Text = tmp;
                 logoColorCombo.SetNeedsDisplay();
                 scroll.SetNeedsDisplay();
@@ -285,6 +246,26 @@ namespace sakura.frameviews
             // Required so scroll bars calculate correctly
             scroll.ContentSize =
                 new Terminal.Gui.Size(Application.Top.Frame.Width - 2, y + 2);
+
+            saveBtn.Clicked += () =>
+              {
+                  try
+                  {
+                      // --- controls validation ---
+
+
+                      // --- apply settings ---
+                      Settings.Save();
+
+                      MessageBox.Query(Resources.Settings, Resources.Settingssavedsuccessfully, Resources.OK);
+                      Log.Write(Resources.Settingssaved);
+                  }
+                  catch (Exception ex)
+                  {
+                      MessageBox.ErrorQuery(Resources.FatalError, ex.Message, Resources.OK);
+                  }
+              };
+
 
         }
     }

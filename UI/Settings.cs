@@ -76,6 +76,15 @@ namespace sakura
             StopRom = Key.F4,
             OpenRomPath = Key.F5,
             OpenSramPath = Key.F6,
+            START = Key.a,
+            SELECT = Key.s,
+            A = Key.z,
+            B = Key.x,
+            UP = Key.CursorUp,
+            DOWN = Key.CursorDown,
+            LEFT = Key.CursorLeft,
+            RIGHT = Key.CursorRight
+
         };
 
         // ------------------------------
