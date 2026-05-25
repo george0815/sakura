@@ -192,9 +192,9 @@ CMakeFiles/sakura.dir/CORE/BUS/bus.cpp.o: \
  /home/Hunter/Documents/Github/sakura/CORE/BUS/../CART/../MAPPERS/mapper.h \
  /usr/include/c++/15.2.1/array /usr/include/c++/15.2.1/compare \
  /home/Hunter/Documents/Github/sakura/CORE/BUS/../CPU_6502/core.h \
- /home/Hunter/Documents/Github/sakura/CORE/BUS/../CPU_6502/../LOGGER/logger.h \
+ /home/Hunter/Documents/Github/sakura/CORE/BUS/../PPU_2C02/core_ppu.h \
+ /home/Hunter/Documents/Github/sakura/CORE/BUS/../LOGGER/logger.h \
  /usr/include/c++/15.2.1/fstream /usr/include/c++/15.2.1/bits/codecvt.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
- /usr/include/c++/15.2.1/bits/fstream.tcc \
- /home/Hunter/Documents/Github/sakura/CORE/BUS/../PPU_2C02/core_ppu.h
+ /usr/include/c++/15.2.1/bits/fstream.tcc

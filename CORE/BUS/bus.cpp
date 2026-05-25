@@ -1,4 +1,5 @@
 #include "bus.h"
+#include "../LOGGER/logger.h"
 #include <array>
 #include <cstdint>
 #include <iostream>

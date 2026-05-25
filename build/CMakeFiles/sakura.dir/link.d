@@ -19,7 +19,8 @@ sakura: \
   CMakeFiles/sakura.dir/CORE/CPU_6502/addressing_modes.cpp.o \
   CMakeFiles/sakura.dir/CORE/CPU_6502/core.cpp.o \
   CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o \
-  CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.o \
+  CMakeFiles/sakura.dir/CORE/LOGGER/cpu_logger.cpp.o \
+  CMakeFiles/sakura.dir/CORE/LOGGER/ppu_logger.cpp.o \
   CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.o \
   CMakeFiles/sakura.dir/CORE/MAPPERS/mapper4.cpp.o \
   CMakeFiles/sakura.dir/CORE/PPU_2C02/core_ppu.cpp.o \
@@ -97,7 +98,9 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/core.cpp.o:
 
 CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o:
 
-CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.o:
+CMakeFiles/sakura.dir/CORE/LOGGER/cpu_logger.cpp.o:
+
+CMakeFiles/sakura.dir/CORE/LOGGER/ppu_logger.cpp.o:
 
 CMakeFiles/sakura.dir/CORE/MAPPERS/mapper0.cpp.o:
 

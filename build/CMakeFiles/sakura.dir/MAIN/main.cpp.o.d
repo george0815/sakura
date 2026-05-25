@@ -193,11 +193,6 @@ CMakeFiles/sakura.dir/MAIN/main.cpp.o: \
  /home/Hunter/Documents/Github/sakura/MAIN/../CORE/BUS/../CART/../MAPPERS/mapper.h \
  /usr/include/c++/15.2.1/array /usr/include/c++/15.2.1/compare \
  /home/Hunter/Documents/Github/sakura/MAIN/../CORE/BUS/../CPU_6502/core.h \
- /home/Hunter/Documents/Github/sakura/MAIN/../CORE/BUS/../CPU_6502/../LOGGER/logger.h \
- /usr/include/c++/15.2.1/fstream /usr/include/c++/15.2.1/bits/codecvt.h \
- /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
- /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
- /usr/include/c++/15.2.1/bits/fstream.tcc \
  /home/Hunter/Documents/Github/sakura/MAIN/../CORE/BUS/../PPU_2C02/core_ppu.h \
  /usr/include/SDL2/SDL_audio.h /usr/include/SDL2/SDL_stdinc.h \
  /usr/include/SDL2/SDL_config.h /usr/include/SDL2/SDL_platform.h \
@@ -234,6 +229,11 @@ CMakeFiles/sakura.dir/MAIN/main.cpp.o: \
  /usr/include/c++/15.2.1/bits/parse_numbers.h \
  /usr/include/c++/15.2.1/bits/std_mutex.h \
  /usr/include/c++/15.2.1/bits/unique_lock.h \
+ /home/Hunter/Documents/Github/sakura/MAIN/../CORE/LOGGER/logger.h \
+ /usr/include/c++/15.2.1/fstream /usr/include/c++/15.2.1/bits/codecvt.h \
+ /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/include/c++/15.2.1/bits/fstream.tcc \
  /home/Hunter/Documents/Github/sakura/MAIN/./render.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_assert.h /usr/include/SDL2/SDL_audio.h \

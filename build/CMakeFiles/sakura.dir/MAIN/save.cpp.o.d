@@ -192,11 +192,6 @@ CMakeFiles/sakura.dir/MAIN/save.cpp.o: \
  /home/Hunter/Documents/Github/sakura/MAIN/../CORE/BUS/../CART/../MAPPERS/mapper.h \
  /usr/include/c++/15.2.1/array /usr/include/c++/15.2.1/compare \
  /home/Hunter/Documents/Github/sakura/MAIN/../CORE/BUS/../CPU_6502/core.h \
- /home/Hunter/Documents/Github/sakura/MAIN/../CORE/BUS/../CPU_6502/../LOGGER/logger.h \
- /usr/include/c++/15.2.1/fstream /usr/include/c++/15.2.1/bits/codecvt.h \
- /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
- /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
- /usr/include/c++/15.2.1/bits/fstream.tcc \
  /home/Hunter/Documents/Github/sakura/MAIN/../CORE/BUS/../PPU_2C02/core_ppu.h \
  /usr/include/c++/15.2.1/filesystem /usr/include/c++/15.2.1/bits/fs_fwd.h \
  /usr/include/c++/15.2.1/bits/chrono.h /usr/include/c++/15.2.1/ratio \
@@ -206,7 +201,7 @@ CMakeFiles/sakura.dir/MAIN/save.cpp.o: \
  /usr/include/c++/15.2.1/bits/locale_facets_nonio.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/time_members.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/messages_members.h \
- /usr/include/libintl.h \
+ /usr/include/libintl.h /usr/include/c++/15.2.1/bits/codecvt.h \
  /usr/include/c++/15.2.1/bits/locale_facets_nonio.tcc \
  /usr/include/c++/15.2.1/bits/locale_conv.h \
  /usr/include/c++/15.2.1/iomanip \
@@ -220,4 +215,7 @@ CMakeFiles/sakura.dir/MAIN/save.cpp.o: \
  /usr/include/c++/15.2.1/bits/unique_ptr.h \
  /usr/include/c++/15.2.1/ext/aligned_buffer.h \
  /usr/include/c++/15.2.1/bits/fs_dir.h \
- /usr/include/c++/15.2.1/bits/fs_ops.h
+ /usr/include/c++/15.2.1/bits/fs_ops.h /usr/include/c++/15.2.1/fstream \
+ /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/include/c++/15.2.1/bits/fstream.tcc

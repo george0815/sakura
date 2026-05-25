@@ -1,7 +1,6 @@
 #pragma once
 
 #include "../BUS/bus.h"
-#include "../LOGGER/logger.h"
 #include <array>
 #include <cstdint>
 #include <string>
@@ -58,18 +57,12 @@ public:
   // bus, the bus is basically the motherboard of the NES
   BUS *B;
 
-  // Logger instance
-  LOGGER *LOGGER_INSTANCE;
-
   // bool for detecting whether a page has been crossed, used by addressing
   // modes
   bool PAGE_CROSSED = false;
 
   // connects bus, will implement later
   void connect_bus(BUS *bus);
-
-  // sets up logger
-  void init_logger(LOGGER *logger);
 
   // 2 byte program counter, holds the address of the next opcode to be executed
   uint16_t PC = 0xC000;

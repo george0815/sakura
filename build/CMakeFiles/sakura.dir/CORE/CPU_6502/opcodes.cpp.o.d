@@ -192,9 +192,4 @@ CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.o: \
  /home/Hunter/Documents/Github/sakura/CORE/CPU_6502/../BUS/../CART/cart.h \
  /home/Hunter/Documents/Github/sakura/CORE/CPU_6502/../BUS/../CART/../MAPPERS/mapper.h \
  /usr/include/c++/15.2.1/array /usr/include/c++/15.2.1/compare \
- /home/Hunter/Documents/Github/sakura/CORE/CPU_6502/../BUS/../PPU_2C02/core_ppu.h \
- /home/Hunter/Documents/Github/sakura/CORE/CPU_6502/../LOGGER/logger.h \
- /usr/include/c++/15.2.1/fstream /usr/include/c++/15.2.1/bits/codecvt.h \
- /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
- /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
- /usr/include/c++/15.2.1/bits/fstream.tcc
+ /home/Hunter/Documents/Github/sakura/CORE/CPU_6502/../BUS/../PPU_2C02/core_ppu.h

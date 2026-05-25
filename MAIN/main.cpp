@@ -75,15 +75,8 @@ int main(int arc, char *argv[]) {
   const double TARGET_FRAME_MS = 1000.0 / 60.0988;
 
   CART cart;
-  LOGGER *logger = new LOGGER(false);
 
   int test = PARSE_FILE(rom_path, cart);
-  //  int test = PARSE_FILE("mmc3_clock_test.nes", cart);
-  //  int test = PARSE_FILE("mmc3_details_test.nes", cart);
-
-  // int test = PARSE_FILE("mmc3_a12_test.nes", cart);
-  //  int test = PARSE_FILE("mmc3_scanline_test.nes", cart);
-  //    int test = PARSE_FILE("nestest.nes", cart);
 
   bus.insert_cartridge(cart);
   LOAD_SRAM("TEST.sav", &bus);
@@ -95,7 +88,8 @@ int main(int arc, char *argv[]) {
 
   cpu.RESET_HANDLER();
 
-  cpu.init_logger(logger);
+  PPU_LOGGER *ppu_logger = new PPU_LOGGER(bus.PPU);
+  CPU_LOGGER *cpu_logger = new CPU_LOGGER(bus.CPU);
 
   bool running = true;
 
@@ -177,6 +171,10 @@ int main(int arc, char *argv[]) {
         case SDLK_l: // temporary load state button
           cout << "L PRESSED";
           pending_load_state = true;
+          break;
+        case SDLK_e: // temporary exit button
+          cout << "L PRESSED";
+          running = false;
 
           break;
         }
@@ -230,6 +228,8 @@ int main(int arc, char *argv[]) {
                      samples.size() * sizeof(int16_t));
     }
 
+    ppu_logger->WRITE();
+    cpu_logger->WRITE();
     render_frame(ppu.FRAMEBUFFER_DATA());
     ppu.CLEAR_FRAME_FLAG();
 
@@ -240,6 +240,8 @@ int main(int arc, char *argv[]) {
     }
   }
 
+  ppu_logger->WRITE_TO_FILE();
+  cpu_logger->WRITE_TO_FILE();
   SDL_DestroyWindow(window);
   SDL_Quit();
 }

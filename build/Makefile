@@ -538,29 +538,53 @@ CORE/CPU_6502/opcodes.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/CPU_6502/opcodes.cpp.s
 .PHONY : CORE/CPU_6502/opcodes.cpp.s
 
-CORE/LOGGER/logger.o: CORE/LOGGER/logger.cpp.o
-.PHONY : CORE/LOGGER/logger.o
+CORE/LOGGER/cpu_logger.o: CORE/LOGGER/cpu_logger.cpp.o
+.PHONY : CORE/LOGGER/cpu_logger.o
 
 # target to build an object file
-CORE/LOGGER/logger.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.o
-.PHONY : CORE/LOGGER/logger.cpp.o
+CORE/LOGGER/cpu_logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/LOGGER/cpu_logger.cpp.o
+.PHONY : CORE/LOGGER/cpu_logger.cpp.o
 
-CORE/LOGGER/logger.i: CORE/LOGGER/logger.cpp.i
-.PHONY : CORE/LOGGER/logger.i
+CORE/LOGGER/cpu_logger.i: CORE/LOGGER/cpu_logger.cpp.i
+.PHONY : CORE/LOGGER/cpu_logger.i
 
 # target to preprocess a source file
-CORE/LOGGER/logger.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.i
-.PHONY : CORE/LOGGER/logger.cpp.i
+CORE/LOGGER/cpu_logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/LOGGER/cpu_logger.cpp.i
+.PHONY : CORE/LOGGER/cpu_logger.cpp.i
 
-CORE/LOGGER/logger.s: CORE/LOGGER/logger.cpp.s
-.PHONY : CORE/LOGGER/logger.s
+CORE/LOGGER/cpu_logger.s: CORE/LOGGER/cpu_logger.cpp.s
+.PHONY : CORE/LOGGER/cpu_logger.s
 
 # target to generate assembly for a file
-CORE/LOGGER/logger.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/LOGGER/logger.cpp.s
-.PHONY : CORE/LOGGER/logger.cpp.s
+CORE/LOGGER/cpu_logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/LOGGER/cpu_logger.cpp.s
+.PHONY : CORE/LOGGER/cpu_logger.cpp.s
+
+CORE/LOGGER/ppu_logger.o: CORE/LOGGER/ppu_logger.cpp.o
+.PHONY : CORE/LOGGER/ppu_logger.o
+
+# target to build an object file
+CORE/LOGGER/ppu_logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/LOGGER/ppu_logger.cpp.o
+.PHONY : CORE/LOGGER/ppu_logger.cpp.o
+
+CORE/LOGGER/ppu_logger.i: CORE/LOGGER/ppu_logger.cpp.i
+.PHONY : CORE/LOGGER/ppu_logger.i
+
+# target to preprocess a source file
+CORE/LOGGER/ppu_logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/LOGGER/ppu_logger.cpp.i
+.PHONY : CORE/LOGGER/ppu_logger.cpp.i
+
+CORE/LOGGER/ppu_logger.s: CORE/LOGGER/ppu_logger.cpp.s
+.PHONY : CORE/LOGGER/ppu_logger.s
+
+# target to generate assembly for a file
+CORE/LOGGER/ppu_logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/CORE/LOGGER/ppu_logger.cpp.s
+.PHONY : CORE/LOGGER/ppu_logger.cpp.s
 
 CORE/MAPPERS/mapper0.o: CORE/MAPPERS/mapper0.cpp.o
 .PHONY : CORE/MAPPERS/mapper0.o
@@ -766,9 +790,12 @@ help:
 	@echo "... CORE/CPU_6502/opcodes.o"
 	@echo "... CORE/CPU_6502/opcodes.i"
 	@echo "... CORE/CPU_6502/opcodes.s"
-	@echo "... CORE/LOGGER/logger.o"
-	@echo "... CORE/LOGGER/logger.i"
-	@echo "... CORE/LOGGER/logger.s"
+	@echo "... CORE/LOGGER/cpu_logger.o"
+	@echo "... CORE/LOGGER/cpu_logger.i"
+	@echo "... CORE/LOGGER/cpu_logger.s"
+	@echo "... CORE/LOGGER/ppu_logger.o"
+	@echo "... CORE/LOGGER/ppu_logger.i"
+	@echo "... CORE/LOGGER/ppu_logger.s"
 	@echo "... CORE/MAPPERS/mapper0.o"
 	@echo "... CORE/MAPPERS/mapper0.i"
 	@echo "... CORE/MAPPERS/mapper0.s"

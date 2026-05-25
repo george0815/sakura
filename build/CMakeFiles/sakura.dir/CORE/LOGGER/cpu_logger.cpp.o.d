@@ -1,8 +1,9 @@
-CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o: \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/wrapper.cpp \
+CMakeFiles/sakura.dir/CORE/LOGGER/cpu_logger.cpp.o: \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/cpu_logger.cpp \
  /usr/include/stdc-predef.h \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/wrapper.h \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/../../MAIN/save.h \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/../CPU_6502/core.h \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/../CPU_6502/../BUS/bus.h \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/../CPU_6502/../BUS/../../MAIN/save.h \
  /usr/include/c++/15.2.1/cstdint \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -155,8 +156,9 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o: \
  /usr/include/c++/15.2.1/bits/stl_vector.h \
  /usr/include/c++/15.2.1/bits/stl_bvector.h \
  /usr/include/c++/15.2.1/bits/vector.tcc \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Buffer.h \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/blargg_common.h \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/../CPU_6502/../BUS/../APU_2A03/wrapper.h \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/../CPU_6502/../BUS/../APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Buffer.h \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/../CPU_6502/../BUS/../APU_2A03/Nes_Snd_Emu/nes_apu/blargg_common.h \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
  /usr/include/boost/config/compiler/gcc.hpp \
@@ -177,20 +179,22 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/wrapper.cpp.o: \
  /usr/include/boost/detail/workaround.hpp \
  /usr/include/boost/config/workaround.hpp /usr/include/c++/15.2.1/cassert \
  /usr/include/assert.h \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Synth.h \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.h \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Oscs.h \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Buffer.h \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/../CPU_6502/../BUS/../APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Synth.h \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/../CPU_6502/../BUS/../APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Apu.h \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/../CPU_6502/../BUS/../APU_2A03/Nes_Snd_Emu/nes_apu/Nes_Oscs.h \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/../CPU_6502/../BUS/../APU_2A03/Nes_Snd_Emu/nes_apu/Blip_Buffer.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/limits.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h \
  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
  /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
  /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
  /usr/include/bits/uio_lim.h \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/../BUS/bus.h \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/../BUS/../CART/cart.h \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/../BUS/../CART/../MAPPERS/mapper.h \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/../CPU_6502/../BUS/../CART/cart.h \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/../CPU_6502/../BUS/../CART/../MAPPERS/mapper.h \
  /usr/include/c++/15.2.1/array /usr/include/c++/15.2.1/compare \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/../BUS/../CPU_6502/core.h \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/../BUS/../PPU_2C02/core_ppu.h \
- /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/nes_apu/apu_snapshot.h
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/../CPU_6502/../BUS/../PPU_2C02/core_ppu.h \
+ /home/Hunter/Documents/Github/sakura/CORE/LOGGER/logger.h \
+ /usr/include/c++/15.2.1/fstream /usr/include/c++/15.2.1/bits/codecvt.h \
+ /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/include/c++/15.2.1/bits/fstream.tcc

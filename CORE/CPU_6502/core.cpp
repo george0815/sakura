@@ -204,8 +204,6 @@ void CPU_6502::connect_bus(BUS *b) {
   cout << "CPU <- BUS";
 }
 
-void CPU_6502::init_logger(LOGGER *l) { LOGGER_INSTANCE = l; }
-
 // Helper function for getting flags
 bool CPU_6502::GET_FLAG(STATUS value) {
 

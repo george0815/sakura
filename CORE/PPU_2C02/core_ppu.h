@@ -38,7 +38,6 @@ public:
   void CLEAR_FRAME_FLAG() { FRAME_DONE = false; }
   const array<uint8_t, 0x20> &PALETTE_DATA() const { return PALETTE; }
 
-private:
   const uint16_t PATTERN_TABLE_END = 0x2000;
   const uint16_t NAMETABLE_BASE = 0x2000;
   const uint16_t PALETTE_BASE = 0x3F00;

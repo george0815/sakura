@@ -85,12 +85,12 @@ clean: CMakeFiles/sakura.dir/clean
 CMakeFiles/sakura.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Hunter/Documents/Github/sakura/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25 "Built target sakura"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Hunter/Documents/Github/sakura/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Built target sakura"
 .PHONY : CMakeFiles/sakura.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sakura.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/Hunter/Documents/Github/sakura/build/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/Hunter/Documents/Github/sakura/build/CMakeFiles 26
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/sakura.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/Hunter/Documents/Github/sakura/build/CMakeFiles 0
 .PHONY : CMakeFiles/sakura.dir/rule
@@ -102,7 +102,7 @@ sakura: CMakeFiles/sakura.dir/rule
 # codegen rule for target.
 CMakeFiles/sakura.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/sakura.dir/build.make CMakeFiles/sakura.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Hunter/Documents/Github/sakura/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25 "Finished codegen for target sakura"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/Hunter/Documents/Github/sakura/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Finished codegen for target sakura"
 .PHONY : CMakeFiles/sakura.dir/codegen
 
 # clean rule for target.
