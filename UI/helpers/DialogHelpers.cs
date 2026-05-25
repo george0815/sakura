@@ -177,5 +177,42 @@ namespace sakura.helpers
 
             return null; // Canceled or invalid
         }
+
+
+        /// <summary>
+        /// Displays a dialog to pick a key for the controls
+        /// </summary>
+        /// <returns>The name of the selected color.</returns>
+        public static string PickKey()
+        {
+            var colors = SettingsView.colors;
+            var dlg = new Dialog("Input key", 50, 2)
+            {
+                // Set the color scheme for the dialog window
+                ColorScheme = new ColorScheme()
+                {
+                    Normal = Application.Driver.MakeAttribute(Settings.Current.TextColor, Color.Black),
+                    Focus = Application.Driver.MakeAttribute(Settings.Current.FocusTextColor, Color.Black),
+                    HotNormal = Application.Driver.MakeAttribute(Settings.Current.HotTextColor, Color.Black),
+                    HotFocus = Application.Driver.MakeAttribute(Settings.Current.FocusTextColor, Color.Black),
+                }
+            };
+
+            string result = Resources.Black; // Default color
+
+
+            dlg.Add(new Label("Waiting for input..."));
+
+            dlg.KeyDown += e =>
+            {
+                result = e.KeyEvent.Key.ToString();
+                Application.RequestStop();
+                e.Handled = true;
+            };
+
+
+            Application.Run(dlg);
+            return result;
+        }
     }
 }
