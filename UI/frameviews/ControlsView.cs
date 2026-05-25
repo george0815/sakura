@@ -49,7 +49,7 @@ namespace sakura.frameviews
             // START 
             scroll.Add(new Label("START: ") { X = 1, Y = y });
             var myKey = Settings.Current.Controls.START;
-            var bgColorCombo = new Button()
+            var startButton = new Button()
             {
                 X = 30,
                 Y = y,
@@ -58,26 +58,29 @@ namespace sakura.frameviews
                 Text = myKey.ToString()
             };
 
-            bgColorCombo.Clicked += () =>
+            startButton.Clicked += () =>
             {
                 // Pick color from grid dialog
-                string tmp = DialogHelpers.PickKey();
+                int tmp = DialogHelpers.PickKey();
+                Settings.Current.Controls.START = (Key)tmp;
 
                 // Update button label to reflect selection
-                bgColorCombo.Text = tmp;
+                char tmpChr = (char)tmp;
+                string tmpString = tmpChr.ToString();
+                startButton.Text = ((Key)tmp).ToString();
 
                 // Force redraw
-                bgColorCombo.SetNeedsDisplay();
+                startButton.SetNeedsDisplay();
                 scroll.SetNeedsDisplay();
             };
 
-            scroll.Add(bgColorCombo);
+            scroll.Add(startButton);
             y += 2;
 
             // SELECT
             scroll.Add(new Label("SELECT: ") { X = 1, Y = y });
             myKey = Settings.Current.Controls.SELECT;
-            var textColorCombo = new Button()
+            var selectButton = new Button()
             {
                 X = 30,
                 Y = y,
@@ -86,21 +89,29 @@ namespace sakura.frameviews
                 Text = myKey.ToString()
             };
 
-            textColorCombo.Clicked += () =>
+            selectButton.Clicked += () =>
             {
-                string tmp = DialogHelpers.PickKey();
-                textColorCombo.Text = tmp;
-                textColorCombo.SetNeedsDisplay();
+                // Pick color from grid dialog
+                int tmp = DialogHelpers.PickKey();
+                Settings.Current.Controls.SELECT = (Key)tmp;
+
+                // Update button label to reflect selection
+                char tmpChr = (char)tmp;
+                string tmpString = tmpChr.ToString();
+                selectButton.Text = ((Key)tmp).ToString();
+
+                // Force redraw
+                selectButton.SetNeedsDisplay();
                 scroll.SetNeedsDisplay();
             };
 
-            scroll.Add(textColorCombo);
+            scroll.Add(selectButton);
             y += 2;
 
             // A
             scroll.Add(new Label("A: ") { X = 1, Y = y });
             myKey = Settings.Current.Controls.A;
-            var backgroundFocusColorCombo = new Button()
+            var aButton = new Button()
             {
                 X = 30,
                 Y = y,
@@ -109,21 +120,29 @@ namespace sakura.frameviews
                 Text = myKey.ToString()
             };
 
-            backgroundFocusColorCombo.Clicked += () =>
+            aButton.Clicked += () =>
             {
-                string tmp = DialogHelpers.PickKey();
-                backgroundFocusColorCombo.Text = tmp;
-                backgroundFocusColorCombo.SetNeedsDisplay();
+                // Pick color from grid dialog
+                int tmp = DialogHelpers.PickKey();
+                Settings.Current.Controls.A = (Key)tmp;
+
+                // Update button label to reflect selection
+                char tmpChr = (char)tmp;
+                string tmpString = tmpChr.ToString();
+                aButton.Text = ((Key)tmp).ToString();
+
+                // Force redraw
+                aButton.SetNeedsDisplay();
                 scroll.SetNeedsDisplay();
             };
 
-            scroll.Add(backgroundFocusColorCombo);
+            scroll.Add(aButton);
             y += 2;
 
             // B
             scroll.Add(new Label("B: ") { X = 1, Y = y });
             myKey = Settings.Current.Controls.B;
-            var textFocusColorCombo = new Button()
+            var bButton = new Button()
             {
                 X = 30,
                 Y = y,
@@ -132,21 +151,29 @@ namespace sakura.frameviews
                 Text = myKey.ToString()
             };
 
-            textFocusColorCombo.Clicked += () =>
+            bButton.Clicked += () =>
             {
-                string tmp = DialogHelpers.PickKey();
-                textFocusColorCombo.Text = tmp;
-                textFocusColorCombo.SetNeedsDisplay();
+                // Pick color from grid dialog
+                int tmp = DialogHelpers.PickKey();
+                Settings.Current.Controls.B = (Key)tmp;
+
+                // Update button label to reflect selection
+                char tmpChr = (char)tmp;
+                string tmpString = tmpChr.ToString();
+                bButton.Text = ((Key)tmp).ToString();
+
+                // Force redraw
+                bButton.SetNeedsDisplay();
                 scroll.SetNeedsDisplay();
             };
 
-            scroll.Add(textFocusColorCombo);
+            scroll.Add(bButton);
             y += 2;
 
             // UP
             scroll.Add(new Label("UP: ") { X = 1, Y = y });
             myKey = Settings.Current.Controls.UP;
-            var hotTextColorCombo = new Button()
+            var upButton = new Button()
             {
                 X = 30,
                 Y = y,
@@ -155,21 +182,29 @@ namespace sakura.frameviews
                 Text = myKey.ToString()
             };
 
-            hotTextColorCombo.Clicked += () =>
+            upButton.Clicked += () =>
             {
-                string tmp = DialogHelpers.PickKey();
-                hotTextColorCombo.Text = tmp;
-                hotTextColorCombo.SetNeedsDisplay();
+                // Pick color from grid dialog
+                int tmp = DialogHelpers.PickKey();
+                Settings.Current.Controls.UP = (Key)tmp;
+
+                // Update button label to reflect selection
+                char tmpChr = (char)tmp;
+                string tmpString = tmpChr.ToString();
+                upButton.Text = ((Key)tmp).ToString();
+
+                // Force redraw
+                upButton.SetNeedsDisplay();
                 scroll.SetNeedsDisplay();
             };
 
-            scroll.Add(hotTextColorCombo);
+            scroll.Add(upButton);
             y += 2;
 
             // DOWN
             scroll.Add(new Label("DOWN: ") { X = 1, Y = y });
             myKey = Settings.Current.Controls.DOWN;
-            var logoColorCombo = new Button()
+            var downButton = new Button()
             {
                 X = 30,
                 Y = y,
@@ -178,21 +213,29 @@ namespace sakura.frameviews
                 Text = myKey.ToString()
             };
 
-            logoColorCombo.Clicked += () =>
+            downButton.Clicked += () =>
             {
-                string tmp = DialogHelpers.PickKey();
-                logoColorCombo.Text = tmp;
-                logoColorCombo.SetNeedsDisplay();
+                // Pick color from grid dialog
+                int tmp = DialogHelpers.PickKey();
+                Settings.Current.Controls.DOWN = (Key)tmp;
+
+                // Update button label to reflect selection
+                char tmpChr = (char)tmp;
+                string tmpString = tmpChr.ToString();
+                downButton.Text = ((Key)tmp).ToString();
+
+                // Force redraw
+                downButton.SetNeedsDisplay();
                 scroll.SetNeedsDisplay();
             };
 
-            scroll.Add(logoColorCombo);
+            scroll.Add(downButton);
             y += 2;
 
             // LEFT
             scroll.Add(new Label("LEFT: ") { X = 1, Y = y });
             myKey = Settings.Current.Controls.LEFT;
-            var left = new Button()
+            var leftButton = new Button()
             {
                 X = 30,
                 Y = y,
@@ -201,22 +244,30 @@ namespace sakura.frameviews
                 Text = myKey.ToString()
             };
 
-            logoColorCombo.Clicked += () =>
+            leftButton.Clicked += () =>
             {
-                string tmp = DialogHelpers.PickKey();
-                logoColorCombo.Text = tmp;
-                logoColorCombo.SetNeedsDisplay();
+                // Pick color from grid dialog
+                int tmp = DialogHelpers.PickKey();
+                Settings.Current.Controls.LEFT = (Key)tmp;
+
+                // Update button label to reflect selection
+                char tmpChr = (char)tmp;
+                string tmpString = tmpChr.ToString();
+                leftButton.Text = ((Key)tmp).ToString();
+
+                // Force redraw
+                leftButton.SetNeedsDisplay();
                 scroll.SetNeedsDisplay();
             };
 
-            scroll.Add(left);
+            scroll.Add(leftButton);
             y += 2;
 
 
             // RIGHT
             scroll.Add(new Label("RIGHT: ") { X = 1, Y = y });
             myKey = Settings.Current.Controls.RIGHT;
-            var right = new Button()
+            var rightButton = new Button()
             {
                 X = 30,
                 Y = y,
@@ -225,15 +276,23 @@ namespace sakura.frameviews
                 Text = myKey.ToString()
             };
 
-            right.Clicked += () =>
+            rightButton.Clicked += () =>
             {
-                string tmp = DialogHelpers.PickKey();
-                logoColorCombo.Text = tmp;
-                logoColorCombo.SetNeedsDisplay();
+                // Pick color from grid dialog
+                int tmp = DialogHelpers.PickKey();
+                Settings.Current.Controls.RIGHT = (Key)tmp;
+
+                // Update button label to reflect selection
+                char tmpChr = (char)tmp;
+                string tmpString = tmpChr.ToString();
+                rightButton.Text = ((Key)tmp).ToString();
+
+                // Force redraw
+                rightButton.SetNeedsDisplay();
                 scroll.SetNeedsDisplay();
             };
 
-            scroll.Add(right);
+            scroll.Add(rightButton);
             y += 2;
 
 
@@ -252,7 +311,22 @@ namespace sakura.frameviews
                   try
                   {
                       // --- controls validation ---
+                      Key[] tmpKeys = [
+                          Settings.Current.Controls.START,
+                          Settings.Current.Controls.SELECT,
+                          Settings.Current.Controls.A,
+                          Settings.Current.Controls.B,
+                          Settings.Current.Controls.UP,
+                          Settings.Current.Controls.DOWN,
+                          Settings.Current.Controls.LEFT,
+                          Settings.Current.Controls.RIGHT,
+                      ];
 
+                      if (tmpKeys.Distinct().Count() != tmpKeys.Count())
+                      {
+                          MessageBox.ErrorQuery(Resources.Error, "Cannot have the same key for multiple buttons.", Resources.OK);
+                          return;
+                      }
 
                       // --- apply settings ---
                       Settings.Save();

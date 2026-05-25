@@ -6,7 +6,7 @@ namespace sakura.helpers
     /// Represents a set of configurable hotkeys for rom operations.
     /// This struct holds the key mappings for starting/stopping roms and opening path folders.
     /// </summary>
-    public struct RomHotkeys
+    public class RomHotkeys
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="RomHotkeys"/> struct.
