@@ -13,3 +13,11 @@ const uint32_t TARGET_AUDIO_LATENCY_MS = 40;
 const uint32_t BYTES_PER_SAMPLE = sizeof(int16_t);
 const uint32_t TARGET_QUEUE_BYTES =
     (44100 * TARGET_AUDIO_LATENCY_MS / 1000) * BYTES_PER_SAMPLE;
+
+enum SHADER {
+
+};
+
+enum RESOLUTION {
+
+};

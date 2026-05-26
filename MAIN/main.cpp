@@ -6,6 +6,7 @@
 #include "save.h"
 #include <SDL2/SDL_audio.h>
 #include <SDL2/SDL_events.h>
+#include <SDL2/SDL_keyboard.h>
 #include <SDL2/SDL_keycode.h>
 #include <SDL2/SDL_timer.h>
 #include <SDL2/SDL_video.h>
@@ -15,16 +16,38 @@
 #include <boost/program_options/variables_map.hpp>
 #include <cstdint>
 #include <iostream>
+#include <nlohmann/json.hpp>
+#include <unordered_map>
 
 using namespace std;
 using namespace boost::program_options;
+using namespace nlohmann;
 using namespace SAVE_MANAGER;
 
 int main(int arc, char *argv[]) {
 
+  typedef struct {
+    SDL_KeyCode A;
+    SDL_KeyCode B;
+    SDL_KeyCode START;
+    SDL_KeyCode SELECT;
+    SDL_KeyCode UP;
+    SDL_KeyCode DOWN;
+    SDL_KeyCode LEFT;
+    SDL_KeyCode RIGHT;
+  } Controls;
+  typedef struct {
+    SHADER shader;
+    RESOLUTION resolution;
+    string log_path;
+    Controls controls;
+
+  } Settings;
+
   BUS bus;
   CPU_6502 cpu;
   PPU_2C02 ppu;
+  Settings settings;
 
   deque<int16_t> AUDIO_QUEUE;
   mutex AUDIO_MUTEX;
@@ -48,8 +71,44 @@ int main(int arc, char *argv[]) {
   notify(vm);
 
   rom_path = vm["rom"].as<string>();
-  cout << "FGheionhtiowentoinweoq" << endl;
-  cout << rom_path << endl;
+
+  ifstream settings_file("./cfg.json");
+
+  json settingsData = json::parse(settings_file);
+
+  // Set settings
+  settings.log_path = settingsData["LogPath"];
+  // settings.shader = settingsData["Shader"];
+  // settings.resolution = settingsData["Resolution"];
+  settings.controls.START =
+      static_cast<SDL_KeyCode>(settingsData["Controls"]["START"].get<int>());
+  settings.controls.SELECT =
+      static_cast<SDL_KeyCode>(settingsData["Controls"]["SELECT"].get<int>());
+  settings.controls.A =
+      static_cast<SDL_KeyCode>(settingsData["Controls"]["A"].get<int>());
+  settings.controls.B =
+      static_cast<SDL_KeyCode>(settingsData["Controls"]["B"].get<int>());
+  settings.controls.UP =
+      static_cast<SDL_KeyCode>(settingsData["Controls"]["UP"].get<int>());
+  settings.controls.DOWN =
+      static_cast<SDL_KeyCode>(settingsData["Controls"]["DOWN"].get<int>());
+  settings.controls.LEFT =
+      static_cast<SDL_KeyCode>(settingsData["Controls"]["LEFT"].get<int>());
+  settings.controls.RIGHT =
+      static_cast<SDL_KeyCode>(settingsData["Controls"]["RIGHT"].get<int>());
+
+  unordered_map<SDL_Keycode, BUS::CONTROLLER_BUTTON> keymap = {
+
+      {settings.controls.START, BUS::CONTROLLER_BUTTON::START},
+      {settings.controls.SELECT, BUS::CONTROLLER_BUTTON::SELECT},
+      {settings.controls.A, BUS::CONTROLLER_BUTTON::A},
+      {settings.controls.B, BUS::CONTROLLER_BUTTON::B},
+      {settings.controls.UP, BUS::CONTROLLER_BUTTON::UP},
+      {settings.controls.DOWN, BUS::CONTROLLER_BUTTON::DOWN},
+      {settings.controls.LEFT, BUS::CONTROLLER_BUTTON::LEFT},
+      {settings.controls.RIGHT, BUS::CONTROLLER_BUTTON::RIGHT},
+
+  };
 
   if (!init_sdl()) {
     return -1;
@@ -106,35 +165,32 @@ int main(int arc, char *argv[]) {
         running = false;
       }
       if (event.type == SDL_KEYDOWN) {
-        // cout << "KEY PRESSED: " << event.key.keysym.sym;
-        switch (event.key.keysym.sym) {
-        case SDLK_a:
-          bus.SET_CONTROLLER_BUTTON(0, BUS::CONTROLLER_BUTTON::A, true);
-          break;
-        case SDLK_b:
-          bus.SET_CONTROLLER_BUTTON(0, BUS::CONTROLLER_BUTTON::B, true);
-          break;
-        case SDLK_s:
-          bus.SET_CONTROLLER_BUTTON(0, BUS::CONTROLLER_BUTTON::SELECT, true);
-          break;
-        case SDLK_f:
-          bus.SET_CONTROLLER_BUTTON(0, BUS::CONTROLLER_BUTTON::START, true);
-          break;
-        case SDLK_UP:
-          bus.SET_CONTROLLER_BUTTON(0, BUS::CONTROLLER_BUTTON::UP, true);
-          break;
-        case SDLK_DOWN:
-          bus.SET_CONTROLLER_BUTTON(0, BUS::CONTROLLER_BUTTON::DOWN, true);
-          break;
-        case SDLK_LEFT:
-          bus.SET_CONTROLLER_BUTTON(0, BUS::CONTROLLER_BUTTON::LEFT, true);
-          break;
-        case SDLK_RIGHT:
-          bus.SET_CONTROLLER_BUTTON(0, BUS::CONTROLLER_BUTTON::RIGHT, true);
-          break;
+
+        SDL_Keycode key = event.key.keysym.sym;
+        cout << "KEY PRESSED: " << SDL_GetKeyName(key) << endl;
+
+        // get KV pair
+        auto map_KV_pair = keymap.find(key);
+
+        //->second is map value, first is map key
+        if (map_KV_pair != keymap.end()) {
+          cout << "KEY: " << SDL_GetKeyName(map_KV_pair->first) << endl;
+          cout << "KEY PRESSED: " << endl;
+          bus.SET_CONTROLLER_BUTTON(0, map_KV_pair->second, true);
         }
+
       } else if (event.type == SDL_KEYUP) {
-        // cout << "KEY RELEASED: " << event.key.keysym.sym;
+        SDL_Keycode key = event.key.keysym.sym;
+
+        // get KV pair
+        auto map_KV_pair = keymap.find(key);
+
+        //->second is map value, first is map key
+        if (map_KV_pair != keymap.end()) {
+          cout << "KEY RELEASED: " << endl;
+          bus.SET_CONTROLLER_BUTTON(0, map_KV_pair->second, false);
+        }
+        /*
         switch (event.key.keysym.sym) {
         case SDLK_a:
           bus.SET_CONTROLLER_BUTTON(0, BUS::CONTROLLER_BUTTON::A, false);
@@ -177,7 +233,7 @@ int main(int arc, char *argv[]) {
           running = false;
 
           break;
-        }
+        }*/
       }
     }
 

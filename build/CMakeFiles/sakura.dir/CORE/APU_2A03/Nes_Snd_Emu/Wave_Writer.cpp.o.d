@@ -2,13 +2,13 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/Wave_Writer.cpp.o: \
  /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/Wave_Writer.cpp \
  /usr/include/stdc-predef.h \
  /home/Hunter/Documents/Github/sakura/CORE/APU_2A03/Nes_Snd_Emu/Wave_Writer.hpp \
- /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/include/stddef.h \
  /usr/include/stdio.h /usr/include/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
  /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/16.1.1/include/stdarg.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
  /usr/include/bits/time64.h /usr/include/bits/types/__fpos_t.h \
  /usr/include/bits/types/__mbstate_t.h \
@@ -17,11 +17,11 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/Wave_Writer.cpp.o: \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h /usr/include/bits/floatn.h \
  /usr/include/bits/floatn-common.h /usr/include/assert.h \
- /usr/include/c++/15.2.1/stdlib.h /usr/include/c++/15.2.1/cstdlib \
- /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
- /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
- /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
- /usr/include/c++/15.2.1/pstl/pstl_config.h /usr/include/stdlib.h \
+ /usr/include/c++/16.1.1/stdlib.h /usr/include/c++/16.1.1/cstdlib \
+ /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/c++config.h \
+ /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/os_defines.h \
+ /usr/include/c++/16.1.1/x86_64-pc-linux-gnu/bits/cpu_defines.h \
+ /usr/include/c++/16.1.1/pstl/pstl_config.h /usr/include/stdlib.h \
  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
  /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
  /usr/include/sys/types.h /usr/include/bits/types/clock_t.h \
@@ -38,4 +38,4 @@ CMakeFiles/sakura.dir/CORE/APU_2A03/Nes_Snd_Emu/Wave_Writer.cpp.o: \
  /usr/include/bits/pthreadtypes-arch.h \
  /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/bits/stdlib-float.h /usr/include/c++/15.2.1/bits/std_abs.h
+ /usr/include/bits/stdlib-float.h /usr/include/c++/16.1.1/bits/std_abs.h
