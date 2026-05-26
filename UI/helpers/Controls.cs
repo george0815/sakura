@@ -40,6 +40,18 @@ namespace sakura.helpers
 
 
         /// <summary>
+        /// The key used to open a rom's SRAM .sav folder.
+        /// Default is F6.
+        /// </summary>
+        public Key SaveState { get; set; } = Key.F7;
+
+        /// <summary>
+        /// The key used to open a rom's SRAM .sav folder.
+        /// Default is F6.
+        /// </summary>
+        public Key LoadState { get; set; } = Key.F8;
+
+        /// <summary>
         /// Start button
         /// Default is a.
         /// </summary>

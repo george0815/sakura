@@ -136,7 +136,7 @@ namespace sakura
             {
                 ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
                 {
-                    Normal = Application.Driver.MakeAttribute(Color.Red, Settings.Current.BackgroundColor)
+                    Normal = Application.Driver.MakeAttribute(Color.Blue, Settings.Current.BackgroundColor)
                 }),
                 X = (Settings.Current.DisableASCII ? 30 : SettingsData.LogoWidth) + 30,
                 Y = 3
@@ -156,10 +156,32 @@ namespace sakura
             {
                 ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
                 {
-                    Normal = Application.Driver.MakeAttribute(Color.Blue, Settings.Current.BackgroundColor)
+                    Normal = Application.Driver.MakeAttribute(Color.Magenta, Settings.Current.BackgroundColor)
                 }),
                 X = (Settings.Current.DisableASCII ? 42 : SettingsData.LogoWidth) + 30,
                 Y = (Settings.Current.DisableASCII ? 3 : 7)
+
+            });
+
+            headerScroll.Add(new Label($"{"Save state: "}{Settings.Current.Controls.SaveState}")
+            {
+                ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
+                {
+                    Normal = Application.Driver.MakeAttribute(Color.Red, Settings.Current.BackgroundColor)
+                }),
+                X = (Settings.Current.DisableASCII ? 62 : SettingsData.LogoWidth) + 30,
+                Y = (Settings.Current.DisableASCII ? 1 : 9)
+
+            });
+
+            headerScroll.Add(new Label($"{"Load state: "}{Settings.Current.Controls.LoadState}")
+            {
+                ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
+                {
+                    Normal = Application.Driver.MakeAttribute(Color.BrightCyan, Settings.Current.BackgroundColor)
+                }),
+                X = (Settings.Current.DisableASCII ? 62 : SettingsData.LogoWidth) + 30,
+                Y = (Settings.Current.DisableASCII ? 3 : 11)
 
             });
 

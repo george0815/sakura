@@ -130,7 +130,7 @@ namespace sakura.frameviews
             scroll.Add(new Label("Rom paths") { X = 1, Y = y });
             var romDirs = new TextView()
             {
-                X = 20,
+                X = 30,
                 Y = y,
                 Width = 40,
                 Height = 5,
@@ -168,18 +168,32 @@ namespace sakura.frameviews
             scroll.Add(logFileDialogBtn);
             y += 2;
 
-            // Settings file location
-            scroll.Add(new Label(Resources.SettingsPath) { X = 1, Y = y });
-            var settingsPathField =
-                new TextField(Settings.Current.SettingsPath ?? "")
+            // SRAM saves location
+            scroll.Add(new Label("SRAM Path:") { X = 1, Y = y });
+            var sramFolderPathField =
+                new TextField(Settings.Current.SramPath ?? "")
                 {
                     X = 30,
                     Y = y,
                     Width = 40
                 };
-            scroll.Add(settingsPathField);
-            var settingsFileDialogBtn = new Button("...") { X = 71, Y = y };
-            scroll.Add(settingsFileDialogBtn);
+            scroll.Add(sramFolderPathField);
+            var sramFolderDialogBtn = new Button("...") { X = 71, Y = y };
+            scroll.Add(sramFolderDialogBtn);
+            y += 2;
+
+            // SRAM saves location
+            scroll.Add(new Label("Save State Path:") { X = 1, Y = y });
+            var stateFolderPathField =
+                new TextField(Settings.Current.StatePath ?? "")
+                {
+                    X = 30,
+                    Y = y,
+                    Width = 40
+                };
+            scroll.Add(stateFolderPathField);
+            var stateFolderDialogBtn = new Button("...") { X = 71, Y = y };
+            scroll.Add(stateFolderDialogBtn);
             y += 3;
 
             #endregion
@@ -370,10 +384,10 @@ namespace sakura.frameviews
             logFileDialogBtn.Clicked += () =>
             {
                 string? path =
-                    DialogHelpers.ShowSaveFileDialog(
+                    DialogHelpers.ShowFolderDialog(
                         Resources.Selectlogfilepath,
-                        Resources.Selectfilenameforthelogfile,
-                        [".txt"]);
+
+                        "Select folder for log files.");
 
                 if (!string.IsNullOrWhiteSpace(path))
                 {
@@ -381,27 +395,38 @@ namespace sakura.frameviews
                 }
             };
 
-            settingsFileDialogBtn.Clicked += () =>
+            sramFolderDialogBtn.Clicked += () =>
             {
                 string? path =
-                    DialogHelpers.ShowSaveFileDialog(
-                        Resources.Selectconfigfilepath,
-                        Resources.Selectfilenamefortheconfigfile,
-                        [".json"]);
+                    DialogHelpers.ShowFolderDialog(
+                        "Select path for SRAM save files",
+                        "Select folder for SRAM save files.");
 
                 if (!string.IsNullOrWhiteSpace(path))
                 {
-                    settingsPathField.Text = path;
+                    sramFolderPathField.Text = path;
+                }
+            };
+
+            stateFolderDialogBtn.Clicked += () =>
+            {
+                string? path =
+                    DialogHelpers.ShowFolderDialog(
+                        "Select path for save state files",
+                        "Select folder for save state files.");
+
+                if (!string.IsNullOrWhiteSpace(path))
+                {
+                    stateFolderPathField.Text = path;
                 }
             };
 
             romFolderDialogBtn.Clicked += () =>
             {
                 string? path =
-                    DialogHelpers.ShowSaveFileDialog(
+                    DialogHelpers.ShowFolderDialog(
                         "Select rom folder",
-                        "Select the folder that has roms in it",
-                        [""]);
+                        "Select the folder that has roms in it");
 
                 if (!string.IsNullOrWhiteSpace(path))
                 {
@@ -436,7 +461,8 @@ namespace sakura.frameviews
 
                     string romPath = romPathField.Text.ToString()!.Trim();
                     string logPath = logPathField.Text.ToString()!.Trim();
-                    string settingsPath = settingsPathField.Text.ToString()!.Trim();
+                    string sramPath = sramFolderPathField.Text.ToString()!.Trim();
+                    string statePath = stateFolderPathField.Text.ToString()!.Trim();
 
                     if (string.IsNullOrWhiteSpace(romPath))
                     {
@@ -462,12 +488,17 @@ namespace sakura.frameviews
                         return;
                     }
 
-                    if (string.IsNullOrWhiteSpace(settingsPath))
+                    if (string.IsNullOrWhiteSpace(sramPath))
                     {
-                        MessageBox.ErrorQuery(Resources.Error, Resources.Settingspathcannotbeempty, Resources.OK);
+                        MessageBox.ErrorQuery(Resources.Error, "SRAM path cannot be empty.", Resources.OK);
                         return;
                     }
 
+                    if (string.IsNullOrWhiteSpace(statePath))
+                    {
+                        MessageBox.ErrorQuery(Resources.Error, "Save state path cannot be empty.", Resources.OK);
+                        return;
+                    }
                     // --- apply settings ---
 
 
@@ -480,7 +511,7 @@ namespace sakura.frameviews
                     Settings.Current.DefaultRomPath = romPath;
                     Settings.Current.AllRomPaths = romDirsList;
                     Settings.Current.LogPath = logPath;
-                    Settings.Current.SettingsPath = settingsPath;
+                    Settings.Current.SramPath = sramPath;
 
                     Settings.Current.BackgroundColor = colors[bgColorCombo.Text.ToString()!];
                     Settings.Current.TextColor = colors[textColorCombo.Text.ToString()!];

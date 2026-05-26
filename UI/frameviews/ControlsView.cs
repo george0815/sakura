@@ -46,9 +46,199 @@ namespace sakura.frameviews
 
             #region CONTROLS SETTINGS
 
+            // START ROM
+            scroll.Add(new Label("START ROM: ") { X = 1, Y = y });
+            var myKey = Settings.Current.Controls.StartRom;
+            var startRomButton = new Button()
+            {
+                X = 30,
+                Y = y,
+                Width = 3,
+                Height = 1,
+                Text = myKey.ToString()
+            };
+
+            startRomButton.Clicked += () =>
+            {
+                // Pick color from grid dialog
+                int tmp = DialogHelpers.PickKey();
+                Settings.Current.Controls.StartRom = (Key)tmp;
+
+                // Update button label to reflect selection
+                char tmpChr = (char)tmp;
+                string tmpString = tmpChr.ToString();
+                startRomButton.Text = ((Key)tmp).ToString();
+
+                // Force redraw
+                startRomButton.SetNeedsDisplay();
+                scroll.SetNeedsDisplay();
+            };
+
+            scroll.Add(startRomButton);
+            y += 2;
+
+            // STOP ROM 
+            scroll.Add(new Label("STOP ROM: ") { X = 1, Y = y });
+            myKey = Settings.Current.Controls.StopRom;
+            var stopRomButton = new Button()
+            {
+                X = 30,
+                Y = y,
+                Width = 3,
+                Height = 1,
+                Text = myKey.ToString()
+            };
+
+            stopRomButton.Clicked += () =>
+            {
+                // Pick color from grid dialog
+                int tmp = DialogHelpers.PickKey();
+                Settings.Current.Controls.StopRom = (Key)tmp;
+
+                // Update button label to reflect selection
+                char tmpChr = (char)tmp;
+                string tmpString = tmpChr.ToString();
+                stopRomButton.Text = ((Key)tmp).ToString();
+
+                // Force redraw
+                stopRomButton.SetNeedsDisplay();
+                scroll.SetNeedsDisplay();
+            };
+
+            scroll.Add(stopRomButton);
+            y += 2;
+
+
+            // OPEN ROM FOLDER 
+            scroll.Add(new Label("OPEN ROM FOLDER: ") { X = 1, Y = y });
+            myKey = Settings.Current.Controls.OpenRomPath;
+            var openRomPathButton = new Button()
+            {
+                X = 30,
+                Y = y,
+                Width = 3,
+                Height = 1,
+                Text = myKey.ToString()
+            };
+
+            openRomPathButton.Clicked += () =>
+            {
+                // Pick color from grid dialog
+                int tmp = DialogHelpers.PickKey();
+                Settings.Current.Controls.OpenRomPath = (Key)tmp;
+
+                // Update button label to reflect selection
+                char tmpChr = (char)tmp;
+                string tmpString = tmpChr.ToString();
+                openRomPathButton.Text = ((Key)tmp).ToString();
+
+                // Force redraw
+                openRomPathButton.SetNeedsDisplay();
+                scroll.SetNeedsDisplay();
+            };
+
+            scroll.Add(openRomPathButton);
+            y += 2;
+
+
+            // OPEN SRAM PATH 
+            scroll.Add(new Label("OPEN SRAM PATH: ") { X = 1, Y = y });
+            myKey = Settings.Current.Controls.OpenSramPath;
+            var openSramButton = new Button()
+            {
+                X = 30,
+                Y = y,
+                Width = 3,
+                Height = 1,
+                Text = myKey.ToString()
+            };
+
+            openSramButton.Clicked += () =>
+            {
+                // Pick color from grid dialog
+                int tmp = DialogHelpers.PickKey();
+                Settings.Current.Controls.OpenSramPath = (Key)tmp;
+
+                // Update button label to reflect selection
+                char tmpChr = (char)tmp;
+                string tmpString = tmpChr.ToString();
+                openSramButton.Text = ((Key)tmp).ToString();
+
+                // Force redraw
+                openSramButton.SetNeedsDisplay();
+                scroll.SetNeedsDisplay();
+            };
+
+            scroll.Add(openSramButton);
+            y += 2;
+
+
+            // SAVE STATE 
+            scroll.Add(new Label("SAVE STATE: ") { X = 1, Y = y });
+            myKey = Settings.Current.Controls.SaveState;
+            var saveStateButton = new Button()
+            {
+                X = 30,
+                Y = y,
+                Width = 3,
+                Height = 1,
+                Text = myKey.ToString()
+            };
+
+            saveStateButton.Clicked += () =>
+            {
+                // Pick color from grid dialog
+                int tmp = DialogHelpers.PickKey();
+                Settings.Current.Controls.SaveState = (Key)tmp;
+
+                // Update button label to reflect selection
+                char tmpChr = (char)tmp;
+                string tmpString = tmpChr.ToString();
+                saveStateButton.Text = ((Key)tmp).ToString();
+
+                // Force redraw
+                saveStateButton.SetNeedsDisplay();
+                scroll.SetNeedsDisplay();
+            };
+
+            scroll.Add(saveStateButton);
+            y += 2;
+
+
+            // LOAD STATE 
+            scroll.Add(new Label("LOAD STATE: ") { X = 1, Y = y });
+            myKey = Settings.Current.Controls.LoadState;
+            var loadStateButton = new Button()
+            {
+                X = 30,
+                Y = y,
+                Width = 3,
+                Height = 1,
+                Text = myKey.ToString()
+            };
+
+            loadStateButton.Clicked += () =>
+            {
+                // Pick color from grid dialog
+                int tmp = DialogHelpers.PickKey();
+                Settings.Current.Controls.LoadState = (Key)tmp;
+
+                // Update button label to reflect selection
+                char tmpChr = (char)tmp;
+                string tmpString = tmpChr.ToString();
+                loadStateButton.Text = ((Key)tmp).ToString();
+
+                // Force redraw
+                loadStateButton.SetNeedsDisplay();
+                scroll.SetNeedsDisplay();
+            };
+
+            scroll.Add(loadStateButton);
+            y += 2;
+
             // START 
             scroll.Add(new Label("START: ") { X = 1, Y = y });
-            var myKey = Settings.Current.Controls.START;
+            myKey = Settings.Current.Controls.START;
             var startButton = new Button()
             {
                 X = 30,

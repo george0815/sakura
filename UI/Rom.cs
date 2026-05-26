@@ -56,7 +56,7 @@ public class Rom
                 {
                     Name = name,
                     RomPath = Path.Combine(file.DirectoryName!, file.Name),
-                    SramPath = Path.Combine(Settings.Current.DefaultSramPath!, name),
+                    SramPath = Path.Combine(Settings.Current.SramPath!, name),
                     NTSC = true,
                 };
                 tempRoms.Add(tempRom);

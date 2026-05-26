@@ -16,26 +16,11 @@ namespace sakura
         public static ushort HeaderHeight { get; set; } = 15;  // Default header height
         public static ushort LogoWidth { get; set; } = 55;     // Width of ASCII logo display
 
-        // ------------------------------
-        // Network Ports
-        // ------------------------------
-        public ushort Port { get; set; } = 55123;             // Main listening port
-        public ushort DhtPort { get; set; } = 55124;          // DHT listening port
-
-        // ------------------------------
-        // Maximum connections / transfer rates
-        // ------------------------------
-        public ushort MaxConnections { get; set; } = 100;
-        public int MaxDownloadSpeed { get; set; } = 100 /* to KB*/ * 1024 /* to MB*/ * 1024;
-        public int MaxUploadSpeed { get; set; } = 100 /* to KB*/ * 1024 /* to MB*/ * 1024;
-        public int RefreshInterval { get; set; } = 1000;      // UI refresh interval (ms)
 
         // ------------------------------
         // Client behavior flags
         // ------------------------------
         public bool DetailedLogging { get; set; } = true;
-        public bool StopSeedingWhenFinished { get; set; } = true;
-        public bool EnablePortForwarding { get; set; } = true;
         public bool HidetextCursor { get; set; } = true;
         public bool DisableColoredHotkeyInfo { get; set; } = false;
         public bool DisableASCII { get; set; } = false;
@@ -44,10 +29,11 @@ namespace sakura
         // Paths
         // ------------------------------
         public string? DefaultRomPath { get; set; } = "./";  // Default download folder
-        public string? DefaultSramPath { get; set; } = "./saves/sram";  // Default download folder
+        public string? SramPath { get; set; } = "./saves/sram/";  // Default sram folder
+        public string? StatePath { get; set; } = "./saves/state/";  // Default save states folder
         public List<string> AllRomPaths { get; set; } = new List<string>() { "./" };
-        public string? LogPath { get; set; } = "./log.txt";       // Log file path
-        public string SettingsPath { get; set; } = "cfg.json";    // Settings file
+        public string? LogPath { get; set; } = "./";       // Log file path
+        public string SettingsPath { get; set; } = "./cfg.json";    // Settings file
 
         // ------------------------------
         // UI Terminal.Gui.Colors
@@ -76,6 +62,8 @@ namespace sakura
             StopRom = Key.F4,
             OpenRomPath = Key.F5,
             OpenSramPath = Key.F6,
+            SaveState = Key.F7,
+            LoadState = Key.F8,
             START = Key.a,
             SELECT = Key.s,
             A = Key.z,

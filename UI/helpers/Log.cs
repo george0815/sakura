@@ -45,7 +45,7 @@ namespace sakura.helpers
         static internal void Save()
         {
             // Open file for writing, overwrite existing content
-            using StreamWriter writer = new(Settings.Current.LogPath!, false, Encoding.UTF8);
+            using StreamWriter writer = new("log.txt", false, Encoding.UTF8);
 
             // Join all log entries with newline and write to file
             writer.Write(string.Join("\n", LogList));
