@@ -38,6 +38,9 @@ namespace sakura
             Console.OutputEncoding = Encoding.UTF8;
 
 
+            // Swallow standard error
+            Console.SetError(TextWriter.Null);
+
             // ------------------------------
             // Initialize Terminal.Gui
             // ------------------------------

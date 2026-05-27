@@ -1,5 +1,7 @@
 //TODO: RESOURCE STRINGS AND ROM KEY HANDLERS
 using System.Data;
+using System.Diagnostics;
+using System.Runtime.InteropServices;
 using Terminal.Gui;
 using sakura.helpers;
 
@@ -101,20 +103,57 @@ namespace sakura.frameviews
                 return true;
             }
 
-            // --- Stop rom---
-            else if (keyEvent.Key == Settings.Current.Controls.StopRom)
-            {
-                Task.Run(async () =>
-                {
-                });
 
+            // --- Open rom folder ---
+            else if (keyEvent.Key == Settings.Current.Controls.OpenRomPath)
+            {
+                try
+                {
+                    OpenExplorer(Directory.GetParent(_roms[_table.SelectedRow].RomPath!)!.ToString());
+                }
+                catch (Exception) { }
                 return true;
             }
 
-
-
+            // --- Open SRAM folder ---
+            else if (keyEvent.Key == Settings.Current.Controls.OpenSramPath)
+            {
+                OpenExplorer(Settings.Current.SramPath!);
+                return true;
+            }
 
             return base.ProcessKey(keyEvent);
+        }
+
+        /// <summary> 
+        /// Opens path in file explorer
+        /// </summary> 
+        void OpenExplorer(string path)
+        {
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+            {
+
+                var escapedPath = path.Replace("'", "'\\''");
+
+                Process.Start(
+                    new ProcessStartInfo
+                    {
+                        FileName = "/bin/sh",
+                        Arguments = $"-c \"setsid xdg-open '{escapedPath}' >/dev/null 2>&1 </dev/null &\"",
+                        UseShellExecute = false,
+                        CreateNoWindow = true
+                    });
+            }
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                Process.Start(
+                    new ProcessStartInfo
+                    {
+                        FileName = "explorer.exe",
+                        Arguments = $"\"{path}\"",
+                        UseShellExecute = true,
+                    });
+            }
         }
 
 
