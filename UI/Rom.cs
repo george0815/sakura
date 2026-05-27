@@ -24,6 +24,10 @@ public class Rom
     {
 
         List<Rom> roms = new List<Rom>();
+        if (!Settings.Current.AllRomPaths.Contains(Settings.Current.DefaultRomPath!))
+        {
+            Settings.Current.AllRomPaths.Add(Settings.Current.DefaultRomPath!);
+        }
         foreach (string path in Settings.Current.AllRomPaths)
         {
             if (Directory.Exists(path))

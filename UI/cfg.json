@@ -3,7 +3,7 @@
   "HidetextCursor": true,
   "DisableColoredHotkeyInfo": false,
   "DisableASCII": false,
-  "DefaultRomPath": "./",
+  "DefaultRomPath": "/home/Hunter/Documents/Github/sakura/build",
   "SramPath": "./saves/sram/",
   "StatePath": "./saves/state/",
   "AllRomPaths": [

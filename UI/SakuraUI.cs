@@ -360,7 +360,7 @@ namespace sakura
         public void RefreshHeader(object? sender, EventArgs e)
         {
 
-            romCount.Text = Rom.Roms?.Count().ToString();
+            romCount.Text = $"{Resources.Roms}: {Rom.Roms?.Count}";
             startLabel.Text = $"{"Start: "}{Settings.Current.Controls.StartRom}";
             stopLabel.Text = $"{"Stop: "}{Settings.Current.Controls.StopRom}";
             openRomPathLabel.Text = $"{"Open rom path: "}{Settings.Current.Controls.OpenRomPath}";
