@@ -14,11 +14,13 @@ public class Rom
 
     public string? SramPath { get; set; }
 
-    public bool NTSC { get; set; }
+    public static List<Rom>? Roms { get; set; } = new List<Rom>();
+
+
 
 
     //For all rom directories, get all roms in each directoy and return list of all roms
-    internal static List<Rom> GetAllRoms()
+    internal static void GetAllRoms()
     {
 
         List<Rom> roms = new List<Rom>();
@@ -30,7 +32,7 @@ public class Rom
             }
         }
 
-        return roms;
+        Roms = roms;
 
     }
 
@@ -57,21 +59,10 @@ public class Rom
                     Name = name,
                     RomPath = Path.Combine(file.DirectoryName!, file.Name),
                     SramPath = Path.Combine(Settings.Current.SramPath!, name),
-                    NTSC = true,
                 };
                 tempRoms.Add(tempRom);
 
             }
-        }
-
-        //For every .nes file in directory, call the parser
-        foreach (FileInfo file in DirInfo.EnumerateFiles().Where(
-              f => Path.GetExtension(f.Name!)
-              .Equals("nes", StringComparison.OrdinalIgnoreCase)))
-        {
-            //call parser TODO: IMPLEMENT PARSER 
-
-
         }
 
 

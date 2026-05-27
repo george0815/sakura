@@ -16,7 +16,7 @@ namespace sakura.frameviews
         /// <summary>
         /// List of roms backing this view.
         /// </summary>
-        private readonly List<Rom> _roms;
+        private List<Rom> _roms;
 
         /// <summary>
         /// Terminal.Gui table showing rom info.
@@ -32,10 +32,10 @@ namespace sakura.frameviews
         /// Initialize the rom list view with the provided roms.
         /// </summary>
         /// <param name="roms">List of rom objects</param>
-        public RomListView(List<Rom> roms)
+        public RomListView(List<Rom>? roms)
             : base(Resources.Roms)
         {
-            _roms = roms;
+            _roms = roms!;
 
             X = 20;
             Y = SettingsData.HeaderHeight;
@@ -49,7 +49,6 @@ namespace sakura.frameviews
             _tableData.Columns.Add(Resources.Name, typeof(string));
             _tableData.Columns.Add("Path", typeof(string));
             _tableData.Columns.Add("SRAM data path", typeof(string));
-            _tableData.Columns.Add("Display mode", typeof(string));
 
             // --- TableView Setup ---
             _table = new TableView()
@@ -65,11 +64,13 @@ namespace sakura.frameviews
 
             foreach (Rom rom in _roms)
             {
-                _tableData.Rows.Add(rom.Name, rom.RomPath, rom.SramPath, rom.NTSC ? "NTSC" : "PAL");
+                _tableData.Rows.Add(rom.Name, rom.RomPath, rom.SramPath);
             }
 
             _table.Update();
             _table.SetNeedsDisplay();
+
+            Settings.SettingsUpdated += RefreshRomList;
 
         }
 
@@ -114,6 +115,26 @@ namespace sakura.frameviews
 
 
             return base.ProcessKey(keyEvent);
+        }
+
+
+        /// <summary>
+        /// Refreshes rom list when settings are saved
+        /// </summary>
+        void RefreshRomList(object? sender, EventArgs e)
+        {
+
+            _tableData.Clear();
+
+            _roms = Rom.Roms!;
+
+            foreach (Rom rom in _roms!)
+            {
+                _tableData.Rows.Add(rom.Name, rom.RomPath, rom.SramPath);
+            }
+
+            _table.Update();
+            _table.SetNeedsDisplay();
         }
 
     }

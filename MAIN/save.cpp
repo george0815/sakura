@@ -10,11 +10,15 @@
 bool SAVE_MANAGER::SAVE_SRAM(const string path, BUS *bus) {
 
   if (!bus->BATTERY_BACKED) {
-    cout << "NO  SRAM";
+    // cout << "NO  SRAM";
     return true;
   }
 
   const auto &data = bus->PRG_RAM;
+
+  filesystem::path p = path;
+
+  filesystem::create_directories(p.parent_path());
 
   ofstream file(path, ios::binary | ios::trunc);
 
@@ -22,11 +26,11 @@ bool SAVE_MANAGER::SAVE_SRAM(const string path, BUS *bus) {
              static_cast<streamsize>(data.size()));
 
   if (!file.good()) {
-    cout << "SOMETYHING WRONG WITH FILE";
+    // cout << "SOMETYHING WRONG WITH FILE";
     return false;
   }
 
-  cout << "RAM SAVED";
+  // cout << "RAM SAVED";
   return true;
 }
 
@@ -56,14 +60,14 @@ bool SAVE_MANAGER::LOAD_SRAM(const string path, BUS *bus) {
   file.read(reinterpret_cast<char *>(data.data()), size);
 
   if (!file.good() && !file.eof()) {
-    cout << "FILE AINT GOOD";
+    // cout << "FILE AINT GOOD";
     return false;
   }
   if (!bus->LOAD_BATTERY_BACKED_SRAM(data)) {
-    cout << "SOMETHIGN  WENT WRONG LOADING DATA";
+    // cout << "SOMETHIGN  WENT WRONG LOADING DATA";
     return false;
   }
-  cout << "SRAM LOADED";
+  // cout << "SRAM LOADED";
   return true;
 }
 
@@ -77,17 +81,20 @@ bool SAVE_MANAGER::SAVE_STATE(const string path, BUS *bus) {
   bus->PPU->save_state(writer);
   bus->save_state(writer);
 
+  filesystem::path p = path;
+
+  filesystem::create_directories(p.parent_path());
   ofstream file(path, ios::binary | ios::trunc);
 
   file.write(reinterpret_cast<const char *>(bytes.data()),
              static_cast<streamsize>(bytes.size()));
 
   if (!file.good()) {
-    cout << "SOMETYHING WRONG WITH FILE";
+    // cout << "SOMETYHING WRONG WITH FILE";
     return false;
   }
 
-  cout << "STATE SAVED" << endl;
+  // cout << "STATE SAVED" << endl;
 
   return true;
 }
@@ -114,7 +121,7 @@ bool SAVE_MANAGER::LOAD_STATE(const string path, BUS *bus) {
   file.read(reinterpret_cast<char *>(data.data()), size);
 
   if (!file.good() && !file.eof()) {
-    cout << "FILE AINT GOOD";
+    // cout << "FILE AINT GOOD";
     return false;
   }
 
@@ -130,11 +137,11 @@ bool SAVE_MANAGER::LOAD_STATE(const string path, BUS *bus) {
       !bus->PPU->load_state(reader) || !bus->load_state(reader) ||
       !reader.ok() || !reader.eof()) {
 
-    cout << "SOMETHING FAILED HERE" << endl;
+    // cout << "SOMETHING FAILED HERE" << endl;
     return false;
   }
 
-  cout << "STATE LOADED" << endl;
+  // cout << "STATE LOADED" << endl;
 
   return true;
 }

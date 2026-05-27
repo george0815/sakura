@@ -59,13 +59,13 @@ public:
                   "plain data requires data that can be copied easily");
     if (!can_read(sizeof(T))) {
       ok_ = false;
-      cout << "FALSE" << endl;
+      // cout << "FALSE" << endl;
       return false;
     }
 
     memcpy(&value, data.data() + offset, sizeof(T));
     offset += sizeof(T);
-    cout << "TRUE" << endl;
+    // cout << "TRUE" << endl;
     return true;
   }
 
@@ -75,13 +75,13 @@ public:
     const size_t bytes = sizeof(T) * N;
     if (!can_read(bytes)) {
       ok_ = false;
-      cout << "FALSE" << endl;
+      // cout << "FALSE" << endl;
       return false;
     }
 
     memcpy(values.data(), data.data() + offset, bytes);
     offset += bytes;
-    cout << "TRUE" << endl;
+    // cout << "TRUE" << endl;
     return true;
   }
 
@@ -89,7 +89,7 @@ public:
     uint32_t size = 0;
     if (!plain_data(size) || !can_read(size)) {
       ok_ = false;
-      cout << "FALSE" << endl;
+      // cout << "FALSE" << endl;
       return false;
     }
 
@@ -98,7 +98,7 @@ public:
 
     offset += size;
 
-    cout << "TRUE" << endl;
+    // cout << "TRUE" << endl;
     return true;
   }
 

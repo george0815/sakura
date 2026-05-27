@@ -23,13 +23,18 @@ namespace sakura
         // Header components
         readonly private FrameView header;
         readonly private Label romCount;
-        private List<Rom> roms;
+        readonly private Label startLabel;
+        readonly private Label stopLabel;
+        readonly private Label openRomPathLabel;
+        readonly private Label openSramPathLabel;
+        readonly private Label saveLabel;
+        readonly private Label loadLabel;
 
         public SakuraUI()
         {
 
             //Get rom list
-            roms = Rom.GetAllRoms();
+            Rom.GetAllRoms();
 
 
             #region HEADER
@@ -105,10 +110,10 @@ namespace sakura
             {
                 X = (Settings.Current.DisableASCII ? 30 : SettingsData.LogoWidth) + 2,
                 Y = (Settings.Current.DisableASCII ? 1 : 3),
-                Text = $"{Resources.Roms}: {roms.Count}"
+                Text = $"{Resources.Roms}: {Rom.Roms?.Count}"
             };
 
-
+            Settings.SettingsUpdated += RefreshHeader;
 
             // Add info labels to header scroll
             headerScroll.Add(date, romCount);
@@ -122,7 +127,7 @@ namespace sakura
             #region HOTKEY INFO
 
             // Add hotkey instructions with colored text
-            headerScroll.Add(new Label($"{Resources.Start}{Settings.Current.Controls.StartRom}")
+            startLabel = new Label($"{Resources.Start}{Settings.Current.Controls.StartRom}")
             {
                 ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
                 {
@@ -130,9 +135,11 @@ namespace sakura
                 }),
                 X = (Settings.Current.DisableASCII ? 30 : SettingsData.LogoWidth) + 30,
                 Y = 1
-            });
+            };
 
-            headerScroll.Add(new Label($"{Resources.Stop}{Settings.Current.Controls.StopRom}")
+            headerScroll.Add(startLabel);
+
+            stopLabel = new Label($"{Resources.Stop}{Settings.Current.Controls.StopRom}")
             {
                 ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
                 {
@@ -140,9 +147,13 @@ namespace sakura
                 }),
                 X = (Settings.Current.DisableASCII ? 30 : SettingsData.LogoWidth) + 30,
                 Y = 3
-            });
+            };
 
-            headerScroll.Add(new Label($"{"Open rom path: "}{Settings.Current.Controls.OpenRomPath}")
+            headerScroll.Add(stopLabel);
+
+
+
+            openRomPathLabel = new Label($"{"Open rom path: "}{Settings.Current.Controls.OpenRomPath}")
             {
                 ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
                 {
@@ -150,9 +161,10 @@ namespace sakura
                 }),
                 X = (Settings.Current.DisableASCII ? 42 : SettingsData.LogoWidth) + 30,
                 Y = (Settings.Current.DisableASCII ? 1 : 5)
-            });
+            };
+            headerScroll.Add(openRomPathLabel);
 
-            headerScroll.Add(new Label($"{"Open SRAM path: "}{Settings.Current.Controls.OpenSramPath}")
+            openSramPathLabel = new Label($"{"Open SRAM path: "}{Settings.Current.Controls.OpenSramPath}")
             {
                 ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
                 {
@@ -161,9 +173,10 @@ namespace sakura
                 X = (Settings.Current.DisableASCII ? 42 : SettingsData.LogoWidth) + 30,
                 Y = (Settings.Current.DisableASCII ? 3 : 7)
 
-            });
+            };
+            headerScroll.Add(openSramPathLabel);
 
-            headerScroll.Add(new Label($"{"Save state: "}{Settings.Current.Controls.SaveState}")
+            saveLabel = new Label($"{"Save state: "}{Settings.Current.Controls.SaveState}")
             {
                 ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
                 {
@@ -172,9 +185,10 @@ namespace sakura
                 X = (Settings.Current.DisableASCII ? 62 : SettingsData.LogoWidth) + 30,
                 Y = (Settings.Current.DisableASCII ? 1 : 9)
 
-            });
+            };
+            headerScroll.Add(saveLabel);
 
-            headerScroll.Add(new Label($"{"Load state: "}{Settings.Current.Controls.LoadState}")
+            loadLabel = new Label($"{"Load state: "}{Settings.Current.Controls.LoadState}")
             {
                 ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
                 {
@@ -183,7 +197,8 @@ namespace sakura
                 X = (Settings.Current.DisableASCII ? 62 : SettingsData.LogoWidth) + 30,
                 Y = (Settings.Current.DisableASCII ? 3 : 11)
 
-            });
+            };
+            headerScroll.Add(loadLabel);
 
             #endregion
 
@@ -245,7 +260,7 @@ namespace sakura
 
             #region CONTENT VIEWS
 
-            romListView = new RomListView(roms);
+            romListView = new RomListView(Rom.Roms!);
             savesView = new SavesView();
             settingsView = new SettingsView();
             controlsView = new ControlsView();
@@ -336,6 +351,24 @@ namespace sakura
             }
 
             base.PositionCursor();
+        }
+
+
+        /// <summary>
+        /// Refreshes header when controls or rom count changes.
+        /// </summary>
+        public void RefreshHeader(object? sender, EventArgs e)
+        {
+
+            romCount.Text = Rom.Roms?.Count().ToString();
+            startLabel.Text = $"{"Start: "}{Settings.Current.Controls.StartRom}";
+            stopLabel.Text = $"{"Stop: "}{Settings.Current.Controls.StopRom}";
+            openRomPathLabel.Text = $"{"Open rom path: "}{Settings.Current.Controls.OpenRomPath}";
+            openSramPathLabel.Text = $"{"Open SRAM path: "}{Settings.Current.Controls.OpenSramPath}";
+            saveLabel.Text = $"{"Save state: "}{Settings.Current.Controls.SaveState}";
+            loadLabel.Text = $"{"Load state: "}{Settings.Current.Controls.LoadState}";
+
+            SetNeedsDisplay();
         }
 
         #endregion

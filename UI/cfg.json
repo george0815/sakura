@@ -19,8 +19,8 @@
   "LogoColor": 11,
   "UseSystemConsole": false,
   "Controls": {
-    "StartRom": 1048590,
-    "StopRom": 1048591,
+    "StartRom": 1048588,
+    "StopRom": 1048599,
     "OpenRomPath": 1048592,
     "OpenSramPath": 1048593,
     "SaveState": 107,

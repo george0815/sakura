@@ -502,6 +502,12 @@ namespace sakura.frameviews
                   {
                       // --- controls validation ---
                       Key[] tmpKeys = [
+                          Settings.Current.Controls.OpenRomPath,
+                          Settings.Current.Controls.OpenSramPath,
+                          Settings.Current.Controls.SaveState,
+                          Settings.Current.Controls.LoadState,
+                          Settings.Current.Controls.StartRom,
+                          Settings.Current.Controls.StopRom,
                           Settings.Current.Controls.START,
                           Settings.Current.Controls.SELECT,
                           Settings.Current.Controls.A,

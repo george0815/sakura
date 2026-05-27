@@ -2,7 +2,7 @@
 #include "../LOGGER/logger.h"
 #include <array>
 #include <cstdint>
-#include <iostream>
+// #include <iostream>
 #include <sys/types.h>
 #include <vector>
 
@@ -164,7 +164,7 @@ void BUS::write(uint16_t addr, uint8_t data) {
 
 void BUS::connect_cpu(CPU_6502 &cpu) {
   CPU = &cpu;
-  cout << "BUS <- CPU\n" << endl;
+  // cout << "BUS <- CPU\n" << endl;
 }
 
 void BUS::connect_ppu(PPU_2C02 &ppu) {
@@ -176,13 +176,13 @@ void BUS::connect_ppu(PPU_2C02 &ppu) {
   if (PPU && CPU) {
     PPU->connect_cpu(CPU);
   }
-  cout << "BUS <- PPU\n" << endl;
+  // cout << "BUS <- PPU\n" << endl;
 }
 
 void BUS::SET_CONTROLLER_BUTTON(int port, CONTROLLER_BUTTON button,
                                 bool pressed) {
 
-  cout << "KEY RELEASED: " << button;
+  // cout << "KEY RELEASED: " << button;
   if (port < 0 || port >= CONTROLLER_STATE.size()) {
     return;
   }
@@ -207,7 +207,7 @@ bool BUS::LOAD_BATTERY_BACKED_SRAM(const vector<uint8_t> &data) {
   if (!HAS_BATTERY_BACKED_SRAM() || data.size() != PRG_RAM.size()) {
     return false;
   }
-  cout << data.size() << "TESTET " << endl;
+  // cout << data.size() << "TESTET " << endl;
   PRG_RAM = data;
   return true;
 }
@@ -285,7 +285,7 @@ bool BUS::load_state(StateReader &reader) {
       !reader.plain_data(MIRROR_MODE)
 
   ) {
-    cout << "BUS LOAD STATE FAILED" << endl;
+    // cout << "BUS LOAD STATE FAILED" << endl;
     return false;
   }
 
@@ -293,19 +293,19 @@ bool BUS::load_state(StateReader &reader) {
       saved_battery_backed != BATTERY_BACKED ||
       saved_chr_mem.size() != CHR_MEM.size() ||
       saved_prg_ram.size() != PRG_RAM.size()) {
-    cout << " SOME OTHER BUS THING LOAD STATE FAILED" << endl;
+    // cout << " SOME OTHER BUS THING LOAD STATE FAILED" << endl;
     return false;
   }
 
   CHR_MEM = saved_chr_mem;
   PRG_RAM = saved_prg_ram;
   if (!APU.load_state(reader)) {
-    cout << "APU LOAD STATE FAILED" << endl;
+    // cout << "APU LOAD STATE FAILED" << endl;
     return false;
   }
 
   if (MAPPER && !MAPPER->load_state(reader)) {
-    cout << "MAPPER LOAD STATE FAILED" << endl;
+    // cout << "MAPPER LOAD STATE FAILED" << endl;
     return false;
   }
 

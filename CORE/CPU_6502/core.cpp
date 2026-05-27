@@ -201,7 +201,7 @@ void CPU_6502::SET_FLAG(STATUS value, bool condition) {
 
 void CPU_6502::connect_bus(BUS *b) {
   B = b;
-  cout << "CPU <- BUS";
+  // cout << "CPU <- BUS";
 }
 
 // Helper function for getting flags

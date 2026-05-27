@@ -61,7 +61,7 @@ bool PARSE_FILE(string filename, CART &cartridge) {
   }
 
   // For testing TODO REMOVE LATER
-  cout << "NES\n";
+  // cout << "NES\n";
 
   // Parse flags, this is mainly for the PPU
   const bool vert = cartridge.HEADER.FLAGS_6 & 0x01;

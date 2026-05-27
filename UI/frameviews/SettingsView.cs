@@ -521,6 +521,7 @@ namespace sakura.frameviews
                     Settings.Current.LogoColor = colors[logoColorCombo.Text.ToString()!];
 
                     Settings.Save();
+                    Rom.GetAllRoms();
 
                     MessageBox.Query(Resources.Settings, Resources.Settingssavedsuccessfully, Resources.OK);
                     Log.Write(Resources.Settingssaved);

@@ -94,6 +94,8 @@ namespace sakura
         /// </summary>
         internal static SettingsData Current { get; private set; } = new();
 
+        internal static event EventHandler? SettingsUpdated;
+
         /// <summary>
         /// Options for JSON serialization.
         /// </summary>
@@ -114,6 +116,7 @@ namespace sakura
             {
                 var json = JsonSerializer.Serialize(Current, JsonOptions);
                 File.WriteAllText(Current.SettingsPath ?? "cfg.json", json);
+                SettingsUpdated?.Invoke(null, EventArgs.Empty);
             }
             catch (Exception ex)
             {
