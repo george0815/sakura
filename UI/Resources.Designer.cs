@@ -196,6 +196,36 @@ namespace sakura
 
 
 
+        /// <summary>
+        ///   Looks up a localized string similar to Save States.
+        /// </summary>
+        internal static string SaveStates
+        {
+            get
+            {
+                return ResourceManager.GetString("SaveStates", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Created.
+        /// </summary>
+        internal static string Created
+        {
+            get
+            {
+                return ResourceManager.GetString("Created", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Size.
+        /// </summary>
+        internal static string Size
+        {
+            get
+            {
+                return ResourceManager.GetString("Size", resourceCulture);
+            }
+        }
 
 
 
@@ -203,15 +233,75 @@ namespace sakura
 
 
 
+        /// <summary>
+        ///   Looks up a localized string similar to SRAM Files.
+        /// </summary>
+        internal static string SRAMFiles
+        {
+            get
+            {
+                return ResourceManager.GetString("SRAMFiles", resourceCulture);
+            }
+        }
 
 
 
 
 
 
+        /// <summary>
+        ///   Looks up a localized string similar to Saves.
+        /// </summary>
+        internal static string Saves
+        {
+            get
+            {
+                return ResourceManager.GetString("Saves", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to SRAM.
+        /// </summary>
+        internal static string SRAM
+        {
+            get
+            {
+                return ResourceManager.GetString("SRAM", resourceCulture);
+            }
+        }
 
 
 
+        /// <summary>
+        ///   Looks up a localized string similar to Path.
+        /// </summary>
+        internal static string Path
+        {
+            get
+            {
+                return ResourceManager.GetString("Path", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to SRAM data path.
+        /// </summary>
+        internal static string Sramdatapath
+        {
+            get
+            {
+                return ResourceManager.GetString("Sramdatapath", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Rom started: .
+        /// </summary>
+        internal static string Romstarted
+        {
+            get
+            {
+                return ResourceManager.GetString("Romstarted", resourceCulture);
+            }
+        }
 
 
 
