@@ -54,7 +54,7 @@ public class Rom
             if (ext.ToLower() == ".nes")
             {
 
-                Log.Write(file.Name);
+                Log.Write($"Rom added: {file.Name}");
 
                 //create temp rom
                 string name = Path.GetFileNameWithoutExtension(file.Name);

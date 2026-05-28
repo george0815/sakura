@@ -528,7 +528,7 @@ namespace sakura.frameviews
                       Settings.Save();
 
                       MessageBox.Query(Resources.Settings, Resources.Settingssavedsuccessfully, Resources.OK);
-                      Log.Write(Resources.Settingssaved);
+                      Log.Write("Controls saved.");
                   }
                   catch (Exception ex)
                   {

@@ -98,6 +98,7 @@ namespace sakura.frameviews
                         RomPath = _roms[_table.SelectedRow].RomPath!,
                     };
                     CoreWrapper.Launch(args);
+                    Log.Write($"Rom started: {_roms[_table.SelectedRow].RomPath!}");
                 });
 
                 return true;
