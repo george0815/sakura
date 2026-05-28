@@ -1,12 +1,12 @@
-﻿[5/28/2026 3:04:30 PM] mmc3_a12_test.nes
-[5/28/2026 3:04:30 PM] mmc3_details_test.nes
-[5/28/2026 3:04:30 PM] nestest.nes
-[5/28/2026 3:04:30 PM] kirb.nes
-[5/28/2026 3:04:30 PM] ng3.nes
-[5/28/2026 3:04:30 PM] mmc3_scanline_test.nes
-[5/28/2026 3:04:30 PM] mmc3_clock_test.nes
-[5/28/2026 3:04:30 PM] rr1.nes
-[5/28/2026 3:04:30 PM] smb3.nes
-[5/28/2026 3:04:30 PM] smb.nes
-[5/28/2026 3:04:30 PM] mm3.nes
-[5/28/2026 3:04:30 PM] rr2.nes
+﻿[5/28/2026 9:12:12 PM] Rom added: mmc3_a12_test.nes
+[5/28/2026 9:12:12 PM] Rom added: mmc3_details_test.nes
+[5/28/2026 9:12:12 PM] Rom added: nestest.nes
+[5/28/2026 9:12:12 PM] Rom added: kirb.nes
+[5/28/2026 9:12:12 PM] Rom added: ng3.nes
+[5/28/2026 9:12:12 PM] Rom added: mmc3_scanline_test.nes
+[5/28/2026 9:12:12 PM] Rom added: mmc3_clock_test.nes
+[5/28/2026 9:12:12 PM] Rom added: rr1.nes
+[5/28/2026 9:12:12 PM] Rom added: smb3.nes
+[5/28/2026 9:12:12 PM] Rom added: smb.nes
+[5/28/2026 9:12:12 PM] Rom added: mm3.nes
+[5/28/2026 9:12:12 PM] Rom added: rr2.nes

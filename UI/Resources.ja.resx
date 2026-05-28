@@ -117,6 +117,188 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+
+  <data name="Controls" xml:space="preserve">
+    <value>コントロール</value>
+  </data>
+  <data name="START" xml:space="preserve">
+    <value>スタート: </value>
+  </data>
+  <data name="SELECT" xml:space="preserve">
+    <value>セレクト: </value>
+  </data>
+  <data name="A" xml:space="preserve">
+    <value>A: </value>
+  </data>
+  <data name="B" xml:space="preserve">
+    <value>B: </value>
+  </data>
+  <data name="UP" xml:space="preserve">
+    <value>上: </value>
+  </data>
+  <data name="DOWN" xml:space="preserve">
+    <value>下: </value>
+  </data>
+  <data name="RIGHT" xml:space="preserve">
+    <value>右: </value>
+  </data>
+  <data name="LEFT" xml:space="preserve">
+    <value>左: </value>
+  </data>
+  <data name="Cannothavethesamekey" xml:space="preserve">
+    <value>複数のボタンに同じキーを設定することはできません。</value>
+  </data>
+  <data name="Controlssavedsuccessfully" xml:space="preserve">
+    <value>設定を正常に保存しました。</value>
+  </data>
+  <data name="Controlssaved" xml:space="preserve">
+    <value>コントロールを保存しました。</value>
+  </data>
+
+
+
+
+  <data name="SaveStates" xml:space="preserve">
+    <value>セーブステート</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>作成日</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>サイズ</value>
+  </data>
+
+
+
+  <data name="SRAMFiles" xml:space="preserve">
+    <value>SRAMファイル</value>
+  </data>
+
+
+
+
+
+  <data name="Saves" xml:space="preserve">
+    <value>セーブ</value>
+  </data>
+  <data name="SRAM" xml:space="preserve">
+    <value>SRAM</value>
+  </data>
+
+
+
+  <data name="Path" xml:space="preserve">
+    <value>パス</value>
+  </data>
+  <data name="Sramdatapath" xml:space="preserve">
+    <value>SRAMデータパス</value>
+  </data>
+  <data name="Romstarted" xml:space="preserve">
+    <value>ROMを起動しました: </value>
+  </data>
+
+
+
+  <data name="Rompaths" xml:space="preserve">
+    <value>ROMパス:</value>
+  </data>
+  <data name="Defaultrompath" xml:space="preserve">
+    <value>デフォルトROMパス:</value>
+  </data>
+  <data name="Srampath" xml:space="preserve">
+    <value>SRAMパス: </value>
+  </data>
+  <data name="Savestatepath" xml:space="preserve">
+    <value>セーブステートパス:</value>
+  </data>
+  <data name="Selectfolderforlog" xml:space="preserve">
+    <value>ログファイル用のフォルダーを選択してください。</value>
+  </data>
+  <data name="Selectsramfolder" xml:space="preserve">
+    <value>SRAMフォルダーを選択</value>
+  </data>
+  <data name="Selectfolderforsram" xml:space="preserve">
+    <value>SRAMセーブファイル用のフォルダーを選択してください。</value>
+  </data>
+  <data name="Selectsavestatefolder" xml:space="preserve">
+    <value>セーブステートフォルダーを選択</value>
+  </data>
+  <data name="Selectfolderforsavestatefiles" xml:space="preserve">
+    <value>セーブステートファイル用のフォルダーを選択してください。</value>
+  </data>
+  <data name="Selectdefaultromfolder" xml:space="preserve">
+    <value>デフォルトROMフォルダーを選択</value>
+  </data>
+  <data name="Selectthefolderthatsakura" xml:space="preserve">
+    <value>サクラが起動時にROMを検索するフォルダーを選択してください。</value>
+  </data>
+  <data name="Rompathcannotbeempty" xml:space="preserve">
+    <value>ROMパスを空にすることはできません。</value>
+  </data>
+  <data name="Rompathdoesnotexist" xml:space="preserve">
+    <value>ROMパスが存在しません。作成しますか？</value>
+  </data>
+  <data name="Srampathcannotbeempty" xml:space="preserve">
+    <value>SRAMパスを空にすることはできません。</value>
+  </data>
+  <data name="Savestatepathcannotbeempty" xml:space="preserve">
+    <value>セーブステートパスを空にすることはできません。</value>
+  </data>
+
+
+
+  <data name="Errorinitializingthesakuracore" xml:space="preserve">
+    <value>サクラのコアの初期化中にエラーが発生しました: </value>
+  </data>
+
+
+
+
+  <data name="Waitingforinput" xml:space="preserve">
+    <value>入力待機中</value>
+  </data>
+  <data name="Inputkey" xml:space="preserve">
+    <value>キー入力</value>
+  </data>
+
+
+
+  <data name="Romadded" xml:space="preserve">
+    <value>ロムを追加しました: </value>
+  </data>
+
+
+
+
+
+  <data name="Startrom" xml:space="preserve">
+    <value>ロム起動: </value>
+  </data>
+  <data name="Stoprom" xml:space="preserve">
+    <value>ロム停止: </value>
+  </data>
+  <data name="Savestate" xml:space="preserve">
+    <value>ステート保存: </value>
+  </data>
+  <data name="Loadstate" xml:space="preserve">
+    <value>ステート読み込み: </value>
+  </data>
+  <data name="Openromfolder" xml:space="preserve">
+    <value>ロムフォルダーを開く: </value>
+  </data>
+  <data name="Opensramfolder" xml:space="preserve">
+    <value>ロムフォルダーを開く: </value>
+  </data>
+
+
+
+
+
+
+
+
+
+
   <data name="Roms" xml:space="preserve">
     <value>ロム</value>
   </data>

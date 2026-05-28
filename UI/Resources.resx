@@ -129,9 +129,6 @@
   <data name="SELECT" xml:space="preserve">
     <value>SELECT: </value>
   </data>
-  <data name="START" xml:space="preserve">
-    <value>START: </value>
-  </data>
   <data name="A" xml:space="preserve">
     <value>A: </value>
   </data>
