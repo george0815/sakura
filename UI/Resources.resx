@@ -117,6 +117,194 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+
+
+   
+  <data name="Controls" xml:space="preserve">
+    <value>Controls</value>
+  </data>
+  <data name="START" xml:space="preserve">
+    <value>START: </value>
+  </data>
+  <data name="SELECT" xml:space="preserve">
+    <value>SELECT: </value>
+  </data>
+  <data name="START" xml:space="preserve">
+    <value>START: </value>
+  </data>
+  <data name="A" xml:space="preserve">
+    <value>A: </value>
+  </data>
+  <data name="B" xml:space="preserve">
+    <value>B: </value>
+  </data>
+  <data name="UP" xml:space="preserve">
+    <value>UP: </value>
+  </data>
+  <data name="DOWN" xml:space="preserve">
+    <value>DOWN: </value>
+  </data>
+  <data name="RIGHT" xml:space="preserve">
+    <value>RIGHT: </value>
+  </data>
+  <data name="LEFT" xml:space="preserve">
+    <value>LEFT: </value>
+  </data>
+  <data name="Cannothavethesamekey" xml:space="preserve">
+    <value>Cannot have the same key for multiple buttons.</value>
+  </data>
+  <data name="Controlssavedsuccessfully" xml:space="preserve">
+    <value>Controls saved successfully.</value>
+  </data>
+  <data name="Controlssaved" xml:space="preserve">
+    <value>Controls saved.</value>
+  </data>
+
+
+
+
+  <data name="SaveStates" xml:space="preserve">
+    <value>Save States</value>
+  </data>
+  <data name="Created" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+
+
+
+  <data name="SRAMFiles" xml:space="preserve">
+    <value>SRAM Files</value>
+  </data>
+
+
+
+
+
+  <data name="Saves" xml:space="preserve">
+    <value>Saves</value>
+  </data>
+  <data name="SRAM" xml:space="preserve">
+    <value>SRAM</value>
+  </data>
+
+
+
+  <data name="Path" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="Sramdatapath" xml:space="preserve">
+    <value>SRAM data path</value>
+  </data>
+  <data name="Romstarted" xml:space="preserve">
+    <value>Rom started: </value>
+  </data>
+
+
+
+  <data name="Rompaths" xml:space="preserve">
+    <value>Rom paths:</value>
+  </data>
+  <data name="Defaultrompath" xml:space="preserve">
+    <value>Default rom path:</value>
+  </data>
+  <data name="Srampath" xml:space="preserve">
+    <value>SRAM path: </value>
+  </data>
+  <data name="Savestatepath" xml:space="preserve">
+    <value>Save state path:</value>
+  </data>
+  <data name="Selectfolderforlog" xml:space="preserve">
+    <value>Select folder for log files.</value>
+  </data>
+  <data name="Selectsramfolder" xml:space="preserve">
+    <value>Select SRAM Folder </value>
+  </data>
+  <data name="Selectfolderforsram" xml:space="preserve">
+    <value>Select folder for SRAM save files.</value>
+  </data>
+  <data name="Selectsavestatefolder" xml:space="preserve">
+    <value>Select Save State Folder</value>
+  </data>
+  <data name="Selectfolderforsavestatefiles" xml:space="preserve">
+    <value>Select folder for save state files.</value>
+  </data>
+  <data name="Selectdefaultromfolder" xml:space="preserve">
+    <value>Select Default Rom Folder</value>
+  </data>
+  <data name="Selectthefolderthatsakura" xml:space="preserve">
+    <value>Select the folder that sakura will search for roms in on startup.</value>
+  </data>
+  <data name="Rompathcannotbeempty" xml:space="preserve">
+    <value>Rom path cannot be empty.</value>
+  </data>
+  <data name="Rompathdoesnotexist" xml:space="preserve">
+    <value>Rom path does not exist, create it?</value>
+  </data>
+  <data name="Srampathcannotbeempty" xml:space="preserve">
+    <value>SRAM path cannot be empty.</value>
+  </data>
+  <data name="Savestatepathcannotbeempty" xml:space="preserve">
+    <value>Save state path cannot be empty.</value>
+  </data>
+
+
+
+  <data name="Errorinitializingthesakuracore" xml:space="preserve">
+    <value>Error initializing the sakura core:</value>
+  </data>
+
+
+
+
+  <data name="Waitingforinput" xml:space="preserve">
+    <value>Waiting for input...</value>
+  </data>
+  <data name="Inputkey" xml:space="preserve">
+    <value>Input Key</value>
+  </data>
+
+
+
+  <data name="Romadded" xml:space="preserve">
+    <value>Rom added: </value>
+  </data>
+
+
+
+
+
+  <data name="Startrom" xml:space="preserve">
+    <value>Start rom: </value>
+  </data>
+  <data name="Stoprom" xml:space="preserve">
+    <value>Stop rom: </value>
+  </data>
+  <data name="Savestate" xml:space="preserve">
+    <value>Save state: </value>
+  </data>
+  <data name="Loadstate" xml:space="preserve">
+    <value>Load state: </value>
+  </data>
+  <data name="Openromfolder" xml:space="preserve">
+    <value>Open rom folder: </value>
+  </data>
+  <data name="Opensramfolder" xml:space="preserve">
+    <value>Open SRAM folder: </value>
+  </data>
+
+
+
+
+
+
+
+
+
+
+
   <data name="Roms" xml:space="preserve">
     <value>Roms</value>
   </data>
