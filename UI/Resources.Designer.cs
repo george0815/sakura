@@ -70,6 +70,157 @@ namespace sakura
         }
 
         /// <summary>
+        ///   Looks up a localized string similar to Controls.
+        /// </summary>
+        internal static string Controls
+        {
+            get
+            {
+                return ResourceManager.GetString("Controls", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to START.
+        /// </summary>
+        internal static string START
+        {
+            get
+            {
+                return ResourceManager.GetString("START", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to SELECT.
+        /// </summary>
+        internal static string SELECT
+        {
+            get
+            {
+                return ResourceManager.GetString("SELECT", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to A.
+        /// </summary>
+        internal static string A
+        {
+            get
+            {
+                return ResourceManager.GetString("A", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to B.
+        /// </summary>
+        internal static string B
+        {
+            get
+            {
+                return ResourceManager.GetString("B", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to UP.
+        /// </summary>
+        internal static string UP
+        {
+            get
+            {
+                return ResourceManager.GetString("UP", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to DOWN.
+        /// </summary>
+        internal static string DOWN
+        {
+            get
+            {
+                return ResourceManager.GetString("DOWN", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to RIGHT.
+        /// </summary>
+        internal static string RIGHT
+        {
+            get
+            {
+                return ResourceManager.GetString("RIGHT", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to LEFT.
+        /// </summary>
+        internal static string LEFT
+        {
+            get
+            {
+                return ResourceManager.GetString("LEFT", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot have the same key for multiple buttons..
+        /// </summary>
+        internal static string Cannothavethesamekey
+        {
+            get
+            {
+                return ResourceManager.GetString("Cannothavethesamekey", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Controls saved successfully..
+        /// </summary>
+        internal static string Controlssavedsuccessfully
+        {
+            get
+            {
+                return ResourceManager.GetString("Controlssavedsuccessfully", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Controls saved..
+        /// </summary>
+        internal static string Controlssaved
+        {
+            get
+            {
+                return ResourceManager.GetString("Controlssaved", resourceCulture);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /// <summary>
         ///   Looks up a localized string similar to ASCII color:.
         /// </summary>
         internal static string ErrorloadingsettingsexMessage
