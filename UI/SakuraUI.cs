@@ -127,7 +127,7 @@ namespace sakura
             #region HOTKEY INFO
 
             // Add hotkey instructions with colored text
-            startLabel = new Label($"{Resources.Start}{Settings.Current.Controls.StartRom}")
+            startLabel = new Label($"{Resources.Startrom}{Settings.Current.Controls.StartRom}")
             {
                 ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
                 {
@@ -139,7 +139,7 @@ namespace sakura
 
             headerScroll.Add(startLabel);
 
-            stopLabel = new Label($"{Resources.Stop}{Settings.Current.Controls.StopRom}")
+            stopLabel = new Label($"{Resources.Stoprom}{Settings.Current.Controls.StopRom}")
             {
                 ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
                 {
@@ -153,7 +153,7 @@ namespace sakura
 
 
 
-            openRomPathLabel = new Label($"{"Open rom path: "}{Settings.Current.Controls.OpenRomPath}")
+            openRomPathLabel = new Label($"{Resources.Openromfolder}{Settings.Current.Controls.OpenRomPath}")
             {
                 ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
                 {
@@ -164,7 +164,7 @@ namespace sakura
             };
             headerScroll.Add(openRomPathLabel);
 
-            openSramPathLabel = new Label($"{"Open SRAM path: "}{Settings.Current.Controls.OpenSramPath}")
+            openSramPathLabel = new Label($"{Resources.Opensramfolder}{Settings.Current.Controls.OpenSramPath}")
             {
                 ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
                 {
@@ -176,7 +176,7 @@ namespace sakura
             };
             headerScroll.Add(openSramPathLabel);
 
-            saveLabel = new Label($"{"Save state: "}{Settings.Current.Controls.SaveState}")
+            saveLabel = new Label($"{Resources.Savestate}{Settings.Current.Controls.SaveState}")
             {
                 ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
                 {
@@ -188,7 +188,7 @@ namespace sakura
             };
             headerScroll.Add(saveLabel);
 
-            loadLabel = new Label($"{"Load state: "}{Settings.Current.Controls.LoadState}")
+            loadLabel = new Label($"{Resources.Loadstate}{Settings.Current.Controls.LoadState}")
             {
                 ColorScheme = (Settings.Current.DisableColoredHotkeyInfo ? this.SuperView?.ColorScheme : new ColorScheme()
                 {
@@ -220,9 +220,9 @@ namespace sakura
             var menu = new ListView(new string[]
         {
                 Resources.Roms,
-                "Saves",
+                Resources.Saves,
                 Resources.Settings,
-                "Controls",
+                Resources.Controls,
                 Resources.Log,
         })
             {
@@ -361,12 +361,12 @@ namespace sakura
         {
 
             romCount.Text = $"{Resources.Roms}: {Rom.Roms?.Count}";
-            startLabel.Text = $"{"Start: "}{Settings.Current.Controls.StartRom}";
-            stopLabel.Text = $"{"Stop: "}{Settings.Current.Controls.StopRom}";
-            openRomPathLabel.Text = $"{"Open rom path: "}{Settings.Current.Controls.OpenRomPath}";
-            openSramPathLabel.Text = $"{"Open SRAM path: "}{Settings.Current.Controls.OpenSramPath}";
-            saveLabel.Text = $"{"Save state: "}{Settings.Current.Controls.SaveState}";
-            loadLabel.Text = $"{"Load state: "}{Settings.Current.Controls.LoadState}";
+            startLabel.Text = $"{Resources.Startrom}{Settings.Current.Controls.StartRom}";
+            stopLabel.Text = $"{Resources.Stoprom}{Settings.Current.Controls.StopRom}";
+            openRomPathLabel.Text = $"{Resources.Openromfolder}{Settings.Current.Controls.OpenRomPath}";
+            openSramPathLabel.Text = $"{Resources.Opensramfolder}{Settings.Current.Controls.OpenSramPath}";
+            saveLabel.Text = $"{Resources.Savestate}{Settings.Current.Controls.SaveState}";
+            loadLabel.Text = $"{Resources.Loadstate}{Settings.Current.Controls.LoadState}";
 
             SetNeedsDisplay();
         }

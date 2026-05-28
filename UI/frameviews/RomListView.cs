@@ -49,8 +49,8 @@ namespace sakura.frameviews
 
             // Define visible columns in a consistent order
             _tableData.Columns.Add(Resources.Name, typeof(string));
-            _tableData.Columns.Add("Path", typeof(string));
-            _tableData.Columns.Add("SRAM data path", typeof(string));
+            _tableData.Columns.Add(Resources.Path, typeof(string));
+            _tableData.Columns.Add(Resources.Sramdatapath, typeof(string));
 
             // --- TableView Setup ---
             _table = new TableView()
@@ -98,7 +98,7 @@ namespace sakura.frameviews
                         RomPath = _roms[_table.SelectedRow].RomPath!,
                     };
                     CoreWrapper.Launch(args);
-                    Log.Write($"Rom started: {_roms[_table.SelectedRow].RomPath!}");
+                    Log.Write($"{Resources.Romstarted}{_roms[_table.SelectedRow].RomPath!}");
                 });
 
                 return true;

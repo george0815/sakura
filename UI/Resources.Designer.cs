@@ -305,8 +305,259 @@ namespace sakura
 
 
 
+        /// <summary>
+        ///   Looks up a localized string similar to Rom paths:.
+        /// </summary>
+        internal static string Rompaths
+        {
+            get
+            {
+                return ResourceManager.GetString("Rom paths:", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Default rom path: .
+        /// </summary>
+        internal static string Defaultrompath
+        {
+            get
+            {
+                return ResourceManager.GetString("Default rom path:", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to SRAM path:.
+        /// </summary>
+        internal static string Srampath
+        {
+            get
+            {
+                return ResourceManager.GetString("Srampath", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Save state path: .
+        /// </summary>
+        internal static string Savestatepath
+        {
+            get
+            {
+                return ResourceManager.GetString("Savestatepath", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Select folder for log files.
+        /// </summary>
+        internal static string Selectfolderforlog
+        {
+            get
+            {
+                return ResourceManager.GetString("Selectfolderforlog", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Select SRAM Folder.
+        /// </summary>
+        internal static string Selectsramfolder
+        {
+            get
+            {
+                return ResourceManager.GetString("Selectsramfolder", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Select folder for SRAM save files.
+        /// </summary>
+        internal static string Selectfolderforsram
+        {
+            get
+            {
+                return ResourceManager.GetString("Selectfolderforsram", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Select Save State Folder.
+        /// </summary>
+        internal static string Selectsavestatefolder
+        {
+            get
+            {
+                return ResourceManager.GetString("Selectsavestatefolder", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Select folder for save state files.
+        /// </summary>
+        internal static string Selectfolderforsavestatefiles
+        {
+            get
+            {
+                return ResourceManager.GetString("Selectfolderforsavestatefiles", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Select Default Rom Folder.
+        /// </summary>
+        internal static string Selectdefaultromfolder
+        {
+            get
+            {
+                return ResourceManager.GetString("Selectdefaultromfolder", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Select the folder that sakura will search for roms in on startup..
+        /// </summary>
+        internal static string Selectthefolderthatsakura
+        {
+            get
+            {
+                return ResourceManager.GetString("Selectthefolderthatsakura", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Rom path does not exist, create it?.
+        /// </summary>
+        internal static string Rompathdoesnotexist
+        {
+            get
+            {
+                return ResourceManager.GetString("Rompathdoesnotexist", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Save state path cannot be empty..
+        /// </summary>
+        internal static string Savestatepathcannotbeempty
+        {
+            get
+            {
+                return ResourceManager.GetString("Savestatepathcannotbeempty", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to SRAM path cannot be empty..
+        /// </summary>
+        internal static string Srampathcannotbeempty
+        {
+            get
+            {
+                return ResourceManager.GetString("Srampathcannotbeempty", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Rom path cannot be empty..
+        /// </summary>
+        internal static string Rompathcannotbeempty
+        {
+            get
+            {
+                return ResourceManager.GetString("Rompathcannotbeempty", resourceCulture);
+            }
+        }
 
 
+        /// <summary>
+        ///   Looks up a localized string similar to Error initializing the sakura code:.
+        /// </summary>
+        internal static string Errorinitializingthesakuracore
+        {
+            get
+            {
+                return ResourceManager.GetString("Errorinitializingthesakuracore", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Waiting for input...
+        /// </summary>
+        internal static string Waitingforinput
+        {
+            get
+            {
+                return ResourceManager.GetString("Waitingforinput", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Input Key.
+        /// </summary>
+        internal static string Inputkey
+        {
+            get
+            {
+                return ResourceManager.GetString("Inputkey", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Rom added: .
+        /// </summary>
+        internal static string Romadded
+        {
+            get
+            {
+                return ResourceManager.GetString("Romadded", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Start rom: .
+        /// </summary>
+        internal static string Startrom
+        {
+            get
+            {
+                return ResourceManager.GetString("Startrom", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Stop rom: .
+        /// </summary>
+        internal static string Stoprom
+        {
+            get
+            {
+                return ResourceManager.GetString("Stoprom", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Save state: .
+        /// </summary>
+        internal static string Savestate
+        {
+            get
+            {
+                return ResourceManager.GetString("Savestate", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Load state: .
+        /// </summary>
+        internal static string Loadstate
+        {
+            get
+            {
+                return ResourceManager.GetString("Loadstate", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Open rom folder: .
+        /// </summary>
+        internal static string Openromfolder
+        {
+            get
+            {
+                return ResourceManager.GetString("Openromfolder", resourceCulture);
+            }
+        }
+        /// <summary>
+        ///   Looks up a localized string similar to Open SRAM folder: .
+        /// </summary>
+        internal static string Opensramfolder
+        {
+            get
+            {
+                return ResourceManager.GetString("Opensramfolder", resourceCulture);
+            }
+        }
 
 
 

@@ -217,7 +217,7 @@
     <value>Select folder for log files.</value>
   </data>
   <data name="Selectsramfolder" xml:space="preserve">
-    <value>Select SRAM Folder </value>
+    <value>Select SRAM Folder</value>
   </data>
   <data name="Selectfolderforsram" xml:space="preserve">
     <value>Select folder for SRAM save files.</value>
@@ -331,9 +331,6 @@
   </data>
   <data name="No" xml:space="preserve">
     <value>No</value>
-  </data>
-  <data name="Start" xml:space="preserve">
-    <value>Start: </value>
   </data>
   <data name="Stop" xml:space="preserve">
     <value>Stop: </value>
@@ -490,9 +487,6 @@
   </data>
   <data name="Selectedfolderdoesnotexist" xml:space="preserve">
     <value>Selected folder does not exist.</value>
-  </data>
-  <data name="StartSettingsCurrentControlsStartDownload" xml:space="preserve">
-    <value>Start:</value>
   </data>
   <data name="Exit" xml:space="preserve">
     <value>Exit</value>

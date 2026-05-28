@@ -127,7 +127,7 @@ namespace sakura.frameviews
 
             #region PATHS
 
-            scroll.Add(new Label("Rom paths") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.Rompaths) { X = 1, Y = y });
             var romDirs = new TextView()
             {
                 X = 30,
@@ -141,7 +141,7 @@ namespace sakura.frameviews
 
 
             // Default rom directory
-            scroll.Add(new Label("Default rom path") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.Defaultrompath) { X = 1, Y = y });
             var romPathField =
                 new TextField(Settings.Current.DefaultRomPath ?? "")
                 {
@@ -169,7 +169,7 @@ namespace sakura.frameviews
             y += 2;
 
             // SRAM saves location
-            scroll.Add(new Label("SRAM Path:") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.Srampath) { X = 1, Y = y });
             var sramFolderPathField =
                 new TextField(Settings.Current.SramPath ?? "")
                 {
@@ -182,8 +182,8 @@ namespace sakura.frameviews
             scroll.Add(sramFolderDialogBtn);
             y += 2;
 
-            // SRAM saves location
-            scroll.Add(new Label("Save State Path:") { X = 1, Y = y });
+            // Save state location
+            scroll.Add(new Label(Resources.Savestatepath) { X = 1, Y = y });
             var stateFolderPathField =
                 new TextField(Settings.Current.StatePath ?? "")
                 {
@@ -387,7 +387,7 @@ namespace sakura.frameviews
                     DialogHelpers.ShowFolderDialog(
                         Resources.Selectlogfilepath,
 
-                        "Select folder for log files.");
+                        Resources.Selectfolderforlog);
 
                 if (!string.IsNullOrWhiteSpace(path))
                 {
@@ -399,8 +399,8 @@ namespace sakura.frameviews
             {
                 string? path =
                     DialogHelpers.ShowFolderDialog(
-                        "Select path for SRAM save files",
-                        "Select folder for SRAM save files.");
+                        Resources.Selectsramfolder,
+                        Resources.Selectfolderforsram);
 
                 if (!string.IsNullOrWhiteSpace(path))
                 {
@@ -412,8 +412,8 @@ namespace sakura.frameviews
             {
                 string? path =
                     DialogHelpers.ShowFolderDialog(
-                        "Select path for save state files",
-                        "Select folder for save state files.");
+                        Resources.Selectsavestatefolder,
+                        Resources.Selectfolderforsavestatefiles);
 
                 if (!string.IsNullOrWhiteSpace(path))
                 {
@@ -425,8 +425,8 @@ namespace sakura.frameviews
             {
                 string? path =
                     DialogHelpers.ShowFolderDialog(
-                        "Select rom folder",
-                        "Select the folder that has roms in it");
+                        Resources.Selectdefaultromfolder,
+                        Resources.Selectthefolderthatsakura);
 
                 if (!string.IsNullOrWhiteSpace(path))
                 {
@@ -466,7 +466,7 @@ namespace sakura.frameviews
 
                     if (string.IsNullOrWhiteSpace(romPath))
                     {
-                        MessageBox.ErrorQuery(Resources.Error, "Rom path cannot be empty", Resources.OK);
+                        MessageBox.ErrorQuery(Resources.Error, Resources.Rompathcannotbeempty, Resources.OK);
                         return;
                     }
 
@@ -474,7 +474,7 @@ namespace sakura.frameviews
                     {
                         if (MessageBox.Query(
                             Resources.MissingDirectory,
-                            "Rom path does not exist, create it?",
+                            Resources.Rompathdoesnotexist,
                             Resources.Yes, Resources.No) == 0)
                         {
                             Directory.CreateDirectory(romPath);
@@ -490,13 +490,13 @@ namespace sakura.frameviews
 
                     if (string.IsNullOrWhiteSpace(sramPath))
                     {
-                        MessageBox.ErrorQuery(Resources.Error, "SRAM path cannot be empty.", Resources.OK);
+                        MessageBox.ErrorQuery(Resources.Error, Resources.Srampathcannotbeempty, Resources.OK);
                         return;
                     }
 
                     if (string.IsNullOrWhiteSpace(statePath))
                     {
-                        MessageBox.ErrorQuery(Resources.Error, "Save state path cannot be empty.", Resources.OK);
+                        MessageBox.ErrorQuery(Resources.Error, Resources.Savestatepathcannotbeempty, Resources.OK);
                         return;
                     }
                     // --- apply settings ---

@@ -46,8 +46,8 @@ namespace sakura.frameviews
 
             // Define visible columns in a consistent order
             _tableData.Columns.Add(Resources.Name, typeof(string));
-            _tableData.Columns.Add("Created", typeof(string));
-            _tableData.Columns.Add("Size", typeof(string));
+            _tableData.Columns.Add(Resources.Created, typeof(string));
+            _tableData.Columns.Add(Resources.Size, typeof(string));
 
             // --- TableView Setup ---
             _table = new TableView()

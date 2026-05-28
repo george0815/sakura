@@ -186,7 +186,7 @@ namespace sakura.helpers
         public static int PickKey()
         {
             var colors = SettingsView.colors;
-            var dlg = new Dialog("Input key", 50, 3)
+            var dlg = new Dialog(Resources.Inputkey, 50, 3)
             {
                 // Set the color scheme for the dialog window
                 ColorScheme = new ColorScheme()
@@ -201,7 +201,7 @@ namespace sakura.helpers
             int result = (int)Key.Enter;
 
 
-            dlg.Add(new Label("Waiting for input..."));
+            dlg.Add(new Label(Resources.Waitingforinput));
 
             dlg.KeyDown += e =>
             {

@@ -64,8 +64,8 @@ namespace sakura.helpers
 
             if (process.ExitCode != 0)
             {
-                Log.Write($"{"Error initializing the sakura core:"} {error}");
-                return $"{{\"data\":[],\"errors\":[\"There was an error lauching the sakura core\"]}}";
+                Log.Write($"{Resources.Errorinitializingthesakuracore} {error}");
+                return $"{{\"data\":[],\"errors\":[\"{Resources.Errorinitializingthesakuracore}{error}\"]}}";
             }
 
             return output; // Return JSON search result

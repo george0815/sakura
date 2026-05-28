@@ -338,9 +338,6 @@
   <data name="No" xml:space="preserve">
     <value>いいえ</value>
   </data>
-  <data name="Start" xml:space="preserve">
-    <value>開始：</value>
-  </data>
   <data name="Stop" xml:space="preserve">
     <value>停止：</value>
   </data>

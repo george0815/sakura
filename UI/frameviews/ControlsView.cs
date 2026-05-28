@@ -18,7 +18,7 @@ namespace sakura.frameviews
         /// and easy to modify without hidden layout logic.
         /// </summary>
         public ControlsView()
-            : base("Controls")
+            : base(Resources.Controls)
         {
             X = 20;
             Y = SettingsData.HeaderHeight;
@@ -47,7 +47,7 @@ namespace sakura.frameviews
             #region CONTROLS SETTINGS
 
             // START ROM
-            scroll.Add(new Label("START ROM: ") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.Startrom) { X = 1, Y = y });
             var myKey = Settings.Current.Controls.StartRom;
             var startRomButton = new Button()
             {
@@ -78,7 +78,7 @@ namespace sakura.frameviews
             y += 2;
 
             // STOP ROM 
-            scroll.Add(new Label("STOP ROM: ") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.Stoprom) { X = 1, Y = y });
             myKey = Settings.Current.Controls.StopRom;
             var stopRomButton = new Button()
             {
@@ -110,7 +110,7 @@ namespace sakura.frameviews
 
 
             // OPEN ROM FOLDER 
-            scroll.Add(new Label("OPEN ROM FOLDER: ") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.Openromfolder) { X = 1, Y = y });
             myKey = Settings.Current.Controls.OpenRomPath;
             var openRomPathButton = new Button()
             {
@@ -142,7 +142,7 @@ namespace sakura.frameviews
 
 
             // OPEN SRAM PATH 
-            scroll.Add(new Label("OPEN SRAM PATH: ") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.Opensramfolder) { X = 1, Y = y });
             myKey = Settings.Current.Controls.OpenSramPath;
             var openSramButton = new Button()
             {
@@ -174,7 +174,7 @@ namespace sakura.frameviews
 
 
             // SAVE STATE 
-            scroll.Add(new Label("SAVE STATE: ") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.Savestate) { X = 1, Y = y });
             myKey = Settings.Current.Controls.SaveState;
             var saveStateButton = new Button()
             {
@@ -206,7 +206,7 @@ namespace sakura.frameviews
 
 
             // LOAD STATE 
-            scroll.Add(new Label("LOAD STATE: ") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.Loadstate) { X = 1, Y = y });
             myKey = Settings.Current.Controls.LoadState;
             var loadStateButton = new Button()
             {
@@ -237,7 +237,7 @@ namespace sakura.frameviews
             y += 2;
 
             // START 
-            scroll.Add(new Label("START: ") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.START) { X = 1, Y = y });
             myKey = Settings.Current.Controls.START;
             var startButton = new Button()
             {
@@ -268,7 +268,7 @@ namespace sakura.frameviews
             y += 2;
 
             // SELECT
-            scroll.Add(new Label("SELECT: ") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.SELECT) { X = 1, Y = y });
             myKey = Settings.Current.Controls.SELECT;
             var selectButton = new Button()
             {
@@ -299,7 +299,7 @@ namespace sakura.frameviews
             y += 2;
 
             // A
-            scroll.Add(new Label("A: ") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.A) { X = 1, Y = y });
             myKey = Settings.Current.Controls.A;
             var aButton = new Button()
             {
@@ -330,7 +330,7 @@ namespace sakura.frameviews
             y += 2;
 
             // B
-            scroll.Add(new Label("B: ") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.B) { X = 1, Y = y });
             myKey = Settings.Current.Controls.B;
             var bButton = new Button()
             {
@@ -361,7 +361,7 @@ namespace sakura.frameviews
             y += 2;
 
             // UP
-            scroll.Add(new Label("UP: ") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.UP) { X = 1, Y = y });
             myKey = Settings.Current.Controls.UP;
             var upButton = new Button()
             {
@@ -392,7 +392,7 @@ namespace sakura.frameviews
             y += 2;
 
             // DOWN
-            scroll.Add(new Label("DOWN: ") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.DOWN) { X = 1, Y = y });
             myKey = Settings.Current.Controls.DOWN;
             var downButton = new Button()
             {
@@ -423,7 +423,7 @@ namespace sakura.frameviews
             y += 2;
 
             // LEFT
-            scroll.Add(new Label("LEFT: ") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.LEFT) { X = 1, Y = y });
             myKey = Settings.Current.Controls.LEFT;
             var leftButton = new Button()
             {
@@ -455,7 +455,7 @@ namespace sakura.frameviews
 
 
             // RIGHT
-            scroll.Add(new Label("RIGHT: ") { X = 1, Y = y });
+            scroll.Add(new Label(Resources.RIGHT) { X = 1, Y = y });
             myKey = Settings.Current.Controls.RIGHT;
             var rightButton = new Button()
             {
@@ -520,15 +520,15 @@ namespace sakura.frameviews
 
                       if (tmpKeys.Distinct().Count() != tmpKeys.Count())
                       {
-                          MessageBox.ErrorQuery(Resources.Error, "Cannot have the same key for multiple buttons.", Resources.OK);
+                          MessageBox.ErrorQuery(Resources.Error, Resources.Cannothavethesamekey, Resources.OK);
                           return;
                       }
 
                       // --- apply settings ---
                       Settings.Save();
 
-                      MessageBox.Query(Resources.Settings, Resources.Settingssavedsuccessfully, Resources.OK);
-                      Log.Write("Controls saved.");
+                      MessageBox.Query(Resources.Settings, Resources.Controlssavedsuccessfully, Resources.OK);
+                      Log.Write(Resources.Controlssaved);
                   }
                   catch (Exception ex)
                   {

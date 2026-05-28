@@ -17,7 +17,7 @@ internal class SavesView : FrameView
     List<FileInfo> stateFiles;
 
     public SavesView()
-        : base("Saves")
+        : base(Resources.Saves)
     {
         // Position the frame consistently with other views.
         X = 20;
@@ -49,8 +49,8 @@ internal class SavesView : FrameView
         // Sidebar menu
         var menu = new ListView(new string[]
         {
-                "SRAM",
-                "Save States",
+                Resources.SRAM,
+                Resources.SaveStates,
         })
         {
             X = 1,
