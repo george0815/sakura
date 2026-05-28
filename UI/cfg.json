@@ -3,11 +3,12 @@
   "HidetextCursor": true,
   "DisableColoredHotkeyInfo": false,
   "DisableASCII": false,
-  "DefaultRomPath": "./",
+  "DefaultRomPath": "/home/Hunter/Documents/Github/sakura/roms",
   "SramPath": "./saves/sram/",
   "StatePath": "./saves/state/",
   "AllRomPaths": [
-    "./"
+    "./",
+    "/home/Hunter/Documents/Github/sakura/roms"
   ],
   "LogPath": "./",
   "SettingsPath": "./cfg.json",
@@ -22,7 +23,7 @@
     "StartRom": 1048590,
     "StopRom": 1048591,
     "OpenRomPath": 1048592,
-    "OpenSramPath": 1048593,
+    "OpenSramPath": 101,
     "SaveState": 1048594,
     "LoadState": 1048595,
     "START": 97,

@@ -1,0 +1,2 @@
+/home/Hunter/Documents/Github/sakura/UI/bin/Release/net10.0/linux-x64/publish/UI.pdb
+/home/Hunter/Documents/Github/sakura/UI/bin/Release/net10.0/linux-x64/publish/UI

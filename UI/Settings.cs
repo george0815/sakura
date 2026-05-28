@@ -116,6 +116,7 @@ namespace sakura
             {
                 var json = JsonSerializer.Serialize(Current, JsonOptions);
                 File.WriteAllText(Current.SettingsPath ?? "cfg.json", json);
+                Rom.GetAllRoms();
                 SettingsUpdated?.Invoke(null, EventArgs.Empty);
             }
             catch (Exception ex)

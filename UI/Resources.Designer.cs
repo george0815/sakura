@@ -312,7 +312,7 @@ namespace sakura
         {
             get
             {
-                return ResourceManager.GetString("Rom paths:", resourceCulture);
+                return ResourceManager.GetString("Rompaths", resourceCulture);
             }
         }
         /// <summary>
@@ -322,7 +322,7 @@ namespace sakura
         {
             get
             {
-                return ResourceManager.GetString("Default rom path:", resourceCulture);
+                return ResourceManager.GetString("Defaultrompath", resourceCulture);
             }
         }
         /// <summary>

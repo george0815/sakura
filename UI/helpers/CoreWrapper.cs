@@ -21,7 +21,7 @@ namespace sakura.helpers
     internal class CoreWrapper
     {
         // Determine executable name based on OS
-        internal static readonly string ExeFileName = OperatingSystem.IsWindows() ? "sakura_core.exe" : "/home/Hunter/Documents/Github/sakura/build/sakura";
+        internal static readonly string ExeFileName = OperatingSystem.IsWindows() ? "sakura_core.exe" : "sakura_core";
 
 
         // JsonSerializerOptions instance
@@ -40,7 +40,7 @@ namespace sakura.helpers
             {
                 FileName = ExeFileName,
                 Arguments =
-                    $"--rom {args.RomPath}",
+                    $"--rom \"{args.RomPath}\"",
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
                 UseShellExecute = false,

@@ -1,1 +1,6 @@
-﻿
+﻿[5/29/2026 2:31:56 AM] Rom added: Super Mario Bros. (World).nes
+[5/29/2026 2:31:56 AM] Rom added: Super Mario Bros. 3 (USA) (Rev 1).nes
+[5/29/2026 2:31:56 AM] Rom added: Rad Racer II (USA).nes
+[5/29/2026 2:31:56 AM] Rom added: Ninja Gaiden III - The Ancient Ship of Doom (USA).nes
+[5/29/2026 2:31:56 AM] Rom added: Kirby's Adventure (USA) (Rev 1).nes
+[5/29/2026 2:33:09 AM] Rom started: /home/Hunter/Documents/Github/sakura/roms/Super Mario Bros. 3 (USA) (Rev 1).nes
