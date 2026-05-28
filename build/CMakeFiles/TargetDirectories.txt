@@ -1,3 +1,0 @@
-/home/Hunter/Documents/Github/sakura/build/CMakeFiles/sakura.dir
-/home/Hunter/Documents/Github/sakura/build/CMakeFiles/edit_cache.dir
-/home/Hunter/Documents/Github/sakura/build/CMakeFiles/rebuild_cache.dir
